@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>编组 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.597144717">
+        <g id="02---首页" transform="translate(-385.000000, -652.000000)">
+            <g id="编组-3" transform="translate(383.000000, 649.000000)">
+                <polyline id="路径-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="3 10 8 14 13 10"></polyline>
+                <polyline id="路径-4" stroke-opacity="0.6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="3 4 8 8 13 4"></polyline>
+                <rect id="home_ic_more" x="0" y="0" width="16" height="16"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

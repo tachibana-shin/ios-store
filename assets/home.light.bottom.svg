@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="155px" height="136px" viewBox="0 0 155 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>编组 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
+            <stop stop-color="#3146A7" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFEDE9" stop-opacity="0.14" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-2">
+            <stop stop-color="#3146A7" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFEDE5" stop-opacity="0.08" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="49.9907622%" fx="50%" fy="49.9907622%" r="49.7879629%" id="radialGradient-3">
+            <stop stop-color="#FFEDEA" stop-opacity="0.4" offset="0%"></stop>
+            <stop stop-color="#FFF1F1" stop-opacity="0.13" offset="15.2057601%"></stop>
+            <stop stop-color="#FFFEFE" stop-opacity="0.03" offset="54.7507916%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="99.9815245%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="49.9907622%" fx="50%" fy="49.9907622%" r="49.8155689%" id="radialGradient-4">
+            <stop stop-color="#FFF0EA" stop-opacity="0.4" offset="0%"></stop>
+            <stop stop-color="#FFF9F8" stop-opacity="0.1" offset="15.2057601%"></stop>
+            <stop stop-color="#FFFEFE" stop-opacity="0.03" offset="54.7507916%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="99.9815245%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="B---首页----☆-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="动效文档" transform="translate(-341.000000, -596.000000)">
+            <g id="编组-4" transform="translate(328.000000, 573.000000)">
+                <circle id="椭圆形" fill="url(#radialGradient-1)" transform="translate(100.541344, 92.000000) rotate(-330.000000) translate(-100.541344, -92.000000) " cx="100.541344" cy="92" r="67"></circle>
+                <circle id="椭圆形备份" fill="url(#radialGradient-2)" transform="translate(71.096481, 75.000000) rotate(-330.000000) translate(-71.096481, -75.000000) " cx="71.0964806" cy="75" r="52"></circle>
+                <circle id="椭圆形" fill="url(#radialGradient-3)" cx="58" cy="65.6902678" r="11"></circle>
+                <circle id="椭圆形备份-2" fill="url(#radialGradient-4)" cx="24" cy="43.6902678" r="11"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

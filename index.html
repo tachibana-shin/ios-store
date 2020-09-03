@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>HTML</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://unpkg.com/vue-loading-overlay@3.3.3/dist/vue-loading.css">
+   <link rel="stylesheet" href="https://nguyenthanh1995.github.io/lib/awesome pro/css/all.min.css">
+   <!-- JavaScript and dependencies -->
+   <!-- HTML -->
+   <script src="https://unpkg.com/eruda" type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript" charset="utf-8">
+      eruda.init()
+   </script>
+   <script src="system.js"></script>
+</head>
+
+<body>
+   <div id="app"></div>
+   <!-- Project -->
+   <script src="config.js"></script>
+   <style>
+      .no-caret::before,
+      .no-caret::after {
+         border: 0 !important;
+      }
+
+      .dropdown-toggle * {
+         pointer-events: none !important
+      }
+
+      .was-validated *.form-control,
+      .was-validated *.is-valid,
+      .was-validated *.is-invalid {
+         border-radius: 0.25rem;
+      }
+
+      .was-validated *.form-control:valid~.insperator,
+      .was-validated *.is-valid,
+      .was-validated *.form-control:valid {
+         border: 1px solid #28a745;
+      }
+
+      .was-validated *.form-control:valid~.insperator,
+      .was-validated *.is-valid,
+      .was-validated *.form-control:valid {
+         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+         background-repeat: no-repeat;
+         background-position: top right;
+         background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+      }
+
+      .was-validated *.form-control:valid:focus~.insperator,
+      .was-validated *.form-control:valid:focus,
+      .was-validated *.is-valid:hover {
+         border: 1px solid #28a745;
+         box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, .25);
+      }
+
+      .was-validated *.form-control:invalid~.insperator,
+      .was-validated *.form-control:invalid,
+      .was-validated *.is-invalid {
+         border: 1px solid #dc3545;
+      }
+
+      .was-validated *.form-control:invalid~.insperator,
+      .was-validated *.is-invalid {
+         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+         background-repeat: no-repeat;
+         background-position: top right;
+         background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+      }
+
+      .was-validated *.form-control:invalid:focus~.insperator,
+      .was-validated *.form-control:invalid:focus,
+      .was-validated *.is-invalid:hover {
+         border: 1px solid #dc3545;
+         box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, .25);
+      }
+      .vs__search::-webkit-placeholder {
+         color: #6c757d;
+      }
+   </style>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>list_btn_download</title>
+    <desc>Created with Sketch.</desc>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02---Lite" transform="translate(-225.000000, -31.000000)">
+            <g id="分组-6" transform="translate(225.000000, 31.000000)">
+                <g id="控件-下载" transform="translate(-0.000000, -0.000000)">
+                    <circle id="Oval-3" fill="#008EFF" cx="23" cy="23" r="23"></circle>
+                    <g id="Group" transform="translate(15.000000, 15.000000)">
+                        <g id="Group-8" transform="translate(1.000000, 3.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            <path d="M1.01434428,4.98562148 L7.03669743,11.0079746" id="Line"></path>
+                            <path d="M13.0170217,5.0169732 L7.06010697,10.9738879" id="Line-Copy-3"></path>
+                            <path d="M7,11 L7,0" id="Line-Copy-2"></path>
+                        </g>
+                        <rect id="Rectangle-5" x="0" y="0" width="16" height="16"></rect>
+                    </g>
+                </g>
+                <rect id="list_btn_download" fill-rule="nonzero" x="0" y="0" width="46" height="46"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

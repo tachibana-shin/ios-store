@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="169px" height="159px" viewBox="0 0 169 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>编组 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientTransform="translate(0.500000,0.500000),scale(0.999482,1.000000),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#3146A7" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFEEE7" stop-opacity="0.07" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientTransform="translate(0.500000,0.500000),scale(0.999482,1.000000),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-2">
+            <stop stop-color="#3146A7" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFECE6" stop-opacity="0.1" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="49.9907622%" fx="50%" fy="49.9907622%" r="49.8155689%" gradientTransform="translate(0.500000,0.499908),scale(0.998965,1.000000),rotate(-90.000000),translate(-0.500000,-0.499908)" id="radialGradient-3">
+            <stop stop-color="#FFEDEA" stop-opacity="0.4" offset="0%"></stop>
+            <stop stop-color="#FFF8F8" stop-opacity="0.1" offset="15.2057601%"></stop>
+            <stop stop-color="#FFFEFE" stop-opacity="0.03" offset="54.7507916%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="99.9815245%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="49.9907622%" fx="50%" fy="49.9907622%" r="49.631818%" gradientTransform="translate(0.500000,0.499908),scale(0.266055,1.000000),rotate(-90.000000),scale(1.000000,3.583689),translate(-0.500000,-0.499908)" id="radialGradient-4">
+            <stop stop-color="#FFF1EA" stop-opacity="0.7" offset="0%"></stop>
+            <stop stop-color="#FFFAF8" stop-opacity="0.230305718" offset="59.811882%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="99.9815245%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="B---首页----☆-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="动效文档" transform="translate(-149.000000, -395.000000)">
+            <g id="编组-10" transform="translate(130.000000, 376.000000)">
+                <g id="编组-4备份" transform="translate(73.500000, 70.000000) scale(-1, -1) translate(-73.500000, -70.000000) ">
+                    <ellipse id="椭圆形" fill="url(#radialGradient-1)" transform="translate(76.578122, 70.000000) rotate(-330.000000) translate(-76.578122, -70.000000) " cx="76.5781224" cy="70" rx="51.0178865" ry="50.9914729"></ellipse>
+                    <ellipse id="椭圆形备份" fill="url(#radialGradient-2)" transform="translate(54.151205, 57.065217) rotate(-330.000000) translate(-54.151205, -57.065217) " cx="54.1512054" cy="57.0652174" rx="39.5959716" ry="39.5754715"></ellipse>
+                    <ellipse id="椭圆形" fill="url(#radialGradient-3)" cx="38.6217617" cy="45.6304348" rx="8.37823834" ry="8.36956522"></ellipse>
+                </g>
+                <ellipse id="椭圆形" fill-opacity="0.51" fill="url(#radialGradient-4)" transform="translate(112.514719, 102.514719) rotate(-315.000000) translate(-112.514719, -102.514719) " cx="112.514719" cy="102.514719" rx="109" ry="29"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
