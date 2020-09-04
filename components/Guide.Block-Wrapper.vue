@@ -3,15 +3,11 @@
       <div class="space" @click="$emit('hide')"></div>
       <div class="content">
          <div class="header">
-            <div class="left"
-               :class="{ active: tab == 0 }"
-               @click="tab = 0">
+            <div class="left" :class="{ active: tab == 0 }" @click="tab = 0">
                Installation
             </div>
             <div class="space"></div>
-            <div class="right"
-               :class="{ active: tab == 1}"
-               @click="tab = 1">
+            <div class="right" :class="{ active: tab == 1}" @click="tab = 1">
                Verification
             </div>
          </div>
@@ -40,7 +36,7 @@
       font-family: DINCond;
       src: url("/fonts/DINCond.ttf");
    }
-   
+
    .guide\.block-wrapper {
       height: 100%;
       left: 0;
@@ -48,7 +44,7 @@
       top: 0;
       width: 100%;
       z-index: 10000;
-      
+
       .space {
          height: 40vw;
       }
@@ -109,7 +105,15 @@
                shrink: 1;
                basis: 0;
             }
+
             overflow: hidden scroll;
+
+            &::-webkit-scrollbar {
+               display: none;
+            }
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
 
             ;
             padding: 0 4.267vw;

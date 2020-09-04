@@ -6,13 +6,13 @@
          <img class="download" src="/assets/nav.ic.download.svg">
       </div>
       <div class="tabs">
-         <div class="left">
+         <router-link tag="span" to="/" exact-active-class="active" class="left">
             Download VIP
-         </div>
+         </router-link>
          <div class="space"></div>
-         <div class="right">
+         <router-link tag="span" to="/lite" active-class="active" class="right">
             Tutuapp Lite
-         </div>
+         </router-link>
       </div>
    </div>
 </template>
@@ -25,6 +25,7 @@
       transition: all .2 ease;
       z-index: 9999;
       width: 100%;
+      
       .wrapper {
          width: 100%;
          height: 13.867vw;
@@ -69,7 +70,7 @@
                shrink: 1;
             };
             
-            .active {
+            &.active {
                color: rgb(0, 132, 240);
                font-size: 4.267vmin;
             }
@@ -86,6 +87,28 @@
 </style>
 <script>
    export default {
-
+      lastScrollPosition: 0,
+      data: () => ({
+         hide: false
+      }),
+      methods: {
+         onScroll() {
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+            if (currentScrollPosition < 0) {
+               return
+            }
+            if (Math.abs(currentScrollPosition - this.$options.lastScrollPosition) < 120) {
+               return
+            }
+            this.$emit("input", currentScrollPosition < this.$options.lastScrollPosition)
+            this.$options.lastScrollPosition = currentScrollPosition
+         }
+      },
+      created() {
+         window.addEventListener("scroll", this.onScroll)
+      },
+      beforeDestroyed() {
+         window.removeEventListener("scroll", this.onScroll)
+      }
    }
 </script>

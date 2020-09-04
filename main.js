@@ -7,9 +7,9 @@ import axios from "axios"
 
 Vue.use(VueLoadingOverlay)
 Vue.use(VueProgressBar, {
-   color: 'rgb(143, 255, 199)',
+   color: 'rgb(0, 132, 240)',
    failedColor: "#f00",
-   height: '5px'
+   height: 5
 })
 
 Vue.prototype.$axios = axios

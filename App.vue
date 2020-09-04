@@ -1,7 +1,9 @@
 <template>
    <div id="app">
       <vue-progress-bar />
-      <Header-App @show-menu="NavListShow = true" />
+      <transition name="swipeY.top:ease">
+         <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event"/>
+      </transition>
       <transition name="fade:ease">
          <backdrop-mark v-if="NavListShow" />
       </transition>
@@ -25,6 +27,28 @@
       .fade\:ease-leave-to {
          opacity: 0;
       }
+      .swipeY\.top\:ease-enter-active {
+         animation: swipeYTopEnter .2s ease;
+         @keyframes swipeYTopEnter {
+            from {
+               transform: translateY(-100%);
+            }
+            to {
+               transform: translateY(0);
+            }
+         }
+      }
+      .swipeY\.top\:ease-leave-active {
+         animation: swipeYTopLeave .2s ease;
+         @keyframes swipeYTopLeave {
+            from {
+               transform: translateY(0);
+            }
+            to {
+               transform: translateY(-100%);
+            }
+         }
+      } 
 
    }
 </style>
@@ -35,7 +59,8 @@
    export default {
       components: { HeaderApp, NavListWrapper, BackdropMark },
       data: () => ({
-         NavListShow: false
+         NavListShow: false,
+         HeaderAppShow: true
       }),
       mounted() {
          //  [App.vue specific] When App.vue is finish loading finish the progress bar

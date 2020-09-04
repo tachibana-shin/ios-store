@@ -76,7 +76,7 @@
       &.active {
          transform: translateX(0%);
       }
-      
+
       hr {
          margin: 0;
          padding: 0;
@@ -88,6 +88,13 @@
          height: 100%;
          position: absolute;
          overflow: hidden scroll;
+
+         &::-webkit-scrollbar {
+            display: none;
+         }
+
+         -ms-overflow-style: none;
+         scrollbar-width: none;
 
          .content {
             border: 1px solid #fff;
@@ -184,7 +191,7 @@
                      background-color: rgb(238, 242, 250);
                   }
                }
-               
+
                hr {
                   background-color: rgb(242, 244, 245);
                   height: 1px;
@@ -253,6 +260,7 @@
                   height: 12.267vw;
                   outline: none;
                   transition: all .666s ease;
+
                   &:hover {
                      background-color: rgb(0, 132, 240);
                      color: #fff;

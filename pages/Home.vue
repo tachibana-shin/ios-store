@@ -21,7 +21,7 @@
                <span> Installation Guide </span>
                <img class="right" src="/assets/ic.more.svg">
             </div>
-            <div class="applist">
+            <div class="applist" v-if="AppListLoaded">
                <span class="applist.title">
                   <img src="/assets/home.ic.hot.svg">
                   VIP Features
@@ -29,20 +29,14 @@
                <div class="applist.wrapper">
                   <ul class="list">
                      <li>
-                        <div class="appinfo">
-                           <div class="appinfo.content">
-                              <img class="icon" src="https://photos.tutuapp.com/picture/app_ios/cn/003/62/45/50/3624550.175x175-75.jpg">
-                              <div class="app.content">
-                                 <p class="app.title"> Dead Cells </p>
-                                 <img class="VIP" src="/assets/list.app.vip.png">
-                              </div>
-                           </div>
-                           <button class="button"></button>
-                        </div>
+                        <app-info src="https://photos.tutuapp.com/picture/app_ios/cn/003/62/45/50/3624550.175x175-75.jpg" name="Dead Cells" :id="0" />
                      </li>
                   </ul>
                </div>
                <p class="check-more"> Check more VIP apps &gt; </p>
+            </div>
+            <div class="applist" v-else>
+               <lite-home-loading-applist/>
             </div>
          </div>
          <div class="patreon">
@@ -118,8 +112,12 @@
             height: 136vw;
 
             @mixin centerX {
-               left: 50%;
-               transform: translateX(-50%);
+               display: block;
+               left: 0;
+               right: 0;
+               margin-left: auto;
+               margin-right: auto;
+               /* alternate auto reveese animation */
             }
 
             .cloud\.front {
@@ -136,17 +134,15 @@
                top: 23.467vw;
                @include centerX;
                z-index: 2;
-               animation: up-down 2s linear infinite;
+               animation: up-down 2s linear infinite alternate;
 
                @keyframes up-down {
-
-                  0%,
-                  100% {
-                     transform: translateX(-50%) translateY(0);
+                  0% {
+                     transform: translateY(0);
                   }
 
-                  50% {
-                     transform: translateX(-50%) translateY(25px);
+                  to {
+                     transform: translateY(22px);
                   }
                }
             }
@@ -194,17 +190,16 @@
                width: 4.267vw;
                height: 4.267vw;
                z-index: 4;
-               animation: up-and-down 1s linear infinite;
+               animation: up-and-down 1s linear infinite alternate;
 
                @keyframes up-and-down {
 
-                  0%,
-                  100% {
-                     transform: translate(-50%, 0);
+                  0% {
+                     transform: translateY(0);
                   }
 
-                  50% {
-                     transform: translate(-50%, 50%);
+                  to {
+                     transform: translateY(10px);
                   }
                }
             }
@@ -359,7 +354,7 @@
 
                   ;
                   transform: rotate(-90deg);
-                  display: inpune-block;
+                  display: inline-block;
                }
             }
 
@@ -399,80 +394,6 @@
                      padding: 0;
 
                      list-style: none;
-
-                     li {
-                        .appinfo {
-                           padding: 3.2vw 0;
-                           position: relative;
-                           display: flex;
-                           justify-content: space-between;
-                           align-items: center;
-
-                           .appinfo\.content {
-                              display: flex;
-
-                              .icon {
-
-                                 border-radius: 3.467vw;
-                                 display: block;
-                                 height: 18.667vw;
-                                 width: 18.667vw;
-                              }
-
-                              .app\.content {
-                                 height: 18.667vw;
-                                 justify-content: center;
-                                 margin-left: 4.267vw;
-                                 overflow: hidden;
-                                 position: relative;
-                                 text-align: left;
-                                 width: 45.333vw;
-                                 align-items: flex-start;
-                                 display: flex;
-                                 flex-direction: column;
-
-                                 .app\.title {
-                                    margin: 0;
-                                    padding: 0;
-                                    color: rgb(47, 64, 89);
-                                    font-size: 4.267vmin;
-                                    font-weight: 500;
-                                    line-height: 5.867vw;
-                                    margin-bottom: 2.133vw;
-                                    overflow-x: hidden;
-                                    text-overflow: ellipsis;
-                                    -webkit-box-orient: vertical;
-                                    -webkit-line-clamp: 2;
-                                 }
-
-                                 .VIP {
-
-                                    border-radius: 3.467vw;
-                                    display: block;
-                                    height: 4.8vw;
-                                    width: 8vw
-                                 }
-                              }
-                           }
-
-                           .button {
-                              border: none;
-                              outline: none;
-                              border-radius: 50%;
-                              height: 12.267vw;
-                              width: 12.267vw;
-
-                              background: {
-                                 image: url("/assets/list.btn.download.svg");
-                                 repeat: no-repeat;
-                                 size: 100%;
-                                 position: center;
-                              }
-
-                              ;
-                           }
-                        }
-                     }
                   }
                }
 
@@ -513,10 +434,16 @@
 <script>
    import GuideBlockWrapper from "../components/Guide.Block-Wrapper.vue"
    import BackdropMark from "../components/Backdrop.vue"
+   import AppInfo from "../components/AppInfo.vue"
+   import LiteHomeLoadingApplist from "../components/Lite:Home.Loading.Applist.vue"
    export default {
-      components: { GuideBlockWrapper, BackdropMark },
+      components: { GuideBlockWrapper, BackdropMark, AppInfo, LiteHomeLoadingApplist },
       data: () => ({
-         guideBlockShow: false
-      })
+         guideBlockShow: false,
+         AppListLoaded: false
+      }),
+      mounted() {
+         setTimeout(() => this.AppListLoaded = true, 3000)
+      }
    }
 </script>
