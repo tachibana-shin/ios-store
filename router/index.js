@@ -1,11 +1,16 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 import Home from "../pages/Home.vue"
+import Lite from "../pages/Lite.vue"
 
 const routes = [
    {
       path: "/",
       component: Home
+   },
+   {
+      path: "/lite",
+      component: Lite
    }
 ]
 Vue.use(VueRouter)
