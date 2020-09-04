@@ -1,11 +1,10 @@
 import Vue from "vue"
 import App from "./App.vue"
 import router from "./router/index.js"
-import VueLoadingOverlay from "vue-loading-overlay"
+
 import VueProgressBar from "vue-progressbar"
 import axios from "axios"
 
-Vue.use(VueLoadingOverlay)
 Vue.use(VueProgressBar, {
    color: 'rgb(0, 132, 240)',
    failedColor: "#f00",

@@ -1,7 +1,6 @@
 <template>
-   <div class="wrapper.loading">
-      <div class="bac.animation"></div>
-      <div class="loading.title"></div>
+   <div class="loading-overlay">
+      <bac-anomation v-if="!children"/>
       <div class="loading.applist">
          <ul>
             <li v-for="item in 10">
@@ -21,50 +20,14 @@
    </div>
 </template>
 <style lang="scss" scoped>
-
-   .wrapper\.loading {
-      position: relative;
-
-      .bac\.animation {
-         animation: backpos 1s ease-in-out infinite;
-
-         @keyframes backpos {
-            0% {
-               background-position-x: -200px;
-            }
-
-            to {
-               background-position-x: calc(200px + 100%)
-            }
-         }
-
-         background: {
-            image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 80%);
-            repeat: no-repeat;
-            size: 15% 100%;
-         }
-
-         height: 250vh;
-         position: absolute;
-         transform: rotate(20deg) translateX(-150vw);
-         width: 250vw;
-         z-index: 999;
-      }
-
-      .loading\.title {
-         background-color: rgb(237, 240, 245);
-         border-radius: 2.667vw;
-         height: 5.333vW;
-         margin-top: 4.267vW;
-         width: 37.333VW;
-      }
-
+   .loading-overlay {
       .loading\.applist {
 
          ul {
             margin: 0;
             padding: 0;
             list-style: none;
+            padding: 0 5.333vw;
 
             li {
 
@@ -129,7 +92,6 @@
                      width: 12.267vw;
 
                      background: {
-                        image: url("/assets/list.btn.download.svg");
                         repeat: no-repeat;
                         size: 100%;
                         position: center;
@@ -170,10 +132,16 @@
             }
          }
       }
+
    }
 </style>
-<script>
-   export default {
 
+<script>
+   import BacAnimation from "./Loading:bac.animation.vue"
+   export default {
+      props: {
+         children: Boolean
+      },
+      components: { BacAnimation }
    }
 </script>

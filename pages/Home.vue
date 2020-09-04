@@ -36,7 +36,7 @@
                <p class="check-more"> Check more VIP apps &gt; </p>
             </div>
             <div class="applist" v-else>
-               <lite-home-loading-applist/>
+               <home-loading-applist/>
             </div>
          </div>
          <div class="patreon">
@@ -98,7 +98,6 @@
 
 
       .wrapper {
-         margin-top: (11.567vw + 13.867);
 
          .banner\.welcome {
             background: {
@@ -106,6 +105,7 @@
                repeat: no-repeat;
                size: cover;
             }
+            padding-top: (11.567vw + 13.867);
 
             position: relative;
             overflow: hidden;
@@ -435,15 +435,15 @@
    import GuideBlockWrapper from "../components/Guide.Block-Wrapper.vue"
    import BackdropMark from "../components/Backdrop.vue"
    import AppInfo from "../components/AppInfo.vue"
-   import LiteHomeLoadingApplist from "../components/Lite:Home.Loading.Applist.vue"
+   import HomeLoadingApplist from "../components/Home.Loading.Applist.vue"
    export default {
-      components: { GuideBlockWrapper, BackdropMark, AppInfo, LiteHomeLoadingApplist },
+      components: { GuideBlockWrapper, BackdropMark, AppInfo, HomeLoadingApplist },
       data: () => ({
          guideBlockShow: false,
          AppListLoaded: false
       }),
       mounted() {
-         setTimeout(() => this.AppListLoaded = true, 3000)
+         //setTimeout(() => this.AppListLoaded = true, 3000)
       }
    }
 </script>

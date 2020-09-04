@@ -21,7 +21,7 @@
       left: 0;
       position: fixed;
       width: 100vw;
-      z-index: 2;
+      z-index: 9999;
       align-items: center;
 
       .item {

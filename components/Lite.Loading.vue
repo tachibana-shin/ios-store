@@ -1,6 +1,6 @@
 <template>
    <div class="wrapper.loading">
-      <div class="bac.animation"></div>
+      <bac.animation/>
       <div class="app">
          <div class="swiper" v-if="state.swiper">
             <div class="top-swiper"></div>
@@ -16,7 +16,7 @@
                   </div>
                </li>
             </ul>
-         </div>
+         </div><!--
          <div class="applist" v-if="state.applist">
             <ul>
                <li v-for="item in 10">
@@ -28,7 +28,8 @@
                   <div class="button"></div>
                </li>
             </ul>
-         </div>
+         </div>-->
+         <list-app-loading :children="true" v-if="state.applist"/>
       </div>
    </div>
 </template>
@@ -38,38 +39,11 @@
       height: 100vh;
       left: 0;
       margin-top: 25.333vw;
-      overflow: hidden;
+      overflow: hidden scroll;
       position: fixed;
       top: 0px;
       width: 100vw;
       z-index: 1;
-
-      .bac\.animation {
-         animation: backpos 1s ease-in-out infinite;
-
-         @keyframes backpos {
-            0% {
-               background-position-x: -200px
-            }
-
-            to {
-               background-position-x: calc(200px + 100%)
-            }
-         }
-
-         background: {
-            image: linear-gradient(90deg, O rgba(255,
-                     255, 255, 0), O rgba(255, 255, 255, 0.5) 50%, rgba (25 5, 255, 255, 0) 80%);
-            repeat: no-repeat;
-            size: 15% 100%;
-         }
-
-         height: 250vh;
-         position: absolute;
-         transform: rotate(20deg) translateX(-150vw);
-         width: 250vw;
-         z-index: 1;
-      }
 
       .app {
          padding-top: 8.533vw;
@@ -83,8 +57,7 @@
                background-color: rgb(237, 240, 245);
                border-radius: 2.667vw;
                height: 45.333vw;
-               margin: ;
-               0 auto;
+               margin: 0 auto;
                transform: translateY(-3.2vw);
                width: 89.6vw;
             }
@@ -92,7 +65,8 @@
 
          .apphot {
             margin-top: 10.133vw;
-            padding-left: 0 5.333vw;
+            padding: 0 5.333vw;
+            box-sizing: border-box;
 
             .title {
                background-color: rgb(237, 240, 245);
@@ -129,8 +103,8 @@
                   .bottom {
 
                      background-color: rgb(237, 240, 245);
-                     border-radius: 1.6Vw,
-                        flex-basis: 0%;
+                     border-radius: 1.6Vw;
+                     flex-basis: 0%;
                      flex-grow: 1;
                      flex-shrink: 1;
                      margin-top: 1.6vw;
@@ -139,7 +113,7 @@
                }
             }
          }
-
+/*
          .applist {
             margin-top: 12.533vw;
             padding: 0 5.333vw;
@@ -169,9 +143,11 @@
                      display: flex;
                      flex-direction: column;
                      height: 18.667vw;
-                     justify-content: center margin-left: 4.267vW;
+                     justify-content: center;
+                     margin-left: 4.267vW;
                      position: relative;
-                     width: 42.667vw -webkit-box-align: start;
+                     width: 42.667vw;
+                     -webkit-box-align: start;
                      -webkit-box-direction: normal;
                      -webkit-box-orient: vertical;
                      -webkit-box-pack: center;
@@ -190,7 +166,7 @@
                         background-color: rgb(237, 240, 245);
                         border-radius: 2.4vw;
                         height: 4.8vw;
-                        width: 8vw,
+                        width: 8vw;
                      }
                   }
 
@@ -206,15 +182,17 @@
                   }
                }
             }
-         }
+         }*/
       }
    }
 </style>
-
 <script>
+   import ListAppLoading from "./ListApp.Loading.vue"
+   import BacAnimation from "./Loading:bac.animation.vue"
    export default {
       props: {
          state: Object
-      }
+      },
+      components: { ListAppLoading, BacAnimation }
    }
 </script>
