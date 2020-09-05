@@ -13,10 +13,7 @@
 </template>
 <style lang="scss" scoped>
    #app {
-
-      .notification-content {
-         word-wrap: wrap !important;
-      }
+      padding-top: 13.867vw;
 
       .fade\:ease-enter-active,
       .fade\:ease-leave-active {

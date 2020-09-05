@@ -4,6 +4,9 @@ import Home from "../pages/Home.vue"
 import Lite from "../pages/Lite.vue"
 import LiteGame from "../pages/Lite.Game.vue"
 import LiteApp from "../pages/Lite.App.vue"
+import LiteTopApp from "../pages/Lite.TopApp.vue"
+import AppInfo_Page from "../pages/AppInfo_Page.vue"
+import Error404 from "../pages/404.vue"
 
 const routes = [
    {
@@ -12,7 +15,7 @@ const routes = [
    },
    {
       path: "/lite",
-      component: Lite,/*
+      component: Lite,
       children: [
          {
             path: "game",
@@ -22,7 +25,19 @@ const routes = [
             path: "app",
             component: LiteApp
          }
-      ]*/
+      ]
+   },
+   {
+      path: "/lite/topapp/:name",
+      component: LiteTopApp
+   },
+   {
+      path: "/lite/info/app/:id",
+      component: AppInfo_Page
+   },
+   {
+      path: "*",
+      component: Error404
    }
 ]
 Vue.use(VueRouter)

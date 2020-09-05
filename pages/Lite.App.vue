@@ -28,7 +28,7 @@
       position: relative;
 
       .wrapper {
-         padding-top: (11.567vw + 13.867);
+         padding-top: 11.467vw;
          background-color: #fff;
 
          .banner {
@@ -64,7 +64,10 @@
       components: { LiteFooter, LiteLoading, Carousel3d, Slide, AppInfo, LoadingMore },
       data: () => ({
          banners: [],
-         loading: false
-      })
+         loading: true
+      }),
+      mounted() {
+         setTimeout(() => this.loading = false, 3000)
+      }
    }
 </script>  

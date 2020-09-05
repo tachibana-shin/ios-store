@@ -10,8 +10,8 @@
          </div>
          <div class="applist">
             <ul>
-               <li>
-                  <app-info/>
+               <li v-for="item in 10">
+                  <app-info name="Pokemon Go" :id="item" src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg" />
                </li>
             </ul>
          </div>
@@ -21,6 +21,7 @@
 <style lang="scss" scoped>
    .lite\.topapp {
       width: 100%;
+      padding-top: 11.467vw;
 
       .picture {
          .picture\.image {
@@ -43,13 +44,14 @@
             margin: 0;
             padding: 0;
             font-weight: 400;
-            line-height: 9.067vW overflow: hidden;
+            line-height: 9.067vW;
+            overflow: hidden;
             padding: 0 5.333vw;
             text-overflow: ellipsis;
             width: 100vw;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
-            px box-sizing: border-box;
+            box-sizing: border-box;
             color: rgb(55, 77, 115);
             display: -webkit-box;
             font-size: 6.4vmin;
@@ -79,3 +81,9 @@
       }
    }
 </style>
+<script>
+   import AppInfo from "../components/AppInfo.vue"
+   export default {
+      components: { AppInfo }
+   }
+</script>

@@ -2,6 +2,13 @@
    <div class="main">
       <div class="wrapper">
          <div class="banner.welcome">
+            <div class="notice">
+               <img class="notice.icon" src="/assets/home.ic.anotice.svg">
+               <div class="notice.content">
+                  <p> Hello awlxlxk </p>
+               </div>
+               <img class="notice.close" src="/assets/home.ic.close.svg">
+            </div>
             <img class="cloud.front" src="/assets/home.cloud.front.png">
             <img class="spaceship" src="/assets/home.spaceship.png">
             <img class="download.button.highlight" src="/assets/home.btn.highlight.png">
@@ -28,7 +35,7 @@
                </span>
                <div class="applist.wrapper">
                   <ul class="list">
-                     <li>
+                     <li v-for="item in 10">
                         <app-info src="https://photos.tutuapp.com/picture/app_ios/cn/003/62/45/50/3624550.175x175-75.jpg" name="Dead Cells" :id="0" />
                      </li>
                   </ul>
@@ -36,7 +43,7 @@
                <p class="check-more"> Check more VIP apps &gt; </p>
             </div>
             <div class="applist" v-else>
-               <home-loading-applist/>
+               <home-loading-applist />
             </div>
          </div>
          <div class="patreon">
@@ -99,13 +106,14 @@
 
       .wrapper {
 
+         padding-top: 11.467vw;
+
          .banner\.welcome {
             background: {
                image: url("/assets/home.bg.png");
                repeat: no-repeat;
                size: cover;
             }
-            padding-top: (11.567vw + 13.867);
 
             position: relative;
             overflow: hidden;
@@ -118,6 +126,67 @@
                margin-left: auto;
                margin-right: auto;
                /* alternate auto reveese animation */
+            }
+
+            .notice {
+               background-color: rgb(245, 246, 247);
+               height: 8.533vw;
+               position: relative;
+               top: 0;
+               left: 0;
+               z-index: 5;
+               display: flex;
+               align-self: center;
+               justify-content: space-between;
+
+               .notice\.icon {
+                  margin-left: 5.333vw;
+               }
+
+               .notice\.content {
+                  flex: {
+                     basis: 0;
+                     grow: 1;
+                     shrink: 1;
+                  }
+                  margin: {
+                     left: (12.8vw - 5.333);
+                     right: (12.8vw - 5.333);
+                  }
+
+                  ;
+                  overflow: hidden;
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+
+                  p {
+                     margin: 0;
+                     padding: 0;
+                     color: rgb(0, 132, 240);
+                     display: inline-block;
+                     min-width: 100%;
+                     font-size: 3.2vmin;
+                     font-weight: 400;
+                     white-space: nowrap;
+                     animation: text-run 10s linear infinite;
+
+                     @keyframes text-run {
+                        from {
+                           transform: translateX(100%);
+                        }
+
+                        to {
+                           transform: translateX(-100%);
+                        }
+                     }
+                  }
+               }
+
+               .notice\.close {
+                  margin-right: 5.333vw;
+                  margin-left: auto;
+               }
             }
 
             .cloud\.front {
@@ -443,7 +512,7 @@
          AppListLoaded: false
       }),
       mounted() {
-         //setTimeout(() => this.AppListLoaded = true, 3000)
+         setTimeout(() => this.AppListLoaded = true, 3000)
       }
    }
 </script>
