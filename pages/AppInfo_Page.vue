@@ -281,16 +281,18 @@
                left: 0;
                position: fixed;
                width: 100vw;
+
                button {
-                  background-color:rgb(0, 142, 255);
-border-radius: 5.333vw;
-color: rgb(255, 255, 255);
-font-size: 4.267vmin;
-font-weight: 500;
-height: 10.667vw;
-line-height: 5.333vw;
-outline-style: none;
-width: 89.333vw; 
+                  background-color: rgb(0, 142, 255);
+                  border-radius: 5.333vw;
+                  color: rgb(255, 255, 255);
+                  font-size: 4.267vmin;
+                  font-weight: 500;
+                  height: 10.667vw;
+                  line-height: 5.333vw;
+                  outline-style: none;
+                  width: 89.333vw;
+                  
                }
             }
          }
