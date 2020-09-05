@@ -1,6 +1,6 @@
 <template>
    <div class="main">
-      <div class="wrapper">
+      <div class="wrapper" v-if="false">
          <div class="banner">
             <carousel-3d :autoplay="true" :autoplay-timeout="3000" :border="0" :autoplay-hover-pause="true" :height="164" :width="330" background-color="#00000000" :per-page="3">
                <slide v-for="(item, index) in 4" :key="index" :index="index" style="border-radius: 10px">
@@ -29,9 +29,9 @@
                </li>
             </ul>
          </div>
-         <loading-more />
-      </div>
-      <lite-loading v-if="loading" :state="{
+         <loading-more/>
+      </div> 
+      <lite-loading v-else :state="{
          swiper: true, apphost: true, applist: true
       }" />
       <lite-footer />
@@ -156,7 +156,7 @@
       components: { LiteFooter, LiteLoading, Carousel3d, Slide, AppInfo, LoadingMore },
       data: () => ({
          banners: [],
-         loading: false
+         loading: true
       })
    }
 </script>

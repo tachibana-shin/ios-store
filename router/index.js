@@ -12,7 +12,7 @@ const routes = [
    },
    {
       path: "/lite",
-      component: Lite,
+      component: Lite,/*
       children: [
          {
             path: "game",
@@ -22,7 +22,7 @@ const routes = [
             path: "app",
             component: LiteApp
          }
-      ]
+      ]*/
    }
 ]
 Vue.use(VueRouter)

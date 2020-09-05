@@ -1,6 +1,6 @@
 <template>
    <div class="wrapper.loading">
-      <bac.animation/>
+      <bac-animation/>
       <div class="app">
          <div class="swiper" v-if="state.swiper">
             <div class="top-swiper"></div>
@@ -16,19 +16,7 @@
                   </div>
                </li>
             </ul>
-         </div><!--
-         <div class="applist" v-if="state.applist">
-            <ul>
-               <li v-for="item in 10">
-                  <div class="icon"></div>
-                  <div class="content">
-                     <div class="name"></div>
-                     <div class="vip"></div>
-                  </div>
-                  <div class="button"></div>
-               </li>
-            </ul>
-         </div>-->
+         </div>
          <list-app-loading :children="true" v-if="state.applist"/>
       </div>
    </div>
@@ -38,12 +26,14 @@
       background-color: rgb(255, 255, 255);
       height: 100vh;
       left: 0;
-      margin-top: 25.333vw;
+      padding-top: 25.333vw;
+      padding-bottom: 20.533vw;
+      box-sizing: border-box;
       overflow: hidden scroll;
       position: fixed;
       top: 0px;
       width: 100vw;
-      z-index: 1;
+      z-index: 2;
 
       .app {
          padding-top: 8.533vw;
@@ -113,76 +103,6 @@
                }
             }
          }
-/*
-         .applist {
-            margin-top: 12.533vw;
-            padding: 0 5.333vw;
-
-            ul {
-               margin: 0;
-               padding: 0;
-               list-style: none;
-
-               li {
-                  display: flex;
-                  height: 18.667vw;
-                  margin-top: 6.4vw;
-                  position: relative;
-                  width: 89.333vw;
-
-                  .icon {
-                     background-color: rgb(237, 240, 245);
-                     border-radius: 4.267vw;
-                     height: 18.667vw;
-                     width: 18.667vw;
-                  }
-
-                  .content {
-                     align-items: flex-start;
-                     border-radius: 4.267vw;
-                     display: flex;
-                     flex-direction: column;
-                     height: 18.667vw;
-                     justify-content: center;
-                     margin-left: 4.267vW;
-                     position: relative;
-                     width: 42.667vw;
-                     -webkit-box-align: start;
-                     -webkit-box-direction: normal;
-                     -webkit-box-orient: vertical;
-                     -webkit-box-pack: center;
-
-                     .name {
-                        background-color: rgb(237, 240, 245);
-                        border-radius: 2.133vw;
-                        height: 5.867vw;
-                        margin-bottom: 2.133vw;
-                        margin-top: 1.067vw;
-                        width: 37.333vw;
-                     }
-
-                     .vip {
-
-                        background-color: rgb(237, 240, 245);
-                        border-radius: 2.4vw;
-                        height: 4.8vw;
-                        width: 8vw;
-                     }
-                  }
-
-                  .button {
-                     background-color: rgb(237, 240, 245);
-                     border-radius: 6.133vw;
-                     height: 12.267vw;
-                     position: absolute;
-                     right: 0;
-                     top: 50%;
-                     transform: translateY(-50%);
-                     width: 12.267vw;
-                  }
-               }
-            }
-         }*/
       }
    }
 </style>

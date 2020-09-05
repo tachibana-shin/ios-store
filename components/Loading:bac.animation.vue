@@ -28,9 +28,3 @@
       z-index: 10;
    }
 </style>
-
-<script>
-   export default {
-      name: "bac-animation"
-   }
-</script>
