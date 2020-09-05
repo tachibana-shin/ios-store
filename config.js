@@ -8,6 +8,15 @@ SystemJS.config({
     '*.vue': {
        'loader': 'vue-loader'
     },
+    "*.css": {
+       loader: 'css-loader',
+            options: {
+              // enable CSS Modules
+              modules: true,
+              // customize generated class names
+              localIdentName: '[local]_[hash:base64:8]'
+            }
+    }
   },
   map: {
         'plugin-babel': './js/systemjs-plugin-babel/plugin-babel.js',

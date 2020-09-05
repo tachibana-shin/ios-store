@@ -1,6 +1,11 @@
 <template>
    <div class="bac.animation"></div>
 </template>
+<script>
+   export default {
+      
+   }
+</script> 
 <style lang="scss" scoped>
    .bac\.animation {
       animation: backpos 1s ease-in-out infinite;

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
     <title>ic_more</title>
     <desc>Created with Sketch.</desc>
-    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="02---Lite" transform="translate(-311.000000, -46.000000)">
-            <g id="编组-3" transform="translate(311.000000, 46.000000)">
-                <polyline id="路径-4" stroke="#6196FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="3 9 8 13 13 9"></polyline>
-                <polyline id="路径-4" stroke-opacity="0.6" stroke="#548DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="3 4 8 8 13 4"></polyline>
-                <rect id="ic_more" x="0" y="0" width="16" height="16"></rect>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-188.000000, -53.000000)">
+            <g id="ic_back备份-2" transform="translate(198.000000, 63.000000) rotate(-90.000000) translate(-198.000000, -63.000000) translate(188.000000, 53.000000)">
+                <path d="M10.2815751,12.9399256 L17.0652009,12.9399256 C17.4527691,12.9399256 17.7669553,13.2541117 17.7669553,13.64168 C17.7669553,14.0292482 17.4527691,14.3434343 17.0652009,14.3434343 L9.57982076,14.3434343 C9.19225252,14.3434343 8.87806638,14.0292482 8.87806638,13.64168 L8.87806638,6.15629984 C8.87806638,5.7687316 9.19225252,5.45454545 9.57982076,5.45454545 C9.96738901,5.45454545 10.2815751,5.7687316 10.2815751,6.15629984 L10.2815751,12.9399256 Z" id="Rectangle-12" stroke="#D1D8E6" stroke-width="0.5" fill="#D1D8E6" fill-rule="nonzero" transform="translate(13.322511, 9.898990) rotate(45.000000) translate(-13.322511, -9.898990) "></path>
+                <rect id="ic_more" fill-opacity="0" fill="#4A90E2" x="0" y="0" width="20" height="20"></rect>
             </g>
         </g>
     </g>
