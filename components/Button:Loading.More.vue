@@ -1,6 +1,6 @@
 <template>
    <div class="loading-more">
-      <div class="loading-btn" v-if="state">
+      <div class="loading-btn" v-if="!state">
          <span class="loading.title">More</span>
          <img class="loading.icon" src="/assets/ic.loading.more.svg">
       </div>

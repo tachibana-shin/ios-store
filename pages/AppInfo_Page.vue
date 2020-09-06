@@ -1,6 +1,6 @@
 <template>
    <div class="main">
-      <div class="wrapper">
+      <div class="wrapper" v-if="!loading">
          <div class="detail-app">
             <div class="detail-app.basic margin-bottom">
                <img class="app.avatar" src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg">
@@ -8,7 +8,7 @@
                   <p class="app.name"> Pokémon Go Hack Ulimite Money </p>
                   <div class="bottom">
                      <span class="app.size"> 100MB </span>
-                     <rate-star />
+                     <rate-star :value="3" />
                   </div>
                </div>
             </div>
@@ -31,19 +31,24 @@
                   </ul>
                </div>
             </div>
-            <div class="detail-app.description">
-               <div class="title">
-                  <span> Description </span>
-                  <img src="/assets/content.ic.down.svg">
-               </div>
-               <p class="content">
+            <t-collapse>
+               <template v-slot:text>
                   WARNING: This version is unsecure now. What's New in Version 1.89.2 - PokéStop nominations will be available to level 40 players in Brazil and South Korea - You can now remove Pokémon from your Favorites while in the trade interface - You can now share an Exclusive Raid Pass with one friend - You can now swipe to dismiss in-app notifications - Various bug fixes and performance updates What's New in Version 1.87.3 - Niantic Kids Parent Portal is now avaliable What's New in Version 1.87.2 - Bug fixs. What's New in Version 1.85.5 - You can now use QR Codes to add friends - Improved Pokémon Collection search function lets you search using the term “Lucky” - You can now view map details for PokéStops on your screen - At-a-glance notifications now show when you have sent a Gift or increased your Friendship level with a friend - Additional setting options let you hide Recently Caught Pokémon from friends - In-game notifications have a new UI and interactive capabilities - Various bug fixes and performance updates What's New in Version 1.85.4 - You can now use QR Codes to add friends - Improved Pokémon Collection search function lets you search using the term “Lucky” - You can now view map details for PokéStops on your screen - At-a-glance notifications now show when you have sent a Gift or increased your Friendship level with a friend - Additional setting options let you hide Recently Caught Pokémon from friends - In-game notifications have a new UI and interactive capabilities - Various bug fixes and performance updates What's New in Version 1.81.4 - Bug fixes. What's New in Version 1.81.3 - When Pokémon are traded, there is chance that both traded Pokémon become Lucky Pokémon - You can now sort the Friends List and assign nicknames to Friends - Gifts may now contain Stardust - Trainers now receive XP for sending Gifts - Added the ability to delete unsent Gifts - Various bug fixes and performance updates What's New in Version 1.79.2 -Bug fixes What's New in Version 1.77.1 - Added new social features that allow Trainers to add and remove Friends on their Friend List and build up their Friendship Level. As Trainers gain friendship they’ll earn bonuses when participating in Raid Battles. - Added a new gifting feature which allows Trainers to send friends Gifts they collect from PokéStops. - Added the ability for Trainers to trade Pokémon. - Improved Pokémon Collection screen search functionality enables Trainers to search using “Alola”. What's New in Version 1.75.1 - Improved in-game messaging for error codes. - Added ability to view and activate items, such as Rare Candy and TMs, directly from a Pokémon’s info screen. - Various bug fixes and performance updates. What's New in Version 1.75.0 - Improved in-game messaging for error codes. - Added ability to view and activate items, such as Rare Candy and TMs, directly from a Pokémon’s info screen. - Various bug fixes and performance updates. What's New in Version 1.73.5 - Trainers can now transform Rare Candy to a specific Pokémon’s Candy in bulk. - Various bug fixes and performance updates. What's New in Version 1.73.3 - Trainers can now transform Rare Candy to a specific Pokémon’s Candy in bulk. - Various bug fixes and performance updates. What's New in Version 1.71.1 - Aspect ratios and UI are now optimized for larger screens such as the iPhone X. - Lucky Eggs and Star Pieces are now accessible and usable from the Raid and Gym Battle inventories. - Various bug fixes and performance updates. What's New in Version 1.69.2 - The Nearby Pokémon indicator now prioritizes Pokémon that are not registered to your Pokédex and are at PokéStops near you. - Various bug fixes and performance updates. What's New in Version 1.67.2 - Introduced the new Field Research and Special Research feature that encourages Trainers to complete objectives to earn unique rewards. - Trainers can now discover the Mythical Pokémon Mew for the first time with Special Research! - Various bug fixes and performance updates. What's New in Version 1.65.3 - Facebook credentials can now be used to log into the app via the ‘Account’ section in Settings. - Various bug fixes and performance updates. What's New in Version 1.61.2 - Fix bugs. What's New in Version 1.61.1 - Improved the in-game News feature. - The Pokémon Collection search function now lets Trainers search using “Shiny.” - Various bug fixes and performance updates.
-               </p>
-            </div>
-            <div class="detail-app.infomation margin-bottom intereting">
+               </template>
+            </t-collapse>
+            <div class="detail-app.infomation intereting">
                <p class="title"> Interting </p>
-               <div class="list">
-                  <list-app-hot />
+               <div class="apphost">
+                  <div class="content">
+                     <ul class="list">
+                        <li class="item" v-for="item in 8">
+                           <router-link :to="'/lite/info/app/1'" class="app" tag="div">
+                              <img src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg">
+                              <p>Pokémon</p>
+                           </router-link>
+                        </li>
+                     </ul>
+                  </div>
                </div>
             </div>
             <div class="download">
@@ -51,14 +56,32 @@
             </div>
          </div>
       </div>
+      <loading v-else/>
    </div>
 </template>
 <style lang="scss" scoped>
+   @font-face {
+      font-family: DIM-Medium;
+      src: url("/fonts/DIN-Medium.ttf");
+   }
+
+   ;
+
    .main {
       .wrapper {
+         padding-top: 11.467vw;
+         background-color: #fff;
+
          .detail-app {
+            padding: {
+               top: 4.267vw;
+               bottom: 18.667vw;
+            }
+
+            ;
+
             .margin-bottom {
-               margin-bottom: (4.267vw + 7.6);
+               margin-bottom: (4.267vw + 4.266);
             }
 
             .detail-app\.basic {
@@ -78,21 +101,19 @@
                .info {
                   position: relative;
 
+                  padding: {
+                     top: 1.067vw;
+                  }
+
                   flex: {
                      basis: 0;
                      grow: 1;
                      shrink: 1;
                   }
 
-                  ;
-
-                  padding: {
-                     top: 1.067vw;
-                     bottom: 1.067vw;
-                  }
-
                   display: flex;
                   justify-content: space-between;
+                  flex-direction: column;
 
                   .app\.name {
                      margin: 0;
@@ -108,11 +129,6 @@
                      font-size: 5.6vmin;
                   }
 
-                  @font-face {
-                     font-family: DIM-Medium;
-                     src: url("/fonts/DIN-Medium.ttf");
-                  }
-
                   .bottom {
                      color: rgb(162, 171, 191);
                      display: flex;
@@ -121,7 +137,9 @@
                      font-weight: 500;
                      align-items: center;
 
-                     .app\.size {}
+                     .app\.size {
+                        margin-right: 5.333vw;
+                     }
 
                   }
                }
@@ -130,7 +148,10 @@
             .detail-app\.infomation {
 
                .title {
-                  color: rgb(47, 64, 89) font-size: 4.8vmin;
+                  margin: 0;
+                  padding: 0;
+                  color: rgb(47, 64, 89);
+                  font-size: 4.8vmin;
                   font-weight: 500;
                   line-height: 6.4vW;
                   padding: 4.267vw 5.333vw;
@@ -149,7 +170,7 @@
                      .key {
                         margin: 0;
                         padding: 0;
-                        font-size 3.733vmin;
+                        font-size: 3.733vmin;
                         font-weight: 500;
                         line-height: 4.267vw;
                         margin-right: 4vw;
@@ -180,7 +201,7 @@
 
             .detail-app\.screenshot {
                .screenshot\.list {
-                  overflow: hidden;
+                  overflow: scroll hidden;
 
                   ul {
                      margin: 0;
@@ -211,64 +232,87 @@
                }
             }
 
-            .detail-app\.description {
+            .intereting {
+               overflow: none;
 
-               padding-bottom: 0;
-               padding-left: 5.333vw;
-               padding-right: 5.333vw;
-               padding-top: 4.267vw;
+               .apphost {
+                  margin-bottom: 4.8vw;
 
-               .title {
-                  position: relative;
-                  margin-bottom: 4.267vw;
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-
-                  span {
-                     color: rgb(22, 43, 72);
-                     font-size: 4.8vmin;
-                     font-weight: 500;
-                  }
-
-                  img {
-                     height: 5.867vw;
-                     width: 5.867vw;
-                  }
-               }
-
-               .content {
-                  margin: 0;
-                  padding: 0;
-                  color: rgb(74, 88, 112);
-                  font-family: PingFangsC-Medium;
-                  font-size: 3.467vmin;
-                  font-weight: 400;
-                  line-height: 5.067vW;
-                  overflow: hidden;
-                  transition: height .5s ease;
-                  text-overflow: ellipsis;
-                  -webkit-boX-orient: vertical;
-                  webkit-line-clamp: 3;
-                  height: 3em;
-
-               }
-
-               &.max {
                   .title {
-                     img {
-                        transform: rotate(180deg);
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                     color: rgb(22, 43, 72);
+                     display: flex;
+                     font-size: 4.267vmin;
+                     font-weight: 500;
+                     line-height: 5.867vw;
+                     overflow: hidden;
+                     padding: 0 5.333vw;
+                     align-items: center;
+
+                     .icon {
+                        height: 5.867vw;
+                        margin-top: -0.8vW;
+                        vertical-align: middle;
+                        width: 5.867vw;
+                     }
+
+                     span {
+                        margin-left: 1.067vw;
                      }
                   }
 
                   .content {
-                     height: hidden;
+                     width: 100%;
+                     overflow: hidden;
+
+                     .list {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        padding: 0 5.333vw;
+                        width: 100vw;
+                        box-sizing: border-box;
+                        display: flex;
+
+                        .item>.app {
+                           box-sizing: border-box;
+                           display: flex;
+                           align-items: center;
+                           flex-direction: column;
+                           height: 24.533vw;
+                           margin-bottom: 4.267vw;
+                           text-align: center;
+                           width: 18.667vw;
+
+                           img {
+                              border-radius: 3.467vw;
+                              height: 18.667vw;
+                              width: 18.667VW;
+                           }
+
+                           p {
+                              margin: 0;
+                              padding: 0;
+                              color: rgb(11, 57, 95);
+                              display: inline-block;
+                              font-size: 3.2vmin;
+                              font-weight: 500;
+                              line-height: 3.733vw;
+                              margin-top: 2.133vw;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                              white-space: nowrap;
+                              width: 18.667vw;
+                           }
+                        }
+                     }
                   }
                }
-            }
 
-            .intereting {
-               overflow: none;
             }
 
             .download {
@@ -281,6 +325,7 @@
                left: 0;
                position: fixed;
                width: 100vw;
+               outline: none;
 
                button {
                   background-color: rgb(0, 142, 255);
@@ -292,7 +337,7 @@
                   line-height: 5.333vw;
                   outline-style: none;
                   width: 89.333vw;
-                  
+
                }
             }
          }
@@ -300,10 +345,17 @@
    }
 </style>
 <script>
-   import LiteFooter from "../components/Lite.Footer.vue"
    import RateStar from "../components/RateStar.vue"
    import ListAppHot from "../components/ListAppHot.vue"
+   import TCollapse from "../components/TCollapse.vue"
+   import Loading from "../components/Loading.AppInfo_Page.vue"
    export default {
-      components: { LiteFooter, RateStar, ListAppHot }
+      components: { RateStar, ListAppHot, TCollapse, Loading },
+      data: () => ({
+         loading: true
+      }),
+      mounted() {
+         setTimeout(() => this.loading = false, 3000)
+      }
    }
 </script>

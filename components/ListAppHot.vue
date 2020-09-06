@@ -1,14 +1,16 @@
 <template>
    <div class="apphost">
-      <p class="title">
+      <p class="title" v-if="title">
          <img class="icon" src="/assets/home.ic.hot.svg">
          <span>Hot</span>
       </p>
       <div class="content">
          <ul class="list">
             <li class="item" v-for="item in 8">
+               <router-link :to="'/lite/info/app/1'" class="app" tag="div">
                <img src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg">
                <p>Pokémon</p>
+               </router-link>
             </li>
          </ul>
       </div>
@@ -58,7 +60,7 @@
             box-sizing: border-box;
             display: flex;
 
-            .item {
+            .item > .app{
                box-sizing: border-box;
                display: flex;
                align-items: center;
@@ -96,6 +98,11 @@
 
 <script>
    export default {
-      
+      props: {
+         title: {
+            type: Boolean,
+            default: true
+         }
+      }
    }
 </script>

@@ -55,7 +55,7 @@
 </style>
 <script>
    import LiteFooter from "../components/Lite.Footer.vue"
-   import LiteLoading from "../components/Lite.Loading.vue"
+   import LiteLoading from "../components/loading.lite.vue"
    import AppInfo from "../components/AppInfo.vue"
    import LoadingMore from "../components/Button:Loading.More.vue"
 

@@ -6,6 +6,7 @@ import LiteGame from "../pages/Lite.Game.vue"
 import LiteApp from "../pages/Lite.App.vue"
 import LiteTopApp from "../pages/Lite.TopApp.vue"
 import AppInfo_Page from "../pages/AppInfo_Page.vue"
+import LiteSearch from "../pages/Lite.Search.vue"
 import Error404 from "../pages/404.vue"
 
 const routes = [
@@ -34,6 +35,10 @@ const routes = [
    {
       path: "/lite/info/app/:id",
       component: AppInfo_Page
+   },
+   {
+      path: "/lite/search",
+      component: LiteSearch
    },
    {
       path: "*",

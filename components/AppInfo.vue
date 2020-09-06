@@ -1,5 +1,5 @@
 <template>
-   <div class="appinfo">
+   <router-link :to="'/lite/info/app/' + id" class="appinfo" tag="div">
       <div class="appinfo.content">
          <img class="icon" :src="src">
          <div class="app.content">
@@ -8,7 +8,7 @@
          </div>
       </div>
       <button class="button"></button>
-   </div>
+   </router-link>
 </template>
 <style lang="scss" scoped>
    .appinfo {
