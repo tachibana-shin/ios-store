@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>ic_search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04---Lite" transform="translate(-343.000000, -44.000000)" fill-rule="nonzero">
+            <g id="分组-2" transform="translate(343.000000, 44.000000)">
+                <g id="分组" transform="translate(5.000000, 4.000000)" stroke="#0084F0" stroke-width="1.5">
+                    <circle id="椭圆形" cx="5" cy="5" r="5"></circle>
+                    <path d="M7.9330127,10.1160254 L7.9330127,12.1160254" id="直线" stroke-linecap="round" stroke-linejoin="round" transform="translate(7.933013, 11.116025) rotate(-30.000000) translate(-7.933013, -11.116025) "></path>
+                </g>
+                <rect id="ic_search" x="0" y="0" width="20" height="20"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
