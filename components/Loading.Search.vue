@@ -87,7 +87,7 @@
                   height: 23.467Vw;
                   margin-top: 4.267vw;
                   width: 18.667vw;
-                  display: fex;
+                  display: flex;
                   flex-direction: column;
 
                   .icon {
@@ -98,12 +98,15 @@
                   }
 
                   .text {
+                     margin: 0;
+                     padding: 0;
                      background-color: rgb(237, 240, 245);
                      border-radius: 1.6vw;
-                     flex-basis: 0%;
+                     flex-basis: 0;
                      flex-grow: 1;
                      flex-shrink: 1;
                      margin-top: 1.6vw;
+                     
                   }
                }
             }
