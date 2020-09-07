@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>toast_submit_processing</title>
+    <desc>Created with Sketch.</desc>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="11---问题反馈" transform="translate(-132.000000, -217.000000)">
+            <g id="编组-2" transform="translate(132.000000, 217.000000)">
+                <path d="M20,33.8461538 C27.6470196,33.8461538 33.8461538,27.6470196 33.8461538,20 C33.8461538,12.3529804 27.6470196,6.15384615 20,6.15384615 C12.3529804,6.15384615 6.15384615,12.3529804 6.15384615,20" id="形状" stroke-opacity="0.7" stroke="#E7F0FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(20.000000, 20.000000) rotate(-270.000000) translate(-20.000000, -20.000000) "></path>
+                <rect id="toast_submit_processing" x="0" y="0" width="40" height="40"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

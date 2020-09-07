@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="297px" height="244px" viewBox="0 0 297 244" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>pop_bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-3.79886454%" y1="10.4909994%" x2="130.107043%" y2="141.472227%" id="linearGradient-1">
+            <stop stop-color="#FFD769" offset="0%"></stop>
+            <stop stop-color="#FFBD22" offset="100%"></stop>
+        </linearGradient>
+        <path d="M8,0 L289,0 C293.418278,-8.11624501e-16 297,3.581722 297,8 L297,244 L0,244 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 Z" id="path-2"></path>
+        <linearGradient x1="-3.79886454%" y1="10.4909994%" x2="127.063622%" y2="138.495279%" id="linearGradient-4">
+            <stop stop-color="#FFEA95" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FDD653" stop-opacity="0.75" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-3.79886454%" y1="10.4909994%" x2="127.839399%" y2="139.254111%" id="linearGradient-5">
+            <stop stop-color="#FFEA95" stop-opacity="0.31" offset="0%"></stop>
+            <stop stop-color="#FFD138" stop-opacity="0.48" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-3.79886454%" y1="10.4909994%" x2="127.839399%" y2="139.254111%" id="linearGradient-6">
+            <stop stop-color="#FFEA95" stop-opacity="0.31" offset="0%"></stop>
+            <stop stop-color="#FFD138" stop-opacity="0.27" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-3.79886454%" y1="10.4909994%" x2="123.327411%" y2="134.840672%" id="linearGradient-7">
+            <stop stop-color="#FEEDA8" stop-opacity="0.47" offset="0%"></stop>
+            <stop stop-color="#FFD446" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="现有VIP绑定设备号" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="弹窗切图" transform="translate(-61.000000, -69.000000)">
+            <g id="分组" transform="translate(61.000000, 69.000000)">
+                <g id="分组-8-copy">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <ellipse id="椭圆形-copy-3" fill="url(#linearGradient-4)" fill-rule="nonzero" mask="url(#mask-3)" cx="39.5" cy="204.341463" rx="19.5" ry="19.3414634"></ellipse>
+                    <ellipse id="椭圆形-copy-5" fill="url(#linearGradient-4)" fill-rule="nonzero" mask="url(#mask-3)" cx="64.5" cy="185.341463" rx="5.5" ry="5.34146341"></ellipse>
+                    <ellipse id="椭圆形-copy-2" fill="url(#linearGradient-5)" fill-rule="nonzero" mask="url(#mask-3)" cx="277" cy="83.3170732" rx="84" ry="83.3170732"></ellipse>
+                    <ellipse id="椭圆形-copy-4" fill-opacity="0.71" fill="url(#linearGradient-5)" fill-rule="nonzero" mask="url(#mask-3)" cx="277" cy="298.552846" rx="84" ry="83.3170732"></ellipse>
+                    <path d="M75.0901153,139.631338 L166.043366,139.952185 C175.394218,139.985171 182.966434,147.557278 182.999555,156.90813 L182.999555,156.90813 C183.032375,166.173983 175.547523,173.712047 166.281669,173.744867 C166.242133,173.745007 166.202596,173.745007 166.16306,173.744868 L75.2098099,173.424021 C65.8589577,173.391035 58.2867412,165.818928 58.2536203,156.468076 L58.2536203,156.468076 C58.2208004,147.202223 65.7056528,139.664159 74.971506,139.631339 C75.0110423,139.631199 75.050579,139.631199 75.0901153,139.631338 Z" id="矩形" fill="url(#linearGradient-5)" fill-rule="nonzero" mask="url(#mask-3)" transform="translate(120.626588, 156.688103) rotate(-30.000000) translate(-120.626588, -156.688103) "></path>
+                    <path d="M130.090115,28.5419075 L221.043366,28.8627541 C230.394218,28.8957401 237.966434,36.4678473 237.999555,45.818699 L237.999555,45.818699 C238.032375,55.0845523 230.547523,62.6226162 221.281669,62.6554361 C221.242133,62.6555762 221.202596,62.6555765 221.16306,62.655437 L130.20981,62.3345904 C120.858958,62.3016044 113.286741,54.7294972 113.25362,45.3786455 L113.25362,45.3786455 C113.2208,36.1127922 120.705653,28.5747283 129.971506,28.5419084 C130.011042,28.5417683 130.050579,28.5417681 130.090115,28.5419075 Z" id="矩形-copy" fill="url(#linearGradient-6)" fill-rule="nonzero" mask="url(#mask-3)" transform="translate(175.626588, 45.598672) rotate(-30.000000) translate(-175.626588, -45.598672) "></path>
+                    <path d="M-23.334465,-21.0771418 L111.309093,-20.6021734 C122.299543,-20.5634035 131.199488,-11.6635874 131.238416,-0.673137938 L131.459337,61.6980646 C131.498461,72.7436903 122.575928,81.7296553 111.530302,81.7687792 C111.483172,81.7689462 111.436041,81.7689465 111.388911,81.7687802 L-43.1136296,81.2237573 L-43.404891,-1.00642618 C-43.4440149,-12.0520519 -34.5214823,-21.0380169 -23.4758566,-21.0771408 C-23.4287262,-21.0773077 -23.3815954,-21.0773081 -23.334465,-21.0771418 Z" id="矩形-copy-2" fill-opacity="0.83" fill="url(#linearGradient-7)" fill-rule="nonzero" mask="url(#mask-3)" transform="translate(44.027223, 30.345819) rotate(-30.000000) translate(-44.027223, -30.345819) "></path>
+                </g>
+                <rect id="pop_bg" fill-rule="nonzero" x="0" y="0" width="297" height="244"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

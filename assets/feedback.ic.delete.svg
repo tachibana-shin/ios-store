@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>feedback_ic_delete</title>
+    <desc>Created with Sketch.</desc>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="11---问题反馈" transform="translate(-335.000000, -55.000000)">
+            <g id="编组-3" transform="translate(335.000000, 55.000000)">
+                <g id="Group-27-Copy-5">
+                    <circle id="Oval-3" fill="#008EFF" cx="10" cy="10" r="10"></circle>
+                    <g id="Group-26" transform="translate(10.000000, 10.000000) rotate(-315.000000) translate(-10.000000, -10.000000) translate(5.000000, 5.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M5,0 L5,10" id="Line"></path>
+                        <path d="M0,5 L10,5" id="Line-Copy"></path>
+                    </g>
+                </g>
+                <rect id="feedback_ic_delete" x="0" y="0" width="20" height="20"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
