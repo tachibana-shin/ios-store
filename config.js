@@ -1,5 +1,5 @@
 SystemJS.config({
-  baseURL: '/',
+  baseURL: 'https://unpkg.com/',
   defaultExtension: true,
   meta: {
       "*.scss": { "loader": "sass" },
@@ -34,7 +34,8 @@ SystemJS.config({
         'axios': '/js/axios.js',
         'vue-progressbar': '/js/vue-progressbar.js',
         "vue": "/js/vue.js",
-        "vue-carousel-3d": "/js/vue-carousel-3d.min.js"
+        "vue-carousel-3d": "/js/vue-carousel-3d.min.js",
+        "vue-awesome-swiper": "https://unpkg.com/vue-awesome-swiper"
   },
   transpiler: 'plugin-babel',
   separateCSS: false,

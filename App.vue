@@ -5,9 +5,12 @@
          <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event"/>
       </transition>
       <transition name="fade:ease">
-         <backdrop-mark v-if="NavListShow" />
+         <backdrop-mark v-if="NavListShow || HowToInstallShow" @click="HowToInstallShow = false"/>
       </transition>
-      <nav-list-wrapper :class="{ active: NavListShow }" @hide-menu="NavListShow = false" />
+      <transition name="howtoinstall">
+         <how-to-install v-if="HowToInstallShow"/>
+      </transition>
+      <nav-list-wrapper :class="{ active: NavListShow }" @hide-menu="NavListShow = false" @show-installation-guide="HowToInstallShow = true" />
       <router-view />
    </div>
 </template>
@@ -45,7 +48,35 @@
                transform: translateY(-100%);
             }
          }
-      } 
+      }
+      .howtoinstall-enter-active {
+         animation: howtoinstallshow .666s ease;
+         @keyframes howtoinstallshow {
+            from {
+               transform: scale(0);
+               opacity: 0;
+            }
+            50% {
+               transform: scale(1.1);
+            }
+            to {
+               transform: scale(1);
+               opacity: 1;
+            }
+         }
+      }
+      .howtoinstall-leave-active {
+         animation: howtoinstallhide .666s ease;
+         @keyframes howtoinstallhide {
+            from {
+               transform: scale(1) translateY(0);
+            }
+            
+            to {
+               transform: scale(0) translateY(-30px);
+            }
+         }
+      }
 
    }
 </style>
@@ -53,11 +84,13 @@
    import HeaderApp from "./components/Header.vue"
    import NavListWrapper from "./components/Nav.List-Wrapper.vue"
    import BackdropMark from "./components/Backdrop.vue"
+   import HowToInstall from "./components/HowToInstall.vue"
    export default {
-      components: { HeaderApp, NavListWrapper, BackdropMark },
+      components: { HeaderApp, NavListWrapper, BackdropMark, HowToInstall },
       data: () => ({
          NavListShow: false,
-         HeaderAppShow: true
+         HeaderAppShow: true,
+         HowToInstallShow: false
       }),
       mounted() {
          //  [App.vue specific] When App.vue is finish loading finish the progress bar

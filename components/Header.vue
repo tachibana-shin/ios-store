@@ -5,7 +5,7 @@
          <img class="logo" src="/assets/nav.ic.logo.svg">
          <img class="download" src="/assets/nav.ic.download.svg">
       </div>
-      <div class="tabs">
+      <div class="tabs" v-if="!$route.meta.hiddenTab">
          <router-link tag="span" to="/" exact-active-class="active" class="left">
             Download VIP
          </router-link>

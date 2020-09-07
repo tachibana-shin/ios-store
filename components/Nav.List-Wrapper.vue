@@ -16,15 +16,15 @@
                   <img class="icon" src="/assets/bar.ic.bind.svg">
                   <span> Bind your UIID </span>
                </li>
-               <li class="item">
+               <li class="item" @click="$emit('show-installation-guide')">
                   <img class="icon" src="/assets/bar.ic.vip.svg">
                   <span> Purchase VIP </span>
                </li>
                <hr>
-               <li class="item">
+               <router-link to="/" tag="li" exact-active-class="active" class="item">
                   <img class="icon" src="/assets/bar.ic.home.svg">
                   <span> Home </span>
-               </li>
+               </router-link>
                <li class="item">
                   <img class="icon" src="/assets/bar.ic.download.svg">
                   <span> Download Tutuapp VIP </span>
@@ -34,7 +34,7 @@
                   <span> iOS Apps & Games </span>
                </li>
                <hr>
-               <router-link tag="li" to="/feedback" class="item">
+               <router-link tag="li" to="/feedback" class="item" active-class="active">
                   <img class="icon" src="/assets/bar.ic.feedback.svg">
                   <span> Feedback </span>
                </router-link>

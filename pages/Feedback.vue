@@ -5,6 +5,7 @@
             <span>Feedback Type</span>
          </div>
          <div class="select">
+            <input v-model="typeFeedback" placeholder="Input Type Feedback">
          </div>
       </div>
       <div class="feedback-item feedback.content">
@@ -12,29 +13,49 @@
             <span>Descrition</span>
          </div>
          <div class="textarea-parent">
-            <textarea></textarea>
-            <span> 0 / 500 </span>
+            <textarea placeholder="Please describe your problem or suggestion in as much detail as possible" v-model="content"></textarea>
+            <span> {{ content.length }} / 500 </span>
          </div>
       </div>
       <div class="feedback-item feedback-screenshot">
-         <div class="title nostar">
-            <span> Screenshot </span>
-            <span> 0 / 4 </span>
+         <div class="title">
+            <span class="nostar"> Screenshot </span>
+            <span> {{ fileSendToReport.length }} / 4 </span>
          </div>
          <div class="cube">
-            <div class="btn">
-               <span></span>
-            </div>
-            <div class="item">
-               <div class="busybox">
+            <div class="item" v-for="item in fileSendToReport">
+               <div class="busybox" :style="{ backgroundImage: 'url(' + getBlob(item.file) + ')' }">
                   <i class="close"></i>
-                  <div class="progress">
-                     <i class="error"></i>
-                     <span> 100% </span>
+                  <div class="progress" v-if="item.progress != null">
+                     <i class="error" :class="{ active: item.error }">!</i>
+                     <span v-if="!item.error"> {{ item.progress }} </span>
                   </div>
                </div>
             </div>
+            <div class="btn" v-if="fileSendToReport.length < 4" @click="$refs.File.click()">
+               <span></span>
+               <input type="file" accept="image/*" hidden ref="File" @change="addFile">
+            </div>
          </div>
+      </div>
+      <div class="feedback-item feedback-email">
+         <div class="title">
+            <span v-model="email">Email</span>
+         </div>
+         <input>
+      </div>
+      <button class="submit" :class="{ active: checkValid() } "> Submit </button>
+      <div class="toast" v-if="state == 1 || state == 2">
+         <img class="progress" src="/assets/toast.submit.progress.svg">
+         <p> Submting... </p>
+         <img src="/assets/toast.submit.failure.svg" v-if="state == 2">
+         <p v-if="state == 2"> Submit Failure </p>
+      </div>
+      <div class="notice" v-if="state == 3">
+         <img src="/assets/toast.submit.success.svg">
+         <h2 class="title">Submitsion Success</h2>
+         <p class="text"> Thank you for feedback! </p>
+         <button class="ok" @click="state = 0"> OK </button>
       </div>
    </div>
 </template>
@@ -42,6 +63,16 @@
    .main {
       background-color: rgb(244, 245, 247);
       padding-top: 6.4vw;
+
+      padding: {
+         left: 5.333vw;
+         right: 5.333vw;
+      }
+
+      ;
+      box-sizing: border-box;
+      width: 100%;
+      overflow: none;
 
       .feedback-item {
          margin-bottom: 9.6vw;
@@ -57,6 +88,7 @@
                color: rgb(55, 77, 115);
                font-size: 4.267vmin;
                font-weight: 500;
+               margin-right: 2.667vw;
 
                &:not(.nostar):after {
                   content: "•";
@@ -66,22 +98,18 @@
             }
          }
 
-         .select {
-            color: rgb(55, 77, 115);
-            text-align: center;
-
-            background-color: rgb(242, 243, 245);
-            border-radius: 5.333vw;
-            color: rgb(162, 171, 191);
-            font-size: 3.733vmin;
-            font-weight: 500;
-            line-height: 4.267vw;
-            outline-style: none;
-            text-align: center;
-            display: block;
+         .select input {
+            background-color: rgb(255, 255, 255);
             border: 0;
-            position: absolute;
-            z-index: 2;
+            outline: none;
+            border-radius: 2.133vw;
+            box-sizing: border-box;
+            color: rgb(55, 77, 115);
+            font-size: 3.733vmin;
+            font-weight: 400;
+            height: 11.733vw;
+            padding: 3.2vw 5.333vw;
+            width: 89.333vw;
          }
       }
 
@@ -97,6 +125,7 @@
             border: 1px solid rgb(220, 223, 230);
             border-radius: 1.067vw;
             box-sizing: border-box;
+            position: relative;
 
             textarea {
                color: rgb(96, 98, 102);
@@ -104,13 +133,13 @@
                font-size: inherit;
                line-height: 1.5;
                padding: 1.333vw 4vw;
-               resize: vertical;
                color: rgb(55, 77, 115);
                font-size: 3.733vmin;
                font-weight: 400;
                line-height: 5.867vw;
                min-height: 32.267vw;
-               padding: 0 5.333vw;
+               border: none;
+               outline: none;
             }
 
             span {
@@ -127,27 +156,38 @@
       .feedback-screenshot {
          .cube {
             position: relative;
+            display: flex;
+            flex-wrap: wrap;
 
             .btn {
 
                margin: 2.667vw 0;
                overflow: hidden;
                position: relative;
+               padding: 0;
 
                span {
                   background-color: rgb(255, 255, 255);
-                  border-radius: 0.533vw;
                   box-shadow: rgba(0, 0, 0, 0.08) 0 0 1.6vw 0.533vw;
                   box-sizing: border-box;
-                  height: 21.333vw;
-                  position: relative;
-                  width: 21.333vw;
                   border: 0.53vw solid rgb(209, 216, 230);
                   border-radius: 2.133vw;
                   ;
                   box-shadow: none;
                   height: 16.533vw;
                   width: 16.533vw;
+                  display: block;
+                  position: relative;
+
+                  &:before {
+                     content: "+";
+                     color: rgb(209, 216, 230);
+                     position: absolute;
+                     font-size: 1.5rem;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
+                  }
                }
             }
 
@@ -162,6 +202,13 @@
                position: relative;
                margin-right: 7.467vw;
 
+               margin: {
+                  top: 2.667vw;
+                  bottom: 2.667vw;
+               }
+
+               ;
+
                .busybox {
 
                   border-radius: 2.133vw;
@@ -171,7 +218,6 @@
                   background-position: center;
                   background-repeat: no-repeat;
                   background-size: cover;
-                  border-radius: 0.533VW;
                   box-sizing: border-box;
 
                   .close {
@@ -210,14 +256,17 @@
 
                      .error {
                         font-size: 8vmin;
-                        position: relative;
                         z-index: 1;
                         color: rgb(244, 53, 48);
-                        display: block;
+                        display: none;
+
+                        &.active {
+                           display: block;
+                        }
                      }
 
                      span {
-                        color: rgb(255, 255, 255);
+                        color: #000;
                         font-size: 5.333vmin;
                      }
                   }
@@ -226,5 +275,197 @@
          }
       }
 
+      .feedback-email input {
+         background-color: rgb(255, 255, 255);
+         border: 0;
+         outline: none;
+         border-radius: 2.133vw;
+         box-sizing: border-box;
+         color: rgb(55, 77, 115);
+         font-size: 3.733vmin;
+         font-weight: 400;
+         height: 11.733vw;
+         padding: 3.2vw 5.333vw;
+         width: 89.333vw;
+      }
+
+      .submit {
+         margin-bottom: 9.6vw;
+         width: 89.333vw;
+
+         background-color: rgb(74, 76, 91);
+         border-radius: 0.533vw;
+         box-sizing: border-bOx;
+         color: rgb(255, 255, 255);
+         cursor: pointer;
+         display: block;
+         font-size: 4.267vmin;
+         line-height: 1;
+
+         outline-style: none;
+         padding: 4.533vw 4.267vw;
+         text-align: center;
+         white-space: nowrap;
+         width: 100%;
+         border-radius: 26.667vw;
+
+         &.active {
+            background-color: rgb(0, 132, 240);
+         }
+      }
+
+      .toast {
+         background-color: rgba(0, 21, 51, 0.74);
+         border-radius: 2.133vw;
+         left: 50%;
+         padding-bottom: 3.2vw;
+         padding-top: 4.267vw;
+         position: fixed;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         width: 24.533vw;
+         z-index: 3;
+
+         img {
+            display: block;
+            height: 10.667vw;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            width: 10.667vw;
+
+            &.progress {
+               animation: rotate 1s linear infinite;
+
+               @keyframes rotate {
+                  from {
+                     transform: rotate(0deg);
+                  }
+
+                  to {
+                     transform: rotate(360deg);
+                  }
+               }
+            }
+         }
+
+         p {
+            margin: 0;
+            padding: 0;
+            color: rgb(229, 236, 249);
+            font-size: 3.733vmin;
+            font-weight: 500;
+            line-height: 5.333vw;
+            margin-top: 1.067vw;
+            text-align: center;
+         }
+      }
+
+      .notice {
+         background-color: rgba(8, 14, 30, 0.75);
+         height: 100v%;
+         left: 0;
+         position: fixed;
+         top: 0;
+         width: 100%;
+         Z-index: 99999;
+
+         .content {
+            background-color: rgb(255, 255, 255);
+            border-radius: 3.2vw;
+            height: 53.333vw;
+            left: 50% margin: 0 auto;
+            position: absolute;
+            top: 50%,
+               transform: translate(-50%, -50%);
+            width: 56.267vw;
+
+            img {
+               display: block;
+               height: 32vw;
+               margin: 0 auto;
+               margin-top: -16vw;
+               width: 32vw;
+            }
+
+            h2 {
+               color: rgb(0, 132, 240);
+               font-size: 4.267vmin;
+               font-weight: 500;
+               line-height: 6.4VW;
+               margin-bottom: 0;
+               margin-top: 3.2vW;
+               text-align: center;
+            }
+
+            .text {
+               font-weight: 400;
+               line-height: 6.4vw;
+               margin-top: 0.533vW;
+               text-align: center;
+               font-size: 3.733vmin;
+               color: rgb(0, 132, 240);
+            }
+
+            .ok {
+
+               align-items: center;
+               background-color: rgb(72, 160, 252);
+               border-radius: 0 0 3.2vw 3.2vw;
+               bottom: 0;
+               color: rgb(255, 255, 255);
+               display: flex;
+               font-weight: 600;
+               height: 14.4vw;
+               justify-content: center;
+               left: 0;
+               position: absolute;
+               width: 56.267vw;
+            }
+         }
+      }
+
    }
 </style>
+<script>
+   export default {
+      data: () => ({
+         fileSendToReport: [],
+         content: "",
+         typeFeedback: "",
+         email: "",
+         state: 0
+      }),
+      watch: {
+         fileSendToReport({ length }) {
+            if (length > 4) {
+               this.fileSendToReport = this.fileSendToReport.slice(0, 4)
+            }
+         },
+         content({ length }) {
+            if (length > 500) {
+               this.content = this.content.slice(0, 500)
+            }
+         }
+      },
+      methods: {
+         addFile({ target }) {
+            this.fileSendToReport.push(...[...target.files].map(e => ({ file: e, error: false, progress: 0 })))
+         },
+         getBlob(file) {
+            let blob = URL.createObjectURL(file)
+
+            setTimeout(() => URL.revokeObjectURL(file), 1000)
+
+            return blob
+         },
+         checkValid() {
+            return !!this.content && !!this.email && !!this.typeFeedback
+         },
+         send() {
+
+         }
+      }
+   }
+</script>

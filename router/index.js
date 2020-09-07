@@ -43,7 +43,10 @@ const routes = [
    },
    {
       path: "/feedback",
-      component: Feedback
+      component: Feedback,
+      meta: {
+         hiddenTab: true
+      }
    },
    {
       path: "*",

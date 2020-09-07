@@ -2,12 +2,12 @@
    <div class="main">
       <div class="wrapper">
          <div class="banner.welcome">
-            <div class="notice">
+            <div class="notice" v-if="showTip">
                <img class="notice.icon" src="/assets/home.ic.anotice.svg">
                <div class="notice.content">
-                  <p> Hello awlxlxk </p>
+                  <p> {{ tipContent }} </p>
                </div>
-               <img class="notice.close" src="/assets/home.ic.close.svg">
+               <img class="notice.close" src="/assets/home.ic.close.svg" @click="showTip = false">
             </div>
             <img class="cloud.front" src="/assets/home.cloud.front.png">
             <img class="spaceship" src="/assets/home.spaceship.png">
@@ -518,7 +518,10 @@
       components: { GuideBlockWrapper, BackdropMark, AppInfo, HomeLoadingApplist },
       data: () => ({
          guideBlockShow: false,
-         AppListLoaded: false
+         AppListLoaded: false,
+         
+         showTip: false,
+         tipContent: ""
       }),
       mounted() {
          setTimeout(() => this.AppListLoaded = true, 3000)
