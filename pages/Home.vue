@@ -241,6 +241,15 @@
                top: 77.333vw;
                z-index: 1;
                @include centerX;
+               animation: fade 1s linear infinite alternate;
+               @keyframes fade {
+                  from {
+                     opacity: 0;
+                  }
+                  to {
+                     opacity: 1;
+                  }
+               }
             }
 
             .download\.download {

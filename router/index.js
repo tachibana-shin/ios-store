@@ -7,6 +7,7 @@ import LiteApp from "../pages/Lite.App.vue"
 import LiteTopApp from "../pages/Lite.TopApp.vue"
 import AppInfo_Page from "../pages/AppInfo_Page.vue"
 import LiteSearch from "../pages/Lite.Search.vue"
+import Feedback from "../pages/Feedback.vue"
 import Error404 from "../pages/404.vue"
 
 const routes = [
@@ -39,6 +40,10 @@ const routes = [
    {
       path: "/lite/search",
       component: LiteSearch
+   },
+   {
+      path: "/feedback",
+      component: Feedback
    },
    {
       path: "*",

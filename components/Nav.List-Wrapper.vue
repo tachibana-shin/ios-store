@@ -34,10 +34,10 @@
                   <span> iOS Apps & Games </span>
                </li>
                <hr>
-               <li class="item">
+               <router-link tag="li" to="/feedback" class="item">
                   <img class="icon" src="/assets/bar.ic.feedback.svg">
                   <span> Feedback </span>
-               </li>
+               </router-link>
                <li class="item">
                   <img class="icon" src="/assets/bar.ic.contact.svg">
                   <span> Contact </span>
@@ -72,6 +72,8 @@
       transition: all .666s ease;
       display: flex;
       transform: translateX(-100%);
+      top: 0;
+      left: 0;
 
       &.active {
          transform: translateX(0%);
