@@ -12,34 +12,34 @@
             </div>
             <hr class="line">
             <ul class="list">
-               <li class="item">
-                  <img class="icon" src="/assets/bar.ic.bind.svg">
+               <router-link to="/bind" exact-active-class="active" tag="li" class="item">
+                  <img class="icon" :src="require('@/assets/bar.ic.bind.svg')">
                   <span> Bind your UIID </span>
-               </li>
+               </router-link>
                <li class="item" @click="$emit('show-installation-guide')">
-                  <img class="icon" src="/assets/bar.ic.vip.svg">
+                  <img class="icon" :src="require('@/assets/bar.ic.vip.svg')">
                   <span> Purchase VIP </span>
                </li>
                <hr>
                <router-link to="/" tag="li" exact-active-class="active" class="item">
-                  <img class="icon" src="/assets/bar.ic.home.svg">
+                  <img class="icon" :src="require('@/assets/bar.ic.home.svg')">
                   <span> Home </span>
                </router-link>
-               <li class="item">
-                  <img class="icon" src="/assets/bar.ic.download.svg">
+               <li class="item" @click="$emit('show-installation-guide')">
+                  <img class="icon" :src="require('@/assets/bar.ic.download.svg')">
                   <span> Download Tutuapp VIP </span>
                </li>
                <li class="item">
-                  <img class="icon" src="/assets/bar.ic.game.svg">
+                  <img class="icon" :src="require('@/assets/bar.ic.game.svg')">
                   <span> iOS Apps & Games </span>
                </li>
                <hr>
                <router-link tag="li" to="/feedback" class="item" active-class="active">
-                  <img class="icon" src="/assets/bar.ic.feedback.svg">
+                  <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
                   <span> Feedback </span>
                </router-link>
                <li class="item">
-                  <img class="icon" src="/assets/bar.ic.contact.svg">
+                  <img class="icon" :src="require('@/assets/bar.ic.contact.svg')">
                   <span> Contact </span>
                </li>
                <li class="contact">
@@ -47,14 +47,20 @@
                      <li class="item-contact">
                         <a href="#"> Twitter </a>
                      </li>
+                     <li class="item-contact">
+                        <a href="#"> Instagram </a>
+                     </li>
+                     <li class="item-contact">
+                        <a href="#"> Youtube </a>
+                     </li> 
                   </ul>
                </li>
                <hr>
-               <li class="item">
-                  <img class="icon" src="/assets/bar.ic.contact.svg">
-                  <span> Contact </span>
-               </li>
-               <li class="">
+               <router-link tag="li" to="/blog" active-class="active" class="item">
+                  <img class="icon" :src="require('@/assets/bar.ic.blog.svg')">
+                  <span> Blog </span>
+               </router-link>
+               <li class="" v-if="false">
                   <button class="logout.button"> Log Out </button>
                </li>
             </ul>

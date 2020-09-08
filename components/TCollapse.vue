@@ -2,7 +2,7 @@
    <div class="t-collapse" :class="{ full: state }" @click="state = !state">
       <div class="title">
          <span> Description </span>
-         <img src="/assets/content.ic.down.svg">
+         <img :src="require('@/assets/content.ic.down.svg')">
       </div>
       <p class="content" :style="{ height }">
          <span ref="Content">

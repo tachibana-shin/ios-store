@@ -3,34 +3,34 @@
       <div class="wrapper">
          <div class="banner.welcome">
             <div class="notice" v-if="showTip">
-               <img class="notice.icon" src="/assets/home.ic.anotice.svg">
+               <img class="notice.icon" :src="require('@/assets/home.ic.anotice.svg')">
                <div class="notice.content">
                   <p> {{ tipContent }} </p>
                </div>
-               <img class="notice.close" src="/assets/home.ic.close.svg" @click="showTip = false">
+               <img class="notice.close" :src="require('@/assets/home.ic.close.svg')" @click="showTip = false">
             </div>
-            <img class="cloud.front" src="/assets/home.cloud.front.png">
-            <img class="spaceship" src="/assets/home.spaceship.png">
-            <img class="download.button.highlight" src="/assets/home.btn.highlight.png">
-            <img class="download.button.light" src="/assets/home.btn.light.png">
-            <img class="download.download" src="/assets/home.btn.download.png">
-            <img class="slide-icon" src="/assets/home.slide.icon.svg">
-            <img class="star-big" src="/assets/home.star.big.svg">
-            <img class="star" src="/assets/home.star.svg">
-            <img class="cloud-left" src="/assets/home.cloud.left.svg">
-            <img class="cloud-right" src="/assets/home.cloud.right.svg">
-            <img class="light-top" src="/assets/home.light.top.svg">
-            <img class="light-bottom" src="/assets/home.light.bottom.svg">
+            <img class="cloud.front" :src="require('@/assets/home.cloud.front.png')">
+            <img class="spaceship" :src="require('@/assets/home.spaceship.png')">
+            <img class="download.button.highlight" :src="require('@/assets/home.btn.highlight.png')">
+            <img class="download.button.light" :src="require('@/assets/home.btn.light.png')">
+            <img class="download.download" :src="require('@/assets/home.btn.download.png')">
+            <img class="slide-icon" :src="require('@/assets/home.slide.icon.svg')">
+            <img class="star-big" :src="require('@/assets/home.star.big.svg')">
+            <img class="star" :src="require('@/assets/home.star.svg')">
+            <img class="cloud-left" :src="require('@/assets/home.cloud.left.svg')">
+            <img class="cloud-right" :src="require('@/assets/home.cloud.right.svg')">
+            <img class="light-top" :src="require('@/assets/home.light.top.svg')">
+            <img class="light-bottom" :src="require('@/assets/home.light.bottom.svg')">
          </div>
          <div class="content">
             <div class="guide-block" @click="guideBlockShow = true">
-               <img class="left" src="/assets/home.ic.video.svg">
+               <img class="left" :src="require('@/assets/home.ic.video.svg')">
                <span> Installation Guide </span>
-               <img class="right" src="/assets/ic.more.svg">
+               <img class="right" :src="require('@/assets/ic.more.svg')">
             </div>
             <div class="applist" v-if="AppListLoaded">
                <span class="applist.title">
-                  <img src="/assets/home.ic.hot.svg">
+                  <img :src="require('@/assets/home.ic.hot.svg')">
                   VIP Features
                </span>
                <div class="applist.wrapper">
@@ -47,9 +47,9 @@
             </div>
          </div>
          <div class="patreon">
-            <img class="item" src="/assets/patreon.yose.png">
-            <img class="item" src="/assets/patreon.paypal.png">
-            <img class="item" src="/assets/patreon.visa.png">
+            <img class="item" :src="require('@/assets/patreon.yose.png')">
+            <img class="item" :src="require('@/assets/patreon.paypal.png')">
+            <img class="item" :src="require('@/assets/patreon.visa.png')">
          </div>
       </div>
       <transition name="fade:ease">

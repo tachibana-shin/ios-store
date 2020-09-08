@@ -5,11 +5,16 @@
          <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event"/>
       </transition>
       <transition name="fade:ease">
-         <backdrop-mark v-if="NavListShow || HowToInstallShow" @click="HowToInstallShow = false"/>
+         <backdrop-mark v-if="NavListShow || HowToInstallShow || LoadingSnipper"/>
       </transition>
       <transition name="howtoinstall">
-         <how-to-install v-if="HowToInstallShow"/>
+         <how-to-install v-if="HowToInstallShow" @close="HowToInstallShow = false" />
       </transition>
+      
+      <transition name="fade:ease">
+         <loading-snipper v-if="LoadingSnipper"/>
+      </transition>
+      
       <nav-list-wrapper :class="{ active: NavListShow }" @hide-menu="NavListShow = false" @show-installation-guide="HowToInstallShow = true" />
       <router-view />
    </div>
@@ -85,16 +90,19 @@
    import NavListWrapper from "./components/Nav.List-Wrapper.vue"
    import BackdropMark from "./components/Backdrop.vue"
    import HowToInstall from "./components/HowToInstall.vue"
+   import LoadingSnipper from "./components/Loading-Snipper.vue"
    export default {
-      components: { HeaderApp, NavListWrapper, BackdropMark, HowToInstall },
+      components: { HeaderApp, NavListWrapper, BackdropMark, HowToInstall, LoadingSnipper },
       data: () => ({
          NavListShow: false,
          HeaderAppShow: true,
-         HowToInstallShow: false
+         HowToInstallShow: false,
+         LoadingSnipper: false
       }),
       mounted() {
          //  [App.vue specific] When App.vue is finish loading finish the progress bar
          this.$Progress.finish()
+         this.$root.$on("loading-snipper", (e) => this.LoadingSnipper = e)
       },
       created() {
          //  [App.vue specific] When App.vue is first loaded start the progress bar

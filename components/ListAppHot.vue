@@ -1,7 +1,7 @@
 <template>
    <div class="apphost">
       <p class="title" v-if="title">
-         <img class="icon" src="/assets/home.ic.hot.svg">
+         <img class="icon" :src="require('@/assets/home.ic.hot.svg')">
          <span>Hot</span>
       </p>
       <div class="content">

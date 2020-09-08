@@ -44,18 +44,20 @@
          </div>
          <input>
       </div>
-      <button class="submit" :class="{ active: checkValid() } "> Submit </button>
+      <button class="submit" :class="{ active: checkValid() } " @click="send"> Submit </button>
       <div class="toast" v-if="state == 1 || state == 2">
-         <img class="progress" src="/assets/toast.submit.progress.svg">
+         <img class="progress" :src="require('@/assets/toast.submit.progress.svg')">
          <p> Submting... </p>
-         <img src="/assets/toast.submit.failure.svg" v-if="state == 2">
+         <img :src="require('@/assets/toast.submit.failure.svg')" v-if="state == 2">
          <p v-if="state == 2"> Submit Failure </p>
       </div>
       <div class="notice" v-if="state == 3">
-         <img src="/assets/toast.submit.success.svg">
-         <h2 class="title">Submitsion Success</h2>
-         <p class="text"> Thank you for feedback! </p>
-         <button class="ok" @click="state = 0"> OK </button>
+         <div class="content">
+            <img :src="require('@/assets/toast.submit.success.svg')">
+            <h2 class="title">Submitsion Success</h2>
+            <p class="text"> Thank you for feedback! </p>
+            <button class="ok" @click="state = 0"> OK </button>
+         </div>
       </div>
    </div>
 </template>
@@ -309,6 +311,7 @@
          width: 100%;
          border-radius: 26.667vw;
 
+
          &.active {
             background-color: rgb(0, 132, 240);
          }
@@ -324,7 +327,7 @@
          top: 50%;
          transform: translate(-50%, -50%);
          width: 24.533vw;
-         z-index: 3;
+         z-index: 9999;
 
          img {
             display: block;
@@ -364,7 +367,7 @@
 
       .notice {
          background-color: rgba(8, 14, 30, 0.75);
-         height: 100v%;
+         height: 100%;
          left: 0;
          position: fixed;
          top: 0;
@@ -375,10 +378,11 @@
             background-color: rgb(255, 255, 255);
             border-radius: 3.2vw;
             height: 53.333vw;
-            left: 50% margin: 0 auto;
+            left: 50%;
+            margin: 0 auto;
             position: absolute;
-            top: 50%,
-               transform: translate(-50%, -50%);
+            top: 50%;
+            transform: translate(-50%, -50%);
             width: 56.267vw;
 
             img {
@@ -464,7 +468,7 @@
             return !!this.content && !!this.email && !!this.typeFeedback
          },
          send() {
-
+            this.state = 1 + 2
          }
       }
    }

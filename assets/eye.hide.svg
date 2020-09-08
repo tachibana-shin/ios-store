@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_cover</title>
+    <desc>Created with Sketch.</desc>
+    <g id="现有VIP绑定设备号" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="页面切图" transform="translate(-187.000000, -40.000000)" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(187.000000, 40.000000)">
+                <path d="M17.3534282,12.1007661 C17.5252034,12.6442214 17.2069862,13.2188554 16.642663,13.3842786 C16.0783565,13.5497018 15.4816408,13.2432518 15.3098655,12.6998125 C14.631376,10.5532321 12.5666689,9.05714286 10.200016,9.05714286 C7.833313,9.05714286 5.76858927,10.5532964 5.09013307,12.699925 C4.91837455,13.2433643 4.32165886,13.5498304 3.75733564,13.3844071 C3.19302911,13.2190161 2.8747952,12.6443661 3.04657042,12.1009268 C3.99691642,9.09394643 6.88667186,7 10.200016,7 C13.5133101,7 16.4029988,9.09389821 17.3534282,12.1007661 Z" id="Shape" fill="#8A95AB" transform="translate(10.200000, 10.214628) rotate(-180.000000) translate(-10.200000, -10.214628) "></path>
+                <rect id="Rectangle-3" x="0" y="0" width="20" height="20"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

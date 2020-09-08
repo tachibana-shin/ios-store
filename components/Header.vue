@@ -1,9 +1,9 @@
 <template>
    <div class="header-nav">
       <div class="wrapper">
-         <img class="menu" src="/assets/nav.ic.menu.svg" @click="$emit('show-menu')">
-         <img class="logo" src="/assets/nav.ic.logo.svg">
-         <img class="download" src="/assets/nav.ic.download.svg">
+         <img class="menu" :src="require('@/assets/nav.ic.menu.svg')" @click="$emit('show-menu')">
+         <img class="logo" :src="require('@/assets/nav.ic.logo.svg')">
+         <img class="download" :src="require('@/assets/nav.ic.download.svg')">
       </div>
       <div class="tabs" v-if="!$route.meta.hiddenTab">
          <router-link tag="span" to="/" exact-active-class="active" class="left">

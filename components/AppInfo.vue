@@ -4,7 +4,7 @@
          <img class="icon" :src="src">
          <div class="app.content">
             <p class="app.title"> {{ name }} </p>
-            <img class="VIP" src="/assets/list.app.vip.png">
+            <img class="VIP" :src="require('@/assets/list.app.vip.png')">
          </div>
       </div>
       <button class="button"></button>

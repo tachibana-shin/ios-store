@@ -3,7 +3,7 @@
       <div class="wrapper_search">
          <div class="search_input">
             <input placeholder="Search" @keyup="fetchData" v-model="keySearch">
-            <img class="icon" src="/assets/ic.search.svg">
+            <img class="icon" :src="require('@/assets/ic.search.svg')">
             <div class="result" v-if="result">
                <ul>
                   <li class="item" v-for="item in result">

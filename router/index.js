@@ -1,13 +1,17 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 import Home from "../pages/Home.vue"
+import Bind from "../pages/Bind.vue"
+import Feedback from "../pages/Feedback.vue"
+import Blog from "../pages/Blog.vue"
+
 import Lite from "../pages/Lite.vue"
 import LiteGame from "../pages/Lite.Game.vue"
 import LiteApp from "../pages/Lite.App.vue"
 import LiteTopApp from "../pages/Lite.TopApp.vue"
 import AppInfo_Page from "../pages/AppInfo_Page.vue"
 import LiteSearch from "../pages/Lite.Search.vue"
-import Feedback from "../pages/Feedback.vue"
+
 import Error404 from "../pages/404.vue"
 
 const routes = [
@@ -48,6 +52,20 @@ const routes = [
          hiddenTab: true
       }
    },
+   {
+      path: "/bind",
+      component: Bind,
+      meta: {
+         hiddenTab: true
+      }
+   },
+   {
+      path: "/blog",
+      component: Blog,
+      meta: {
+         hiddenTab: true
+      }
+   }, 
    {
       path: "*",
       component: Error404

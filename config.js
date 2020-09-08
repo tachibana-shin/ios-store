@@ -35,7 +35,8 @@ SystemJS.config({
         'vue-progressbar': '/js/vue-progressbar.js',
         "vue": "/js/vue.js",
         "vue-carousel-3d": "/js/vue-carousel-3d.min.js",
-        "vue-awesome-swiper": "https://unpkg.com/vue-awesome-swiper"
+        "vue-awesome-swiper": "vue-awesome-swiper",
+        "swiper": "https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"
   },
   transpiler: 'plugin-babel',
   separateCSS: false,

@@ -1,12 +1,17 @@
 <template>
-   <div class="HowToInstall">
-      <div class="content">
+   <div class="HowToInstall" @click="$emit('close')">
+      <div class="content" @click.stop="true">
          <div class="swiper-wrapper">
             <p class="title"> Installation Guide </p>
             <swiper :options="{
-               pagination: '.pagination-swiper'
+               pagination: {
+                  el: '.pagination-swiper',
+                  clickable: true,
+                  bulletClass: 'bullet',
+                  bulletActiveClass: 'bullet-active'
+               }
             }">
-               <swiper-slide class="swiper-item">
+               <swiper-slide class="swiper-item" v-for="item in 5" :key="item">
                   <img src="https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png">
                </swiper-slide>
                <div class="pagination-swiper" slot="pagination">
@@ -15,7 +20,7 @@
          </div>
          <div class="footer">
             <p class="video">
-               <img src="/assets/home.ic.video.svg">
+               <img :src="require('@/assets/home.ic.video.svg')">
                Installation Guide
             </p>
             <button class="install">
@@ -27,6 +32,7 @@
 </template>
 <style lang="scss" scoped>
    @import "https://unpkg.com/swiper/swiper-bundle.min.css";
+   @import "/components/pagination-custom.css";
 
    .HowToInstall {
       display: flex;
@@ -85,6 +91,7 @@
                   left: 50%;
                }
             }
+
          }
 
          .footer {
@@ -124,6 +131,7 @@
             }
          }
       }
+      
    }
 </style>
 <script>
