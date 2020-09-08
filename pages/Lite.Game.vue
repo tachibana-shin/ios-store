@@ -4,10 +4,13 @@
          <div class="banner">
             <carousel-3d :autoplay="true" :autoplay-timeout="3000" :border="0" :autoplay-hover-pause="true" :height="164" :width="330" background-color="#00000000" :per-page="3">
                <slide v-for="(item, index) in 4" :key="index" :index="index" style="border-radius: 10px">
-                  <img :src="'/assets/' + item + '.jpg'">
+                  <router-link to="/lite/topapp/no-name">
+                     <img :src="'/assets/' + item + '.jpg'">
+                  </router-link>
                </slide>
             </carousel-3d>
          </div>
+         
          <div class="applist">
             <ul>
                <li v-for="item in 20">
@@ -15,10 +18,10 @@
                </li>
             </ul>
          </div>
-         <loading-more />
+         <loading-more :state="LoadingMoreState" @click="fetchDataMore" />
       </div>
       <lite-loading v-else :state="{
-         swiper: true, applist: true
+         swiper: true, apphost: false, applist: true
       }" />
       <lite-footer />
    </div>
@@ -64,10 +67,16 @@
       components: { LiteFooter, LiteLoading, Carousel3d, Slide, AppInfo, LoadingMore },
       data: () => ({
          banners: [],
-         loading: true
+         loading: true,
+         LoadingMoreState: false
       }),
+      methods: {
+         fetchDataMore() {
+            setTimeout(() => this.LoadingMoreState = true, 3000)
+         }
+      },
       mounted() {
          setTimeout(() => this.loading = false, 3000)
       }
    }
-</script> 
+</script>
