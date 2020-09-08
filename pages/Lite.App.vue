@@ -10,7 +10,6 @@
                </slide>
             </carousel-3d>
          </div>
-         <list-app-hot/>
          <div class="applist">
             <ul>
                <li v-for="item in 20">
@@ -60,11 +59,10 @@
    import LiteLoading from "../components/loading.lite.vue"
    import AppInfo from "../components/AppInfo.vue"
    import LoadingMore from "../components/Button:Loading.More.vue"
-   import ListAppHot from "../components/ListAppHot.vue"
 
    import { Carousel3d, Slide } from "vue-carousel-3d"
    export default {
-      components: { LiteFooter, LiteLoading, Carousel3d, Slide, AppInfo, LoadingMore, ListAppHot },
+      components: { LiteFooter, LiteLoading, Carousel3d, Slide, AppInfo, LoadingMore },
       data: () => ({
          banners: [],
          loading: true,
@@ -79,4 +77,4 @@
          setTimeout(() => this.loading = false, 3000)
       }
    }
-</script>
+</script>  

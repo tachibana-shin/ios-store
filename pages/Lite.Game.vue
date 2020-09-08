@@ -10,7 +10,6 @@
                </slide>
             </carousel-3d>
          </div>
-         
          <div class="applist">
             <ul>
                <li v-for="item in 20">
@@ -21,7 +20,7 @@
          <loading-more :state="LoadingMoreState" @click="fetchDataMore" />
       </div>
       <lite-loading v-else :state="{
-         swiper: true, apphost: false, applist: true
+         swiper: true, apphost: true, applist: true
       }" />
       <lite-footer />
    </div>
@@ -42,7 +41,6 @@
                object-position: 50% 50%;
             }
          }
-
          .applist {
             ul {
                margin: 0;
@@ -79,4 +77,4 @@
          setTimeout(() => this.loading = false, 3000)
       }
    }
-</script>
+</script> 
