@@ -1,13 +1,13 @@
 <template>
    <div class="rate-star">
       <span class="number"> {{ value }} </span>
-      <img class="rate-star__star" v-for="item in 5" :src="require(getSourceStar(item))">
+      <img class="rate-star__star" v-for="item in 5" :src="('' + getSourceStar(item))">
    </div>
 </template>
 <style lang="scss" scoped>
    @font-face {
       font-family: DIM-Medium;
-      src: url("/fonts/DIN-Medium.ttf");
+      src: url("../fonts/DIN-Medium.ttf");
    }
 
    .rate-star {
@@ -46,7 +46,7 @@
             if (~~this.value < this.value && ~~this.value == index) {
                return "@/assets/rate.ic.0.5.svg"
             }
-            return "@/assets/rate.ic.0.svg"
+            return "@/assets/ratae.ic.0.svg"
          }
       }
    }

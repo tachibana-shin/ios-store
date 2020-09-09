@@ -32,7 +32,7 @@
 </template>
 <style lang="scss" scoped>
    @import "https://unpkg.com/swiper/swiper-bundle.min.css";
-   @import "/components/pagination-custom.css";
+   @import "./pagination-custom.css";
 
    .HowToInstall {
       display: flex;

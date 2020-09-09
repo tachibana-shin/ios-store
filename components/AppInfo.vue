@@ -72,7 +72,7 @@
          width: 12.267vw;
 
          background: {
-            image: url("/assets/list.btn.download.svg");
+            image: url("../assets/list.btn.download.svg");
             repeat: no-repeat;
             size: 100%;
             position: center;

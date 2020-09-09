@@ -110,7 +110,7 @@
 
          .banner\.welcome {
             background: {
-               image: url("/assets/home.bg.png");
+               image: url("../assets/home.bg.png");
                repeat: no-repeat;
                size: cover;
             }
@@ -377,7 +377,7 @@
 
             background: {
                image:
-                  url("/assets/home.transition.png");
+                  url("../assets/home.transition.png");
                repeat: no-repeat;
                size: 100% auto;
                position: 0 0;

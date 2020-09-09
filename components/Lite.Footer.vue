@@ -5,7 +5,7 @@
          :to="item.path"
          :active-class="item.activeClass"
          :exact-active-class="item.exactActiveClass">
-         <img class="icon" :src="item.icon + ($route.path == item.path ? 'selected' : 'default') + '.svg'">
+         <img class="icon" :src="require('@/assets/' + item.icon + ($route.path == item.path ? 'selected' : 'default') + '.svg')">
          <p> {{ item.name }} </p>
       </router-link>
    </footer>
@@ -62,10 +62,10 @@
 <script>
    export default {
       tabs: [
-         { icon: "/assets/tab.ic.home.", path: "/lite", name: "Home", activeClass: "", exactActiveClass: "active" },
-         { icon: "/assets/tab.ic.game.", path: "/lite/game", name: "Games", activeClass: "active" },
-         { icon: "/assets/tab.ic.app.", path: "/lite/app", name: "Apps", activeClass: "active" },
-         { icon: "/assets/tab.ic.search.", path: "/lite/search", name: "Search", activeClass: "active" }, 
+         { icon: "tab.ic.home.", path: "/lite", name: "Home", activeClass: "", exactActiveClass: "active" },
+         { icon: "tab.ic.game.", path: "/lite/game", name: "Games", activeClass: "active" },
+         { icon: "tab.ic.app.", path: "/lite/app", name: "Apps", activeClass: "active" },
+         { icon: "tab.ic.search.", path: "/lite/search", name: "Search", activeClass: "active" }, 
          
       ]
    }

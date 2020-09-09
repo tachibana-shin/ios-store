@@ -1,25 +1,23 @@
-import Vue from "vue"
-import App from "./App.vue"
-import router from "./router/index.js"
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router/index.js'
 
-import VueProgressBar from "vue-progressbar"
-import axios from "axios"
-import eruda from "eruda"
+import VueProgressBar from 'vue-progressbar'
+import axios from 'axios'
+import eruda from 'eruda'
 eruda.init()
 
-
-Vue.prototype.$axios = axios; 
+Vue.prototype.$axios = axios
 
 Vue.use(VueProgressBar, {
-   color: 'rgb(0, 132, 240)',
-   failedColor: "#f00",
-   height: 5
+  color: 'rgb(0, 132, 240)',
+  failedColor: '#f00',
+  height: 5
 })
 
-
 new Vue({
-   el: "#app",
-   router,
-   template: "<App/>",
-   components: { App }
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
 })
