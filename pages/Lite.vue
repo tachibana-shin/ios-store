@@ -2,19 +2,19 @@
    <div class="main">
       <div class="wrapper" v-if="!loading">
          <div class="banner">
-            <carousel-3d :autoplay="true" :autoplay-timeout="3000" :border="0" :autoplay-hover-pause="true" :height="164" :width="330" background-color="#00000000" :per-page="3">
-               <slide v-for="(item, index) in 4" :key="index" :index="index" style="border-radius: 10px">
-                  <router-link to="/lite/topapp/no-name">
-                     <img :src="'/assets/' + item + '.jpg'">
+            <carousel-3d :autoplay="true" :autoplay-timeout="3000" :border="0" :autoplay-hover-pause="true" :height="164" :width="330" background-color="#00000000" :per-page="3" :key="JSON.stringify(banners)">
+               <slide v-for="(item, index) in banners" :key="index" :index="index" style="border-radius: 10px">
+                  <router-link to="/lite">
+                     <img :src="item.path">
                   </router-link>
                </slide>
             </carousel-3d>
          </div>
-         <list-app-hot/>
+         <list-app-hot :items="AppsHot" />
          <div class="applist">
             <ul>
-               <li v-for="item in 20">
-                  <app-info src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg" name="Pokémon" :id="item" />
+               <li v-for="item in Apps">
+                  <app-info :data="item" />
                </li>
             </ul>
          </div>
@@ -42,6 +42,7 @@
                object-position: 50% 50%;
             }
          }
+
          .applist {
             ul {
                margin: 0;
@@ -67,13 +68,61 @@
       components: { LiteFooter, LiteLoading, Carousel3d, Slide, AppInfo, LoadingMore, ListAppHot },
       data: () => ({
          banners: [],
+         AppsHot: [],
+         Apps: [],
          loading: true,
          LoadingMoreState: false
       }),
       methods: {
          fetchDataMore() {
-            setTimeout(() => this.LoadingMoreState = true, 3000)
+            this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
+               params: {
+                  category: "hot",
+                  order: this.Apps.length
+               }
+            })
+            .then(res => res.data)
+            .then(json => {
+               if ( json.state.error ) {
+                  throw new Error( json.state.message )
+               } else {
+                  this.Apps.push(...json.data)
+               }
+            })
          }
+      },
+      created() {
+         Promise.all([
+            this.$axios.get("http://localhost:8080/admin/api/Banners.php", {
+               params: {
+                  category: "hot"
+               }
+            })
+            .then(res => res.data)
+            .then(json => {
+               if (json.state.error) {
+                  throw new Error(json.state.message)
+               } else {
+                  this.banners = json.data
+               }
+            }),
+            this.$axios.get("http://localhost:8080/admin/api/AppHot.php")
+            .then(res => res.data)
+            .then(json => {
+               if ( json.state.error ) {
+                  throw new Error( json.state.message )
+               } else {
+                  this.AppsHot = json.data
+               }
+            }),
+            this.fetchDataMore.bind(this)
+         ])
+         .then(() => {
+            this.loading = false
+         })
+         .catch((error) => {
+            console.log( error )
+         })
       },
       mounted() {
          setTimeout(() => this.loading = false, 3000)

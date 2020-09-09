@@ -1,9 +1,9 @@
 <template>
-   <router-link :to="'/lite/info/app/' + id" class="appinfo" tag="div">
+   <router-link :to="'/lite/info/app/' + data.id" class="appinfo" tag="div">
       <div class="appinfo.content">
-         <img class="icon" :src="src">
+         <img class="icon" :src="data.icon">
          <div class="app.content">
-            <p class="app.title"> {{ name }} </p>
+            <p class="app.title"> {{ data.name }} </p>
             <img class="VIP" :src="require('@/assets/list.app.vip.png')">
          </div>
       </div>
@@ -85,15 +85,7 @@
 <script>
    export default {
       props: {
-         src: String,
-         name: {
-            type: String,
-            required: true
-         },
-         id: {
-            type: Number,
-            required: true
-         }
+         data: Object
       }
    }
 </script>

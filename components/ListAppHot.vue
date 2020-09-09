@@ -6,10 +6,10 @@
       </p>
       <div class="content">
          <ul class="list">
-            <li class="item" v-for="item in 8">
-               <router-link :to="'/lite/info/app/1'" class="app" tag="div">
-               <img src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg">
-               <p>Pokémon</p>
+            <li class="item" v-for="item items">
+               <router-link :to="'/lite/info/app/' + item.id" class="app" tag="div">
+               <img :src="item.icon">
+               <p> {{ item.name }} </p>
                </router-link>
             </li>
          </ul>
@@ -99,10 +99,7 @@
 <script>
    export default {
       props: {
-         title: {
-            type: Boolean,
-            default: true
-         }
+         items: Array
       }
    }
 </script>

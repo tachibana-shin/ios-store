@@ -4,8 +4,6 @@ import router from './router/index.js'
 
 import VueProgressBar from 'vue-progressbar'
 import axios from 'axios'
-import eruda from 'eruda'
-eruda.init()
 
 Vue.prototype.$axios = axios
 
