@@ -78,7 +78,7 @@
             this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
                params: {
                   category: "hot",
-                  order: this.Apps.length
+                  offset: this.Apps.length
                }
             })
             .then(res => res.data)
