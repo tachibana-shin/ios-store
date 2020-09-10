@@ -36,7 +36,7 @@
                <div class="applist.wrapper">
                   <ul class="list">
                      <li v-for="item in 10">
-                        <app-info src="https://photos.tutuapp.com/picture/app_ios/cn/003/62/45/50/3624550.175x175-75.jpg" name="Dead Cells" :id="0" />
+                        <app-info :data="{ icon: 'https://photos.tutuapp.com/picture/app_ios/cn/003/62/45/50/3624550.175x175-75.jpg',  name: 'Dead Cells' }" :id="0" />
                      </li>
                   </ul>
                </div>
