@@ -46,7 +46,7 @@
             if (~~this.value < this.value && ~~this.value == index) {
                return "rate.ic.0.5.svg"
             }
-            return "ratae.ic.0.svg"
+            return "rate.ic.0.svg"
          }
       }
    }

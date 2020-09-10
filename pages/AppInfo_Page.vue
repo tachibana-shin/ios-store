@@ -365,9 +365,16 @@
                produce: true
             }
          })
-      },
-      mounted() {
-         setTimeout(() => this.loading = false, 3000)
+         .then(res => res.data)
+         .then(({ state, data }) => {
+            if ( sate.error ) {
+               throw new Error(state.message)
+            } else {
+               this.data = data
+            }
+         })
+         .then(() => this.loading = false)
+         .catch((error) => console.log(error))
       }
    }
 </script>
