@@ -75,9 +75,8 @@
       }),
       methods: {
          fetchDataMore() {
-            this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
+            return this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
                params: {
-                  category: "feature",
                   offset: this.Apps.length
                }
             })
@@ -115,7 +114,7 @@
                   this.AppsHot = json.data
                }
             }),
-            this.fetchDataMore.bind(this)
+            this.fetchDataMore()
          ])
          .then(() => {
             this.loading = false
@@ -123,9 +122,6 @@
          .catch((error) => {
             console.log( error )
          })
-      },
-      mounted() {
-         setTimeout(() => this.loading = false, 3000)
       }
    }
 </script>
