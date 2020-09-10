@@ -3,21 +3,21 @@
       <div class="wrapper" v-if="!loading">
          <div class="detail-app">
             <div class="detail-app.basic margin-bottom">
-               <img class="app.avatar" src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg">
+               <img class="app.avatar" :src="data.icon">
                <div class="info">
-                  <p class="app.name"> Pokémon Go Hack Ulimite Money </p>
+                  <p class="app.name"> {{ data.name }} </p>
                   <div class="bottom">
-                     <span class="app.size"> 100MB </span>
-                     <rate-star :value="3" />
+                     <span class="app.size"> {{ data.size }} </span>
+                     <rate-star :value="4.5" />
                   </div>
                </div>
             </div>
             <div class="detail-app.infomation margin-bottom">
                <p class="title"> Information </p>
                <ul class="list">
-                  <li class="item" v-for="item in 4">
-                     <p class="key"> Developer </p>
-                     <p class="value"> Google LLC </p>
+                  <li class="item" v-for="item in infomation">
+                     <p class="key"> {{ item.type }} </p>
+                     <p class="value"> {{ item.value }} </p>
                   </li>
                </ul>
             </div>
@@ -25,26 +25,24 @@
                <p class="title"> Screenshot </p>
                <div class="screenshot.list">
                   <ul>
-                     <li class="screenshot.item" v-for="item in 5">
-                        <img src="https://photos.tutuapp.com/picture/app_ios/cn/003/62/83/14/5dd3b2102fb51.png">
+                     <li class="screenshot.item" v-for="item in data.screenshot">
+                        <img :src="item">
                      </li>
                   </ul>
                </div>
             </div>
             <t-collapse>
-               <template v-slot:text>
-                  WARNING: This version is unsecure now. What's New in Version 1.89.2 - PokéStop nominations will be available to level 40 players in Brazil and South Korea - You can now remove Pokémon from your Favorites while in the trade interface - You can now share an Exclusive Raid Pass with one friend - You can now swipe to dismiss in-app notifications - Various bug fixes and performance updates What's New in Version 1.87.3 - Niantic Kids Parent Portal is now avaliable What's New in Version 1.87.2 - Bug fixs. What's New in Version 1.85.5 - You can now use QR Codes to add friends - Improved Pokémon Collection search function lets you search using the term “Lucky” - You can now view map details for PokéStops on your screen - At-a-glance notifications now show when you have sent a Gift or increased your Friendship level with a friend - Additional setting options let you hide Recently Caught Pokémon from friends - In-game notifications have a new UI and interactive capabilities - Various bug fixes and performance updates What's New in Version 1.85.4 - You can now use QR Codes to add friends - Improved Pokémon Collection search function lets you search using the term “Lucky” - You can now view map details for PokéStops on your screen - At-a-glance notifications now show when you have sent a Gift or increased your Friendship level with a friend - Additional setting options let you hide Recently Caught Pokémon from friends - In-game notifications have a new UI and interactive capabilities - Various bug fixes and performance updates What's New in Version 1.81.4 - Bug fixes. What's New in Version 1.81.3 - When Pokémon are traded, there is chance that both traded Pokémon become Lucky Pokémon - You can now sort the Friends List and assign nicknames to Friends - Gifts may now contain Stardust - Trainers now receive XP for sending Gifts - Added the ability to delete unsent Gifts - Various bug fixes and performance updates What's New in Version 1.79.2 -Bug fixes What's New in Version 1.77.1 - Added new social features that allow Trainers to add and remove Friends on their Friend List and build up their Friendship Level. As Trainers gain friendship they’ll earn bonuses when participating in Raid Battles. - Added a new gifting feature which allows Trainers to send friends Gifts they collect from PokéStops. - Added the ability for Trainers to trade Pokémon. - Improved Pokémon Collection screen search functionality enables Trainers to search using “Alola”. What's New in Version 1.75.1 - Improved in-game messaging for error codes. - Added ability to view and activate items, such as Rare Candy and TMs, directly from a Pokémon’s info screen. - Various bug fixes and performance updates. What's New in Version 1.75.0 - Improved in-game messaging for error codes. - Added ability to view and activate items, such as Rare Candy and TMs, directly from a Pokémon’s info screen. - Various bug fixes and performance updates. What's New in Version 1.73.5 - Trainers can now transform Rare Candy to a specific Pokémon’s Candy in bulk. - Various bug fixes and performance updates. What's New in Version 1.73.3 - Trainers can now transform Rare Candy to a specific Pokémon’s Candy in bulk. - Various bug fixes and performance updates. What's New in Version 1.71.1 - Aspect ratios and UI are now optimized for larger screens such as the iPhone X. - Lucky Eggs and Star Pieces are now accessible and usable from the Raid and Gym Battle inventories. - Various bug fixes and performance updates. What's New in Version 1.69.2 - The Nearby Pokémon indicator now prioritizes Pokémon that are not registered to your Pokédex and are at PokéStops near you. - Various bug fixes and performance updates. What's New in Version 1.67.2 - Introduced the new Field Research and Special Research feature that encourages Trainers to complete objectives to earn unique rewards. - Trainers can now discover the Mythical Pokémon Mew for the first time with Special Research! - Various bug fixes and performance updates. What's New in Version 1.65.3 - Facebook credentials can now be used to log into the app via the ‘Account’ section in Settings. - Various bug fixes and performance updates. What's New in Version 1.61.2 - Fix bugs. What's New in Version 1.61.1 - Improved the in-game News feature. - The Pokémon Collection search function now lets Trainers search using “Shiny.” - Various bug fixes and performance updates.
-               </template>
+               <template v-slot:text> {{ data.description }} </template>
             </t-collapse>
             <div class="detail-app.infomation intereting">
                <p class="title"> Interting </p>
                <div class="apphost">
                   <div class="content">
                      <ul class="list">
-                        <li class="item" v-for="item in 8">
-                           <router-link :to="'/lite/info/app/1'" class="app" tag="div">
-                              <img src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg">
-                              <p>Pokémon</p>
+                        <li class="item" v-for="item in app.intereting">
+                           <router-link :to="'/lite/info/app/' + item.id" class="app" tag="div">
+                              <img :src="item.icon">
+                              <p> {{ item.name }} </p>
                            </router-link>
                         </li>
                      </ul>
@@ -62,7 +60,7 @@
 <style lang="scss" scoped>
    @font-face {
       font-family: DIM-Medium;
-      src: url("/fonts/DIN-Medium.ttf");
+      src: url("../fonts/DIN-Medium.ttf");
    }
 
    ;
@@ -352,8 +350,22 @@
    export default {
       components: { RateStar, ListAppHot, TCollapse, Loading },
       data: () => ({
-         loading: true
+         loading: true,
+         data: {}
       }),
+      computed: {
+         infomation() {
+            return [{ type: "Developer", "Apple Inc" }]
+         }
+      },
+      created() {
+         this.$axios.get("http://localhost:8080/admin/api/App.php", {
+            params: {
+               id: this.$route.params.id,
+               produce: true
+            }
+         })
+      },
       mounted() {
          setTimeout(() => this.loading = false, 3000)
       }
