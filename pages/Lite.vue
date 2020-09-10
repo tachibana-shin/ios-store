@@ -77,7 +77,7 @@
          fetchDataMore() {
             this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
                params: {
-                  category: "hot",
+                  category: "feature",
                   offset: this.Apps.length
                }
             })
@@ -95,7 +95,7 @@
          Promise.all([
             this.$axios.get("http://localhost:8080/admin/api/Banners.php", {
                params: {
-                  category: "hot"
+                  category: "feature"
                }
             })
             .then(res => res.data)
