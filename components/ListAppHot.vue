@@ -99,7 +99,11 @@
 <script>
    export default {
       props: {
-         items: Array
+         items: Array,
+         title: {
+            type: Boolean,
+            default: true
+         }
       }
    }
 </script>
