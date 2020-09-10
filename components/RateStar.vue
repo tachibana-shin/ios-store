@@ -1,7 +1,7 @@
 <template>
    <div class="rate-star">
       <span class="number"> {{ value }} </span>
-      <img class="rate-star__star" v-for="item in 5" :src="('' + getSourceStar(item))">
+      <img class="rate-star__star" v-for="item in 5" :src="require('@/assets/' + getSourceStar(item))">
    </div>
 </template>
 <style lang="scss" scoped>
@@ -41,12 +41,12 @@
       methods: {
          getSourceStar(index) {
             if (index <= ~~this.value) {
-               return "@/assets/rate.ic.1.svg"
+               return "rate.ic.1.svg"
             }
             if (~~this.value < this.value && ~~this.value == index) {
-               return "@/assets/rate.ic.0.5.svg"
+               return "rate.ic.0.5.svg"
             }
-            return "@/assets/ratae.ic.0.svg"
+            return "ratae.ic.0.svg"
          }
       }
    }
