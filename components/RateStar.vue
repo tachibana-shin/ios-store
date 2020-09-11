@@ -40,10 +40,10 @@
       },
       methods: {
          getSourceStar(index) {
-            if (index <= ~~this.value) {
+            if (index < ~~this.value) {
                return "rate.ic.1.svg"
             }
-            if (~~this.value < this.value && ~~this.value == index) {
+            if ( this.value > ~~this.value && ~~this.value == index) {
                return "rate.ic.0.5.svg"
             }
             return "rate.ic.0.svg"

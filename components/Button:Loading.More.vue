@@ -1,8 +1,8 @@
 <template>
    <div class="loading-more">
-      <div class="loading-btn" v-if="!state">
-         <span class="loading.title">More</span>
-         <img class="loading.icon" :src="require('@/assets/ic.loading.more.svg')">
+      <div class="loading-btn" v-if="!state || noMore" @click="noMore || $emit('click')">
+         <span class="loading.title"> {{ noMore ? "No More" : "More" }} </span>
+         <img class="loading.icon" :src="require('@/assets/ic.loading.more.svg')" v-if="!noMore">
       </div>
       <list-app-loading v-else/>
    </div>
@@ -61,7 +61,8 @@
    import ListAppLoading from "./ListApp.Loading.vue"
    export default {
       props: {
-         state: Boolean
+         state: Boolean,
+	 noMore: Boolean
       },
       components: { ListAppLoading }
    }

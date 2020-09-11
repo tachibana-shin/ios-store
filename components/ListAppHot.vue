@@ -8,7 +8,7 @@
          <ul class="list">
             <li class="item" v-for="item in items">
                <router-link :to="'/lite/info/app/' + item.id" class="app" tag="div">
-               <img :src="item.icon">
+               <img v-lazy="item.icon">
                <p> {{ item.name }} </p>
                </router-link>
             </li>

@@ -18,7 +18,7 @@
                </li>
             </ul>
          </div>
-         <loading-more :state="LoadingMoreState" @click="fetchDataMore" />
+         <loading-more :state="LoadingMoreState" @click="fetchDataMore" :no-more="NoMore"/>
       </div>
       <lite-loading v-else :state="{
          swiper: true, apphost: true, applist: true
@@ -71,11 +71,15 @@
          AppsHot: [],
          Apps: [],
          loading: true,
-         LoadingMoreState: false
+         LoadingMoreState: false,
+	 NoMore: false
       }),
       methods: {
-         fetchDataMore() {
-            return this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
+         fetchDataMore(loading = true) {
+            if ( loading  ) {
+               this.LoadingMoreState = true
+	    }
+	    return this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
                params: {
                   offset: this.Apps.length
                }
@@ -85,9 +89,14 @@
                if ( json.state.error ) {
                   throw new Error( json.state.message )
                } else {
-                  this.Apps.push(...json.data)
+                  if ( json.data.length ) {
+		     this.Apps.push(...json.data)
+		  } else {
+                     this.NoMore = true
+		  }
                }
             })
+	    .then(() => this.LoadingMoreState = false)
          }
       },
       created() {

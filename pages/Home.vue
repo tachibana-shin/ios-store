@@ -35,8 +35,8 @@
                </span>
                <div class="applist.wrapper">
                   <ul class="list">
-                     <li v-for="item in 10">
-                        <app-info :data="{ icon: 'https://photos.tutuapp.com/picture/app_ios/cn/003/62/45/50/3624550.175x175-75.jpg',  name: 'Dead Cells' }" :id="0" />
+                     <li v-for="item in VIPApps">
+                        <app-info :data="item"/>
                      </li>
                   </ul>
                </div>
@@ -519,12 +519,22 @@
       data: () => ({
          guideBlockShow: false,
          AppListLoaded: false,
+	 VIPApps: [],
          
-         showTip: false,
-         tipContent: ""
+         showTip: true,
+         tipContent: "Check your idid"
       }),
-      mounted() {
-         setTimeout(() => this.AppListLoaded = true, 3000)
+      created() {
+         this.$axios.get("http://localhost:8080/admin/api/AppVipFeature.php")
+	 .then(res => res.data)
+	 .then(({ state, data }) => {
+            if ( state.error ) {
+               throw new Error( state.message )
+	    } else {
+               this.VIPApps = data
+	    }
+	 })
+	 .then(() => this.AppListLoaded = true)
       }
    }
 </script>

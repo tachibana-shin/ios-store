@@ -2,7 +2,7 @@
    <div class="nav.list-wrapper">
       <nav class="nav.list">
          <div class="content">
-            <h1 class="welcome"> Welcone </h1>
+            <h1 class="welcome"> Welcome </h1>
             <div class="user-general">
                <div class="user.content" v-if="false">
                </div>
@@ -11,7 +11,7 @@
                </div>
             </div>
             <hr class="line">
-            <ul class="list">
+            <ul class="list" @click="$emit('hide-menu')">
                <router-link to="/bind" exact-active-class="active" tag="li" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.bind.svg')">
                   <span> Bind your UIID </span>

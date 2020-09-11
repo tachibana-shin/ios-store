@@ -31,7 +31,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "https://unpkg.com/swiper/swiper-bundle.min.css";
    @import "./pagination-custom.css";
 
    .HowToInstall {
@@ -55,7 +54,7 @@
          width: 79.2vW;
 
          .swiper-wrapper {
-            background-image: url("/assets/howtoinstall.bg.svg");
+            background-image: url("../assets/howtoinstall.bg.svg");
             background-repeat: no-repeat;
             background-size: cover;
             height: 65.067vw;
@@ -136,6 +135,7 @@
 </style>
 <script>
    import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper"
+   import 'swiper/swiper-bundle.css'
    export default {
       components: {
          Swiper,

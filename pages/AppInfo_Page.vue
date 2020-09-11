@@ -3,7 +3,7 @@
       <div class="wrapper" v-if="!loading">
          <div class="detail-app">
             <div class="detail-app.basic margin-bottom">
-               <img class="app.avatar" :src="data.icon">
+               <img class="app.avatar" :alt="data.name"  v-lazy="data.icon">
                <div class="info">
                   <p class="app.name"> {{ data.name }} </p>
                   <div class="bottom">
@@ -26,7 +26,7 @@
                <div class="screenshot.list">
                   <ul>
                      <li class="screenshot.item" v-for="item in data.screenshot">
-                        <img :src="item">
+                        <img v-img="{ group: 'screenshot', src: item }" v-lazy="item">
                      </li>
                   </ul>
                </div>
@@ -39,7 +39,7 @@
                <div class="apphost">
                   <div class="content">
                      <ul class="list">
-                        <li class="item" v-for="item in app.intereting">
+                        <li class="item" v-for="item in apps">
                            <router-link :to="'/lite/info/app/' + item.id" class="app" tag="div">
                               <img :src="item.icon">
                               <p> {{ item.name }} </p>
@@ -137,6 +137,7 @@
 
                      .app\.size {
                         margin-right: 5.333vw;
+			text-transform: uppercase;
                      }
 
                   }
@@ -177,6 +178,7 @@
                         flex-basis: auto;
                         flex-grow: 0;
                         flex-shrink: 0;
+			text-transform: capitalize;
                      }
 
                      .value {
@@ -351,11 +353,22 @@
       components: { RateStar, ListAppHot, TCollapse, Loading },
       data: () => ({
          loading: true,
-         data: {}
+         data: {},
+	 apps: []
       }),
       computed: {
          infomation() {
-            return [{ type: "Developer", "Apple Inc" }]
+	   const __proto__ = ["developer", "category", "updated", "compatibility", "languages", "account"]
+	   return __proto__.map(item => {
+              if ( item in this.data ) {
+                 return {
+                    type: item,
+		    value: Array.isArray( this.data[ item ]) ? this.data[ item ].join(", ") : this.data[ item ]
+		 }
+	      } else {
+                 return null
+	      }
+	   })
          }
       },
       created() {
@@ -367,10 +380,11 @@
          })
          .then(res => res.data)
          .then(({ state, data }) => {
-            if ( sate.error ) {
+            if ( state.error ) {
                throw new Error(state.message)
             } else {
-               this.data = data
+               this.data = data.data
+	       this.apps = data.apps
             }
          })
          .then(() => this.loading = false)

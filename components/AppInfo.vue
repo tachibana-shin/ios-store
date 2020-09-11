@@ -1,7 +1,7 @@
 <template>
    <router-link :to="'/lite/info/app/' + data.id" class="appinfo" tag="div">
       <div class="appinfo.content">
-         <img class="icon" :src="data.icon">
+         <img class="icon" v-lazy="data.icon">
          <div class="app.content">
             <p class="app.title"> {{ data.name }} </p>
             <img class="VIP" :src="require('@/assets/list.app.vip.png')">
