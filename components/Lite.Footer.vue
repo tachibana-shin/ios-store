@@ -5,7 +5,7 @@
          :to="item.path"
          :active-class="item.activeClass"
          :exact-active-class="item.exactActiveClass">
-         <img class="icon" :src="require('@/assets/' + item.icon + ($route.path == item.path ? 'selected' : 'default') + '.svg')">
+         <img class="icon" :src="require('@/assets/' + item.icon + ((!!item.exactActiveClass ? $route.path == item.path : ($route.path.indexOf(item.path) > -1)) ? 'selected' : 'default') + '.svg')">
          <p> {{ item.name }} </p>
       </router-link>
    </footer>
