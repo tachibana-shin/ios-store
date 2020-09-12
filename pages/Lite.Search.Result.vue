@@ -182,6 +182,8 @@
                .catch((error) => console.log(error))
          }
       },
-      created: "fetchData"
+      created() {
+         this.fetchData()
+      }
    }
 </script>
