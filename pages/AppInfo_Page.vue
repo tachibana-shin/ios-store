@@ -50,7 +50,7 @@
                </div>
             </div>
             <div class="download">
-               <button> Download </button>
+               <button @click="download"> Download </button>
             </div>
          </div>
       </div>
@@ -356,6 +356,15 @@
          data: {},
 	 apps: []
       }),
+      methods: {
+         download() {
+	    this.$axios.get("http://localhost:8080/admin/api/RequestDownload.php", {
+               params: {
+                  id: this.$route.params.id
+	       }
+	    })
+	 }
+      },
       computed: {
          infomation() {
 	   const __proto__ = ["developer", "category", "updated", "compatibility", "languages", "account"]
