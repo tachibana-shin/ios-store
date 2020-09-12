@@ -2,7 +2,7 @@
    <div class="main">
       <div class="wrapper_search">
          <div class="search_input">
-            <input placeholder="Search" @keyup="fetchData" ref="Search" @blur="result = []" @keyup.enter="$router.push('/lite/search/result?query=' + $event.target.value)">
+            <input placeholder="Search" @keyup="fetchData" ref="Search" @blur="result = []" @keyup.enter="$router.push('/lite/search/result?query=' + $event.tsrget.value)">
             <img class="icon" :src="require('@/assets/ic.search.svg')">
             <div class="result" v-if="result">
                <ul>
@@ -17,7 +17,10 @@
                </ul>
             </div>
          </div>
-         <loading v-if="loading"/>
+	 <div class="wrapper__result" v-if="!loading">
+
+	 </div>
+         <loading v-else/>
       </div>
       <lite-footer />
    </div>
@@ -130,27 +133,23 @@
       timeout: 0,
       methods: {
          fetchData() {
-            clearTimeout(this.timeout)
-            this.timeout = setTimeout(() => {
-               this.$axios.get("http://localhost:8080/admin/api/pre-search.php", {
-                  params: {
-                     query: this.$refs.Search.value
-		  }
-	       })
-	       .then(res => res.data)
-	       .then(({ state, data })  => {
-                  if ( state.error ) {
-
-		  } else {
-                     this.result = data
-		  }
-	       })
-	       .catch(() => this.result = [])
-            }, 1000)
+            this.$axios.get("http://localhost:8080/admin/api/Search.php", {
+               params: {
+                  query: this.$route.query.query
+               }
+	    })
+	    .then(res => res.data)
+	    .then(({ state, data }) => {
+               if ( state.error ) {
+                  throw new Error( state.message )
+	       } else {
+                  this.apps = data
+	       }
+	    })
+	    .then(() => this.loading = false)
+	    .catch((error) => console.log(error))
          }
       },
-      mounted() {
-         this.loading = false
-      }
+      created: "fetchData"
    }
 </script>
