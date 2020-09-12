@@ -22,18 +22,16 @@ const routes = [
   },
    {
       path: '/lite',
-      component: () => import('../pages/Lite.vue'),
-      children: [
-         {
-            path: 'game',
-            component: () => import('../pages/Lite.Game.vue')
+      component: () => import('../pages/Lite.vue')
+   },
+   {
+      path: '/lite/game',
+      component: () => import('../pages/Lite.Game.vue')
       },
-         {
-            path: 'app',
-            component: () => import('../pages/Lite.App.vue')
-      }
-    ]
-  },
+   {
+      path: '/lite/app',
+      component: () => import('../pages/Lite.App.vue')
+      },
    {
       path: '/lite/topapp/:name',
       component: () => import('../pages/Lite.TopApp.vue')
@@ -46,6 +44,10 @@ const routes = [
       path: '/lite/search',
       component: () => import('../pages/Lite.Search.vue')
   },
+   {
+      path: '/lite/search/result',
+      component: () => import('../pages/Lite.Search.Result.vue')
+  }, 
    {
       path: '/feedback',
       component: () => import('../pages/Feedback.vue'),
