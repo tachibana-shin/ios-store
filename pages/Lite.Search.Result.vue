@@ -27,7 +27,7 @@
             </div>
             <loading-more :state="LoadingMoreState" @click="fetchData(true)" :no-more="NoMore" />
          </div>
-         <loading-applist v-else padding="0" />
+         <loading-app-list v-else padding="0" />
       </div>
       <lite-footer />
    </div>
