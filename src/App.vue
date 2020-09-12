@@ -14,7 +14,9 @@
          <loading-snipper v-if="LoadingSnipper" />
       </transition>
       <nav-list-wrapper :class="{ active: NavListShow }" @hide-menu="NavListShow = false" @show-installation-guide="HowToInstallShow = true" />
-      <router-view />
+      <transition :name="nameTransitionRouter">
+         <router-view />
+      </transition>
    </div>
 </template>
 <style lang="scss" scoped>
@@ -92,6 +94,26 @@
             }
          }
       }
+      .fade-enter-active, .fade-leave-active {
+  transition: opacity .75s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
+.child-view {
+  position: absolute;
+  transition: all .75s cubic-bezier(.55,0,.1,1);
+}
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(30px, 0);
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-30px, 0);
+  transform: translate(-30px, 0);
+}
 
    }
 </style>
@@ -107,8 +129,16 @@
          NavListShow: false,
          HeaderAppShow: true,
          HowToInstallShow: false,
-         LoadingSnipper: false
+         LoadingSnipper: false,
+         
+         nameTransitionRouter: "slide-left"
       }),
+      beforeRouteUpdate (to, from, next) {
+    const toDepth = to.path.split('/').length
+    const fromDepth = from.path.split('/').length
+    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    next()
+  },
       mounted() {
          //  [App.vue specific] When App.vue is finish loading finish the progress bar
          this.$Progress.finish()
