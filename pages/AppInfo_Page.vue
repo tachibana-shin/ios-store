@@ -369,7 +369,7 @@
          infomation() {
             const __proto__ = ["developer", "category", "updated", "compatibility", "languages", "account"]
             return __proto__.map(item => {
-               if (item in this.data) {
+               if (item in this.data && !!this.data[item] && this.data.length > 0) {
                   return {
                      type: item,
                      value: Array.isArray(this.data[item]) ? this.data[item].join(", ") : this.data[item]

@@ -17,17 +17,19 @@
                </ul>
             </div>
          </div>
-         <div class="wrapper__result" v-if="!loading">
-            <div class="applist">
-               <ul>
-                  <li v-for="item in apps">
-                     <app-info :data="item" />
-                  </li>
-               </ul>
-            </div>
-            <loading-more :state="LoadingMoreState" @click="fetchData(true)" :no-more="NoMore" />
+         <div class="wrapper__result">
+            <div v-if="!loading">
+	       <div class="applist">
+                  <ul>
+                     <li v-for="item in apps">
+                        <app-info :data="item" />
+                     </li>
+                  </ul>
+               </div>
+               <loading-more :state="LoadingMoreState" @click="fetchData(true)" :no-more="NoMore" />
+	    </div>
+            <loading-app-list v-else />
          </div>
-         <loading-app-list v-else padding="0" />
       </div>
       <lite-footer />
    </div>
@@ -36,6 +38,7 @@
    .main {
       background-color: rgb(255, 255, 255);
       padding-top: 11.467vw;
+      position: relative;
 
       .wrapper_search {
          padding-bottom: 17.6vw;
@@ -47,7 +50,7 @@
             padding: 5.333vw;
             top: 0;
             width: 89.333vw;
-            position: absolute;
+            position: relative;
             z-index: 2;
 
             input {
@@ -131,11 +134,17 @@
                   margin: 0;
                   padding: 0;
                   box-sizing: border-box;
-                  padding: 0 5.333vw;
                   list-style: none;
+		  padding: 0 5.333vw;
                }
 
             }
+	    position: relative;
+	    overflow: hidden;
+	    width: 100%;
+	    box-sizing: border-box;
+	    margin-top: 10.333vw;
+	    
          }
       }
    }
