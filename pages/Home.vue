@@ -36,7 +36,7 @@
                <div class="applist.wrapper">
                   <ul class="list">
                      <li v-for="item in VIPApps">
-                        <app-info :data="item"/>
+                        <app-info :data="item" />
                      </li>
                   </ul>
                </div>
@@ -149,6 +149,7 @@
                      grow: 1;
                      shrink: 1;
                   }
+
                   margin: {
                      left: (12.8vw - 5.333);
                      right: (12.8vw - 5.333);
@@ -242,10 +243,12 @@
                z-index: 1;
                @include centerX;
                animation: fade 1s linear infinite alternate;
+
                @keyframes fade {
                   from {
                      opacity: 0;
                   }
+
                   to {
                      opacity: 1;
                   }
@@ -519,22 +522,22 @@
       data: () => ({
          guideBlockShow: false,
          AppListLoaded: false,
-	 VIPApps: [],
-         
+         VIPApps: [],
+
          showTip: true,
          tipContent: "Check your idid"
       }),
       created() {
          this.$axios.get("http://localhost:8080/admin/api/AppVipFeature.php")
-	 .then(res => res.data)
-	 .then(({ state, data }) => {
-            if ( state.error ) {
-               throw new Error( state.message )
-	    } else {
-               this.VIPApps = data
-	    }
-	 })
-	 .then(() => this.AppListLoaded = true)
+            .then(res => res.data)
+            .then(({ state, data }) => {
+               if (state.error) {
+                  throw new Error(state.message)
+               } else {
+                  this.VIPApps = data
+               }
+            })
+            .then(() => this.AppListLoaded = true)
       }
    }
 </script>

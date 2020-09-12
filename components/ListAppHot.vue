@@ -8,8 +8,8 @@
          <ul class="list">
             <li class="item" v-for="item in items">
                <router-link :to="'/lite/info/app/' + item.id" class="app" tag="div">
-               <img v-lazy="item.icon">
-               <p> {{ item.name }} </p>
+                  <img v-lazy="item.icon">
+                  <p> {{ item.name }} </p>
                </router-link>
             </li>
          </ul>
@@ -60,7 +60,7 @@
             box-sizing: border-box;
             display: flex;
 
-            .item > .app{
+            .item>.app {
                box-sizing: border-box;
                display: flex;
                align-items: center;
@@ -95,7 +95,6 @@
       }
    }
 </style>
-
 <script>
    export default {
       props: {

@@ -7,7 +7,7 @@
             <div class="result" v-if="result">
                <ul>
                   <li class="item" v-for="item in result">
-                     <router-link tag="p":to="'/lite/info/app/' + item.id">
+                     <router-link tag="p" :to="'/lite/info/app/' + item.id">
                         {{ item.name  }}
                      </router-link>
                   </li>
@@ -17,7 +17,7 @@
                </ul>
             </div>
          </div>
-         <loading v-if="loading"/>
+         <loading v-if="loading" />
       </div>
       <lite-footer />
    </div>
@@ -67,52 +67,52 @@
 
                z-index: 3;
             }
-         }
 
-         .result {
-            background-color: rgb(255, 255, 255);
-            border-radius: 0 0 3.2vw 3.2vw;
-            box-shadow: rgba(32, 33, 36, 0.28) 0 1.067vw 1.6vw 0;
-            max-height: calc(100vh - 85.333vw);
+            .result {
+               background-color: rgb(255, 255, 255);
+               border-radius: 0 0 3.2vw 3.2vw;
+               box-shadow: rgba(32, 33, 36, 0.28) 0 1.067vw 1.6vw 0;
+               max-height: calc(100vh - 85.333vw);
 
-            overflow: hidden scroll;
-            padding-bottom: 8vw;
-            width: 89.333vw;
-            margin-top: (10.667vw / 2);
-            padding-top: (10.667vw / 2);
-            z-index: 0;
+               overflow: hidden scroll;
+               padding-bottom: 8vw;
+               width: 89.333vw;
+               margin-top: (10.667vw / 2);
+               padding-top: (10.667vw / 2);
+               z-index: 0;
 
-            ul {
-               margin: 0;
-               padding: 0;
-               list-style: none;
-               padding-bottom: 10.667vw;
-               padding-top: 4vw;
+               ul {
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  padding-bottom: 10.667vw;
+                  padding-top: 4vw;
 
-               .item {
-                  font-size: 4vmin;
-                  font-weight: 300;
-                  height: 9.6vw;
-                  line-height: 9.6vw;
-                  padding-left: 4.267vw;
-                  padding-right: 8vw;
+                  .item {
+                     font-size: 4vmin;
+                     font-weight: 300;
+                     height: 9.6vw;
+                     line-height: 9.6vw;
+                     padding-left: 4.267vw;
+                     padding-right: 8vw;
 
-                  p {
-                     margin: 0;
-                     padding: 0;
+                     p {
+                        margin: 0;
+                        padding: 0;
 
-                     color: rgb(117, 136, 169);
-                     font-size: 3.733vmin;
-                     font-weight: 400;
-                     line-height: 4.267vw;
+                        color: rgb(117, 136, 169);
+                        font-size: 3.733vmin;
+                        font-weight: 400;
+                        line-height: 4.267vw;
 
-                     overflow: hidden;
-                     text-overflow: ellipsis;
-                     white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                     }
                   }
                }
-            }
 
+            }
          }
       }
    }
@@ -125,7 +125,7 @@
       data: () => ({
          loading: true,
 
-	 result: null
+         result: null
       }),
       timeout: 0,
       methods: {
@@ -133,19 +133,19 @@
             clearTimeout(this.timeout)
             this.timeout = setTimeout(() => {
                this.$axios.get("http://localhost:8080/admin/api/pre-search.php", {
-                  params: {
-                     query: this.$refs.Search.value
-		  }
-	       })
-	       .then(res => res.data)
-	       .then(({ state, data })  => {
-                  if ( state.error ) {
+                     params: {
+                        query: this.$refs.Search.value
+                     }
+                  })
+                  .then(res => res.data)
+                  .then(({ state, data }) => {
+                     if (state.error) {
 
-		  } else {
-                     this.result = data
-		  }
-	       })
-	       .catch(() => this.result = [])
+                     } else {
+                        this.result = data
+                     }
+                  })
+                  .catch(() => this.result = [])
             }, 1000)
          }
       },

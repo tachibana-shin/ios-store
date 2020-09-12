@@ -17,7 +17,7 @@
                </li>
             </ul>
          </div>
-         <loading-more :state="LoadingMoreState" @click="fetchDataMore" :no-more="NoMore"/>
+         <loading-more :state="LoadingMoreState" @click="fetchDataMore" :no-more="NoMore" />
       </div>
       <lite-loading v-else :state="{
          swiper: true, apphost: true, applist: true
@@ -70,57 +70,57 @@
          Apps: [],
          loading: true,
          LoadingMoreState: false,
-	 NoMore: false
+         NoMore: false
       }),
       methods: {
          fetchDataMore(loading = true) {
-            if ( loading  ) {
+            if (loading) {
                this.LoadingMoreState = true
-	    }
-	    return this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
-               params: {
-                  offset: this.Apps.length,
-		  category: "^games"
-               }
-            })
-            .then(res => res.data)
-            .then(json => {
-               if ( json.state.error ) {
-                  throw new Error( json.state.message )
-               } else {
-                  if ( json.data.length ) {
-		     this.Apps.push(...json.data)
-		  } else {
-                     this.NoMore = true
-		  }
-               }
-            })
-	    .then(() => this.LoadingMoreState = false)
+            }
+            return this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
+                  params: {
+                     offset: this.Apps.length,
+                     category: "^games"
+                  }
+               })
+               .then(res => res.data)
+               .then(json => {
+                  if (json.state.error) {
+                     throw new Error(json.state.message)
+                  } else {
+                     if (json.data.length) {
+                        this.Apps.push(...json.data)
+                     } else {
+                        this.NoMore = true
+                     }
+                  }
+               })
+               .then(() => this.LoadingMoreState = false)
          }
       },
       created() {
          Promise.all([
             this.$axios.get("http://localhost:8080/admin/api/Banners.php", {
-               params: {
-                  category: "app"
-               }
-            })
+                  params: {
+                     category: "app"
+                  }
+               })
             .then(res => res.data)
             .then(json => {
-               if (json.state.error) {
-                  throw new Error(json.state.message)
-               } else {
-                  this.banners = json.data
-               }
-            }),
+                  if (json.state.error) {
+                     throw new Error(json.state.message)
+                  } else {
+                     this.banners = json.data
+                  }
+               }),
             this.fetchDataMore()
          ])
-         .then(() => {
-            this.loading = false
-         })
-         .catch((error) => {
-            console.log( error )
-         })
+            .then(() => {
+               this.loading = false
+            })
+            .catch((error) => {
+               console.log(error)
+            })
       }
    }
 </script>

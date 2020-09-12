@@ -3,7 +3,7 @@
       <div class="wrapper" v-if="!loading">
          <div class="detail-app">
             <div class="detail-app.basic margin-bottom">
-               <img class="app.avatar" :alt="data.name"  v-lazy="data.icon">
+               <img class="app.avatar" :alt="data.name" v-lazy="data.icon">
                <div class="info">
                   <p class="app.name"> {{ data.name }} </p>
                   <div class="bottom">
@@ -54,7 +54,7 @@
             </div>
          </div>
       </div>
-      <loading v-else/>
+      <loading v-else />
    </div>
 </template>
 <style lang="scss" scoped>
@@ -137,7 +137,7 @@
 
                      .app\.size {
                         margin-right: 5.333vw;
-			text-transform: uppercase;
+                        text-transform: uppercase;
                      }
 
                   }
@@ -178,7 +178,7 @@
                         flex-basis: auto;
                         flex-grow: 0;
                         flex-shrink: 0;
-			text-transform: capitalize;
+                        text-transform: capitalize;
                      }
 
                      .value {
@@ -354,50 +354,50 @@
       data: () => ({
          loading: true,
          data: {},
-	 apps: []
+         apps: []
       }),
       methods: {
          download() {
-	    this.$axios.get("http://localhost:8080/admin/api/RequestDownload.php", {
+            this.$axios.get("http://localhost:8080/admin/api/RequestDownload.php", {
                params: {
                   id: this.$route.params.id
-	       }
-	    })
-	 }
+               }
+            })
+         }
       },
       computed: {
          infomation() {
-	   const __proto__ = ["developer", "category", "updated", "compatibility", "languages", "account"]
-	   return __proto__.map(item => {
-              if ( item in this.data ) {
-                 return {
-                    type: item,
-		    value: Array.isArray( this.data[ item ]) ? this.data[ item ].join(", ") : this.data[ item ]
-		 }
-	      } else {
-                 return null
-	      }
-	   })
+            const __proto__ = ["developer", "category", "updated", "compatibility", "languages", "account"]
+            return __proto__.map(item => {
+               if (item in this.data) {
+                  return {
+                     type: item,
+                     value: Array.isArray(this.data[item]) ? this.data[item].join(", ") : this.data[item]
+                  }
+               } else {
+                  return null
+               }
+            })
          }
       },
       created() {
          this.$axios.get("http://localhost:8080/admin/api/App.php", {
-            params: {
-               id: this.$route.params.id,
-               produce: true
-            }
-         })
-         .then(res => res.data)
-         .then(({ state, data }) => {
-            if ( state.error ) {
-               throw new Error(state.message)
-            } else {
-               this.data = data.data
-	       this.apps = data.apps
-            }
-         })
-         .then(() => this.loading = false)
-         .catch((error) => console.log(error))
+               params: {
+                  id: this.$route.params.id,
+                  produce: true
+               }
+            })
+            .then(res => res.data)
+            .then(({ state, data }) => {
+               if (state.error) {
+                  throw new Error(state.message)
+               } else {
+                  this.data = data.data
+                  this.apps = data.apps
+               }
+            })
+            .then(() => this.loading = false)
+            .catch((error) => console.log(error))
       }
    }
 </script>

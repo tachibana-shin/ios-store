@@ -2,19 +2,17 @@
    <div id="app">
       <vue-progress-bar />
       <transition name="swipeY.top:ease">
-         <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event"/>
+         <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event" />
       </transition>
       <transition name="fade:ease">
-         <backdrop-mark v-if="NavListShow || HowToInstallShow || LoadingSnipper"/>
+         <backdrop-mark v-if="NavListShow || HowToInstallShow || LoadingSnipper" />
       </transition>
       <transition name="howtoinstall">
          <how-to-install v-if="HowToInstallShow" @close="HowToInstallShow = false" />
       </transition>
-      
       <transition name="fade:ease">
-         <loading-snipper v-if="LoadingSnipper"/>
+         <loading-snipper v-if="LoadingSnipper" />
       </transition>
-      
       <nav-list-wrapper :class="{ active: NavListShow }" @hide-menu="NavListShow = false" @show-installation-guide="HowToInstallShow = true" />
       <router-view />
    </div>
@@ -32,51 +30,63 @@
       .fade\:ease-leave-to {
          opacity: 0;
       }
+
       .swipeY\.top\:ease-enter-active {
          animation: swipeYTopEnter .2s ease;
+
          @keyframes swipeYTopEnter {
             from {
                transform: translateY(-100%);
             }
+
             to {
                transform: translateY(0);
             }
          }
       }
+
       .swipeY\.top\:ease-leave-active {
          animation: swipeYTopLeave .2s ease;
+
          @keyframes swipeYTopLeave {
             from {
                transform: translateY(0);
             }
+
             to {
                transform: translateY(-100%);
             }
          }
       }
+
       .howtoinstall-enter-active {
          animation: howtoinstallshow .666s ease;
+
          @keyframes howtoinstallshow {
             from {
                transform: scale(0);
                opacity: 0;
             }
+
             50% {
                transform: scale(1.1);
             }
+
             to {
                transform: scale(1);
                opacity: 1;
             }
          }
       }
+
       .howtoinstall-leave-active {
          animation: howtoinstallhide .666s ease;
+
          @keyframes howtoinstallhide {
             from {
                transform: scale(1) translateY(0);
             }
-            
+
             to {
                transform: scale(0) translateY(-30px);
             }
