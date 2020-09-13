@@ -31,7 +31,7 @@
                   </ul>
                </div>
             </div>
-            <t-collapse>
+            <t-collapse :title="'APP_INFO.DESCRIPTION' | t">
                <template v-slot:text> {{ data.description }} </template>
             </t-collapse>
             <div class="detail-app.infomation intereting">

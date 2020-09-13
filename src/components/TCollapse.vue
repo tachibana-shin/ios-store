@@ -1,12 +1,12 @@
 <template>
    <div class="t-collapse" :class="{ full: state }" @click="state = !state">
       <div class="title">
-         <span> Description </span>
+         <span> {{ title }} </span>
          <img :src="require('@/assets/content.ic.down.svg')">
       </div>
       <p class="content" :style="{ height }">
          <span ref="Content">
-            <slot name="text" /> </span>>
+            <slot name="text" /> </span>
       </p>
    </div>
 </template>
@@ -64,6 +64,9 @@
 </style>
 <script>
    export default {
+      props: {
+         title: String
+      },
       data: () => ({
          state: false,
          height: "4.5em"

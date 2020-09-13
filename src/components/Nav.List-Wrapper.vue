@@ -60,6 +60,9 @@
                   <img class="icon" :src="require('@/assets/bar.ic.blog.svg')">
                   <span> {{ "HEADER.BLOG" | t }}  </span>
                </router-link>
+	       <li class="item">
+                  <language/>
+	       </li>
                <li class="" v-if="false">
                   <button class="logout.button"> {{ "HEADER.LOGOUT" | t }} </button>
                </li>
@@ -292,7 +295,8 @@
    }
 </style>
 <script>
+   import Language from "./Language.vue"
    export default {
-
+      components: { Language }
    }
 </script>

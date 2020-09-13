@@ -43,7 +43,8 @@
 		"INFORMATION": "情報",
 		"SCREENSHOT": "スクリーンショット",
 		"INTERTING": "面白い",
-		"DOWNLOAD": "ダウンロード"
+		"DOWNLOAD": "ダウンロード",
+		"DESCRIPTION": "解説"
 	},
 	"BIND": {
 		"TEXT1": "TutuAppアカウントでログインして、 UDIDを確認および取得し、 バインドを完了してください。 ",

@@ -41,7 +41,7 @@
             <p class="title"> {{ "BIND.FAQ" | t }} </p>
             <ol>
                <li class="item">
-                  <collapse :title="'BIND.TITLE_TEXT7' | t" :content="'BIND.TEXT7' | transl| t
+                  <collapse :title="'BIND.TITLE_TEXT7' | t" :content="'BIND.TEXT7' | t"/>
                </li>
             </ol>
          </div>

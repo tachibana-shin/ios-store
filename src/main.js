@@ -1,3 +1,7 @@
+import eruda from "eruda"
+
+eruda.init()
+
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index.js'
@@ -7,9 +11,7 @@ import axios from 'axios'
 import vImg from 'v-img'
 import Lazyload from 'vue-lazyload'
 import i18n from './i18n'
-import eruda from 'eruda'
-
-eruda.init()
+import VueScrollTo from "vue-scrollto"
 
 Vue.prototype.$axios = axios
 
@@ -24,6 +26,7 @@ Vue.use(vImg, {
   thumbnails: true
 })
 Vue.use(Lazyload)
+Vue.use(VueScrollTo)
 
 new Vue({
   el: '#app',

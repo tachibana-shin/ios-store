@@ -43,7 +43,8 @@
 		"INFORMATION": "Thông tin",
 		"SCREENSHOT": "Ảnh chụp màn hình",
 		"INTERTING": "Hấp dẫn",
-		"DOWNLOAD": "Tải xuống"
+		"DOWNLOAD": "Tải xuống",
+		"DESCRIPTION": "Mô tả"
 	},
 	"BIND": {
 		"TEXT1": "Vui lòng đăng nhập bằng tài khoản TutuApp để xác minh và lấy UDID của bạn để hoàn tất việc ràng buộc. ",

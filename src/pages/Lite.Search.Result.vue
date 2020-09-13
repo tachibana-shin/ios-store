@@ -2,7 +2,7 @@
    <div class="main">
       <div class="wrapper_search">
          <div class="search_input">
-            <input placeholder="Search" @keyup="fetchData" ref="Search" @blur="result = []" @keyup.enter="$router.push('/lite/search/result?query=' + $event.tsrget.value)">
+            <input placeholder="Search" @keyup="fetchData" ref="Search" @keyup.enter="$router.push('/lite/search/result?query=' + $event.tsrget.value)">
             <img class="icon" :src="require('@/assets/ic.search.svg')">
             <div class="result" v-if="result">
                <ul>
@@ -26,7 +26,7 @@
                      </li>
                   </ul>
                </div>
-               <loading-more :state="LoadingMoreState" @click="fetchData(true)" :no-more="NoMore" />
+               <loading-more :state="LoadingMoreState" @click="fetchData" :no-more="NoMore" />
 	    </div>
             <loading-app-list v-else />
          </div>
@@ -153,9 +153,10 @@
    import LiteFooter from "../components/Lite.Footer.vue"
    import LoadingAppList from "../components/ListApp.Loading.vue"
    import AppInfo from "../components/AppInfo.vue"
+   import LoadingMore from "../components/Button:Loading.More.vue"
 
    export default {
-      components: { LiteFooter, LoadingAppList, AppInfo },
+      components: { LiteFooter, LoadingAppList, AppInfo, LoadingMore },
       data: () => ({
          loading: true,
 
@@ -166,13 +167,16 @@
          NoMore: false,
 
       }),
-      timeout: 0,
       methods: {
          fetchData(loadMore) {
-            this.$axios.get("http://localhost:8080/admin/api/Search.php", {
+            if ( !loadMore ) {
+               this.LoadingMoreState = true
+	    }
+	    
+	    this.$axios.get("http://localhost:8080/admin/api/Search.php", {
                   params: {
                      query: this.$route.query.query,
-                     offset: loadMore ? this.apps.length : 0
+                     offset: loadMore ? 0 : this.apps.length
                   }
                })
                .then(res => res.data)
@@ -180,19 +184,22 @@
                   if (state.error) {
                      throw new Error(state.message)
                   } else {
-                     if (loadMore) {
+                     if ( !loadMore ) {
                         this.apps.push(...data)
-                     } {
+			if ( data.length == 0 ) {
+			   this.NoMore = true
+			}
+                     } else {
                         this.apps = data
                      }
                   }
                })
-               .then(() => this.loading = false)
+               .then(() => this.loading = this.LoadingMoreState = false)
                .catch((error) => console.log(error))
          }
       },
       created() {
-         this.fetchData()
+         this.fetchData(true)
       }
    }
 </script>

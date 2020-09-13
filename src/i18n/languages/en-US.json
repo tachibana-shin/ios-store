@@ -43,7 +43,8 @@
 		"INFORMATION": "Information",
 		"SCREENSHOT": "Screenshot",
 		"INTERTING": "Interting",
-		"DOWNLOAD": "Download"
+		"DOWNLOAD": "Download",
+		"DESCRIPTION": "Description"
 	},
 	"BIND": {
 		"TEXT1": "Please login with TutuApp account to verify and get your UDID to complete the binding.",

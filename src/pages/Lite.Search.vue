@@ -2,7 +2,7 @@
    <div class="main">
       <div class="wrapper_search">
          <div class="search_input">
-            <input placeholder="Search" @keyup="fetchData" ref="Search" @blur="result = []" @keyup.enter="$router.push('/lite/search/result?query=' + $event.target.value)">
+            <input placeholder="Search" @keyup="fetchData" ref="Search" @keyup.enter="$router.push('/lite/search/result?query=' + $event.target.value)">
             <img class="icon" :src="require('@/assets/ic.search.svg')">
             <div class="result" v-if="result">
                <ul>

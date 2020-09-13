@@ -14,7 +14,7 @@
             <img class="download.button.highlight" :src="require('@/assets/home.btn.highlight.png')">
             <img class="download.button.light" :src="require('@/assets/home.btn.light.png')">
             <img class="download.download" :src="require('@/assets/home.btn.download.png')">
-            <img class="slide-icon" :src="require('@/assets/home.slide.icon.svg')">
+            <img class="slide-icon" :src="require('@/assets/home.slide.icon.svg')" v-scroll-to="{ element: '#content', duration: 666 }">
             <img class="star-big" :src="require('@/assets/home.star.big.svg')">
             <img class="star" :src="require('@/assets/home.star.svg')">
             <img class="cloud-left" :src="require('@/assets/home.cloud.left.svg')">
@@ -22,7 +22,7 @@
             <img class="light-top" :src="require('@/assets/home.light.top.svg')">
             <img class="light-bottom" :src="require('@/assets/home.light.bottom.svg')">
          </div>
-         <div class="content">
+         <div class="content" id="content">
             <div class="guide-block" @click="guideBlockShow = true">
                <img class="left" :src="require('@/assets/home.ic.video.svg')">
                <span> {{ "HOME.INST_GUIDE" | t }} </span>
