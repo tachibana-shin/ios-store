@@ -2,7 +2,7 @@
    <div class="wrapper">
       <div class="header">
          <img :src="require('@/assets/buny.png')">
-         {{ "BIND.TEXT1" | translate }}
+         {{ "BIND.TEXT1" | t }}
       </div>
       <div class="content">
          <div class="user" v-if="showUser">
@@ -13,35 +13,35 @@
                   <img :src="require(showPassword ? '@/assets/eye.show.svg' : '@/assets/eye.hide.svg')" @click="showPassword = !showPassword">
                </div>
             </div>
-            <button> {{ "BIND.VERIFY" | translate }} </button>
-            <p @click="showUser = false"> {{ "BIND.TEXT2" | translate }}  </p>
+            <button> {{ "BIND.VERIFY" | t }} </button>
+            <p @click="showUser = false"> {{ "BIND.TEXT2" | t }}  </p>
          </div>
          <div class="order" v-else>
             <input type="tel">
-            <button> {{ "BIND.VERIFY" | translate }}  </button>
-            <p @click="showUser = true"> {{ "BIND.TEXT3" | translate }}  </p>
+            <button> {{ "BIND.VERIFY" | t }}  </button>
+            <p @click="showUser = true"> {{ "BIND.TEXT3" | t }}  </p>
          </div>
          <div class="description ehem">
-            <p class="title"> {{ "BIND.TIPS" | translate }} </p>
+            <p class="title"> {{ "BIND.TIPS" | t }} </p>
             <ol>
                <li class="item">
-                  <span> {{ "BIND.TEXT4" | translate }} </span>
+                  <span> {{ "BIND.TEXT4" | t }} </span>
                </li>
                <li class="item">
-                  <span> {{ "BIND.TEXT5" | translate }} </span>
+                  <span> {{ "BIND.TEXT5" | t }} </span>
                </li>
                <li class="item">
-                  <span> {{ "BIND.TEXT6" | translate }} </span>
+                  <span> {{ "BIND.TEXT6" | t }} </span>
                </li>
             </ol>
          </div>
       </div>
       <div class="faq">
          <div class="ehem">
-            <p class="title"> {{ "BIND.FAQ" | translate }} </p>
+            <p class="title"> {{ "BIND.FAQ" | t }} </p>
             <ol>
                <li class="item">
-                  <collapse :title="'BIND.TITLE_TEXT7' | translate" :content="'BIND.TEXT7' | translate" />
+                  <collapse :title="'BIND.TITLE_TEXT7' | t" :content="'BIND.TEXT7' | transl| t
                </li>
             </ol>
          </div>

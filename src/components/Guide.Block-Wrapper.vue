@@ -4,11 +4,11 @@
       <div class="content">
          <div class="header">
             <div class="left" :class="{ active: tab == 0 }" @click="tab = 0">
-               {{ "GUIDE_BLOCK.INST" | translate }}
+               {{ "GUIDE_BLOCK.INST" | t }}
             </div>
             <div class="space"></div>
             <div class="right" :class="{ active: tab == 1}" @click="tab = 1">
-               {{ "GUIDE_BLOCK.VERIFICATION" | translate }}
+               {{ "GUIDE_BLOCK.VERIFICATION" | t }}
             </div>
          </div>
          <div class="wrapper">

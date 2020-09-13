@@ -13,16 +13,16 @@
                </div>
             </div>
             <div class="detail-app.infomation margin-bottom">
-               <p class="title"> {{ "APP_INFO.INFORMATION" | translate }} </p>
+               <p class="title"> {{ "APP_INFO.INFORMATION" | t }} </p>
                <ul class="list">
                   <li class="item" v-for="item in infomation">
-                     <p class="key"> {{ item.type | translate }} </p>
+                     <p class="key"> {{ item.type | t }} </p>
                      <p class="value"> {{ item.value }} </p>
                   </li>
                </ul>
             </div>
             <div class="detail-app.infomation margin-bottom detail-app.screenshot">
-               <p class="title"> {{ "APP_INFO.SCREENSHOT" | translate }} </p>
+               <p class="title"> {{ "APP_INFO.SCREENSHOT" | t }} </p>
                <div class="screenshot.list">
                   <ul>
                      <li class="screenshot.item" v-for="item in data.screenshot">
@@ -35,7 +35,7 @@
                <template v-slot:text> {{ data.description }} </template>
             </t-collapse>
             <div class="detail-app.infomation intereting">
-               <p class="title"> {{ "APP_INFO.INTERTING" | translate }} </p>
+               <p class="title"> {{ "APP_INFO.INTERTING" | t }} </p>
                <div class="apphost">
                   <div class="content">
                      <ul class="list">
@@ -50,7 +50,7 @@
                </div>
             </div>
             <div class="download">
-               <button @click="download"> {{ "APP_INFO.DOWNLOAD" | translate }} </button>
+               <button @click="download"> {{ "APP_INFO.DOWNLOAD" | t }} </button>
             </div>
          </div>
       </div>

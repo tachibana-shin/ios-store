@@ -6,7 +6,7 @@
          :active-class="item.activeClass"
          :exact-active-class="item.exactActiveClass">
          <img class="icon" :src="require('@/assets/' + item.icon + ((!!item.exactActiveClass ? $route.path == item.path : ($route.path.indexOf(item.path) > -1)) ? 'selected' : 'default') + '.svg')">
-         <p> {{ item.name | translate }} </p>
+         <p> {{ item.name | t }} </p>
       </router-link>
    </footer>
 </template>

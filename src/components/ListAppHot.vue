@@ -2,7 +2,7 @@
    <div class="apphost">
       <p class="title" v-if="title">
          <img class="icon" :src="require('@/assets/home.ic.hot.svg')">
-         <span> {{ "HOME.HOT" | translate }} </span>
+         <span> {{ "HOME.HOT" | t }} </span>
       </p>
       <div class="content">
          <ul class="list">

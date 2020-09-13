@@ -1,0 +1,76 @@
+{
+	"NO_MORE": "Không còn nữa",
+	"MORE": "Thêm",
+	"INST": "Cài đặt",
+	"developer": "Lập trình viên",
+	"category": "Thể loại",
+	"updated": "Đã cập nhật",
+	"compatibility": "Khả năng tương thích",
+	"languages": "Ngôn ngữ",
+	"account": "Tài khoản",
+	"GUIDE_BLOCK": {
+		"INST": "Cài đặt",
+		"VERIFICATION": "Xác minh"
+	},
+	"HEADER": {
+		"DOWNLOAD_VIP": "Tải xuống VIP",
+		"LITE": "Tutuapp Lite",
+		"WELCOME": "Chào mừng",
+		"LOGIN": "Đăng nhập",
+		"BIND_YOUR_UIID": "Liên kết UIID của bạn",
+		"PURCHASE_VIP": "Mua VIP",
+		"HOME": "Nhà",
+		"DOWNLOAD_APP_VIP": "Tải xuống Tutuapp VIP",
+		"IOS_APPS_AND_GAMES": "Ứng dụng và trò chơi iOS",
+		"FEEDBACK": "Phản hồi",
+		"CONTACT": "Tiếp xúc",
+		"BLOG": "Blog",
+		"LOGOUT": "Đăng xuất"
+	},
+	"HOME": {
+		"INST_GUIDE": "Hướng dẫn Cài đặt",
+		"VIP_FEATURE": "Tính năng VIP",
+		"CHECK_MORE_VIP_APPS": "Kiểm tra các ứng dụng VIP khác &gt;",
+		"HOT": "Hot"
+	},
+	"LITE_FOOTER": {
+		"HOME": "Trang chủ",
+		"GAMES": "Trò chơi",
+		"APPS": "Ứng dụng",
+		"SEARCH": "Tìm kiếm"
+	},
+	"APP_INFO": {
+		"INFORMATION": "Thông tin",
+		"SCREENSHOT": "Ảnh chụp màn hình",
+		"INTERTING": "Hấp dẫn",
+		"DOWNLOAD": "Tải xuống"
+	},
+	"BIND": {
+		"TEXT1": "Vui lòng đăng nhập bằng tài khoản TutuApp để xác minh và lấy UDID của bạn để hoàn tất việc ràng buộc. ",
+		"VERIFY": "Xác minh",
+		"TEXT2": "Nhập số mục để xác minh>",
+		"TEXT3": "Đăng nhập TutuApp để xác minh >",
+		"TIPS": "Mẹo",
+		"TEXT4": "Chức năng này CHỈ dành cho những người dùng đã có tài khoản VIP trước đó. Những người đã mua bây giờ không cần ràng buộc chỉ cần tải xuống là được.",
+		"TEXT5": "Những người dùng đã có tài khoản VIP có thể sử dụng TutuApp VIP sau khi xác minh.",
+		"TEXT6": "Nếu bạn gặp vấn đề khác, vui lòng liên hệ với chúng tôi.",
+		"FAQ": "Câu hỏi thường gặp",
+		"TITLE_TEXT7": "Làm cách nào để liên kết UDID của bạn?",
+		"TEXT7": "Phương pháp 1: Vui lòng đăng nhập bằng tài khoản TutuApp để xác minh và lấy UDID của bạn để hoàn thành việc ràng buộc. \nCách 2: Vui lòng nhập số mục để xác minh và lấy UDID của bạn để hoàn thành việc ràng buộc."
+	},
+	"BLOG": {
+		"HOT": "Hot",
+		"GAMES_GUIDE": "Hướng dẫn trò chơi",
+		"NEW": "Mới"
+	},
+	"FEEDBACK": {
+		"FEEDBACK_TYPE": "Loại phản hồi ",
+		"DESCRIPTION": "Mô tả",
+		"SCREENSHOT": "Ảnh chụp màn hình",
+		"SUBMIT": "Gửi",
+		"PLC1": "Phản hồi loại đầu vào",
+		"PLC2": "Vui lòng mô tả vấn đề hoặc đề xuất của bạn càng chi tiết càng tốt",
+		"EMAIL": "Email",
+		"PLC3": "Email của bạn"
+	}
+}

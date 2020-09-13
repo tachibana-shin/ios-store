@@ -2,7 +2,7 @@
    <div class="HowToInstall" @click="$emit('close')">
       <div class="content" @click.stop="true">
          <div class="swiper-wrapper">
-            <p class="title"> {{ "HOME.INST_GUIDE" | translate }} </p>
+            <p class="title"> {{ "HOME.INST_GUIDE" | t }} </p>
             <swiper :options="{
                pagination: {
                   el: '.pagination-swiper',
@@ -21,10 +21,10 @@
          <div class="footer">
             <p class="video">
                <img :src="require('@/assets/home.ic.video.svg')">
-               {{ "HOME.INST_GUIDE" | translate }}
+               {{ "HOME.INST_GUIDE" | t }}
             </p>
             <button class="install">
-               {{ "INST" | translate }}
+               {{ "INST" | t }}
             </button>
          </div>
       </div>

@@ -25,13 +25,13 @@
          <div class="content">
             <div class="guide-block" @click="guideBlockShow = true">
                <img class="left" :src="require('@/assets/home.ic.video.svg')">
-               <span> {{ "HOME.INST_GUIDE" | translate }} </span>
+               <span> {{ "HOME.INST_GUIDE" | t }} </span>
                <img class="right" :src="require('@/assets/ic.more.svg')">
             </div>
             <div class="applist" v-if="AppListLoaded">
                <span class="applist.title">
                   <img :src="require('@/assets/home.ic.hot.svg')">
-                  {{ "HOME.VIP_FEATURE" | translate }}
+                  {{ "HOME.VIP_FEATURE" | t }}
                </span>
                <div class="applist.wrapper">
                   <ul class="list">
@@ -40,7 +40,7 @@
                      </li>
                   </ul>
                </div>
-               <p class="check-more"> {{ "HOME.CHECK_MORE_VIP_APPS" | translate }} </p>
+               <p class="check-more"> {{ "HOME.CHECK_MORE_VIP_APPS" | t }} </p>
             </div>
             <div class="applist" v-else>
                <home-loading-applist />

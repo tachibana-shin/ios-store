@@ -1,0 +1,86 @@
+{
+	"NO_MORE": "もういや",
+	"MORE": "もっと",
+	"INST": "設定",
+	"developer": "プログラマー",
+	"category": "カテゴリー",
+	"updated": "更新しました",
+	"compatibility": "互換性",
+	"languages": "言語",
+	"account": "アカウント",
+	"GUIDE_BLOCK": {
+		"INST": "設定",
+		"VERIFICATION": "Verify"
+	},
+	"HEADER": {
+		"DOWNLOAD_VIP": "VIPをダウンロード ",
+		"LITE": "Tutuapp Lite",
+		"WELCOME": "ようこそ",
+		"LOGIN": "ログイン",
+		"BIND_YOUR_UIID": "UIIDをリンク",
+		"PURCHASE_VIP": "VIPを購入",
+		"HOME": "ホーム",
+		"DOWNLOAD_APP_VIP": "ダウンロードTutuapp VIP",
+		"IOS_APPS_AND_GAMES": "iOSアプリとゲーム",
+		"FEEDBACK": "フィードバック",
+		"CONTACT": "お問い合わせ",
+		"BLOG": "ブログ",
+		"LOGOUT": "ログアウト"
+	},
+	"HOME": {
+		"INST_GUIDE": "インストールガイド ",
+		"VIP_FEATURE": "VIP機能",
+		"CHECK_MORE_VIP_APPS": "他のVIPアプリをチェック>",
+		"HOT": "ホット"
+	},
+	"LITE_FOOTER": {
+		"HOME": "ホームページ",
+		"GAMES": "ゲーム",
+		"APPS": "応用",
+		"SEARCH": "探す"
+	},
+	"APP_INFO": {
+		"INFORMATION": "情報",
+		"SCREENSHOT": "スクリーンショット",
+		"INTERTING": "面白い",
+		"DOWNLOAD": "ダウンロード"
+	},
+	"BIND": {
+		"TEXT1": "TutuAppアカウントでログインして、 UDIDを確認および取得し、 バインドを完了してください。 ",
+
+		"VERIFY": "検証",
+
+		"TEXT2": "確認のためのエントリ数を入力してください>",
+
+		"TEXT3": "確認のためにTutuAppにサインイン>",
+
+		"TIPS": "ヒント",
+
+		"TEXT4": "この機能は、 すでにVIPアカウントを持っているユーザーのみが使用できます。拘束せずに今すぐ購入して、 ダウンロードするだけです。",
+
+		"TEXT5": "VIPアカウントを既に持っているユーザーは、 確認後、 TutuApp VIPを使用できます。",
+
+		"TEXT6": "他に問題がある場合はご連絡ください。",
+
+		"FAQ": "よくある質問",
+
+		"TITLE_TEXT7": "UDIDをリンクするにはどうすればよいですか？",
+
+		"TEXT7": "方法1: TutuAppアカウントでログインして、 UDIDを確認して取得し、 バインドを完了してください。\n方法2: アイテム番号を入力して、 UDIDを確認して取得してください バインドを完了してください。」"
+	},
+	"BLOG": {
+		"HOT": "ホット",
+		"GAMES_GUIDE": "ゲームの説明",
+		"NEW": "新着"
+	},
+	"FEEDBACK": {
+		"FEEDBACK_TYPE": "フィードバックタイプ",
+		"DESCRIPTION": "説明",
+		"SCREENSHOT": "スクリーンショット",
+		"SUBMIT": "送る",
+		"PLC1": "入力タイプフィードバック",
+		"PLC2": "問題または提案をできるだけ詳しく説明してください",
+		"EMAIL": "メール",
+		"PLC3": "あなたのメールアドレス"
+	}
+}

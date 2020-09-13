@@ -7,11 +7,11 @@
       </div>
       <div class="tabs" v-if="!$route.meta.hiddenTab">
          <router-link tag="span" to="/" exact-active-class="active" class="left">
-            {{ "HEADER.DOWNLOAD_VIP" | translate }}
+            {{ "HEADER.DOWNLOAD_VIP" | t }}
          </router-link>
          <div class="space"></div>
          <router-link tag="span" to="/lite" active-class="active" class="right">
-            {{ "HEADER.LITE" | translate }}
+            {{ "HEADER.LITE" | t }}
          </router-link>
       </div>
    </div>
