@@ -2,24 +2,24 @@
    <div class="main">
       <div class="feedback-item">
          <div class="title">
-            <span>Feedback Type</span>
+            <span> {{ "FEEDBACK.FEEDBACK_TYPE" | t }} </span>
          </div>
          <div class="select">
-            <input v-model="typeFeedback" placeholder="Input Type Feedback">
+            <input v-model="typeFeedback" :placeholder="'FEEDBACK.PLC1' | t">
          </div>
       </div>
       <div class="feedback-item feedback.content">
          <div class="title">
-            <span>Descrition</span>
+            <span> {{ "FEEDBACK.DESCRIPTION" | t }} </span>
          </div>
          <div class="textarea-parent">
-            <textarea placeholder="Please describe your problem or suggestion in as much detail as possible" v-model="content"></textarea>
+            <textarea :placeholder="'FEEDBACK.PLC2' | t" v-model="content"></textarea>
             <span> {{ content.length }} / 500 </span>
          </div>
       </div>
       <div class="feedback-item feedback-screenshot">
          <div class="title">
-            <span class="nostar"> Screenshot </span>
+            <span class="nostar"> {{ "FEEDBACK.SCREENSHOT" | t }}  </span>
             <span> {{ fileSendToReport.length }} / 4 </span>
          </div>
          <div class="cube">
@@ -40,11 +40,11 @@
       </div>
       <div class="feedback-item feedback-email">
          <div class="title">
-            <span v-model="email">Email</span>
+            <span v-model="email"> {{ "FEEDBACK.EMAIL" | t }} </span>
          </div>
-         <input>
+         <input :placeholder="'FEEDBACK.PLC3' | t">
       </div>
-      <button class="submit" :class="{ active: checkValid() } " @click="send"> Submit </button>
+      <button class="submit" :class="{ active: checkValid() } " @click="send"> {{ "FEEDBACK.SUBMIT" | t }}  </button>
       <div class="toast" v-if="state == 1 || state == 2">
          <img class="progress" :src="require('@/assets/toast.submit.progress.svg')">
          <p> Submting... </p>

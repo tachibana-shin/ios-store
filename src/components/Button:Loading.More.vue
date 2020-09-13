@@ -1,7 +1,7 @@
 <template>
    <div class="loading-more">
       <div class="loading-btn" v-if="!state || noMore" @click="noMore || $emit('click')">
-         <span class="loading.title"> {{ noMore ? "No More" : "More" }} </span>
+         <span class="loading.title"> {{ (noMore ? "NO_MORE" : "MORE") | translate }} </span>
          <img class="loading.icon" :src="require('@/assets/ic.loading.more.svg')" v-if="!noMore">
       </div>
       <list-app-loading v-else/>

@@ -2,7 +2,7 @@
    <div class="wrapper">
       <div class="header">
          <img :src="require('@/assets/buny.png')">
-         Please login with TutuApp account to verify and get your UDID to complete the binding.
+         {{ "BIND.TEXT1" | translate }}
       </div>
       <div class="content">
          <div class="user" v-if="showUser">
@@ -13,37 +13,35 @@
                   <img :src="require(showPassword ? '@/assets/eye.show.svg' : '@/assets/eye.hide.svg')" @click="showPassword = !showPassword">
                </div>
             </div>
-            <button> Verify </button>
-            <p @click="showUser = false"> Enter item number to verify &gt; </p>
+            <button> {{ "BIND.VERIFY" | translate }} </button>
+            <p @click="showUser = false"> {{ "BIND.TEXT2" | translate }}  </p>
          </div>
          <div class="order" v-else>
             <input type="tel">
-            <button> Verify </button>
-            <p @click="showUser = true"> Login TutuApp to verify &gt; </p>
+            <button> {{ "BIND.VERIFY" | translate }}  </button>
+            <p @click="showUser = true"> {{ "BIND.TEXT3" | translate }}  </p>
          </div>
          <div class="description ehem">
-            <p class="title"> Tips </p>
+            <p class="title"> {{ "BIND.TIPS" | translate }} </p>
             <ol>
                <li class="item">
-                  <span> This function is ONLY for the users who have already had VIP account before. People who purchased now don't need to bind just download is okay. </span>
+                  <span> {{ "BIND.TEXT4" | translate }} </span>
                </li>
                <li class="item">
-                  <span> The users who have already had VIP account can use TutuApp VIP after the verification. </span>
+                  <span> {{ "BIND.TEXT5" | translate }} </span>
                </li>
                <li class="item">
-                  <span> If you have other issues please contact us. </span>
+                  <span> {{ "BIND.TEXT6" | translate }} </span>
                </li>
             </ol>
          </div>
       </div>
       <div class="faq">
          <div class="ehem">
-            <p class="title"> FAQ </p>
+            <p class="title"> {{ "BIND.FAQ" | translate }} </p>
             <ol>
                <li class="item">
-                  <collapse title="How to bind your UDID ?" content="
-Method 1: Please login with TutuApp account to verify and get your UDID to complete the binding.
-Method 2: Please enter item number to verify and get your UDID to complete the binding." />
+                  <collapse :title="'BIND.TITLE_TEXT7' | translate" :content="'BIND.TEXT7' | translate" />
                </li>
             </ol>
          </div>

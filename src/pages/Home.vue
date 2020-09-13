@@ -25,13 +25,13 @@
          <div class="content">
             <div class="guide-block" @click="guideBlockShow = true">
                <img class="left" :src="require('@/assets/home.ic.video.svg')">
-               <span> Installation Guide </span>
+               <span> {{ "HOME.INST_GUIDE" | translate }} </span>
                <img class="right" :src="require('@/assets/ic.more.svg')">
             </div>
             <div class="applist" v-if="AppListLoaded">
                <span class="applist.title">
                   <img :src="require('@/assets/home.ic.hot.svg')">
-                  VIP Features
+                  {{ "HOME.VIP_FEATURE" | translate }}
                </span>
                <div class="applist.wrapper">
                   <ul class="list">
@@ -40,7 +40,7 @@
                      </li>
                   </ul>
                </div>
-               <p class="check-more"> Check more VIP apps &gt; </p>
+               <p class="check-more"> {{ "HOME.CHECK_MORE_VIP_APPS" | translate }} </p>
             </div>
             <div class="applist" v-else>
                <home-loading-applist />

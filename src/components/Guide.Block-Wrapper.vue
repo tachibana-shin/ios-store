@@ -4,11 +4,11 @@
       <div class="content">
          <div class="header">
             <div class="left" :class="{ active: tab == 0 }" @click="tab = 0">
-               Installation
+               {{ "GUIDE_BLOCK.INST" | translate }}
             </div>
             <div class="space"></div>
             <div class="right" :class="{ active: tab == 1}" @click="tab = 1">
-               Verification
+               {{ "GUIDE_BLOCK.VERIFICATION" | translate }}
             </div>
          </div>
          <div class="wrapper">

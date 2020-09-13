@@ -6,7 +6,7 @@
          :active-class="item.activeClass"
          :exact-active-class="item.exactActiveClass">
          <img class="icon" :src="require('@/assets/' + item.icon + ((!!item.exactActiveClass ? $route.path == item.path : ($route.path.indexOf(item.path) > -1)) ? 'selected' : 'default') + '.svg')">
-         <p> {{ item.name }} </p>
+         <p> {{ item.name | translate }} </p>
       </router-link>
    </footer>
 </template>
@@ -62,10 +62,10 @@
 <script>
    export default {
       tabs: [
-         { icon: "tab.ic.home.", path: "/lite", name: "Home", activeClass: "", exactActiveClass: "active" },
-         { icon: "tab.ic.game.", path: "/lite/game", name: "Games", activeClass: "active" },
-         { icon: "tab.ic.app.", path: "/lite/app", name: "Apps", activeClass: "active" },
-         { icon: "tab.ic.search.", path: "/lite/search", name: "Search", activeClass: "active" }, 
+         { icon: "tab.ic.home.", path: "/lite", name: "LITE_FOOTER.HOME", activeClass: "", exactActiveClass: "active" },
+         { icon: "tab.ic.game.", path: "/lite/game", name: "LITE_FOOTER.GAMES", activeClass: "active" },
+         { icon: "tab.ic.app.", path: "/lite/app", name: "LITE_FOOTER.APPS", activeClass: "active" },
+         { icon: "tab.ic.search.", path: "/lite/search", name: "LITE_FOOTER.SEARCH", activeClass: "active" }, 
          
       ]
    }

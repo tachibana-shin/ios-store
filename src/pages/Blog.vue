@@ -3,15 +3,15 @@
       <div class="header">
          <div class="item">
             <img :src="require('@/assets/news.ic.hot.svg')">
-            <span> Hot </span>
+            <span> {{ "BLOG.HOT" | t }} </span>
          </div>
          <div class="item">
             <img :src="require('@/assets/news.ic.raiders.svg')">
-            <span> Games Guide </span>
+            <span> {{ "BLOG.GAMES_GUIDE" | t }} </span>
          </div>
          <div class="item">
             <img :src="require('@/assets/news.ic.new.svg')">
-            <span> New </span>
+            <span> {{ "BLOG.NEW" | t }} </span>
          </div>
       </div>
       <div class="content">

@@ -7,11 +7,11 @@
       </div>
       <div class="tabs" v-if="!$route.meta.hiddenTab">
          <router-link tag="span" to="/" exact-active-class="active" class="left">
-            Download VIP
+            {{ "HEADER.DOWNLOAD_VIP" | translate }}
          </router-link>
          <div class="space"></div>
          <router-link tag="span" to="/lite" active-class="active" class="right">
-            Tutuapp Lite
+            {{ "HEADER.LITE" | translate }}
          </router-link>
       </div>
    </div>

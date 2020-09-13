@@ -13,16 +13,16 @@
                </div>
             </div>
             <div class="detail-app.infomation margin-bottom">
-               <p class="title"> Information </p>
+               <p class="title"> {{ "APP_INFO.INFORMATION" | translate }} </p>
                <ul class="list">
                   <li class="item" v-for="item in infomation">
-                     <p class="key"> {{ item.type }} </p>
+                     <p class="key"> {{ item.type | translate }} </p>
                      <p class="value"> {{ item.value }} </p>
                   </li>
                </ul>
             </div>
             <div class="detail-app.infomation margin-bottom detail-app.screenshot">
-               <p class="title"> Screenshot </p>
+               <p class="title"> {{ "APP_INFO.SCREENSHOT" | translate }} </p>
                <div class="screenshot.list">
                   <ul>
                      <li class="screenshot.item" v-for="item in data.screenshot">
@@ -35,7 +35,7 @@
                <template v-slot:text> {{ data.description }} </template>
             </t-collapse>
             <div class="detail-app.infomation intereting">
-               <p class="title"> Interting </p>
+               <p class="title"> {{ "APP_INFO.INTERTING" | translate }} </p>
                <div class="apphost">
                   <div class="content">
                      <ul class="list">
@@ -50,7 +50,7 @@
                </div>
             </div>
             <div class="download">
-               <button @click="download"> Download </button>
+               <button @click="download"> {{ "APP_INFO.DOWNLOAD" | translate }} </button>
             </div>
          </div>
       </div>
@@ -369,7 +369,7 @@
          infomation() {
             const __proto__ = ["developer", "category", "updated", "compatibility", "languages", "account"]
             return __proto__.map(item => {
-               if (item in this.data && !!this.data[item] && this.data.length > 0) {
+               if (item in this.data && !!this.data[item] && this.data[item].length > 0) {
                   return {
                      type: item,
                      value: Array.isArray(this.data[item]) ? this.data[item].join(", ") : this.data[item]
@@ -377,7 +377,7 @@
                } else {
                   return null
                }
-            })
+            }).filter(e => e !== null)
          }
       },
       created() {

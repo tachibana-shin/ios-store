@@ -2,45 +2,45 @@
    <div class="nav.list-wrapper">
       <nav class="nav.list">
          <div class="content">
-            <h1 class="welcome"> Welcome </h1>
+            <h1 class="welcome"> {{ "HEADER.WELCOME" | translate }} </h1>
             <div class="user-general">
                <div class="user.content" v-if="false">
                </div>
                <div class="no-login" v-else>
-                  <button class="login.button"> Login </button>
+                  <button class="login.button"> {{ "HEADER.LOGIN" | translate }}  </button>
                </div>
             </div>
             <hr class="line">
             <ul class="list" @click="$emit('hide-menu')">
                <router-link to="/bind" exact-active-class="active" tag="li" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.bind.svg')">
-                  <span> Bind your UIID </span>
+                  <span> {{ "HEADER.BIND_YOUR_UIID" | translate }}  </span>
                </router-link>
                <li class="item" @click="$emit('show-installation-guide')">
                   <img class="icon" :src="require('@/assets/bar.ic.vip.svg')">
-                  <span> Purchase VIP </span>
+                  <span> {{ "HEADER.PURCHASE_VIP" | translate }} </span>
                </li>
                <hr>
                <router-link to="/" tag="li" exact-active-class="active" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.home.svg')">
-                  <span> Home </span>
+                  <span> {{ "HEADER.HOME" | translate }}  </span>
                </router-link>
                <li class="item" @click="$emit('show-installation-guide')">
                   <img class="icon" :src="require('@/assets/bar.ic.download.svg')">
-                  <span> Download Tutuapp VIP </span>
+                  <span> {{ "HEADER.DOWNLOAD_APP_VIP" | translate }}  </span>
                </li>
                <li class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.game.svg')">
-                  <span> iOS Apps & Games </span>
+                  <span> {{ "HEADER.IOS_APPS_AND_GAMES" | translate }}  </span>
                </li>
                <hr>
                <router-link tag="li" to="/feedback" class="item" active-class="active">
                   <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
-                  <span> Feedback </span>
+                  <span> {{ "HEADER.FEEDBACK" | translate }} </span>
                </router-link>
                <li class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.contact.svg')">
-                  <span> Contact </span>
+                  <span> {{ "HEADER.CONTACT" | translate }}  </span>
                </li>
                <li class="contact">
                   <ul>
@@ -58,10 +58,10 @@
                <hr>
                <router-link tag="li" to="/blog" active-class="active" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.blog.svg')">
-                  <span> Blog </span>
+                  <span> {{ "HEADER.BLOG" | translate }}  </span>
                </router-link>
                <li class="" v-if="false">
-                  <button class="logout.button"> Log Out </button>
+                  <button class="logout.button"> {{ "HEADER.LOGOUT" | translate }} </button>
                </li>
             </ul>
          </div>

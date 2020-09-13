@@ -6,6 +6,7 @@ import VueProgressBar from 'vue-progressbar'
 import axios from 'axios'
 import vImg from 'v-img'
 import Lazyload from 'vue-lazyload'
+import i18n from './i18n'
 import eruda from 'eruda'
 
 eruda.init()
@@ -27,6 +28,7 @@ Vue.use(Lazyload)
 new Vue({
   el: '#app',
   router,
+  i18n,
   template: '<App/>',
   components: { App }
 })
