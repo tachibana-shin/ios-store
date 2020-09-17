@@ -173,7 +173,7 @@
                this.LoadingMoreState = true
 	    }
 	    
-	    this.$axios.get("http://localhost:8080/admin/api/Search.php", {
+	    this.$axios.get("//admin/api/Search.php", {
                   params: {
                      query: this.$route.query.query,
                      offset: loadMore ? 0 : this.apps.length

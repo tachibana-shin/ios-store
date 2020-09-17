@@ -132,7 +132,7 @@
          fetchData() {
             clearTimeout(this.timeout)
             this.timeout = setTimeout(() => {
-               this.$axios.get("http://localhost:8080/admin/api/pre-search.php", {
+               this.$axios.get("//admin/api/pre-search.php", {
                      params: {
                         query: this.$refs.Search.value
                      }

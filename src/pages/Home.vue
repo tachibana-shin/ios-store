@@ -528,7 +528,7 @@
          tipContent: "Check your idid"
       }),
       created() {
-         this.$axios.get("http://localhost:8080/admin/api/AppVipFeature.php")
+         this.$axios.get("//admin/api/AppVipFeature.php")
             .then(res => res.data)
             .then(({ state, data }) => {
                if (state.error) {

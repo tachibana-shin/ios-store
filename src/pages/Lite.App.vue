@@ -77,7 +77,7 @@
             if (loading) {
                this.LoadingMoreState = true
             }
-            return this.$axios.get("http://localhost:8080/admin/api/ListApp.php", {
+            return this.$axios.get("//admin/api/ListApp.php", {
                   params: {
                      offset: this.Apps.length,
                      category: "^games"
@@ -100,7 +100,7 @@
       },
       created() {
          Promise.all([
-            this.$axios.get("http://localhost:8080/admin/api/Banners.php", {
+            this.$axios.get("//admin/api/Banners.php", {
                   params: {
                      category: "app"
                   }
