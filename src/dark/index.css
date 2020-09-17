@@ -1,0 +1,718 @@
+.appinfo .appinfo\.content .app\.content .app\.title {
+  color: #d0bfa6;
+}
+
+.main .wrapper .detail-app .detail-app\.basic .info .app\.name {
+  color: #e9d4b7;
+}
+.main .wrapper .detail-app .detail-app\.basic .info .bottom {
+  color: #5d5440;
+}
+.main .wrapper .detail-app .detail-app\.infomation .title {
+  color: #d0bfa6;
+}
+.main .wrapper .detail-app .detail-app\.infomation .list .item .key {
+  color: #8a7756;
+}
+.main .wrapper .detail-app .detail-app\.infomation .list .item .value {
+  color: #c8b28c;
+}
+.main .wrapper .detail-app .intereting .apphost .title {
+  color: #e9d4b7;
+}
+.main .wrapper .detail-app .intereting .apphost .content .list .item > .app p {
+  color: #f4c6a0;
+}
+.main .wrapper .detail-app .download {
+  background-color: #000;
+}
+.main .wrapper .detail-app .download button {
+  background-color: #ff7100;
+  color: #000;
+}
+
+.backdrop\.mark {
+  background-color: rgba(254, 245, 239, 0.9);
+}
+
+.wrapper {
+  background-color: #0a0908;
+}
+.wrapper .ehem .title {
+  color: #c8b28c;
+}
+.wrapper .ehem .title:before {
+  background-color: #ff7100;
+}
+.wrapper .ehem ol .item {
+  color: #b49d75;
+}
+.wrapper .header {
+  background-color: #000;
+  box-shadow: rgba(247, 242, 216, 0.03) 0 0.533vw 3.2vw 0;
+  color: #f4c6a0;
+  font-size: 3.733vmin;
+  font-weight: 400;
+}
+.wrapper .content {
+  background-color: #000;
+  box-shadow: rgba(247, 242, 216, 0.03) 0 0.533vw 3.2vw 0;
+}
+.wrapper .content .user input,
+.wrapper .content .order input {
+  color: #413c30;
+}
+.wrapper .content .user button,
+.wrapper .content .order button {
+  background-color: #e6e8eb;
+  color: #000;
+}
+.wrapper .content .user button.active,
+.wrapper .content .order button.active {
+  background-color: #ff7100;
+}
+.wrapper .content .user p,
+.wrapper .content .order p {
+  color: #baa47d;
+}
+.wrapper .faq {
+  background-color: #000;
+  box-shadow: rgba(247, 242, 216, 0.03) 0 0.533vw 3.2vw 0;
+}
+
+.loading-more .loading-btn .loading\.title {
+  color: #ff7b0f;
+}
+
+.collapse-faq .el-collapse .item .header {
+  background-color: #000;
+  color: #cfcecc;
+}
+.collapse-faq .el-collapse .item .header .title {
+  color: #b49d75;
+}
+.collapse-faq .el-collapse .item .content {
+  background-color: #000;
+}
+.collapse-faq .el-collapse .item .content span {
+  color: #ff7b0f;
+}
+
+.main {
+  background-color: #f4f5f7;
+}
+.main .feedback-item .title span:first-child {
+  color: #c8b28c;
+}
+.main .feedback-item .title span:first-child:not(.nostar):after {
+  color: #0ff;
+}
+.main .feedback-item .select input {
+  background-color: #000;
+  color: #c8b28c;
+}
+.main .feedback\.content .textarea-parent {
+  border-color: #052019;
+}
+.main .feedback\.content .textarea-parent textarea {
+  color: #9f9d99;
+  color: #c8b28c;
+}
+.main .feedback\.content .textarea-parent span {
+  background-color: #000;
+  color: #6f6c66;
+}
+.main .feedback-screenshot .cube .btn span {
+  background-color: #000;
+  box-shadow: rgba(255, 255, 255, 0.08) 0 0 1.6vw 0.533vw;
+}
+.main .feedback-screenshot .cube .btn span:before {
+  color: #2e2719;
+}
+.main .feedback-screenshot .cube .item {
+  border-top-color: #2e2719;
+}
+.main .feedback-screenshot .cube .item .busybox .close {
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.8);
+}
+.main .feedback-screenshot .cube .item .busybox .progress {
+  background-color: rgba(218, 217, 210, 0.4);
+  background-color: #000;
+}
+.main .feedback-screenshot .cube .item .busybox .progress .error {
+  color: #f43530;
+}
+.main .feedback-screenshot .cube .item .busybox .progress span {
+  color: #000;
+}
+.main .feedback-email input {
+  background-color: #000;
+  color: #c8b28c;
+}
+.main .submit {
+  background-color: #b5b3a4;
+}
+.main .submit.active {
+  background-color: #ff7b0f;
+}
+.main .toast {
+  background-color: rgba(255, 234, 204, 0.74);
+}
+.main .toast p {
+  color: #1a1306;
+}
+.main .notice {
+  background-color: rgba(247, 241, 225, 0.75);
+}
+.main .notice .content h2 {
+  color: #ff7b0f;
+}
+.main .notice .content .text {
+  color: #ff7b0f;
+}
+.main .notice .content .ok {
+  background-color: #b75f03;
+}
+
+.guide\.block-wrapper .content {
+  background-color: #060503;
+}
+.guide\.block-wrapper .content .header {
+  background-color: #000;
+}
+.guide\.block-wrapper .content .header .left,
+.guide\.block-wrapper .content .header .right {
+  color: #5d5440;
+}
+.guide\.block-wrapper .content .header .left.active,
+.guide\.block-wrapper .content .header .right.active {
+  color: #ff7b0f;
+}
+.guide\.block-wrapper .content .header .space {
+  background-color: #0f0d0a;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .index {
+  color: #001430;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .wrapper\.content\.content {
+  background-color: #000;
+  box-shadow: rgba(252, 241, 218, 0.06) 0 0.8vw 5.333vw 0;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .wrapper\.content\.content .text {
+  color: #bfa67a;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .wrapper\.content\.content .text span {
+  color: #ff7b0f;
+}
+
+.header-nav {
+  box-shadow: rgba(247, 242, 216, 0.05) 0 0.533vw 2.133vw 0;
+}
+.header-nav .wrapper {
+  background-color: #000;
+}
+.header-nav .tabs {
+  background-color: #030200;
+  color: #5d5440;
+}
+.header-nav .tabs .left.active,
+.header-nav .tabs .right.active {
+  color: #ff7b0f;
+}
+.header-nav .tabs .space {
+  background-color: #0f0d0a;
+}
+
+.wrapper\.loading .loading\.title {
+  background-color: #120f0a;
+}
+
+.main .wrapper .banner\.welcome .notice {
+  background-color: #0a0908;
+}
+.main .wrapper .banner\.welcome .notice .notice\.content p {
+  color: #ff7b0f;
+}
+.main .wrapper .content .guide-block {
+  box-shadow: rgba(252, 241, 218, 0.06) 0 0.8vw 5.333vw 0;
+}
+.main .wrapper .content .guide-block span {
+  color: #c8b28c;
+}
+.main .wrapper .content .applist {
+  background-color: #000;
+  box-shadow: rgba(252, 241, 218, 0.06) 0 0.8vw 5.333vw 0;
+}
+.main .wrapper .content .applist .applist\.title {
+  color: #c8b28c;
+}
+.main .wrapper .content .applist .check-more {
+  color: #ff7b0f;
+}
+
+.HowToInstall .content .swiper-wrapper .title {
+  color: #000;
+}
+.HowToInstall .content .footer {
+  background-color: #000;
+}
+.HowToInstall .content .footer .video {
+  color: #ffa861;
+}
+.HowToInstall .content .footer .install {
+  background-color: #ff7b0f;
+  color: #000;
+}
+
+.wrapper-language .options {
+  background-color: #000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .app\.content .app\.title {
+  color: #d0bfa6;
+}
+.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .icon {
+  background-color: #120f0a;
+}
+.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .app\.content .app\.title {
+  background-color: #120f0a;
+}
+.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .app\.content .VIP {
+  background-color: #120f0a;
+}
+.loading-overlay .loading\.applist ul li .appinfo .button {
+  background-color: #120f0a;
+}
+
+.apphost .title {
+  color: #e9d4b7;
+}
+.apphost .content .list .item > .app p {
+  color: #f4c6a0;
+}
+
+.footer\.app {
+  background-color: #000;
+  border-bottom-color: #262626;
+  box-shadow: rgba(247, 242, 216, 0.01) 0 0 1.6vw 0;
+}
+.footer\.app .item p {
+  color: #5d5440;
+}
+.footer\.app .item.active p {
+  color: #c8b28c;
+}
+
+.wrapper\.loading .wrapper\.content {
+  background-color: #120f0a;
+}
+.wrapper\.loading .wrapper\.content .content .title1,
+.wrapper\.loading .wrapper\.content .content .title2 {
+  background-color: #120f0a;
+}
+.wrapper\.loading .wrapper\.content .content .des1,
+.wrapper\.loading .wrapper\.content .content .des2,
+.wrapper\.loading .wrapper\.content .content .des3 {
+  background-color: #120f0a;
+}
+
+.loadingapp {
+  background-color: #000;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .app\.avatar {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .app\.name .one,
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .app\.name .two {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .bottom .app\.size {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .bottom .rate-star {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.infomation .title {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.infomation .list .item .key {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.infomation .list .item .value {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.screenshot .screenshot\.list ul .screenshot\.item {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .t-collapse .title {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .t-collapse .content {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .intereting .apphost .title {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .intereting .apphost .content .list .item > .app div {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .intereting .apphost .content .list .item > .app p {
+  background-color: #120f0a;
+}
+
+.wrapper\.loading {
+  background-color: #000;
+}
+.wrapper\.loading .app .swiper {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .swiper .top-swiper {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .apphot .title {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .apphot ul li .top {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .apphot ul li .bottom {
+  background-color: #120f0a;
+}
+
+.wrapper_loading {
+  background-color: #000;
+}
+.wrapper_loading .wrapper_result .keyword-hot .title {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .keyword-hot .list li {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .interset .title {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .interset .list .item .icon {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .interset .list .item .text {
+  background-color: #120f0a;
+}
+
+.bac\.animation {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 80%);
+}
+
+.nav\.list-wrapper .nav\.list {
+  background-color: #000;
+}
+.nav\.list-wrapper .nav\.list .content {
+  border: 1px solid #000;
+  background-color: #000;
+}
+.nav\.list-wrapper .nav\.list .content .welcome {
+  color: #bfa68e;
+}
+.nav\.list-wrapper .nav\.list .content .user-general .no-login .login\.button {
+  background-color: #ff7b0f;
+  color: #000;
+}
+.nav\.list-wrapper .nav\.list .content hr.line {
+  background-color: #0d0b0a;
+}
+.nav\.list-wrapper .nav\.list .content .list .item {
+  color: #c8ff8c;
+}
+.nav\.list-wrapper .nav\.list .content .list .item.active {
+  background-color: #110d05;
+}
+.nav\.list-wrapper .nav\.list .content .list hr {
+  background-color: #0d0b0a;
+}
+.nav\.list-wrapper .nav\.list .content .list .contact {
+  color: #8a7756;
+}
+.nav\.list-wrapper .nav\.list .content .list .contact ul .item-contact a {
+  color: #8a7756;
+}
+.nav\.list-wrapper .nav\.list .content .list hr {
+  background-color: #0d0b0a;
+}
+.nav\.list-wrapper .nav\.list .content .list .logout\.button {
+  background-color: #000;
+}
+.nav\.list-wrapper .nav\.list .content .list .logout\.button:hover {
+  background-color: #ff7b0f;
+  color: #000;
+}
+
+.rate-star .number {
+  color: #5d5440;
+}
+
+.t-collapse .title span {
+  color: #e9d4b7;
+}
+.t-collapse .content {
+  color: #b5a78f;
+}
+
+.warning .content {
+  background-color: #000;
+}
+
+.appinfo .appinfo\.content .app\.content .app\.title {
+  color: #d0bfa6;
+}.backdrop\.mark {
+  background-color: rgba(254, 245, 239, 0.9);
+}.loading-more .loading-btn .loading\.title {
+  color: #ff7b0f;
+}.collapse-faq .el-collapse .item .header {
+  background-color: #000;
+  color: #cfcecc;
+}
+.collapse-faq .el-collapse .item .header .title {
+  color: #b49d75;
+}
+.collapse-faq .el-collapse .item .content {
+  background-color: #000;
+}
+.collapse-faq .el-collapse .item .content span {
+  color: #ff7b0f;
+}.guide\.block-wrapper .content {
+  background-color: #060503;
+}
+.guide\.block-wrapper .content .header {
+  background-color: #000;
+}
+.guide\.block-wrapper .content .header .left,
+.guide\.block-wrapper .content .header .right {
+  color: #5d5440;
+}
+.guide\.block-wrapper .content .header .left.active,
+.guide\.block-wrapper .content .header .right.active {
+  color: #ff7b0f;
+}
+.guide\.block-wrapper .content .header .space {
+  background-color: #0f0d0a;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .index {
+  color: #001430;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .wrapper\.content\.content {
+  background-color: #000;
+  box-shadow: rgba(252, 241, 218, 0.06) 0 0.8vw 5.333vw 0;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .wrapper\.content\.content .text {
+  color: #bfa67a;
+}
+.guide\.block-wrapper .content .wrapper .wrapper\.content > .item .item .wrapper\.content\.content .text span {
+  color: #ff7b0f;
+}.header-nav {
+  box-shadow: rgba(247, 242, 216, 0.05) 0 0.533vw 2.133vw 0;
+}
+.header-nav .wrapper {
+  background-color: #000;
+}
+.header-nav .tabs {
+  background-color: #030200;
+  color: #5d5440;
+}
+.header-nav .tabs .left.active,
+.header-nav .tabs .right.active {
+  color: #ff7b0f;
+}
+.header-nav .tabs .space {
+  background-color: #0f0d0a;
+}.wrapper\.loading .loading\.title {
+  background-color: #120f0a;
+}.HowToInstall .content .swiper-wrapper .title {
+  color: #000;
+}
+.HowToInstall .content .footer {
+  background-color: #000;
+}
+.HowToInstall .content .footer .video {
+  color: #ffa861;
+}
+.HowToInstall .content .footer .install {
+  background-color: #ff7b0f;
+  color: #000;
+}.wrapper-language .options {
+  background-color: #000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .app\.content .app\.title {
+  color: #d0bfa6;
+}
+.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .icon {
+  background-color: #120f0a;
+}
+.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .app\.content .app\.title {
+  background-color: #120f0a;
+}
+.loading-overlay .loading\.applist ul li .appinfo .appinfo\.content .app\.content .VIP {
+  background-color: #120f0a;
+}
+.loading-overlay .loading\.applist ul li .appinfo .button {
+  background-color: #120f0a;
+}.apphost .title {
+  color: #e9d4b7;
+}
+.apphost .content .list .item > .app p {
+  color: #f4c6a0;
+}.footer\.app {
+  background-color: #000;
+  border-bottom-color: #262626;
+  box-shadow: rgba(247, 242, 216, 0.01) 0 0 1.6vw 0;
+}
+.footer\.app .item p {
+  color: #5d5440;
+}
+.footer\.app .item.active p {
+  color: #c8b28c;
+}.wrapper\.loading .wrapper\.content {
+  background-color: #120f0a;
+}
+.wrapper\.loading .wrapper\.content .content .title1,
+.wrapper\.loading .wrapper\.content .content .title2 {
+  background-color: #120f0a;
+}
+.wrapper\.loading .wrapper\.content .content .des1,
+.wrapper\.loading .wrapper\.content .content .des2,
+.wrapper\.loading .wrapper\.content .content .des3 {
+  background-color: #120f0a;
+}.loadingapp {
+  background-color: #000;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .app\.avatar {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .app\.name .one,
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .app\.name .two {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .bottom .app\.size {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.basic .info .bottom .rate-star {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.infomation .title {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.infomation .list .item .key {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.infomation .list .item .value {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .detail-app\.screenshot .screenshot\.list ul .screenshot\.item {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .t-collapse .title {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .t-collapse .content {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .intereting .apphost .title {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .intereting .apphost .content .list .item > .app div {
+  background-color: #120f0a;
+}
+.loadingapp .wrapper .detail-app .intereting .apphost .content .list .item > .app p {
+  background-color: #120f0a;
+}.wrapper\.loading {
+  background-color: #000;
+}
+.wrapper\.loading .app .swiper {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .swiper .top-swiper {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .apphot .title {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .apphot ul li .top {
+  background-color: #120f0a;
+}
+.wrapper\.loading .app .apphot ul li .bottom {
+  background-color: #120f0a;
+}.wrapper_loading {
+  background-color: #000;
+}
+.wrapper_loading .wrapper_result .keyword-hot .title {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .keyword-hot .list li {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .interset .title {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .interset .list .item .icon {
+  background-color: #120f0a;
+}
+.wrapper_loading .wrapper_result .interset .list .item .text {
+  background-color: #120f0a;
+}
+.bac\.animation {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 80%);
+}
+ 
+.nav\.list-wrapper .nav\.list {
+  background-color: #000;
+}
+.nav\.list-wrapper .nav\.list .content {
+  border: 1px solid #000;
+  background-color: #000;
+}
+.nav\.list-wrapper .nav\.list .content .welcome {
+  color: #bfa68e;
+}
+.nav\.list-wrapper .nav\.list .content .user-general .no-login .login\.button {
+  background-color: #ff7b0f;
+  color: #000;
+}
+.nav\.list-wrapper .nav\.list .content hr.line {
+  background-color: #0d0b0a;
+}
+.nav\.list-wrapper .nav\.list .content .list .item {
+  color: #c8ff8c;
+}
+.nav\.list-wrapper .nav\.list .content .list .item.active {
+  background-color: #110d05;
+}
+.nav\.list-wrapper .nav\.list .content .list hr {
+  background-color: #0d0b0a;
+}
+.nav\.list-wrapper .nav\.list .content .list .contact {
+  color: #8a7756;
+}
+.nav\.list-wrapper .nav\.list .content .list .contact ul .item-contact a {
+  color: #8a7756;
+}
+.nav\.list-wrapper .nav\.list .content .list hr {
+  background-color: #0d0b0a;
+}
+.nav\.list-wrapper .nav\.list .content .list .logout\.button {
+  background-color: #000;
+}
+.nav\.list-wrapper .nav\.list .content .list .logout\.button:hover {
+  background-color: #ff7b0f;
+  color: #000;
+}.rate-star .number {
+  color: #5d5440;
+}.t-collapse .title span {
+  color: #e9d4b7;
+}
+.t-collapse .content {
+  color: #b5a78f;
+}.warning .content {
+  background-color: #000;
+}

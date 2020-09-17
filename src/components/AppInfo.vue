@@ -20,6 +20,11 @@
 
       .appinfo\.content {
          display: flex;
+	 flex: {
+            grow: 1;
+	    basis: 0;
+	    shrink: 1;
+	 }
 
          .icon {
 
