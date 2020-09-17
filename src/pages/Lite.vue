@@ -108,8 +108,8 @@
                })
             .then(res => res.data)
             .then(json => {
-                 console.log( json )
-		 if (json.state.error) {
+
+                  if (json.state.error) {
                      throw new Error(json.state.message)
                   } else {
                      this.banners = json.data

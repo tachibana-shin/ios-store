@@ -158,6 +158,8 @@
             //  start the progress bar
             this.$Progress.start()
             //  continue to next page
+            document.title = from.title()
+            // change title page
             next()
          })
          //  hook the progress bar to finish after we've finished moving router-view

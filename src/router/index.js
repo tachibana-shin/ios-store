@@ -1,78 +1,95 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-/*
-import Home from '../pages/Home.vue'
-import Bind from '../pages/Bind.vue'
-import Feedback from '../pages/Feedback.vue'
-import Blog from '../pages/Blog.vue'
-
-import Lite from '../pages/Lite.vue'
-import LiteGame from '../pages/Lite.Game.vue'
-import LiteApp from '../pages/Lite.App.vue'
-import LiteTopApp from '../pages/Lite.TopApp.vue'
-import AppInfo_Page from '../pages/AppInfo_Page.vue'
-import LiteSearch from '../pages/Lite.Search.vue'
-
-import Error404 from '../pages/404.vue'*/
 
 const routes = [
    {
       path: '/',
-      component: () => import('../pages/Home.vue')
+      component: () => import('../pages/Home.vue'),
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
   },
    {
       path: '/lite',
-      component: () => import('../pages/Lite.vue')
+      component: () => import('../pages/Lite.vue'),
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
    },
    {
       path: '/lite/game',
-      component: () => import('../pages/Lite.Game.vue')
-      },
+      component: () => import('../pages/Lite.Game.vue'),
+
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
+   },
    {
       path: '/lite/app',
-      component: () => import('../pages/Lite.App.vue')
-      },
+      component: () => import('../pages/Lite.App.vue'),
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
+   },
    {
       path: '/lite/topapp/:name',
-      component: () => import('../pages/Lite.TopApp.vue')
-  },
+      component: () => import('../pages/Lite.TopApp.vue'),
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
+   },
    {
       path: '/lite/info/app/:id',
-      component: () => import('../pages/AppInfo_Page.vue')
-  },
+      component: () => import('../pages/AppInfo_Page.vue'),
+      meta: {
+         title: () => `TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun`
+      }
+   },
    {
       path: '/lite/search',
-      component: () => import('../pages/Lite.Search.vue')
-  },
+      component: () => import('../pages/Lite.Search.vue'),
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | Search App"
+      } 
+   },
    {
       path: '/lite/search/result',
-      component: () => import('../pages/Lite.Search.Result.vue')
-  }, 
+      component: () => import('../pages/Lite.Search.Result.vue'),
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      } 
+   },
    {
       path: '/feedback',
       component: () => import('../pages/Feedback.vue'),
       meta: {
-         hiddenTab: true
+         hiddenTab: true,
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
       }
-  },
+   },
    {
       path: '/bind',
       component: () => import('../pages/Bind.vue'),
       meta: {
-         hiddenTab: true
+         hiddenTab: true,
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
       }
-  },
+   },
    {
       path: '/blog',
       component: () => import('../pages/Blog.vue'),
       meta: {
-         hiddenTab: true
+         hiddenTab: true,
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
       }
-  },
+   },
    {
       path: '*',
-      component: () => import('../pages/404.vue')
-  }
+      component: () => import('../pages/404.vue'),
+      meta: {
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      } 
+   }
 ]
 Vue.use(VueRouter)
 
