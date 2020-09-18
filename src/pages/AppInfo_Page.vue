@@ -202,6 +202,9 @@
             .detail-app\.screenshot {
                .screenshot\.list {
                   overflow: scroll hidden;
+                  position: relative;
+                  width: 100%;
+                  box-sizing: border-box;
 
                   ul {
                      margin: 0;
