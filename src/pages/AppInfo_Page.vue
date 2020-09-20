@@ -24,7 +24,7 @@
             <div class="detail-app.infomation margin-bottom detail-app.screenshot">
                <p class="title"> {{ "APP_INFO.SCREENSHOT" | t }} </p>
                <div class="screenshot.list">
-                  <ul>
+                  <ul v-touch-scroll:horizontal="{ scrollbar: { render: false } }">
                      <li class="screenshot.item" v-for="item in data.screenshot">
                         <img v-img="{ group: 'screenshot', src: item }" v-lazy="item">
                      </li>
@@ -201,7 +201,7 @@
 
             .detail-app\.screenshot {
                .screenshot\.list {
-                  overflow: scroll hidden;
+                  overflow: hidden;
                   position: relative;
                   width: 100%;
                   box-sizing: border-box;
@@ -212,6 +212,7 @@
                      list-style: none;
                      padding: 0 5.333vw;
                      white-space: nowrap;
+		     display: inline-block;
 
                      .screenshot\.item {
 

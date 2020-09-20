@@ -1,7 +1,7 @@
 <template>
    <div class="nav.list-wrapper">
       <nav class="nav.list">
-         <div class="content">
+         <div class="content" v-touch-scroll:vertical="{ scrollbar: { render: false } }">
             <h1 class="welcome"> {{ "HEADER.WELCOME" | t }} </h1>
             <div class="user-general">
                <div class="user.content" v-if="false">
@@ -98,7 +98,7 @@
          width: 79.467vw;
          height: 100%;
          position: absolute;
-         overflow: hidden scroll;
+         overflow: hidden;
 
          &::-webkit-scrollbar {
             display: none;

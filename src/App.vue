@@ -121,10 +121,12 @@
    import HeaderApp from "./components/Header.vue"
    import NavListWrapper from "./components/Nav.List-Wrapper.vue"
    import BackdropMark from "./components/Backdrop.vue"
-   import HowToInstall from "./components/HowToInstall.vue"
-   import LoadingSnipper from "./components/Loading-Snipper.vue"
    export default {
-      components: { HeaderApp, NavListWrapper, BackdropMark, HowToInstall, LoadingSnipper },
+      components: {
+         HeaderApp, NavListWrapper, BackdropMark,
+         HowToInstall: () => import("./components/HowToInstall.vue"),
+	 LoadingSnipper: () => import("./components/Loading-Snipper.vue")
+      },
       data: () => ({
          NavListShow: false,
          HeaderAppShow: true,
@@ -158,7 +160,7 @@
             //  start the progress bar
             this.$Progress.start()
             //  continue to next page
-            document.title = from.title()
+            window.document.title = to.meta.title()
             // change title page
             next()
          })

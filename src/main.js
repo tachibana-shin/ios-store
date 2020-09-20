@@ -1,6 +1,3 @@
-import eruda from "eruda"
-
-eruda.init()
 
 import Vue from 'vue'
 import App from './App.vue'
@@ -12,6 +9,7 @@ import vImg from 'v-img'
 import Lazyload from 'vue-lazyload'
 import i18n from './i18n'
 import VueScrollTo from "vue-scrollto"
+import VueTouchScroll from "vue-touch-scroll"
 
 Vue.prototype.$axios = axios
 
@@ -27,6 +25,7 @@ Vue.use(vImg, {
 })
 Vue.use(Lazyload)
 Vue.use(VueScrollTo)
+Vue.use(VueTouchScroll)
 
 new Vue({
   el: '#app',

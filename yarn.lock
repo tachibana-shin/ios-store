@@ -2616,11 +2616,6 @@ error-stack-parser@^2.0.0:
   dependencies:
     stackframe "^1.1.1"
 
-eruda@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/eruda/-/eruda-2.3.3.tgz#d976943b96e4d4f9d786fb9773180b9fe1a17305"
-  integrity sha512-ZC3PzJxDYER0fEW33Brmn8f+xIO+m+Hn9wJBjxj7+WN66hRElqfTfMafsAL97E5RYFGZ40xY0TxaKbg8pp68Tg==
-
 es-abstract@^1.17.0, es-abstract@^1.17.0-next.1, es-abstract@^1.17.2, es-abstract@^1.17.5:
   version "1.17.6"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.17.6.tgz#9142071707857b2cacc7b89ecb670316c3e2d52a"
@@ -7397,6 +7392,11 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-touch-scroll@^0.0.2-alpha5:
+  version "0.0.2-alpha5"
+  resolved "https://registry.yarnpkg.com/vue-touch-scroll/-/vue-touch-scroll-0.0.2-alpha5.tgz#a033bdfd992b03a18b55c9e98f9c847ea1c3ae34"
+  integrity sha512-dqgJgwwsoK7K8KBS0WS269/ybMC2GX335jvgY/HCl/P5ZRlXRNdEFX/gKI8GtUb6Ljqyq2MnbnQkXGjhZA+0sw==
 
 vue@^2.5.2:
   version "2.6.12"
