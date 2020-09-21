@@ -5,18 +5,19 @@
          <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event" />
       </transition>
       <transition name="fade:ease">
-         <backdrop-mark v-if="NavListShow || HowToInstallShow || LoadingSnipper" />
+         <backdrop-mark v-if="NavListShow || HowToInstallShow || LoadingSnipper || ModalDownload" />
       </transition>
       <transition name="howtoinstall">
          <how-to-install v-if="HowToInstallShow" @close="HowToInstallShow = false" />
       </transition>
+      <transition name="howtoinstall">
+         <modal-download v-if="ModalDownload" @close="ModalDownload = false" :items="ModalDownloadItem"/>
+      </transition> 
       <transition name="fade:ease">
          <loading-snipper v-if="LoadingSnipper" />
       </transition>
       <nav-list-wrapper :class="{ active: NavListShow }" @hide-menu="NavListShow = false" @show-installation-guide="HowToInstallShow = true" />
-      <transition :name="nameTransitionRouter">
-         <router-view />
-      </transition>
+      <router-view />
    </div>
 </template>
 <style lang="scss" scoped>
@@ -94,26 +95,35 @@
             }
          }
       }
-      .fade-enter-active, .fade-leave-active {
-  transition: opacity .75s ease;
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0;
-}
-.child-view {
-  position: absolute;
-  transition: all .75s cubic-bezier(.55,0,.1,1);
-}
-.slide-left-enter, .slide-right-leave-active {
-  opacity: 0;
-  -webkit-transform: translate(30px, 0);
-  transform: translate(30px, 0);
-}
-.slide-left-leave-active, .slide-right-enter {
-  opacity: 0;
-  -webkit-transform: translate(-30px, 0);
-  transform: translate(-30px, 0);
-}
+
+      .fade-enter-active,
+      .fade-leave-active {
+         transition: opacity .75s ease;
+      }
+
+      .fade-enter,
+      .fade-leave-active {
+         opacity: 0;
+      }
+
+      .child-view {
+         position: absolute;
+         transition: all .75s cubic-bezier(.55, 0, .1, 1);
+      }
+
+      .slide-left-enter,
+      .slide-right-leave-active {
+         opacity: 0;
+         -webkit-transform: translate(30px, 0);
+         transform: translate(30px, 0);
+      }
+
+      .slide-left-leave-active,
+      .slide-right-enter {
+         opacity: 0;
+         -webkit-transform: translate(-30px, 0);
+         transform: translate(-30px, 0);
+      }
 
    }
 </style>
@@ -123,28 +133,28 @@
    import BackdropMark from "./components/Backdrop.vue"
    export default {
       components: {
-         HeaderApp, NavListWrapper, BackdropMark,
+         HeaderApp,
+         NavListWrapper,
+         BackdropMark,
          HowToInstall: () => import("./components/HowToInstall.vue"),
-	 LoadingSnipper: () => import("./components/Loading-Snipper.vue")
+         LoadingSnipper: () => import("./components/Loading-Snipper.vue")
       },
       data: () => ({
          NavListShow: false,
          HeaderAppShow: true,
          HowToInstallShow: false,
          LoadingSnipper: false,
-         
-         nameTransitionRouter: "slide-left"
+         ModalDownload: false,
+         ModalDownloadItem: []
       }),
-      beforeRouteUpdate (to, from, next) {
-    const toDepth = to.path.split('/').length
-    const fromDepth = from.path.split('/').length
-    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-    next()
-  },
       mounted() {
          //  [App.vue specific] When App.vue is finish loading finish the progress bar
          this.$Progress.finish()
          this.$root.$on("loading-snipper", (e) => this.LoadingSnipper = e)
+         this.$root.$on("Modal.Download", (({ items, state })) => {
+            this.ModalDownload = state
+            this.ModalDownloadItem = items
+         })
       },
       created() {
          //  [App.vue specific] When App.vue is first loaded start the progress bar

@@ -353,6 +353,8 @@
    import ListAppHot from "../components/ListAppHot.vue"
    import TCollapse from "../components/TCollapse.vue"
    import Loading from "../components/Loading.AppInfo_Page.vue"
+   import Base from "../js/base.js"
+   
    export default {
       components: { RateStar, ListAppHot, TCollapse, Loading },
       data: () => ({
@@ -366,6 +368,11 @@
                params: {
                   id: this.$route.params.id
                }
+            })
+            
+            this.$root.$emit("Modal.Download", {
+               state: true,
+               items: this.data.version
             })
          }
       },
@@ -397,6 +404,7 @@
                   throw new Error(state.message)
                } else {
                   this.data = data.data
+                  this.data.version = Base.decode(this.data.version)
                   this.apps = data.apps
                }
             })
