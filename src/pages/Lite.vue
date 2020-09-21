@@ -79,7 +79,7 @@
             if (loading) {
                this.LoadingMoreState = true
             }
-            return this.$axios.get("/admin/api/ListApp.php", {
+            return this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/ListApp.php", {
                   params: {
                      offset: this.Apps.length
                   }
@@ -101,7 +101,7 @@
       },
       created() {
          Promise.all([
-            this.$axios.get("/admin/api/Banners.php", {
+            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/Banners.php", {
                   params: {
                      category: "feature"
                   }
@@ -115,7 +115,7 @@
                      this.banners = json.data
                   }
                }),
-            this.$axios.get("/admin/api/AppHot.php")
+            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php")
             .then(res => res.data)
             .then(json => {
                   if (json.state.error) {

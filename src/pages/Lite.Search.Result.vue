@@ -173,7 +173,7 @@
                this.LoadingMoreState = true
 	    }
 	    
-	    this.$axios.get("/admin/api/Search.php", {
+	    this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/Search.php", {
                   params: {
                      query: this.$route.query.query,
                      offset: loadMore ? 0 : this.apps.length

@@ -364,7 +364,7 @@
       }),
       methods: {
          download() {
-            this.$axios.get("/admin/api/RequestDownload.php", {
+            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/RequestDownload.php", {
                params: {
                   id: this.$route.params.id
                }
@@ -392,7 +392,7 @@
          }
       },
       created() {
-         this.$axios.get("/admin/api/App.php", {
+         this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/App.php", {
                params: {
                   id: this.$route.params.id,
                   produce: true
