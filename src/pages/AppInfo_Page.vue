@@ -402,7 +402,7 @@
                   throw new Error(state.message)
                } else {
                   this.data = data.data
-                  //this.data.version = Base.decode(this.data.version)
+                  this.$set(this.data, "version", Base.decode(this.data.version))
                   this.apps = data.apps
                }
             })
