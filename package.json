@@ -24,7 +24,7 @@
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.18.2",
-    "vue-touch-scroll": "^0.0.2-alpha5"
+    "vue-touch-scroll": "^0.0.2-alpha6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

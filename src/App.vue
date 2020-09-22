@@ -137,7 +137,8 @@
          NavListWrapper,
          BackdropMark,
          HowToInstall: () => import("./components/HowToInstall.vue"),
-         LoadingSnipper: () => import("./components/Loading-Snipper.vue")
+         LoadingSnipper: () => import("./components/Loading-Snipper.vue"),
+	 ModalDownload: () => import("./components/Modal.Download.vue")
       },
       data: () => ({
          NavListShow: false,
@@ -151,7 +152,7 @@
          //  [App.vue specific] When App.vue is finish loading finish the progress bar
          this.$Progress.finish()
          this.$root.$on("loading-snipper", (e) => this.LoadingSnipper = e)
-         this.$root.$on("Modal.Download", (({ items, state })) => {
+         this.$root.$on("Modal.Download", ({ items, state }) => {
             this.ModalDownload = state
             this.ModalDownloadItem = items
          })

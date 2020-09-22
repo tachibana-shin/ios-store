@@ -354,9 +354,10 @@
    import TCollapse from "../components/TCollapse.vue"
    import Loading from "../components/Loading.AppInfo_Page.vue"
    import Base from "../js/base.js"
+   import CheckboxCustom from "../components/Checkbox.Custom.vue"
    
    export default {
-      components: { RateStar, ListAppHot, TCollapse, Loading },
+      components: { RateStar, ListAppHot, TCollapse, Loading, CheckboxCustom  },
       data: () => ({
          loading: true,
          data: {},
@@ -364,15 +365,12 @@
       }),
       methods: {
          download() {
-            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/RequestDownload.php", {
-               params: {
-                  id: this.$route.params.id
-               }
-            })
-            
             this.$root.$emit("Modal.Download", {
                state: true,
-               items: this.data.version
+               items: {
+	          value: this.data.version,
+		  id:  this.$route.params.id
+	       }
             })
          }
       },
@@ -404,7 +402,7 @@
                   throw new Error(state.message)
                } else {
                   this.data = data.data
-                  this.data.version = Base.decode(this.data.version)
+                  //this.data.version = Base.decode(this.data.version)
                   this.apps = data.apps
                }
             })

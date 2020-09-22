@@ -1,6 +1,6 @@
 <template>
    <div class="HowToInstall" @click="$emit('close')">
-      <div class="content" @click.stop="true">
+      <div class="content" @click.stop>
          <div class="swiper-wrapper">
             <p class="title"> {{ "HOME.INST_GUIDE" | t }} </p>
             <swiper :options="{

@@ -2,8 +2,8 @@
    <div class="backdrop.mark" @click="$emit('click')"></div>
 </template>
 
-<style>
-   .backdrop\.mark {
+<style lang="scss" scoped>
+  .backdrop\.mark {
       position: fixed;
       top: 0;
       left: 0;

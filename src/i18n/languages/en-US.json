@@ -8,6 +8,7 @@
 	"compatibility": "Compatibility",
 	"languages": "Languages",
 	"account": "Account",
+	"DOWNLOAD_RESOURCE": "Downloading rerource...",
 	"GUIDE_BLOCK": {
 		"INST": "Installation",
 		"VERIFICATION": "Verification"

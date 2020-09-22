@@ -7393,10 +7393,10 @@ vue-template-es2015-compiler@^1.6.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue-touch-scroll@^0.0.2-alpha5:
-  version "0.0.2-alpha5"
-  resolved "https://registry.yarnpkg.com/vue-touch-scroll/-/vue-touch-scroll-0.0.2-alpha5.tgz#a033bdfd992b03a18b55c9e98f9c847ea1c3ae34"
-  integrity sha512-dqgJgwwsoK7K8KBS0WS269/ybMC2GX335jvgY/HCl/P5ZRlXRNdEFX/gKI8GtUb6Ljqyq2MnbnQkXGjhZA+0sw==
+vue-touch-scroll@^0.0.2-alpha6:
+  version "0.0.2-alpha6"
+  resolved "https://registry.yarnpkg.com/vue-touch-scroll/-/vue-touch-scroll-0.0.2-alpha6.tgz#cb929b68a15ed9bc1e2fa755a27457e169459d0e"
+  integrity sha512-R5VlriWZ81ovCC7lWjH9MrMtV04gcila/OweI6MTgAvkP1VKo7Wui1/dO+g64EMx1RTZFczZz9A4j0JCrZ5ObA==
 
 vue@^2.5.2:
   version "2.6.12"
