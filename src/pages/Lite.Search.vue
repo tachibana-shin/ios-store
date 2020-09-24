@@ -259,9 +259,6 @@
                   .catch(() => this.result = [])
             }, 1000)
          }
-      },
-      mounted() {
-         setTimeout(() => this.loading = false, 1000)
       }
    }
 </script>
