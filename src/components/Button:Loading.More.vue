@@ -8,7 +8,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "@/scss/variants";
+   @import "/scss/_variants.scss";
    .loading-more {
       width: 100%;
       overflow: hidden;

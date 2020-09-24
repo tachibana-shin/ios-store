@@ -16,7 +16,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "@/scss/variants";
+   @import "/scss/_variants.scss";
    .collapse-faq {
       margin-bottom: 2.133vw;
 
