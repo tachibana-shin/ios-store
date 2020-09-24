@@ -74,5 +74,8 @@
 		"PLC2": "Please describe your problem or suggestion in as much detail as possible",
 		"EMAIL": "Email",
 		"PLC3": "Your Email"
+	},
+	"SEARCH": {
+	   "KEYWORD_HOT": "Keyword Hot"
 	}
 }

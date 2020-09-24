@@ -74,5 +74,8 @@
 		"PLC2": "Vui lòng mô tả vấn đề hoặc đề xuất của bạn càng chi tiết càng tốt",
 		"EMAIL": "Email",
 		"PLC3": "Email của bạn"
+	},
+	"SEARCH": {
+	   "KEYWORD_HOT": "Từ khóa nổi bật"
 	}
 }
