@@ -28,7 +28,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @include "scss/variants";
+   @import "@/scss/variants";
 
    .Modal\.Download {
       display: flex;

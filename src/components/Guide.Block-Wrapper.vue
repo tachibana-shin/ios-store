@@ -32,7 +32,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @include "scss/variants";
+   @import "@/scss/variants";
    @font-face {
       font-family: DINCond;
       src: url("/fonts/DINCond.ttf");

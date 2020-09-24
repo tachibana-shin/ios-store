@@ -76,7 +76,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @include "scss/variants";
+   @import "@/scss/variants";
 
    .nav\.list-wrapper {
       position: fixed;
