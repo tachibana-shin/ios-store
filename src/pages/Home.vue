@@ -61,7 +61,8 @@
    </div>
 </template>
 <style lang="scss" scoped>
-@include "@/scss/variants";
+   @include "scss/variants";
+
    .main {
       overflow: hidden;
 

@@ -62,7 +62,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @include "@/scss/variants";
+   @include "scss/variants";
 
    .main {
       background-color: rgb(244, 245, 247);
