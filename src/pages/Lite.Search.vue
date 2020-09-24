@@ -22,7 +22,7 @@
                <p class="title"> {{ "SEARCH.KEYWORD_HOT" | t }} </p>
                <ul class="list">
                   <li v-for="item in 5">
-                     {{ item }}
+                     <span>{{ item }}</span>
                   </li>
                </ul>
             </div>
@@ -140,19 +140,25 @@
          .wrapper_result {
             /*margin-top: 21.333vw;*/
             padding: 0 5.333vw;
-            margin-top: 10.667vw;
+            /*margin-top: 10.667vw;*/
             position: relative;
+            
+            %title {
+               color: rgb(47, 64, 89);
+               font-size: 4.8vmin;
+               font-weight: 500;
+               line-height: 6.4vw;
+               margin: 0;
+               padding: 0;
+               /*margin-top: 4vw;
+               /*padding: 4.267vw 0;*/
+            }
+
             .keyword-hot {
-               padding-top: 1.333vw;
+               padding-top: 10.333vw;
 
                .title {
-                  margin: 0;
-                  padding: 0;
-                  background-color: rgb(237, 240, 245);
-                  border-radius: 2.667vw;
-                  height: 6.4vw;
-                  margin-top: 4vw;
-                  width: 48VW;
+                  @extend %title;
                }
 
                .list {
@@ -169,6 +175,7 @@
                      margin-right: 8vw;
                      margin-top: 5.333vw;
                      width: 32vw;
+                     padding: 0 5.333vw;
                   }
                }
             }
@@ -177,11 +184,7 @@
                margin-top: 10.667vw;
 
                .title {
-                  background-color: rgb(237, 240, 245);
-                  border-radius: 2.667vw;
-                  height: 6.4vw;
-                  margin-top: 4VW;
-                  width: 66.667VW;
+                  @extend %title;
                }
 
                .list {
@@ -258,7 +261,7 @@
          }
       },
       mounted() {
-         this.loading = false
+         setTimeout(() => this.loading = false, 30000)
       }
    }
 </script>

@@ -29,22 +29,25 @@
       width: 100%;
 
       .wrapper_result {
-         margin-top: 10.667vw;
+         /*margin-top: 10.667vw;*/
          padding: 0 5.333vw;
          position: relative;
          box-sizing: border-box;
+         
+         @mixin title( $width ) {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(237, 240, 245);
+            border-radius: 2.667vw;
+            height: 6.4vw;
+            width: $width;
+         }
 
          .keyword-hot {
-            padding-top: 1.333vw;
+            padding-top: 10.333vw;/*1.333vw*/
 
             .title {
-               margin: 0;
-               padding: 0;
-               background-color: rgb(237, 240, 245);
-               border-radius: 2.667vw;
-               height: 6.4vw;
-               margin-top: 4vw;
-               width: 48VW;
+               @include title(48vw);
             }
 
             .list {
@@ -69,10 +72,7 @@
             margin-top: 10.667vw;
 
             .title {
-               background-color: rgb(237, 240, 245);
-               border-radius: 2.667vw;
-               height: 6.4vw;
-               margin-top: 4VW;width: 66.667VW;
+               @include title(66.667VW);
             }
 
             .list {
@@ -107,7 +107,7 @@
                      flex-grow: 1;
                      flex-shrink: 1;
                      margin-top: 1.6vw;
-                     
+
                   }
                }
             }
