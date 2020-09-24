@@ -32,6 +32,7 @@
 </template>
 <style lang="scss" scoped>
    @import "./pagination-custom.css";
+   @import "@/scss/variants";
 
    .HowToInstall {
       display: flex;
@@ -117,7 +118,7 @@
             }
 
             .install {
-               background-color: rgb(0, 132, 240);
+               background-color: $colorMain;
                border-radius: 6.133vw;
                color: rgb(255, 255, 255);
                font-size: 4vmin;

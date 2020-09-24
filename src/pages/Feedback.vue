@@ -19,7 +19,7 @@
       </div>
       <div class="feedback-item feedback-screenshot">
          <div class="title">
-            <span class="nostar"> {{ "FEEDBACK.SCREENSHOT" | t }}  </span>
+            <span class="nostar"> {{ "FEEDBACK.SCREENSHOT" | t }} </span>
             <span> {{ fileSendToReport.length }} / 4 </span>
          </div>
          <div class="cube">
@@ -44,7 +44,7 @@
          </div>
          <input :placeholder="'FEEDBACK.PLC3' | t">
       </div>
-      <button class="submit" :class="{ active: checkValid() } " @click="send"> {{ "FEEDBACK.SUBMIT" | t }}  </button>
+      <button class="submit" :class="{ active: checkValid() } " @click="send"> {{ "FEEDBACK.SUBMIT" | t }} </button>
       <div class="toast" v-if="state == 1 || state == 2">
          <img class="progress" :src="require('@/assets/toast.submit.progress.svg')">
          <p> Submting... </p>
@@ -62,6 +62,8 @@
    </div>
 </template>
 <style lang="scss" scoped>
+   @include "@/scss/variants";
+
    .main {
       background-color: rgb(244, 245, 247);
       padding-top: 6.4vw;
@@ -313,7 +315,7 @@
 
 
          &.active {
-            background-color: rgb(0, 132, 240);
+            background-color: $colorMain;
          }
       }
 
@@ -394,7 +396,7 @@
             }
 
             h2 {
-               color: rgb(0, 132, 240);
+               color: $colorMain;
                font-size: 4.267vmin;
                font-weight: 500;
                line-height: 6.4VW;
@@ -409,7 +411,7 @@
                margin-top: 0.533vW;
                text-align: center;
                font-size: 3.733vmin;
-               color: rgb(0, 132, 240);
+               color: $colorMain;
             }
 
             .ok {

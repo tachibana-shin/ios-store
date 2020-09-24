@@ -8,6 +8,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
+   @include "@/scss/variants";
    .loading-more {
       width: 100%;
       overflow: hidden;
@@ -23,7 +24,7 @@
          justify-content: center;
 
          .loading\.title {
-            color: rgb(0, 132, 240);
+            color: $colorMain;
             display: block;
             left: 0;
             line-height: 4.267vW;

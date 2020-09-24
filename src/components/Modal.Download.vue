@@ -6,10 +6,10 @@
             <div class="list-item.wrapper">
                <vue-touch-scroll hide-scrollbar tag="ul" class="list">
                   <li class="item" v-for="item in items.value">
-		     <div class="version-item">
-		        <span class="name"> {{ item.name }} </span>
-			 <checkbox-custom name="version"  @input="$event ? (value = item.value) : (value = '')"/>              
-	             </div>
+                     <div class="version-item">
+                        <span class="name"> {{ item.name }} </span>
+                        <checkbox-custom name="version" @input="$event ? (value = item.value) : (value = '')" />
+                     </div>
                   </li>
                </vue-touch-scroll>
             </div>
@@ -20,14 +20,15 @@
                {{ "HOME.INST_GUIDE" | t }}
             </p>
             <button class="install" @click="download" :class="{ active: !!value, error: !!error  }">
-	       {{ !!error ? error :  (loading ? "DOWNLOAD_RESOURCE" : "INST") | t }}
-	       <img :src="require('../assets/ellipsis.svg')" v-if="loading" class="loading">
+               {{ !!error ? error :  (loading ? "DOWNLOAD_RESOURCE" : "INST") | t }}
+               <img :src="require('../assets/ellipsis.svg')" v-if="loading" class="loading">
             </button>
          </div>
       </div>
    </div>
 </template>
 <style lang="scss" scoped>
+   @include "@/scss/variants";
 
    .Modal\.Download {
       display: flex;
@@ -52,11 +53,12 @@
          .version-wrapper {
 
             position: relative;
-	    background-color: rgb(255, 255, 255);
-	    padding: {
-	       left: 5.333vw;
-	       right: 5.333vw;
-	    }
+            background-color: rgb(255, 255, 255);
+
+            padding: {
+               left: 5.333vw;
+               right: 5.333vw;
+            }
 
             .title {
                margin: 0;
@@ -74,8 +76,8 @@
             .list-item\.wrapper {
                overflow: hidden;
                box-sizing: border-box;
-	       margin-top: 3.235vw;
-	       text-align: left;
+               margin-top: 3.235vw;
+               text-align: left;
 
                .list {
                   margin: 0;
@@ -84,10 +86,10 @@
 
                   .item {
                      .version-item {
-		        display: flex;
+                        display: flex;
                         justify-content: space-between;
-		        padding: 3.2vw 0;
-		        align-items: center;
+                        padding: 3.2vw 0;
+                        align-items: center;
 
                         .name {
                            flex: {
@@ -98,7 +100,7 @@
 
                            ;
                            font-weight: 600;
-		   	   font-size: 4.267vw;
+                           font-size: 4.267vw;
                            display: inline-block;
 
                            overflow: hidden;
@@ -106,9 +108,9 @@
                            text-overflow: ellipsis;
                            -webkit-box-orient: vertical;
                            -webkit-line-clamp: 1;
-			   color: rgb(0, 87, 152);
-		        }
-		     }
+                           color: rgb(0, 87, 152);
+                        }
+                     }
                   }
                }
             }
@@ -150,15 +152,18 @@
                margin-top: 4.267vw;
                outline-style: none;
                width: 55.733vw;
-	       &.active {
-                  background-color: rgb(0, 132, 240)
-	       }
-	       &.error {
+
+               &.active {
+                  background-color: $colorMain
+               }
+
+               &.error {
                   background-color: #f99;
-	       }
-	       .loading {
+               }
+
+               .loading {
                   margin-left: 2.333vw;
-	       }
+               }
             }
          }
       }
@@ -174,27 +179,28 @@
       },
       data: () => ({
          value: "",
-	 loading: false,
-	 error: ""
+         loading: false,
+         error: ""
       }),
       methods: {
          download() {
-            if ( !!this.value ) {
+            if (!!this.value) {
                this.loading = true
-	       this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/RequestDownload.php", {                    
-	          params: {                                               id: this.items.id
-	          }
-	       })
-	       .then(res => res.data)
-	       .then(({ state }) => {
-                  if ( state.error ) {
-                     throw new Error(state.message)
-		  }
-		  window.open(this.value, "_self")
-	       })
-	       .catch(({ message }) => this.error = message)
-	       .finally(() => this.loading = false)
-	    }
+               this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/RequestDownload.php", {
+                     params: {
+                        id: this.items.id
+                     }
+                  })
+                  .then(res => res.data)
+                  .then(({ state }) => {
+                     if (state.error) {
+                        throw new Error(state.message)
+                     }
+                     window.open(this.value, "_self")
+                  })
+                  .catch(({ message }) => this.error = message)
+                  .finally(() => this.loading = false)
+            }
          }
       }
    }

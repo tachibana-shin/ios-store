@@ -32,6 +32,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
+   @include "@/scss/variants";
    @font-face {
       font-family: DINCond;
       src: url("/fonts/DINCond.ttf");
@@ -87,7 +88,7 @@
 
                &.active {
 
-                  color: rgb(0, 132, 240);
+                  color: $colorMain;
                   font-size: 4.267vmin;
                }
             }
@@ -168,7 +169,7 @@
                            margin: 0;
 
                            span {
-                              color: rgb(0, 132, 240);
+                              color: $colorMain;
                            }
                         }
                      }

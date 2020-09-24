@@ -1,7 +1,8 @@
 <template>
    <div class="nav.list-wrapper">
       <nav class="nav.list">
-         <div class="content" v-touch-scroll:vertical="{ scrollbar: { render: false } }"><!--
+         <div class="content" v-touch-scroll:vertical="{ scrollbar: { render: false } }">
+            <!--
             <h1 class="welcome"> {{ "HEADER.WELCOME" | t }} </h1>
             <div class="user-general">
                <div class="user.content" v-if="false">
@@ -11,7 +12,8 @@
                </div>
             </div>
             <hr class="line">-->
-            <ul class="list" @click="$emit('hide-menu')"><!--
+            <ul class="list" @click="$emit('hide-menu')">
+               <!--
                <router-link to="/bind" exact-active-class="active" tag="li" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.bind.svg')">
                   <span> {{ "HEADER.BIND_YOUR_UIID" | t }}  </span>
@@ -23,15 +25,15 @@
                <hr>-->
                <router-link to="/" tag="li" exact-active-class="active" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.home.svg')">
-                  <span> {{ "HEADER.HOME" | t }}  </span>
+                  <span> {{ "HEADER.HOME" | t }} </span>
                </router-link>
                <li class="item" @click="$emit('show-installation-guide')">
                   <img class="icon" :src="require('@/assets/bar.ic.download.svg')">
-                  <span> {{ "HEADER.DOWNLOAD_APP_VIP" | t }}  </span>
+                  <span> {{ "HEADER.DOWNLOAD_APP_VIP" | t }} </span>
                </li>
                <li class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.game.svg')">
-                  <span> {{ "HEADER.IOS_APPS_AND_GAMES" | t }}  </span>
+                  <span> {{ "HEADER.IOS_APPS_AND_GAMES" | t }} </span>
                </li>
                <hr>
                <router-link tag="li" to="/feedback" class="item" active-class="active">
@@ -40,7 +42,7 @@
                </router-link>
                <li class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.contact.svg')">
-                  <span> {{ "HEADER.CONTACT" | t }}  </span>
+                  <span> {{ "HEADER.CONTACT" | t }} </span>
                </li>
                <li class="contact">
                   <ul>
@@ -55,14 +57,15 @@
                      </li>
                   </ul>
                </li>
-               <hr><!--
+               <hr>
+               <!--
                <router-link tag="li" to="/blog" active-class="active" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.blog.svg')">
                   <span> {{ "HEADER.BLOG" | t }}  </span>
                </router-link>-->
-	       <li class="item">
-                  <language/>
-	       </li>
+               <li class="item">
+                  <language />
+               </li>
                <li class="" v-if="false">
                   <button class="logout.button"> {{ "HEADER.LOGOUT" | t }} </button>
                </li>
@@ -73,6 +76,8 @@
    </div>
 </template>
 <style lang="scss" scoped>
+   @include "@/scss/variants";
+
    .nav\.list-wrapper {
       position: fixed;
       z-index: 9999;
@@ -148,7 +153,7 @@
                   margin-top: 4.267vw;
 
                   .login\.button {
-                     background-color: rgb(0, 132, 240);
+                     background-color: $colorMain;
                      border-radius: 2.133vw;
                      color: #fff;
 
@@ -173,7 +178,7 @@
 
             .list {
                /*padding: 3.2vw 5.333vw;*/
-	       padding: 5.333vw;
+               padding: 5.333vw;
                box-sizing: border-box;
                margin: 0;
                list-style: none;
@@ -252,7 +257,7 @@
 
                .logout\.button {
                   border-radius: 2.133vw;
-                  border: 1px solid rgb(0, 132, 240);
+                  border: 1px solid $colorMain;
                   background-color: #fff;
 
                   font: {
@@ -274,7 +279,7 @@
                   transition: all .666s ease;
 
                   &:hover {
-                     background-color: rgb(0, 132, 240);
+                     background-color: $colorMain;
                      color: #fff;
                   }
                }

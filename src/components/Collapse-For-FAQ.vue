@@ -16,6 +16,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
+   @include "@/scss/variants";
    .collapse-faq {
       margin-bottom: 2.133vw;
 
@@ -74,7 +75,7 @@
                   font-weight: 400;
                   line-height: 4.8vw;
                   padding-right: 8vw;
-                  color: rgb(0, 132, 240);
+                  color: $colorMain;
                   ;
                   font-size: 3.467vmin;
                   display: block;

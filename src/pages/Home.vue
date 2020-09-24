@@ -61,6 +61,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
+@include "@/scss/variants";
    .main {
       overflow: hidden;
 
@@ -164,7 +165,7 @@
                   p {
                      margin: 0;
                      padding: 0;
-                     color: rgb(0, 132, 240);
+                     color: $colorMain;
                      display: inline-block;
                      min-width: 100%;
                      font-size: 3.2vmin;
@@ -479,7 +480,7 @@
                }
 
                .check-more {
-                  color: rgb(0, 132, 240);
+                  color: $colorMain;
                   display: inline-block;
 
                   font: {

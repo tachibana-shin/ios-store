@@ -172,9 +172,9 @@
                      background-color: rgb(237, 240, 245);
                      border-radius: 4.8vw;
                      height: 9.6vw;
+                     line-height: 9.6vw;
                      margin-right: 8vw;
                      margin-top: 5.333vw;
-                     width: 32vw;
                      padding: 0 5.333vw;
                   }
                }
@@ -261,7 +261,7 @@
          }
       },
       mounted() {
-         setTimeout(() => this.loading = false, 30000)
+         setTimeout(() => this.loading = false, 1000)
       }
    }
 </script>

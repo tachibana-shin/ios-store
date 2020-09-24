@@ -17,6 +17,8 @@
    </div>
 </template>
 <style lang="scss" scoped>
+   @include "@/scss/variants";
+
    .header-nav {
       box-shadow: rgba(8, 13, 39, .05) 0 .533vw 2.133vw 0;
       position: fixed;
@@ -25,7 +27,7 @@
       transition: all .2 ease;
       z-index: 9999;
       width: 100%;
-      
+
       .wrapper {
          width: 100%;
          height: 13.867vw;
@@ -34,47 +36,58 @@
          display: flex;
          align-items: center;
          justify-content: space-between;
+
          img.menu {
             width: 6.4vw;
             height: 6.4vw;
             margin-left: 4.267vw;
          }
+
          img.logo {
             height: 7.467vw;
          }
+
          img.download {
             width: 4.267vw;
             height: 5.867vw;
             margin-right: 4.267vw;
          }
       }
+
       .tabs {
          background-color: rgb(252, 253, 255);
          color: rgb(162, 171, 191);
+
          font: {
             size: 3.733vmin;
             weight: 500;
-         };
+         }
+
+         ;
          position: relative;
          width: 100%;
          text-align: center;
-         
+
          display: flex;
          align-items: center;
          height: 11.467vw;
-         
-         .left, .right {
+
+         .left,
+         .right {
             flex: {
                basis: 0;
                grow: 1;
                shrink: 1;
-            };
-            
+            }
+
+            ;
+
             &.active {
-               color: rgb(0, 132, 240);
+               color: $colorMain;
                font-size: 4.267vmin;
             }
          }
+
          .space {
             background-color: rgb(240, 242, 245);
             height: 4.8vw;
@@ -82,7 +95,7 @@
             width: 1px;
          }
       }
-      
+
    }
 </style>
 <script>
