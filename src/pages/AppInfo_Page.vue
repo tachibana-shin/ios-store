@@ -353,7 +353,6 @@
    import ListAppHot from "../components/ListAppHot.vue"
    import TCollapse from "../components/TCollapse.vue"
    import Loading from "../components/Loading.AppInfo_Page.vue"
-   import Base from "../js/base.js"
    import CheckboxCustom from "../components/Checkbox.Custom.vue"
    
    export default {
@@ -402,7 +401,6 @@
                   throw new Error(state.message)
                } else {
                   this.data = data.data
-                  this.$set(this.data, "version", JSON.parse(Base.decode(this.data.version)))
                   this.apps = data.apps
                }
             })

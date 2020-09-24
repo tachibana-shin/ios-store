@@ -66,7 +66,7 @@ const routes = [
          hiddenTab: true,
          title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
       }
-   },
+   },/*
    {
       path: '/bind',
       component: () => import('../pages/Bind.vue'),
@@ -82,7 +82,7 @@ const routes = [
          hiddenTab: true,
          title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
       }
-   },
+   },*/
    {
       path: '*',
       component: () => import('../pages/404.vue'),

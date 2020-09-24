@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.11.5",
     "axios": "^0.20.0",
     "sass": "^1.26.10",
     "sass-loader": "7.3.1",
@@ -69,7 +70,7 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions",
+    "last 1 versions",
     "not ie <= 8"
   ]
 }

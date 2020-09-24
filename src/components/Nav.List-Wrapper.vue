@@ -1,7 +1,7 @@
 <template>
    <div class="nav.list-wrapper">
       <nav class="nav.list">
-         <div class="content" v-touch-scroll:vertical="{ scrollbar: { render: false } }">
+         <div class="content" v-touch-scroll:vertical="{ scrollbar: { render: false } }"><!--
             <h1 class="welcome"> {{ "HEADER.WELCOME" | t }} </h1>
             <div class="user-general">
                <div class="user.content" v-if="false">
@@ -10,8 +10,8 @@
                   <button class="login.button"> {{ "HEADER.LOGIN" | t }}  </button>
                </div>
             </div>
-            <hr class="line">
-            <ul class="list" @click="$emit('hide-menu')">
+            <hr class="line">-->
+            <ul class="list" @click="$emit('hide-menu')"><!--
                <router-link to="/bind" exact-active-class="active" tag="li" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.bind.svg')">
                   <span> {{ "HEADER.BIND_YOUR_UIID" | t }}  </span>
@@ -20,7 +20,7 @@
                   <img class="icon" :src="require('@/assets/bar.ic.vip.svg')">
                   <span> {{ "HEADER.PURCHASE_VIP" | t }} </span>
                </li>
-               <hr>
+               <hr>-->
                <router-link to="/" tag="li" exact-active-class="active" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.home.svg')">
                   <span> {{ "HEADER.HOME" | t }}  </span>
@@ -55,11 +55,11 @@
                      </li>
                   </ul>
                </li>
-               <hr>
+               <hr><!--
                <router-link tag="li" to="/blog" active-class="active" class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.blog.svg')">
                   <span> {{ "HEADER.BLOG" | t }}  </span>
-               </router-link>
+               </router-link>-->
 	       <li class="item">
                   <language/>
 	       </li>
@@ -172,7 +172,8 @@
             }
 
             .list {
-               padding: 3.2vw 5.333vw;
+               /*padding: 3.2vw 5.333vw;*/
+	       padding: 5.333vw;
                box-sizing: border-box;
                margin: 0;
                list-style: none;
