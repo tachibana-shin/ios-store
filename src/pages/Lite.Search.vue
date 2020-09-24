@@ -17,7 +17,23 @@
                </ul>
             </div>
          </div>
-         <loading v-if="loading" />
+	 <div class="wrapper_result" v-if="!loading">
+            <div class="keyword-hot">
+               <p class="title"></p>
+               <ul class="list">
+                  <li v-for="item in 5"></li>
+               </ul>
+            </div>
+            <div class="interset">
+               <p class="title"></p>
+               <ul class="list">
+	          <li class="item" v-for="item in 8">                     <div class="icon"></div>  
+		     <p class="text"></p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <loading v-else/>
       </div>
       <lite-footer />
    </div>
