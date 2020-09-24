@@ -21,7 +21,7 @@
             <div class="keyword-hot">
                <p class="title"> {{ "SEARCH.KEYWORD_HOT" | t }} </p>
                <ul class="list">
-                  <li v-for="item in 5">
+                  <li v-for="item in data.keyword">
                      <span>{{ item }}</span>
                   </li>
                </ul>
@@ -29,7 +29,7 @@
             <div class="interset">
                <p class="title"> {{ "APP_INFO.INTERTING" | t }} </p>
                <ul class="list">
-                  <li class="item" v-for="item in 8">
+                  <li class="item" v-for="item in data.interesting">
                      <div class="icon"></div>
                      <p class="text"></p>
                   </li>
@@ -236,7 +236,12 @@
       data: () => ({
          loading: true,
 
-         result: null
+         result: null,
+         
+         data: {
+            keyword: [],
+            interesting: []
+         }
       }),
       timeout: 0,
       methods: {
@@ -260,8 +265,16 @@
             }, 1000)
          }
       },
-      mounted() {
-         setTimeout(() => this.loading = false, 1000)
+      created() {
+         this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/Search.Data.php")
+         .then(res => res.data)
+         .then(({ state, data }) => {
+            if ( state.error ) {
+               throw new Error(state.message)
+            }
+            this.data = data
+         })
+         .then(() => this.loading = false)
       }
    }
 </script>
