@@ -29,9 +29,10 @@
       width: 100%;
 
       .wrapper_result {
-         margin-top: 21.333vw;
+         margin-top: 10.667vw;
          padding: 0 5.333vw;
          position: relative;
+         box-sizing: border-box;
 
          .keyword-hot {
             padding-top: 1.333vw;

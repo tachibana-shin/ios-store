@@ -49,6 +49,7 @@
       .wrapper_search {
          padding-bottom: 17.6vw;
          position: relative;
+         box-sizing: border-box;
 
          .search_input {
             background-color: rgb(255, 255, 255);
@@ -56,7 +57,8 @@
             padding: 5.333vw;
             top: 0;
             width: 89.333vw;
-            position: absolute;
+            position: relative;
+            box-sizing: border-box;
             z-index: 2;
 
             input {
@@ -133,88 +135,89 @@
 
             }
          }
-      }
 
-      .wrapper_result {
-         margin-top: 21.333vw;
-         padding: 0 5.333vw;
-         position: relative;
 
-         .keyword-hot {
-            padding-top: 1.333vw;
+         .wrapper_result {
+            /*margin-top: 21.333vw;*/
+            padding: 0 5.333vw;
+            margin-top: 10.667vw;
+            position: relative;
+            .keyword-hot {
+               padding-top: 1.333vw;
 
-            .title {
-               margin: 0;
-               padding: 0;
-               background-color: rgb(237, 240, 245);
-               border-radius: 2.667vw;
-               height: 6.4vw;
-               margin-top: 4vw;
-               width: 48VW;
-            }
-
-            .list {
-               margin: 0;
-               padding: 0;
-               list-style: none;
-               display: flex;
-               flex-wrap: wrap;
-
-               li {
+               .title {
+                  margin: 0;
+                  padding: 0;
                   background-color: rgb(237, 240, 245);
-                  border-radius: 4.8vw;
-                  height: 9.6vw;
-                  margin-right: 8vw;
-                  margin-top: 5.333vw;
-                  width: 32vw;
+                  border-radius: 2.667vw;
+                  height: 6.4vw;
+                  margin-top: 4vw;
+                  width: 48VW;
+               }
+
+               .list {
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: flex;
+                  flex-wrap: wrap;
+
+                  li {
+                     background-color: rgb(237, 240, 245);
+                     border-radius: 4.8vw;
+                     height: 9.6vw;
+                     margin-right: 8vw;
+                     margin-top: 5.333vw;
+                     width: 32vw;
+                  }
                }
             }
-         }
 
-         .interset {
-            margin-top: 10.667vw;
+            .interset {
+               margin-top: 10.667vw;
 
-            .title {
-               background-color: rgb(237, 240, 245);
-               border-radius: 2.667vw;
-               height: 6.4vw;
-               margin-top: 4VW;
-               width: 66.667VW;
-            }
+               .title {
+                  background-color: rgb(237, 240, 245);
+                  border-radius: 2.667vw;
+                  height: 6.4vw;
+                  margin-top: 4VW;
+                  width: 66.667VW;
+               }
 
-            .list {
-               display: flex;
-               flex-wrap: wrap;
-               justify-content: space-between;
-               margin: 0;
-               padding: 0;
-               list-style: none;
-
-               .item {
-                  margin-top: 3.733vw;
-                  height: 23.467Vw;
-                  margin-top: 4.267vw;
-                  width: 18.667vw;
+               .list {
                   display: flex;
-                  flex-direction: column;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
 
-                  .icon {
-                     background-color: rgb(237, 240, 245);
-                     border-radius: 2.667vw;
-                     height: 18.667vw;
+                  .item {
+                     margin-top: 3.733vw;
+                     height: 23.467Vw;
+                     margin-top: 4.267vw;
                      width: 18.667vw;
-                  }
+                     display: flex;
+                     flex-direction: column;
 
-                  .text {
-                     margin: 0;
-                     padding: 0;
-                     background-color: rgb(237, 240, 245);
-                     border-radius: 1.6vw;
-                     flex-basis: 0;
-                     flex-grow: 1;
-                     flex-shrink: 1;
-                     margin-top: 1.6vw;
+                     .icon {
+                        background-color: rgb(237, 240, 245);
+                        border-radius: 2.667vw;
+                        height: 18.667vw;
+                        width: 18.667vw;
+                     }
 
+                     .text {
+                        margin: 0;
+                        padding: 0;
+                        background-color: rgb(237, 240, 245);
+                        border-radius: 1.6vw;
+                        flex-basis: 0;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        margin-top: 1.6vw;
+
+                     }
                   }
                }
             }
