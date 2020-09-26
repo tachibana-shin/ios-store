@@ -28,12 +28,7 @@
             </div>
             <div class="interset">
                <p class="title"> {{ "APP_INFO.INTERTING" | t }} </p>
-               <ul class="list">
-                  <li class="item" v-for="item in data.intersing">
-                     <div class="icon"></div>
-                     <p class="text"></p>
-                  </li>
-               </ul>
+               <list-app-hot padding="0" style="padding: 0" :title="false" :items="data.intersting"/>
             </div>
          </div>
          <loading v-else />
@@ -186,43 +181,6 @@
                .title {
                   @extend %title;
                }
-
-               .list {
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: space-between;
-                  margin: 0;
-                  padding: 0;
-                  list-style: none;
-
-                  .item {
-                     margin-top: 3.733vw;
-                     height: 23.467Vw;
-                     margin-top: 4.267vw;
-                     width: 18.667vw;
-                     display: flex;
-                     flex-direction: column;
-
-                     .icon {
-                        background-color: rgb(237, 240, 245);
-                        border-radius: 2.667vw;
-                        height: 18.667vw;
-                        width: 18.667vw;
-                     }
-
-                     .text {
-                        margin: 0;
-                        padding: 0;
-                        background-color: rgb(237, 240, 245);
-                        border-radius: 1.6vw;
-                        flex-basis: 0;
-                        flex-grow: 1;
-                        flex-shrink: 1;
-                        margin-top: 1.6vw;
-
-                     }
-                  }
-               }
             }
          }
       }
@@ -231,8 +189,9 @@
 <script>
    import LiteFooter from "../components/Lite.Footer.vue"
    import Loading from "../components/Loading.Search.vue"
+   import ListAppHot from "../components/ListAppHot.vue"
    export default {
-      components: { LiteFooter, Loading },
+      components: { LiteFooter, Loading, ListAppHot },
       data: () => ({
          loading: true,
 
