@@ -5,7 +5,7 @@
          <span> {{ "HOME.HOT" | t }} </span>
       </p>
       <div class="content">
-         <ul class="list">
+         <ul class="list" :style="{ padding }">
             <li class="item" v-for="item in items">
                <router-link :to="'/lite/info/app/' + item.id" class="app" tag="div">
                   <img v-lazy="item.icon">
@@ -56,7 +56,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             padding: 0 5.333vw;
-            width: 100vw;
+            width: 100%;
             box-sizing: border-box;
             display: flex;
 
@@ -102,7 +102,8 @@
          title: {
             type: Boolean,
             default: true
-         }
+         },
+	 padding: String
       }
    }
 </script>
