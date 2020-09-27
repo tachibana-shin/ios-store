@@ -18,7 +18,7 @@
             </div>
          </div>
       </div>
-      <topapp-loading />
+      <top-app-loading />
    </div>
 </template>
 <style lang="scss" scoped>

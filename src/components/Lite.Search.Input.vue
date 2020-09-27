@@ -113,7 +113,7 @@
             valueSearch: "",
 
          }
-      }
+      },
       timeout: 0,
       methods: {
          fetchData() {

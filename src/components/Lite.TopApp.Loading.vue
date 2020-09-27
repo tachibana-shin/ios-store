@@ -1,4 +1,4 @@
-<ttemplate>
+<template>
    <div class="wrapper.loading">
       <div class="wrapper.content">
          <div class="content">
@@ -14,7 +14,7 @@
          </div>
       </div>
    </div>
-</ttemplate>
+</template>
 <style lang="scss" scoped>
    .wrapper\.loading {
       position: relative;
