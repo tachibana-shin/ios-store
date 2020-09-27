@@ -2,17 +2,17 @@
    <div class="wrapper.loading">
       <div class="wrapper.content">
          <div class="content">
-            <div class="title1">
+            <p class="title-1"></p>
+            <p class="title-2"></p>
+            <p class="des-1"></p>
+            <p class="des-2"></p>
+            <p class="des-3"></p>
+            <div class="list">
+               <list-app-loading :children="true" />
             </div>
-            <div class="title2">
-            </div>
-            <div class="des1">
-            </div>
-            <div class="des2">
-            </div>
-            <list-app-loading :children="true"/>
          </div>
       </div>
+      <bac-animation />
    </div>
 </template>
 <style lang="scss" scoped>
@@ -26,49 +26,62 @@
          overflow: hidden;
 
          .content {
-            border-radius: 6.4VW 6.4vw 0 0;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6.4vw 6.4vw 0 0;
             box-sizing: border-box;
-            margin-top: 44.267VW;
+            margin-top: 44.267vw;
             overflow: hidden;
-            padding: 0 5.333Vw;
+            padding: 8vw 5.333vw;
 
-            .title1,
-            .title2 {
+            p {
+               margin: 0;
+               padding: 0;
+            }
+
+            .title-1,
+            .title-2 {
                background-color: rgb(237, 240, 245);
                border-radius: 4.267vw;
                height: 9.067vw;
             }
 
-            .title2 {
+            .title-2 {
                margin-top: 4.267vw;
                width: 60%;
             }
 
-            .des1,
-            .des2,
-            .des3 {
+            .des-1,
+            .des-2,
+            .des-3 {
                background-color: rgb(237, 240, 245);
                border-radius: 2.933vw;
                height: 5.867vw;
                margin-top: 6.4vw;
             }
 
-            .des2, .des3 {
+            .des-2 {
                margin-top: 2.667vw;
-               width: 60%;
+               width: 80%;
             }
 
-            .des3 {
+            .des-3 {
+               margin-top: 2.667vw;
                width: 90%;
             }
+
+            .list {
+               margin-top: 9.6vw;
+            }
+
+
          }
       }
    }
 </style>
-
 <script>
    import BacAnimation from "./Loading:bac.animation.vue"
+   import ListAppLoading from "./ListApp.Loading.vue"
    export default {
-      components: { BacAnimation }
+      components: { BacAnimation, ListAppLoading }
    }
 </script>
