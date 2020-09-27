@@ -1,6 +1,6 @@
 <template>
    <div class="nav.list-wrapper">
-      <nav class="nav.list">
+      <nav class="nav.list" @touchmove.prevent>
          <div class="content" v-touch-scroll:vertical="{ scrollbar: { render: false } }">
             <!--
             <h1 class="welcome"> {{ "HEADER.WELCOME" | t }} </h1>

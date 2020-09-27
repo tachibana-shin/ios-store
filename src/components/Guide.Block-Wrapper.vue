@@ -14,12 +14,12 @@
          <div class="wrapper">
             <div class="wrapper.content">
                <ul class="item" v-if="tab == 0">
-                  <li class="item">
-                     <span class="index"> 1 </span>
+                  <li class="item" v-for="(item, index) in Installtion">
+                     <span class="index"> {{ index + 1 }} </span>
                      <div class="wrapper.content.content">
-                        <img src="https://tutuapp.vip/ios/img/home_installation_one_english@2x.d67dccea.png">
-                        <p class="text">
-                           Click <span> "download" </span>
+                        <img :src="item.wrapper">
+                        <p class="text" v-html="item.html">
+                           
                         </p>
                      </div>
                   </li>
@@ -184,7 +184,11 @@
    export default {
       data() {
          return {
-            tab: 0
+            tab: 0,
+
+	    Installtion: [
+               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" }
+	    ]
          }
       }
    }
