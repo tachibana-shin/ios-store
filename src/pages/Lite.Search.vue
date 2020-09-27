@@ -2,7 +2,7 @@
    <div class="main">
       <div class="wrapper_search">
          <div class="search_input">
-            <input placeholder="Search" @keyup="fetchData" ref="Search" @keyup.enter="$router.push('/lite/search/result?query=' + $event.target.value)">
+            <input placeholder="Search" @keyup="fetchData" :placeholder="placeholderSearch" :value="valueSearch" @keyup.enter="searchByValue($event.target.value)" @blur="blurSearch" ref="Search">
             <img class="icon" :src="require('@/assets/ic.search.svg')">
             <div class="result" v-if="result">
                <ul>
@@ -21,7 +21,7 @@
             <div class="keyword-hot">
                <p class="title"> {{ "SEARCH.KEYWORD_HOT" | t }} </p>
                <ul class="list">
-                  <li v-for="item in data.keyword">
+                  <li v-for="item in data.keyword" @click="searchByValue( item )">
                      <span>{{ item }}</span>
                   </li>
                </ul>
@@ -171,6 +171,14 @@
                      margin-right: 8vw;
                      margin-top: 5.333vw;
                      padding: 0 5.333vw;
+		     span {
+		        display: block;
+                        overfilow-x: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+			font-size: 3.733vmin;
+		     }
                   }
                }
             }
@@ -196,6 +204,9 @@
          loading: true,
 
          result: null,
+
+	 placeholderSearch: "Search",
+	 valueSearch: "",
          
          data: {
             keyword: [],
@@ -215,14 +226,23 @@
                   .then(res => res.data)
                   .then(({ state, data }) => {
                      if (state.error) {
-
+		        throw new Error(state.message)
                      } else {
                         this.result = data
                      }
                   })
                   .catch(() => this.result = [])
             }, 1000)
-         }
+         },
+	 searchByValue( value ) {
+            this.valueSearch = ""
+	    this.placeholderSearch = value
+	    this.$router.push("/lite/search/result?q=" + encodeURIComponent(value))
+	 },
+	 blurSearch() {
+            this.placeholderSearch = this.$refs.Search.value
+	    this.valueSearch = ""
+	 }
       },
       created() {
          this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/Search.Data.php")

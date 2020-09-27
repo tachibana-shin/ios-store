@@ -23,7 +23,7 @@
                   <span> {{ "HEADER.PURCHASE_VIP" | t }} </span>
                </li>
                <hr>-->
-               <router-link to="/" tag="li" exact-active-class="active" class="item">
+               <router-link to="/" tag="li" exact-active-class="active" class="item" :class="{ active: homeRouterActive }">
                   <img class="icon" :src="require('@/assets/bar.ic.home.svg')">
                   <span> {{ "HEADER.HOME" | t }} </span>
                </router-link>
@@ -303,6 +303,11 @@
 <script>
    import Language from "./Language.vue"
    export default {
-      components: { Language }
+      components: { Language },
+      computed: {
+         homeRouterActive() {
+            return !!this.$route.path.match(/^\/lite/)
+	 }
+      }
    }
 </script>
