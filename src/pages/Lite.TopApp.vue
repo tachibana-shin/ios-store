@@ -1,81 +1,89 @@
 <template>
-   <div class="lite.topapp">
-      <div class="picture">
-         <img class="picture.image" :src="TopApp.picture">
-      </div>
-      <div class="card-wrapper">
-         <p class="title"> {{ TopApp.title }} </p>
-         <div class="description">
-            {{ TopApp.description }}
+   <div class="wrapper">
+      <div class="lite.topapp" v-if="false">
+         <div class="picture">
+            <img class="picture.image" :src="TopApp.picture">
          </div>
-         <div class="applist">
-            <ul>
-               <li v-for="item in TopApp.items">
-                  <app-info :data="item"/>
-               </li>
-            </ul>
+         <div class="card-wrapper">
+            <p class="title"> {{ TopApp.title }} </p>
+            <div class="description">
+               {{ TopApp.description }}
+            </div>
+            <div class="applist">
+               <ul>
+                  <li v-for="item in TopApp.items">
+                     <app-info :data="item" />
+                  </li>
+               </ul>
+            </div>
          </div>
       </div>
+      <topapp-loading />
    </div>
 </template>
 <style lang="scss" scoped>
-   .lite\.topapp {
+   .wrapper {
       width: 100%;
-      padding-top: 11.467vw;
+      position: relative;
 
-      .picture {
-         .picture\.image {
-            height: 49.867vw;
-            width: 100vw;
+      .lite\.topapp {
+         width: 100%;
+         padding-top: 11.467vw;
+
+         .picture {
+            .picture\.image {
+               height: 49.867vw;
+               width: 100vw;
+            }
          }
-      }
 
-      .card-wrapper {
-         background-color: rgb(255, 255, 255);
-         border-radius: 6.4vw 6.4vw 0 0;
-         margin-top: -6.4vw;
-         overflow: hidden;
-         padding-top: 6.4Vw;
-         position: relative;
-         width: 100vw;
-         z-index: 1;
-
-         .title {
-            margin: 0;
-            padding: 0;
-            font-weight: 400;
-            line-height: 9.067vW;
+         .card-wrapper {
+            background-color: rgb(255, 255, 255);
+            border-radius: 6.4vw 6.4vw 0 0;
+            margin-top: -6.4vw;
             overflow: hidden;
-            padding: 0 5.333vw;
-            text-overflow: ellipsis;
+            padding-top: 6.4Vw;
+            position: relative;
             width: 100vw;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            box-sizing: border-box;
-            color: rgb(55, 77, 115);
-            display: -webkit-box;
-            font-size: 6.4vmin;
-         }
+            z-index: 1;
 
-         .description {
-            box-sizing: border-box;
-            color: rgb(55, 77, 115);
-            font-size: 3.733vmin;
-            font-weight: 400;
-            line-height: 5.867vw;
-            margin-bottom: 4.267vw;
-            margin-top: 4.267vW;
-            padding: 0 5.333vw;
-            width: 100vw;
-         }
-
-         .applist {
-            ul {
+            .title {
                margin: 0;
                padding: 0;
-               list-style: none;
+               font-weight: 400;
+               line-height: 9.067vW;
+               overflow: hidden;
+               padding: 0 5.333vw;
+               text-overflow: ellipsis;
+               width: 100vw;
+               -webkit-box-orient: vertical;
+               -webkit-line-clamp: 2;
                box-sizing: border-box;
-               padding-right: 0 5.333vw;
+               color: rgb(55, 77, 115);
+               display: -webkit-box;
+               font-size: 6.4vmin;
+            }
+
+            .description {
+               box-sizing: border-box;
+               color: rgb(55, 77, 115);
+               font-size: 3.733vmin;
+               font-weight: 400;
+               line-height: 5.867vw;
+               margin-bottom: 4.267vw;
+               margin-top: 4.267vW;
+               padding: 0 5.333vw;
+               width: 100vw;
+            }
+
+            .applist {
+               ul {
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  box-sizing: border-box;
+                  padding-right: 0 5.333vw;
+               }
             }
          }
       }
@@ -89,10 +97,10 @@
       data: () => ({
          TopApp: {
             title: "",
-	    picture: "",
-	    description: "",
-	    items: []
-	 }
+            picture: "",
+            description: "",
+            items: []
+         }
       }),
       created() {
 

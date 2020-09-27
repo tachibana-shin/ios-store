@@ -307,7 +307,7 @@
       computed: {
          homeRouterActive() {
             return !!this.$route.path.match(/^\/lite/)
-	 }
+         }
       }
    }
 </script>

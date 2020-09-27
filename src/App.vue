@@ -11,8 +11,8 @@
          <how-to-install v-if="HowToInstallShow" @close="HowToInstallShow = false" />
       </transition>
       <transition name="howtoinstall">
-         <modal-download v-if="ModalDownload" @close="ModalDownload = false" :items="ModalDownloadItem"/>
-      </transition> 
+         <modal-download v-if="ModalDownload" @close="ModalDownload = false" :items="ModalDownloadItem" />
+      </transition>
       <transition name="fade:ease">
          <loading-snipper v-if="LoadingSnipper" />
       </transition>
@@ -138,7 +138,7 @@
          BackdropMark,
          HowToInstall: () => import("./components/HowToInstall.vue"),
          LoadingSnipper: () => import("./components/Loading-Snipper.vue"),
-	 ModalDownload: () => import("./components/Modal.Download.vue")
+         ModalDownload: () => import("./components/Modal.Download.vue")
       },
       data: () => ({
          NavListShow: false,
