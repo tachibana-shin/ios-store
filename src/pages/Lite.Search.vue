@@ -2,10 +2,10 @@
    <div class="main">
       <div class="wrapper_search">
          <div class="search_input">
-            <input placeholder="Search" @keyup="fetchData" :placeholder="placeholderSearch" :value="valueSearch" @keyup.enter="searchByValue($event.target.value)" @blur="blurSearch" ref="Search">
+            <input placeholder="Search" @keyup="fetchData" :placeholder="placeholderSearch" v-model="valueSearch" @keyup.enter="searchByValue($event.target.value)" @blur="blurSearch" ref="Search">
             <img class="icon" :src="require('@/assets/ic.search.svg')">
-            <div class="result" v-if="result">
-               <ul>
+            <div class="result" v-if="result" @touchmove.prevent>
+               <ul v-touch-scroll:vertical="{ scrollbar: { render: false } }">
                   <li class="item" v-for="item in result">
                      <router-link tag="p" :to="'/lite/info/app/' + item.id">
                         {{ item.name  }}
@@ -90,7 +90,7 @@
                box-shadow: rgba(32, 33, 36, 0.28) 0 1.067vw 1.6vw 0;
                max-height: calc(100vh - 85.333vw);
 
-               overflow: hidden scroll;
+               overflow: hidden;
                padding-bottom: 8vw;
                width: 89.333vw;
                margin-top: (10.667vw / 2);
@@ -231,7 +231,7 @@
                         this.result = data
                      }
                   })
-                  .catch(() => this.result = [])
+                  .catch(() => this.result = null)
             }, 1000)
          },
 	 searchByValue( value ) {
@@ -242,6 +242,7 @@
 	 blurSearch() {
             this.placeholderSearch = this.$refs.Search.value
 	    this.valueSearch = ""
+	    this.result = null
 	 }
       },
       created() {

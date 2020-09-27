@@ -1,17 +1,17 @@
 <template>
    <div class="lite.topapp">
       <div class="picture">
-         <img class="picture.image" src="https://photos.tutuapp.com/photo/special/000/001/423/414x155.jpg">
+         <img class="picture.image" :src="TopApp.picture">
       </div>
       <div class="card-wrapper">
-         <p class="title"> Top Game This holyday </p>
+         <p class="title"> {{ TopApp.title }} </p>
          <div class="description">
-            8 ball
+            {{ TopApp.description }}
          </div>
          <div class="applist">
             <ul>
-               <li v-for="item in 10">
-                  <app-info name="Pokemon Go" :id="item" src="https://photos.tutuapp.com/picture/app_ios/cn/002/54/98/20/2549820.175x175-75.jpg" />
+               <li v-for="item in TopApp.items">
+                  <app-info :data="item"/>
                </li>
             </ul>
          </div>
@@ -83,7 +83,19 @@
 </style>
 <script>
    import AppInfo from "../components/AppInfo.vue"
+   import TopAppLoading from "../components/Lite.TopApp.Loading.vue"
    export default {
-      components: { AppInfo }
+      components: { AppInfo, TopAppLoading },
+      data: () => ({
+         TopApp: {
+            title: "",
+	    picture: "",
+	    description: "",
+	    items: []
+	 }
+      }),
+      created() {
+
+      }
    }
 </script>
