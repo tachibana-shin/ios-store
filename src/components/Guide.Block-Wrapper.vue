@@ -19,7 +19,6 @@
                      <div class="wrapper.content.content">
                         <img :src="item.wrapper">
                         <p class="text" v-html="item.html">
-                           
                         </p>
                      </div>
                   </li>
@@ -33,6 +32,7 @@
 </template>
 <style lang="scss" scoped>
    @import "~@/scss/variants";
+
    @font-face {
       font-family: DINCond;
       src: url("/fonts/DINCond.ttf");
@@ -186,9 +186,9 @@
          return {
             tab: 0,
 
-	    Installtion: [
+            Installtion: [
                { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" }
-	    ]
+            ]
          }
       }
    }
