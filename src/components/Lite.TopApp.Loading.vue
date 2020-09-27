@@ -1,5 +1,6 @@
 <template>
    <div class="wrapper.loading">
+      <bac-animation/>
       <div class="wrapper.content">
          <div class="content">
             <p class="title-1"></p>
@@ -8,17 +9,18 @@
             <p class="des-2"></p>
             <p class="des-3"></p>
             <div class="list">
-               <list-app-loading :children="true" />
+               <list-app-loading :children="true" padding="0" />
             </div>
          </div>
       </div>
-      <bac-animation />
    </div>
 </template>
 <style lang="scss" scoped>
    .wrapper\.loading {
       position: relative;
-      margin-top: 25.333vw;
+      width: 100%;
+      overflow: hidden;
+      padding-top: 11.467vw;
 
       .wrapper\.content {
          background-color: rgb(237, 240, 245);
