@@ -128,6 +128,8 @@
    }
 </style>
 <script>
+   import "https://fonts.googleapis.com/icon?family=Material+Icons"
+   import "~@/scss/global.scss"
    import HeaderApp from "./components/Header.vue"
    import NavListWrapper from "./components/Nav.List-Wrapper.vue"
    import BackdropMark from "./components/Backdrop.vue"
