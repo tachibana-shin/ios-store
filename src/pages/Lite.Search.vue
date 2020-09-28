@@ -1,12 +1,12 @@
 <template>
    <div class="main">
       <div class="wrapper_search">
-         <lite-search-input/>
+         <lite-search-input ref="LiteSearchInput"/>
          <div class="wrapper_result" v-if="!loading">
             <div class="keyword-hot">
                <p class="title"> {{ "SEARCH.KEYWORD_HOT" | t }} </p>
                <ul class="list">
-                  <li v-for="item in data.keyword" @click="searchByValue( item )">
+                  <li v-for="item in data.keyword" @click="$refs.LiteSearchInput.searchByValue( item )">
                      <span>{{ item }}</span>
                   </li>
                </ul>

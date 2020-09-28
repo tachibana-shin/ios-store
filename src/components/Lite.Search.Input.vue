@@ -104,6 +104,9 @@
 </style>
 <script>
    export default {
+      props: {
+         placeholder: String
+      },
       data() {
          return {
 
@@ -113,6 +116,16 @@
             valueSearch: "",
 
          }
+      },
+      watch: {
+         placeholder: {
+            handler( newVal ) {
+               if ( !!newVal ) {
+	          this.placeholderSearch = newVal
+	       }
+	    },
+	    immediate: true
+	 }
       },
       timeout: 0,
       methods: {
@@ -138,7 +151,7 @@
          searchByValue(value) {
             this.valueSearch = ""
             this.placeholderSearch = value
-            this.$router.push("/lite/search/result?q=" + encodeURIComponent(value))
+            this.$router.push("/lite/search/result?query=" + encodeURIComponent(value))
          },
          blurSearch() {
             this.placeholderSearch = this.$refs.Search.value

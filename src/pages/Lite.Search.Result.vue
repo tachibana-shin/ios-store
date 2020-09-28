@@ -1,7 +1,7 @@
 <template>
    <div class="main">
       <div class="wrapper_search">
-         <lite-search-input/>
+         <lite-search-input :placeholder="$route.query.query"/>
          <div class="wrapper__result">
             <div v-if="!loading">
                <div class="applist">
@@ -65,7 +65,7 @@
 
          apps: [],
          LoadingMoreState: false,
-         NoMore: false,
+         NoMore: false
 
       }),
       methods: {
