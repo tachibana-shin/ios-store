@@ -21,9 +21,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-   @import "~@/scss/global.scss";
-
    #app {
       padding-top: 13.867vw;
 
