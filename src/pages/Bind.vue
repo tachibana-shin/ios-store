@@ -50,7 +50,7 @@
 </template>
 <style lang="scss" scoped>
    .wrapper {
-      background-color: $color-wrapper;
+      background-color: $bg-wrapper;
       box-sizing: border-box;
       min-height: calc(100vh - 13.867vw);
       padding-bottom: 21.867vw;

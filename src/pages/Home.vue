@@ -131,7 +131,7 @@
             }
 
             .notice {
-               background-color: $color-wrapper;
+               background-color: $bg-wrapper;
                height: 8.533vw;
                position: relative;
                top: 0;
