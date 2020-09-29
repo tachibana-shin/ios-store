@@ -21,7 +21,8 @@
       margin-bottom: 4.8vw;
 
       .title {
-         @extend %distance0;
+         margin: 0;
+         padding: 0;
          box-sizing: border-box;
          color: rgb(22, 43, 72);
          display: flex;
@@ -50,7 +51,8 @@
 
          .list {
             margin: 0;
-            @extend %distance0; none;
+            padding: 0;
+            list-style: none;
             flex-wrap: wrap;
             justify-content: space-between;
             padding: 0 5.333vw;
@@ -77,7 +79,8 @@
                p {
                   margin: 0;
                   padding: 0;
-                  @extend %distance0;line-block;
+                  color: rgb(11, 57, 95);
+                  display: inline-block;
                   font-size: 3.2vmin;
                   font-weight: 500;
                   line-height: 3.733vw;
