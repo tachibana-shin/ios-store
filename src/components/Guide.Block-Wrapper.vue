@@ -61,7 +61,7 @@
          width: 100%;
 
          .header {
-            background-color: rgb(255, 255, 255);
+            background-color: $white;
             border-radius: inherit;
             display: flex;
             height: 13.333vw;
@@ -74,7 +74,7 @@
             .right {
                font-weight: 500;
                line-height: 13.333vw;
-               color: rgb(162, 171, 191);
+               color: $color-blue-grey;
                font-size: 3.733vmin;
 
                flex: {
@@ -94,7 +94,7 @@
             }
 
             .space {
-               background-color: rgb(240, 242, 245);
+               background-color: $color-yellow-grey;
                height: 4.8vw;
                width: 1px;
             }
@@ -146,7 +146,7 @@
                      }
 
                      .wrapper\.content\.content {
-                        background-color: rgb(255, 255, 255);
+                        background-color: $white;
                         border-radius: 4.267vw;
                         box-shadow: rgba(3, 14, 37, 0.06) 0 .8vw 5.333vw 0;
                         margin-top: 18.667vw;

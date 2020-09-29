@@ -27,8 +27,8 @@
 
             .header {
                align-items: center;
-               background-color: rgb(255, 255, 255);
-               color: rgb(48, 49, 51);
+               background-color: $white;
+               color: $color-FAQ;
                cursor: pointer;
                display: flex;
                font-size: 3.467vmin;
@@ -63,7 +63,7 @@
             }
 
             .content {
-               background-color: rgb(255, 255, 255);
+               background-color: $white;
                box-sizing: border-box;
                overflow: hidden;
                height: 0;

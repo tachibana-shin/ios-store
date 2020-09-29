@@ -18,7 +18,7 @@
 </template>
 <style lang="scss" scoped>
    .search_input {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
       height: 10.667vw;
       padding: 5.333vw;
       top: 0;
@@ -30,7 +30,7 @@
       input {
          background-color: rgb(242, 243, 245);
          border-radius: 5.333vw;
-         color: rgb(162, 171, 191);
+         color: $color-blue-grey;
          font-size: 3.733vmin;
          font-weight: 500;
          height: 100%;
@@ -56,7 +56,7 @@
       }
 
       .result {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          border-radius: 0 0 3.2vw 3.2vw;
          box-shadow: rgba(32, 33, 36, 0.28) 0 1.067vw 1.6vw 0;
          max-height: calc(100vh - 85.333vw);

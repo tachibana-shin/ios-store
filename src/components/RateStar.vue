@@ -15,7 +15,7 @@
       align-items: center;
 
       .number {
-         color: rgb(162, 171, 191);
+         color: $color-blue-grey;
 
          font: {
             family: DIN-Medium;

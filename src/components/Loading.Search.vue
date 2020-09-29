@@ -22,7 +22,7 @@
 </template>
 <style lang="scss" scoped>
    .wrapper_loading {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
       box-sizing: border-box;
       overflow: hidden;
       position: relative;

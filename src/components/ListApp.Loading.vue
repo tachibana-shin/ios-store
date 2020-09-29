@@ -63,7 +63,7 @@
                         .app\.title {
                            margin: 0;
                            padding: 0;
-                           color: rgb(47, 64, 89);
+                           color: $color-text-content;
                            font-size: 4.267vmin;
                            font-weight: 500;
                            line-height: 5.867vw;

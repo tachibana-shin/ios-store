@@ -28,7 +28,7 @@
          overflow: hidden;
 
          .content {
-            background-color: rgb(255, 255, 255);
+            background-color: $white;
             border-radius: 6.4vw 6.4vw 0 0;
             box-sizing: border-box;
             margin-top: 44.267vw;

@@ -99,7 +99,7 @@
       }
 
       .nav\.list {
-         background-color: #fff;
+         background-color: $white;
          width: 79.467vw;
          height: 100%;
          position: absolute;
@@ -114,7 +114,7 @@
 
          .content {
             border: 1px solid #fff;
-            background-color: #fff;
+            background-color: $white;
             padding-bottom: 26.667vw;
             width: 100%;
 
@@ -155,7 +155,7 @@
                   .login\.button {
                      background-color: $colorMain;
                      border-radius: 2.133vw;
-                     color: #fff;
+                     color: $white;
 
                      font: {
                         size: 4.267vmin;
@@ -171,7 +171,7 @@
             }
 
             hr.line {
-               background-color: rgb(242, 244, 245);
+               background-color: $color-hr;
                height: 1px;
                width: 100%;
             }
@@ -194,7 +194,7 @@
                   }
 
                   ;
-                  color: rgb(55, 77, 115);
+                  color: $color-blue-dark;
                   height: 13.867vw;
                   box-sizing: border-box;
 
@@ -210,7 +210,7 @@
                }
 
                hr {
-                  background-color: rgb(242, 244, 245);
+                  background-color: $color-hr;
                   height: 1px;
                   margin: 3.2vw 0;
                }
@@ -251,14 +251,14 @@
                }
 
                hr {
-                  background-color: rgb(242, 244, 245);
+                  background-color: $color-hr;
                   height: 1px;
                }
 
                .logout\.button {
                   border-radius: 2.133vw;
                   border: 1px solid $colorMain;
-                  background-color: #fff;
+                  background-color: $white;
 
                   font: {
                      size: 4.267vmin;
@@ -280,7 +280,7 @@
 
                   &:hover {
                      background-color: $colorMain;
-                     color: #fff;
+                     color: $white;
                   }
                }
             }

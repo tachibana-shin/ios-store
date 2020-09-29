@@ -23,7 +23,7 @@
 </template>
 <style lang="scss" scoped>
    .main {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
       padding-top: 11.467vw;
 
       .wrapper_search {
@@ -38,7 +38,7 @@
             position: relative;
 
             %title {
-               color: rgb(47, 64, 89);
+               color: $color-text-content;
                font-size: 4.8vmin;
                font-weight: 500;
                line-height: 6.4vw;

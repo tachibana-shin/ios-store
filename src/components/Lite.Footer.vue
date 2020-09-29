@@ -12,7 +12,7 @@
 </template>
 <style lang="scss" scoped>
    .footer\.app {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
       border-bottom: 1px solid rgb(217, 217, 217);
       bottom: 0;
       box-shadow: rgba(8, 13, 39, .01) 0 0 1.6vw 0;
@@ -45,7 +45,7 @@
          p {
             margin: 0;
             padding: 0;
-            color: rgb(162, 171, 191);
+            color: $color-blue-grey;
             font-size: 2.667vmin;
             font-weight: 400;
             line-height: 3.733vw;
@@ -53,7 +53,7 @@
          }
 
          &.active p {
-            color: rgb(55, 77, 115);
+            color: $color-blue-dark;
             font-weight: 500;
          }
       }

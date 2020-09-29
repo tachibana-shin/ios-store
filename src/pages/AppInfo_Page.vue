@@ -68,7 +68,7 @@
    .main {
       .wrapper {
          padding-top: 11.467vw;
-         background-color: #fff;
+         background-color: $white;
 
          .detail-app {
             padding: {
@@ -128,7 +128,7 @@
                   }
 
                   .bottom {
-                     color: rgb(162, 171, 191);
+                     color: $color-blue-grey;
                      display: flex;
                      font-family: DIN-Medium;
                      font-size: 3.733vmin;
@@ -149,7 +149,7 @@
                .title {
                   margin: 0;
                   padding: 0;
-                  color: rgb(47, 64, 89);
+                  color: $color-text-content;
                   font-size: 4.8vmin;
                   font-weight: 500;
                   line-height: 6.4vW;
@@ -192,7 +192,7 @@
                         overflow: hidden;
                         word-break: break-all;
 
-                        color: rgb(55, 77, 115);
+                        color: $color-blue-dark;
                         flex-basis: 0%;
                      }
                   }
@@ -301,7 +301,7 @@
                            p {
                               margin: 0;
                               padding: 0;
-                              color: rgb(11, 57, 95);
+                              color: $color-value;
                               display: inline-block;
                               font-size: 3.2vmin;
                               font-weight: 500;
@@ -321,7 +321,7 @@
 
             .download {
                align-items: center;
-               background-color: rgb(255, 255, 255);
+               background-color: $white;
                bottom: 0;
                display: flex;
                height: 16VW;
@@ -334,7 +334,7 @@
                button {
                   background-color: rgb(0, 142, 255);
                   border-radius: 5.333vw;
-                  color: rgb(255, 255, 255);
+                  color: $white;
                   font-size: 4.267vmin;
                   font-weight: 500;
                   height: 10.667vw;

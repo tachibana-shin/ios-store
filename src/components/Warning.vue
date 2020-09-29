@@ -17,7 +17,7 @@
       z-index: 10;
 
       .content {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          border-radius: 3.2vw;
          position: relative;
          text-align: center;

@@ -23,7 +23,7 @@
 </template>
 <style lang="scss" scoped>
    .wrapper\.loading {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
       height: 100vh;
       left: 0;
       padding-top: 25.333vw;

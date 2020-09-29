@@ -50,7 +50,7 @@
 </template>
 <style lang="scss" scoped>
    .wrapper {
-      background-color: rgb(245, 246, 247);
+      background-color: $color-wrapper;
       box-sizing: border-box;
       min-height: calc(100vh - 13.867vw);
       padding-bottom: 21.867vw;
@@ -66,7 +66,7 @@
          .title {
             margin: 0;
             padding: 0;
-            color: rgb(55, 77, 115);
+            color: $color-blue-dark;
             font-size: 4.267vmin;
             font-weight: 500;
             line-height: 4.8vw;
@@ -100,11 +100,11 @@
       }
 
       .header {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          border-radius: 2.133vw;
          box-shadow: rgba(8, 13, 39, 0.03) 0 0.533vw 3.2vw 0;
          box-sizing: border-box;
-         color: rgb(11, 57, 95);
+         color: $color-value;
          font-size: 3.733vmin;
          font-weight: 400;
          line-height: 5.6vw;
@@ -122,7 +122,7 @@
       }
 
       .content {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          border-radius: 2.133vw;
          box-shadow: rgba(8, 13, 39, 0.03) 0 0.533vw 3.2vw 0;
          box-sizing: border-box;
@@ -173,7 +173,7 @@
             button {
                background-color: rgb(230, 232, 235);
                border-radius: 6.133vw;
-               color: rgb(255, 255, 255);
+               color: $white;
                font-size: 4.8vmin;
                font-weight: 500;
                height: 12.267vw;
@@ -204,7 +204,7 @@
       }
 
       .faq {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          border-radius: 2.133vw;
          box-shadow: rgba(8, 13, 39, 0.03) 0 0.533vw 3.2vw 0;
          box-sizing: border-bOx;

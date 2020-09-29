@@ -64,7 +64,7 @@
    $bgColor: rgb(237, 240, 245);
 
    .loadingapp {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
       height: 100%;
       left: 0;
       box-sizing: border-box;
@@ -77,7 +77,7 @@
 
       .wrapper {
          padding-top: 11.467vw;
-         background-color: #fff;
+         background-color: $white;
          position: relative;
 
          .detail-app {

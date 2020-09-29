@@ -41,7 +41,7 @@
             .name {
                font-size: 14px;
                line-height: 18px;
-               color: #000;
+               color: $black;
             }
          }
 
@@ -58,7 +58,7 @@
          width: 150px;
          height: 300px;
          border-radius: 8px;
-         background-color: #fff;
+         background-color: $white;
          overflow: hidden scroll;
 	 box-shadow: 0 0 20px rgba(0, 0, 0, .1);
 	 border: 1px solid rgba(0, 0, 0, .1);
@@ -87,7 +87,7 @@
 
                   font-size: 14px;
                   line-height: 18px;
-                  color: #000;
+                  color: $black;
                }
             }
          }

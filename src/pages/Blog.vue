@@ -43,7 +43,7 @@
       overflow: hidden;
 
       .header {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          border-radius: 2.133vw;
          box-shadow: rgba(8, 13, 39, 0.03) 0 0.533vw 3.2vw 0;
          display: flex;
@@ -102,7 +102,7 @@
 
                   .top {
                      box-sizing: border-box;
-                     color: rgb(255, 255, 255);
+                     color: $white;
                      font-size: 3.467vmin;
                      font-weight: 500;
                      left: 0;
@@ -123,7 +123,7 @@
                      font-weight: 500;
                      left: 4.267VW;
                      bottom: 5.333vw;
-                     color: rgb(255, 255, 255);
+                     color: $white;
                      font-size: 6.4vmin;
                      line-height: 8vw;
                      position: absolute;

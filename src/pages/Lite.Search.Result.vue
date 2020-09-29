@@ -21,7 +21,7 @@
 </template>
 <style lang="scss" scoped>
    .main {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
       padding-top: 11.467vw;
       position: relative;
 

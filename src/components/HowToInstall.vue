@@ -70,7 +70,7 @@
                position: absolute;
                text-align: center;
                top: 4.26vw;
-               color: rgb(255, 255, 255);
+               color: $white;
                font-size: 4vmin;
                width: 100%;
 
@@ -95,7 +95,7 @@
          }
 
          .footer {
-            background-color: rgb(255, 255, 255);
+            background-color: $white;
             box-sizing: border-box;
             height: 35.2vw;
             padding-top: 9.067vw;
@@ -103,7 +103,7 @@
             .video {
                margin: 0;
                padding: 0;
-               color: rgb(0, 87, 158);
+               color: $color-blue-black;
                font-size: 3.733vmin;
                font-weight: 500;
                line-height: 5.333vw;
@@ -120,7 +120,7 @@
             .install {
                background-color: $colorMain;
                border-radius: 6.133vw;
-               color: rgb(255, 255, 255);
+               color: $white;
                font-size: 4vmin;
                font-weight: 500;
                height: 11.733vw;

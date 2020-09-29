@@ -31,7 +31,7 @@
       .wrapper {
          width: 100%;
          height: 13.867vw;
-         background-color: #fff;
+         background-color: $white;
          position: relative;
          display: flex;
          align-items: center;
@@ -56,7 +56,7 @@
 
       .tabs {
          background-color: rgb(252, 253, 255);
-         color: rgb(162, 171, 191);
+         color: $color-blue-grey;
 
          font: {
             size: 3.733vmin;
@@ -89,7 +89,7 @@
          }
 
          .space {
-            background-color: rgb(240, 242, 245);
+            background-color: $color-yellow-grey;
             height: 4.8vw;
             max-height: 100%;
             width: 1px;

@@ -131,7 +131,7 @@
             }
 
             .notice {
-               background-color: rgb(245, 246, 247);
+               background-color: $color-wrapper;
                height: 8.533vw;
                position: relative;
                top: 0;
@@ -392,7 +392,7 @@
 
             .guide-block {
                align-items: center;
-               background-color: rgb(255, 255, 255);
+               background-color: $white;
                border-radius: 4.267vw;
                box-shadow: rgba(3, 14, 37, 0.06) 0 .8vw 5.333vw 0;
                box-sizing: border-box;
@@ -423,7 +423,7 @@
                }
 
                span {
-                  color: rgb(55, 77, 115);
+                  color: $color-blue-dark;
                   font-size: 4.8vmin;
                   font-weight: 500;
                   line-height: 17.6vw;
@@ -442,7 +442,7 @@
             }
 
             .applist {
-               background-color: #fff;
+               background-color: $white;
                border-radius: 4.267vw;
                box-shadow: rgba(3, 14, 37, .06) 0 .8vw 5.333vw 0;
                box-sizing: border-box;
@@ -455,7 +455,7 @@
                width: 91.467vw;
 
                .applist\.title {
-                  color: rgb(55, 77, 115);
+                  color: $color-blue-dark;
                   display: block;
                   font-size: 4.8vmin;
                   font-weight: 500;

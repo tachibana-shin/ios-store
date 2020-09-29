@@ -32,7 +32,7 @@
 
       .wrapper {
          padding-top: 11.467vw;
-         background-color: #fff;
+         background-color: $white;
 
          .banner {
             position: relative;

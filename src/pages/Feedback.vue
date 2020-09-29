@@ -89,7 +89,7 @@
             margin-bottom: 4.267vw;
 
             span:first-child {
-               color: rgb(55, 77, 115);
+               color: $color-blue-dark;
                font-size: 4.267vmin;
                font-weight: 500;
                margin-right: 2.667vw;
@@ -103,12 +103,12 @@
          }
 
          .select input {
-            background-color: rgb(255, 255, 255);
+            background-color: $white;
             border: 0;
             outline: none;
             border-radius: 2.133vw;
             box-sizing: border-box;
-            color: rgb(55, 77, 115);
+            color: $color-blue-dark;
             font-size: 3.733vmin;
             font-weight: 400;
             height: 11.733vw;
@@ -124,7 +124,7 @@
             padding-bottom: 12.533vw;
             padding-top: 4.267vw;
 
-            background-color: rgb(255, 255, 255);
+            background-color: $white;
 
             border: 1px solid rgb(220, 223, 230);
             border-radius: 1.067vw;
@@ -137,7 +137,7 @@
                font-size: inherit;
                line-height: 1.5;
                padding: 1.333vw 4vw;
-               color: rgb(55, 77, 115);
+               color: $color-blue-dark;
                font-size: 3.733vmin;
                font-weight: 400;
                line-height: 5.867vw;
@@ -147,7 +147,7 @@
             }
 
             span {
-               background-color: rgb(255, 255, 255);
+               background-color: $white;
                bottom: 1.333vw;
                color: rgb(144, 147, 153);
                font-size: 3.2vmin;
@@ -171,7 +171,7 @@
                padding: 0;
 
                span {
-                  background-color: rgb(255, 255, 255);
+                  background-color: $white;
                   box-shadow: rgba(0, 0, 0, 0.08) 0 0 1.6vw 0.533vw;
                   box-sizing: border-box;
                   border: 0.53vw solid rgb(209, 216, 230);
@@ -218,14 +218,14 @@
                   border-radius: 2.133vw;
                   height: 16.533vw;
                   width: 16.533vw;
-                  background-color: rgb(255, 255, 255);
+                  background-color: $white;
                   background-position: center;
                   background-repeat: no-repeat;
                   background-size: cover;
                   box-sizing: border-box;
 
                   .close {
-                     background-color: rgb(255, 255, 255);
+                     background-color: $white;
                      border-radius: 50%;
                      color: rgba(0, 0, 0, 0.8);
                      font-size: 4.267vmin;
@@ -250,7 +250,7 @@
                      overflow: hidden;
                      position: relative;
                      transition: opacity .1s ease;
-                     background-color: rgb(255, 255, 255);
+                     background-color: $white;
                      border-radius: 2.133vw;
                      opacity: 0;
 
@@ -270,7 +270,7 @@
                      }
 
                      span {
-                        color: #000;
+                        color: $black;
                         font-size: 5.333vmin;
                      }
                   }
@@ -280,12 +280,12 @@
       }
 
       .feedback-email input {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          border: 0;
          outline: none;
          border-radius: 2.133vw;
          box-sizing: border-box;
-         color: rgb(55, 77, 115);
+         color: $color-blue-dark;
          font-size: 3.733vmin;
          font-weight: 400;
          height: 11.733vw;
@@ -300,7 +300,7 @@
          background-color: rgb(74, 76, 91);
          border-radius: 0.533vw;
          box-sizing: border-bOx;
-         color: rgb(255, 255, 255);
+         color: $white;
          cursor: pointer;
          display: block;
          font-size: 4.267vmin;
@@ -377,7 +377,7 @@
          Z-index: 99999;
 
          .content {
-            background-color: rgb(255, 255, 255);
+            background-color: $white;
             border-radius: 3.2vw;
             height: 53.333vw;
             left: 50%;
@@ -420,7 +420,7 @@
                background-color: rgb(72, 160, 252);
                border-radius: 0 0 3.2vw 3.2vw;
                bottom: 0;
-               color: rgb(255, 255, 255);
+               color: $white;
                display: flex;
                font-weight: 600;
                height: 14.4vw;

@@ -38,7 +38,7 @@
          }
 
          .card-wrapper {
-            background-color: rgb(255, 255, 255);
+            background-color: $white;
             border-radius: 6.4vw 6.4vw 0 0;
             margin-top: -6.4vw;
             overflow: hidden;
@@ -59,14 +59,14 @@
                -webkit-box-orient: vertical;
                -webkit-line-clamp: 2;
                box-sizing: border-box;
-               color: rgb(55, 77, 115);
+               color: $color-blue-dark;
                display: -webkit-box;
                font-size: 6.4vmin;
             }
 
             .description {
                box-sizing: border-box;
-               color: rgb(55, 77, 115);
+               color: $color-blue-dark;
                font-size: 3.733vmin;
                font-weight: 400;
                line-height: 5.867vw;
