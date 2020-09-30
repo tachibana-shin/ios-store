@@ -13,7 +13,7 @@
 <style lang="scss" scoped>
    .footer\.app {
       background-color: $white;
-      border-bottom: 1px solid rgb(217, 217, 217);
+      border-bottom: 1px solid $border-color-end;
       bottom: 0;
       box-shadow: rgba(8, 13, 39, .01) 0 0 1.6vw 0;
       display: flex;

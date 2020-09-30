@@ -119,7 +119,7 @@
                      line-height: 7.467vw;
                      overflow: hidden;
                      @include text-truncate(2);
-                     color: rgb(22, 43, 72);
+                     color: $color-app-name-pro;
                      display: -webkit-box;
                      font-size: 5.6vmin;
                   }
@@ -238,7 +238,7 @@
                   .title {
                      @include distance0;
                      box-sizing: border-box;
-                     color: rgb(22, 43, 72);
+                     color: $color-app-name-pro;
                      display: flex;
                      font-size: 4.267vmin;
                      font-weight: 500;

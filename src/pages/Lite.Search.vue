@@ -73,6 +73,7 @@
                         display: block;
                         @include text-truncate;
                         font-size: 3.733vmin;
+                        color: $black;
                      }
                   }
                }

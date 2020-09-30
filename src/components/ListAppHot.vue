@@ -23,7 +23,7 @@
       .title {
          @inlude distance0;
          box-sizing: border-box;
-         color: rgb(22, 43, 72);
+         color: $color-app-name-pro;
          display: flex;
          font-size: 4.267vmin;
          font-weight: 500;
@@ -100,7 +100,7 @@
             type: Boolean,
             default: true
          },
-	 padding: String
+         padding: String
       }
    }
 </script>

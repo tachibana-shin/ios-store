@@ -26,7 +26,7 @@
          justify-content: space-between;
 
          span {
-            color: rgb(22, 43, 72);
+            color: $color-app-name-pro;
             font-size: 4.8vmin;
             font-weight: 500;
          }
