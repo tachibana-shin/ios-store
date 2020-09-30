@@ -21,7 +21,7 @@ const store = new Vuex.Store({
       },
       setLanguage(state, value) {
          state.language = value
-	 i18n.localeAsync = value
+         i18n.localeAsync = value
       }
    }
 })

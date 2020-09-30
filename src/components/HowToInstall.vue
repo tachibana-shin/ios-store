@@ -32,7 +32,7 @@
 </template>
 <style lang="scss" scoped>
    @import "./pagination-custom.css";
-   @import "~@/scss/variants";
+
 
    .HowToInstall {
       display: flex;

@@ -3,9 +3,9 @@
 </template>
 <script>
    export default {
-      
+
    }
-</script> 
+</script>
 <style lang="scss" scoped>
    .bac\.animation {
       animation: backpos 1s ease-in-out infinite;

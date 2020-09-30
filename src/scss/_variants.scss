@@ -30,7 +30,7 @@ $bg-page-more: var(--bg-page-more);
 @mixin text-truncate($count: -1) {
    overflow-x: hidden;
    text-overflow: ellipsis;
-      
+
    @if ($count==-1) {
       -webkit-box-orient: vertical;
       -webkit-line-clamp: $count;

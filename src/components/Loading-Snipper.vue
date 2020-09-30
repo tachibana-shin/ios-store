@@ -14,15 +14,15 @@
       top: 0px;
       width: 100%;
       Z-index: 10;
+
       img {
          width: 16vw;
          height: 16vw;
       }
    }
 </style>
-
 <script>
    export default {
-      
+
    }
 </script>

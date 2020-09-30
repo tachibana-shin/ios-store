@@ -1,6 +1,6 @@
 <template>
    <div class="loading-overlay">
-      <bac-animation v-if="!children"/>
+      <bac-animation v-if="!children" />
       <div class="loading.applist">
          <ul :style="{ padding }">
             <li v-for="item in 10">
@@ -130,7 +130,6 @@
 
    }
 </style>
-
 <script>
    import BacAnimation from "./Loading:bac.animation.vue"
    export default {

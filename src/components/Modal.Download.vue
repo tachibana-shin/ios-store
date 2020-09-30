@@ -28,8 +28,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "~@/scss/variants";
-
    .Modal\.Download {
       display: flex;
       align-items: center;

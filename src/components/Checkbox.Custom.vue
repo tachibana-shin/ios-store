@@ -5,7 +5,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "~@/scss/variants";
    .checkbox-custom {
       display: inline-block;
 

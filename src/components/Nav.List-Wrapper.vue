@@ -77,8 +77,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "~@/scss/variants";
-
    .nav\.list-wrapper {
       position: fixed;
       z-index: 9999;

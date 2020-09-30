@@ -1,6 +1,6 @@
 <template>
    <div class="wrapper.loading">
-      <bac-animation/>
+      <bac-animation />
       <div class="app">
          <div class="swiper" v-if="state.swiper">
             <div class="top-swiper"></div>
@@ -17,7 +17,7 @@
                </li>
             </ul>
          </div>
-         <list-app-loading :children="true" v-if="state.applist"/>
+         <list-app-loading :children="true" v-if="state.applist" />
       </div>
    </div>
 </template>

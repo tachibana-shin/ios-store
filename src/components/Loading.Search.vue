@@ -33,8 +33,8 @@
          padding: 0 5.333vw;
          position: relative;
          box-sizing: border-box;
-         
-         @mixin title( $width ) {
+
+         @mixin title($width) {
             @include distance0;
             background-color: $bg-noactive;
             border-radius: 2.667vw;
@@ -43,7 +43,8 @@
          }
 
          .keyword-hot {
-            padding-top: 10.333vw;/*1.333vw*/
+            padding-top: 10.333vw;
+            /*1.333vw*/
 
             .title {
                @include title(48vw);

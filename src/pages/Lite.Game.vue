@@ -44,7 +44,7 @@
 
          .applist {
             ul {
-               @include distance0; 
+               @include distance0;
                box-sizing: border-box;
                padding: 0 5.333vw;
                list-style: none;

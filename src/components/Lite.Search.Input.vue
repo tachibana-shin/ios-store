@@ -117,13 +117,13 @@
       },
       watch: {
          placeholder: {
-            handler( newVal ) {
-               if ( !!newVal ) {
-	          this.placeholderSearch = newVal
-	       }
-	    },
-	    immediate: true
-	 }
+            handler(newVal) {
+               if (!!newVal) {
+                  this.placeholderSearch = newVal
+               }
+            },
+            immediate: true
+         }
       },
       timeout: 0,
       methods: {

@@ -42,7 +42,7 @@
          <div class="title">
             <span> {{ "FEEDBACK.EMAIL" | t }} </span>
          </div>
-         <input :placeholder="'FEEDBACK.PLC3' | t" v-model="email" >
+         <input :placeholder="'FEEDBACK.PLC3' | t" v-model="email">
       </div>
       <button class="submit" :class="{ active: checkValid() } " @click="send"> {{ "FEEDBACK.SUBMIT" | t }} </button>
       <div class="toast" v-if="state == 1 || state == 2">
@@ -62,8 +62,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "~@/scss/variants";
-
    .main {
       background-color: $bg-page-more;
 
@@ -296,7 +294,7 @@
 
       .submit {
          width: 89.333vw;
-         margin-bottom: 9.6vw; 
+         margin-bottom: 9.6vw;
          background-color: rgb(74, 76, 91);
          border-radius: 0.533vw;
          box-sizing: border-bOx;
@@ -471,23 +469,23 @@
          },
          send() {
             const formData = new FormData
-            
+
             formData.append("type", this.typeFeedback)
             formData.append("content", this.content)
             formData.append("email", this.email)
             this.fileSendToReport.forEach(item => formData.append("file[]", item))
-            
+
             this.state = 1
-            
+
             this.$axios.post("http://carbonated-patterns.000webhostapp.com/admin/api/Send-Feedback.php", formData)
-            .then(res => res.data)
-            .then(({ state, data }) => {
-               if ( state.error ) {
-                  throw new Error(state.message)
-               }
-            })
-            .then(() => this.state = 3)
-            .catch(() => this.state = 2)
+               .then(res => res.data)
+               .then(({ state, data }) => {
+                  if (state.error) {
+                     throw new Error(state.message)
+                  }
+               })
+               .then(() => this.state = 3)
+               .catch(() => this.state = 2)
          }
       }
    }

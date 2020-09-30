@@ -17,8 +17,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "~@/scss/variants";
-
    .header-nav {
       box-shadow: rgba(8, 13, 39, .05) 0 .533vw 2.133vw 0;
       position: fixed;

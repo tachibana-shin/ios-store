@@ -205,7 +205,7 @@
                      list-style: none;
                      padding: 0 5.333vw;
                      white-space: nowrap;
-		     display: inline-block;
+                     display: inline-block;
 
                      .screenshot\.item {
 
@@ -344,9 +344,9 @@
    import TCollapse from "../components/TCollapse.vue"
    import Loading from "../components/Loading.AppInfo_Page.vue"
    import CheckboxCustom from "../components/Checkbox.Custom.vue"
-   
+
    export default {
-      components: { RateStar, ListAppHot, TCollapse, Loading, CheckboxCustom  },
+      components: { RateStar, ListAppHot, TCollapse, Loading, CheckboxCustom },
       data: () => ({
          loading: true,
          data: {},
@@ -357,9 +357,9 @@
             this.$root.$emit("Modal.Download", {
                state: true,
                items: {
-	          value: this.data.version,
-		  id:  this.$route.params.id
-	       }
+                  value: this.data.version,
+                  id: this.$route.params.id
+               }
             })
          }
       },

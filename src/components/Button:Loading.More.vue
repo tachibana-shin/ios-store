@@ -4,11 +4,10 @@
          <span class="loading.title"> {{ (noMore ? "NO_MORE" : "MORE") | t }} </span>
          <img class="loading.icon" :src="require('@/assets/ic.loading.more.svg')" v-if="!noMore">
       </div>
-      <list-app-loading v-else/>
+      <list-app-loading v-else />
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "~@/scss/variants";
    .loading-more {
       width: 100%;
       overflow: hidden;
@@ -63,7 +62,7 @@
    export default {
       props: {
          state: Boolean,
-	 noMore: Boolean
+         noMore: Boolean
       },
       components: { ListAppLoading }
    }

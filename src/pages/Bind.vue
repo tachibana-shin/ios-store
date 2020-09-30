@@ -14,12 +14,12 @@
                </div>
             </div>
             <button> {{ "BIND.VERIFY" | t }} </button>
-            <p @click="showUser = false"> {{ "BIND.TEXT2" | t }}  </p>
+            <p @click="showUser = false"> {{ "BIND.TEXT2" | t }} </p>
          </div>
          <div class="order" v-else>
             <input type="tel">
-            <button> {{ "BIND.VERIFY" | t }}  </button>
-            <p @click="showUser = true"> {{ "BIND.TEXT3" | t }}  </p>
+            <button> {{ "BIND.VERIFY" | t }} </button>
+            <p @click="showUser = true"> {{ "BIND.TEXT3" | t }} </p>
          </div>
          <div class="description ehem">
             <p class="title"> {{ "BIND.TIPS" | t }} </p>
@@ -41,7 +41,7 @@
             <p class="title"> {{ "BIND.FAQ" | t }} </p>
             <ol>
                <li class="item">
-                  <collapse :title="'BIND.TITLE_TEXT7' | t" :content="'BIND.TEXT7' | t"/>
+                  <collapse :title="'BIND.TITLE_TEXT7' | t" :content="'BIND.TEXT7' | t" />
                </li>
             </ol>
          </div>

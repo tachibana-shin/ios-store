@@ -1,6 +1,6 @@
 <template>
    <div class="wrapper.loading">
-      <bac-animation/>
+      <bac-animation />
       <div class="wrapper.content">
          <div class="content">
             <p class="title-1"></p>

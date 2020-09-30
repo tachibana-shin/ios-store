@@ -1,7 +1,7 @@
 <template>
    <div class="main">
       <div class="wrapper_search">
-         <lite-search-input ref="LiteSearchInput"/>
+         <lite-search-input ref="LiteSearchInput" />
          <div class="wrapper_result" v-if="!loading">
             <div class="keyword-hot">
                <p class="title"> {{ "SEARCH.KEYWORD_HOT" | t }} </p>
