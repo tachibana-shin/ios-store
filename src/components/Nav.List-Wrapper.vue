@@ -63,8 +63,9 @@
                   <img class="icon" :src="require('@/assets/bar.ic.blog.svg')">
                   <span> {{ "HEADER.BLOG" | t }}  </span>
                </router-link>-->
-               <li class="item">
+               <li class="item settings" @click.stop>
                   <language />
+		  <darkmode-switcher/>
                </li>
                <li class="" v-if="false">
                   <button class="logout.button"> {{ "HEADER.LOGOUT" | t }} </button>
@@ -206,6 +207,12 @@
                   &.active {
                      background-color: $bg-active;
                   }
+		  &.settings {
+                     display: flex;
+		     justify-content: space-between;
+		     box-sizing: border-box;
+		     align-items: center;
+		  }
                }
 
                hr {
@@ -301,8 +308,10 @@
 </style>
 <script>
    import Language from "./Language.vue"
+   import DarkmodeSwitcher from "./DarkModeSwitch.vue"
+
    export default {
-      components: { Language },
+      components: { Language, DarkmodeSwitcher },
       computed: {
          homeRouterActive() {
             return !!this.$route.path.match(/^\/lite/)
