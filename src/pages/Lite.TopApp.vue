@@ -48,16 +48,13 @@
             z-index: 1;
 
             .title {
-               margin: 0;
-               padding: 0;
+               @include distance0;
                font-weight: 400;
                line-height: 9.067vW;
                overflow: hidden;
                padding: 0 5.333vw;
-               text-overflow: ellipsis;
                width: 100vw;
-               -webkit-box-orient: vertical;
-               -webkit-line-clamp: 2;
+               @include text-truncate(2);
                box-sizing: border-box;
                color: $color-blue-dark;
                display: -webkit-box;
@@ -78,8 +75,7 @@
 
             .applist {
                ul {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
                   list-style: none;
                   box-sizing: border-box;
                   padding-right: 0 5.333vw;

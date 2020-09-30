@@ -114,14 +114,11 @@
                   flex-direction: column;
 
                   .app\.name {
-                     margin: 0;
-                     padding: 0;
+                     @include distance0;
                      font-weight: 500;
                      line-height: 7.467vw;
                      overflow: hidden;
-                     text-overflow: ellipsis;
-                     -webkit-box-orient: vertical;
-                     -webkit-line-clamp: 2;
+                     @include text-truncate(2);
                      color: rgb(22, 43, 72);
                      display: -webkit-box;
                      font-size: 5.6vmin;
@@ -147,8 +144,7 @@
             .detail-app\.infomation {
 
                .title {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
                   color: $color-text-content;
                   font-size: 4.8vmin;
                   font-weight: 500;
@@ -167,8 +163,7 @@
                      margin-bottom: 2.133vw;
 
                      .key {
-                        margin: 0;
-                        padding: 0;
+                        @include distance0;
                         font-size: 3.733vmin;
                         font-weight: 500;
                         line-height: 4.267vw;
@@ -182,8 +177,7 @@
                      }
 
                      .value {
-                        margin: 0;
-                        padding: 0;
+                        @include distance0;
                         flex-grow: 1;
                         flex-shrink: 1;
                         font-size: 3.733vmin;
@@ -207,8 +201,7 @@
                   box-sizing: border-box;
 
                   ul {
-                     margin: 0;
-                     padding: 0;
+                     @include distance0;
                      list-style: none;
                      padding: 0 5.333vw;
                      white-space: nowrap;
@@ -243,8 +236,7 @@
                   margin-bottom: 4.8vw;
 
                   .title {
-                     margin: 0;
-                     padding: 0;
+                     @include distance0;
                      box-sizing: border-box;
                      color: rgb(22, 43, 72);
                      display: flex;
@@ -272,8 +264,7 @@
                      overflow: hidden;
 
                      .list {
-                        margin: 0;
-                        padding: 0;
+                        @include distance0;
                         list-style: none;
                         flex-wrap: wrap;
                         justify-content: space-between;
@@ -299,8 +290,7 @@
                            }
 
                            p {
-                              margin: 0;
-                              padding: 0;
+                              @include distance0;
                               color: $color-value;
                               display: inline-block;
                               font-size: 3.2vmin;
@@ -308,7 +298,7 @@
                               line-height: 3.733vw;
                               margin-top: 2.133vw;
                               overflow: hidden;
-                              text-overflow: ellipsis;
+                              @include text-truncate;
                               white-space: nowrap;
                               width: 18.667vw;
                            }

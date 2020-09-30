@@ -35,9 +35,8 @@
          box-sizing: border-box;
          
          @mixin title( $width ) {
-            margin: 0;
-            padding: 0;
-            background-color: rgb(237, 240, 245);
+            @include distance0;
+            background-color: $bg-noactive;
             border-radius: 2.667vw;
             height: 6.4vw;
             width: $width;
@@ -51,14 +50,13 @@
             }
 
             .list {
-               margin: 0;
-               padding: 0;
+               @include distance0;
                list-style: none;
                display: flex;
                flex-wrap: wrap;
 
                li {
-                  background-color: rgb(237, 240, 245);
+                  background-color: $bg-noactive;
                   border-radius: 4.8vw;
                   height: 9.6vw;
                   margin-right: 8vw;
@@ -79,8 +77,7 @@
                display: flex;
                flex-wrap: wrap;
                justify-content: space-between;
-               margin: 0;
-               padding: 0;
+               @include distance0;
                list-style: none;
 
                .item {
@@ -92,16 +89,15 @@
                   flex-direction: column;
 
                   .icon {
-                     background-color: rgb(237, 240, 245);
+                     background-color: $bg-noactive;
                      border-radius: 2.667vw;
                      height: 18.667vw;
                      width: 18.667vw;
                   }
 
                   .text {
-                     margin: 0;
-                     padding: 0;
-                     background-color: rgb(237, 240, 245);
+                     @include distance0;
+                     background-color: $bg-noactive;
                      border-radius: 1.6vw;
                      flex-basis: 0;
                      flex-grow: 1;

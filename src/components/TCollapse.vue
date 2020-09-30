@@ -47,9 +47,7 @@
          line-height: 5.067vW;
          overflow: hidden;
          transition: height .5s ease;
-         text-overflow: ellipsis;
-         -webkit-boX-orient: vertical;
-         webkit-line-clamp: 3;
+         @include text-truncate(3);
       }
 
       &.full {

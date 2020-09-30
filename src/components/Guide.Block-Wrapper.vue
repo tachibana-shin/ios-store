@@ -123,8 +123,7 @@
                padding-bottom: 17.6vw;
 
                &>.item {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
                   list-style: none;
 
                   .item {

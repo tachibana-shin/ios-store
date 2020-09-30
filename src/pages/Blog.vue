@@ -83,8 +83,7 @@
 
       .content {
          .list {
-            margin: 0;
-            padding: 0;
+            @include distance0;
             list-style: none;
 
             .item {
@@ -118,8 +117,7 @@
                   }
 
                   .bottom {
-                     margin: 0;
-                     padding: 0;
+                     @include distance0;
                      font-weight: 500;
                      left: 4.267VW;
                      bottom: 5.333vw;

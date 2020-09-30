@@ -104,10 +104,7 @@
                            display: inline-block;
 
                            overflow: hidden;
-
-                           text-overflow: ellipsis;
-                           -webkit-box-orient: vertical;
-                           -webkit-line-clamp: 1;
+                           @include text-truncate;
                            color: rgb(0, 87, 152);
                         }
                      }

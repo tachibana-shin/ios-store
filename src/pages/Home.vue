@@ -164,8 +164,7 @@
                   position: relative;
 
                   p {
-                     margin: 0;
-                     padding: 0;
+                     @include distance0;
                      color: $colorMain;
                      display: inline-block;
                      min-width: 100%;
@@ -473,9 +472,7 @@
 
                .applist\.wrapper {
                   .list {
-                     margin: 0;
-                     padding: 0;
-
+                     @include distance0;
                      list-style: none;
                   }
                }

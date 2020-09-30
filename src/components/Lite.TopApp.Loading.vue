@@ -23,7 +23,7 @@
       padding-top: 11.467vw;
 
       .wrapper\.content {
-         background-color: rgb(237, 240, 245);
+         background-color: $bg-noactive;
          height: 100%;
          overflow: hidden;
 
@@ -36,13 +36,12 @@
             padding: 8vw 5.333vw;
 
             p {
-               margin: 0;
-               padding: 0;
+               @include distance0;
             }
 
             .title-1,
             .title-2 {
-               background-color: rgb(237, 240, 245);
+               background-color: $bg-noactive;
                border-radius: 4.267vw;
                height: 9.067vw;
             }
@@ -55,7 +54,7 @@
             .des-1,
             .des-2,
             .des-3 {
-               background-color: rgb(237, 240, 245);
+               background-color: $bg-noactive;
                border-radius: 2.933vw;
                height: 5.867vw;
                margin-top: 6.4vw;

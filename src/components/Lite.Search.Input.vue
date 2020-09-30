@@ -69,8 +69,7 @@
          z-index: 0;
 
          ul {
-            margin: 0;
-            padding: 0;
+            @include distance0;
             list-style: none;
             padding-bottom: 10.667vw;
             padding-top: 4vw;
@@ -84,8 +83,7 @@
                padding-right: 8vw;
 
                p {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
 
                   color: rgb(117, 136, 169);
                   font-size: 3.733vmin;
@@ -93,7 +91,7 @@
                   line-height: 4.267vw;
 
                   overflow: hidden;
-                  text-overflow: ellipsis;
+                  @include text-truncate;
                   white-space: nowrap;
                }
             }

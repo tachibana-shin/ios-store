@@ -42,8 +42,7 @@
                font-size: 4.8vmin;
                font-weight: 500;
                line-height: 6.4vw;
-               margin: 0;
-               padding: 0;
+               @include distance0;
                /*margin-top: 4vw;
                /*padding: 4.267vw 0;*/
             }
@@ -56,14 +55,13 @@
                }
 
                .list {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
                   list-style: none;
                   display: flex;
                   flex-wrap: wrap;
 
                   li {
-                     background-color: rgb(237, 240, 245);
+                     background-color: $bg-noactive;
                      border-radius: 4.8vw;
                      height: 9.6vw;
                      line-height: 9.6vw;
@@ -73,10 +71,7 @@
 
                      span {
                         display: block;
-                        overfilow-x: hidden;
-                        text-overflow: ellipsis;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
+                        @include text-truncate;
                         font-size: 3.733vmin;
                      }
                   }

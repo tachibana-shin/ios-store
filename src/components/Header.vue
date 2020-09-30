@@ -55,7 +55,7 @@
       }
 
       .tabs {
-         background-color: rgb(252, 253, 255);
+         background-color: $bg-header_tabs;
          color: $color-blue-grey;
 
          font: {

@@ -62,8 +62,7 @@
             position: relative;
 
             .title {
-               margin: 0;
-               padding: 0;
+               @include distance0;
                font-weight: 500;
                left: 0;
                line-height: 5.333vw;
@@ -101,8 +100,7 @@
             padding-top: 9.067vw;
 
             .video {
-               margin: 0;
-               padding: 0;
+               @include distance0;
                color: $color-blue-black;
                font-size: 3.733vmin;
                font-weight: 500;

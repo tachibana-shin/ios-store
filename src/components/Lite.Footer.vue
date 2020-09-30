@@ -43,8 +43,7 @@
          }
 
          p {
-            margin: 0;
-            padding: 0;
+            @include distance0;
             color: $color-blue-grey;
             font-size: 2.667vmin;
             font-weight: 400;

@@ -356,8 +356,7 @@
          }
 
          p {
-            margin: 0;
-            padding: 0;
+            @include distance0;
             color: rgb(229, 236, 249);
             font-size: 3.733vmin;
             font-weight: 500;

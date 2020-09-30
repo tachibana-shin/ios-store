@@ -24,8 +24,7 @@
       .loading\.applist {
 
          ul {
-            margin: 0;
-            padding: 0;
+            @include distance0;
             list-style: none;
             padding: 0 5.333vw;
 
@@ -61,17 +60,13 @@
                         flex-direction: column;
 
                         .app\.title {
-                           margin: 0;
-                           padding: 0;
+                           @include distance0;
                            color: $color-text-content;
                            font-size: 4.267vmin;
                            font-weight: 500;
                            line-height: 5.867vw;
                            margin-bottom: 2.133vw;
-                           overflow-x: hidden;
-                           text-overflow: ellipsis;
-                           -webkit-box-orient: vertical;
-                           -webkit-line-clamp: 2;
+                           @include text-truncate(2);
                         }
 
                         .VIP {
@@ -106,25 +101,25 @@
                      position: relative;
 
                      .icon {
-                        background-color: rgb(237, 240, 245);
+                        background-color: $bg-noactive;
                      }
 
                      .app\.content {
                         .app\.title {
-                           background-color: rgb(237, 240, 245);
+                           background-color: $bg-noactive;
                            width: 37.333vw;
                            height: 5.867vw;
                            border-radius: 2.133vw;
                         }
 
                         .VIP {
-                           background-color: rgb(237, 240, 245);
+                           background-color: $bg-noactive;
                         }
                      }
                   }
 
                   .button {
-                     background-color: rgb(237, 240, 245);
+                     background-color: $bg-noactive;
                      background-image: none;
                   }
 

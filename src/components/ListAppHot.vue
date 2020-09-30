@@ -21,8 +21,7 @@
       margin-bottom: 4.8vw;
 
       .title {
-         margin: 0;
-         padding: 0;
+         @inlude distance0;
          box-sizing: border-box;
          color: rgb(22, 43, 72);
          display: flex;
@@ -50,8 +49,7 @@
          overflow: hidden;
 
          .list {
-            margin: 0;
-            padding: 0;
+            @include distance0;
             list-style: none;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -77,8 +75,7 @@
                }
 
                p {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
                   color: rgb(11, 57, 95);
                   display: inline-block;
                   font-size: 3.2vmin;
@@ -86,7 +83,7 @@
                   line-height: 3.733vw;
                   margin-top: 2.133vw;
                   overflow: hidden;
-                  text-overflow: ellipsis;
+                  @include text-trucate;
                   white-space: nowrap;
                   width: 18.667vw;
                }

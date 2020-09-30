@@ -64,8 +64,7 @@
          text-align: left;
 
          .title {
-            margin: 0;
-            padding: 0;
+            @include distance0;
             color: $color-blue-dark;
             font-size: 4.267vmin;
             font-weight: 500;
@@ -188,8 +187,7 @@
             }
 
             p {
-               margin: 0;
-               padding: 0;
+               @include distance0;
                color: rgb(69, 91, 130);
                display: inline-block;
                font-size: 3.733vmin;

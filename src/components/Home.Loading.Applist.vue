@@ -10,7 +10,7 @@
       position: relative;
 
       .loading\.title {
-         background-color: rgb(237, 240, 245);
+         background-color: $bg-noactive;
          border-radius: 2.667vw;
          height: 5.333vW;
          margin-top: 4.267vW;

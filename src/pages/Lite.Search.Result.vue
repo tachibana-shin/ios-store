@@ -32,8 +32,7 @@
          .wrapper__result {
             .applist {
                ul {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
                   box-sizing: border-box;
                   list-style: none;
                   padding: 0 5.333vw;

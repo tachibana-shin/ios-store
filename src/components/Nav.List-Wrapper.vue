@@ -94,8 +94,7 @@
       }
 
       hr {
-         margin: 0;
-         padding: 0;
+         @include distance0; 
       }
 
       .nav\.list {

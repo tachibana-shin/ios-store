@@ -61,7 +61,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   $bgColor: rgb(237, 240, 245);
+   $bgColor: $bg-noactive;
 
    .loadingapp {
       background-color: $white;
@@ -128,9 +128,7 @@
 
                      .one,
                      .two {
-                        margin: 0;
-                        padding: 0;
-
+                        @include distance0;
                         background-color: $bgColor;
                         border-radius: 2.667vw;
                         height: 5.333Vw;
@@ -174,8 +172,7 @@
             .detail-app\.infomation {
 
                .title {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0; 
                   margin: 4.267vw 5.333vw;
                   background-color: $bgColor;
                   border-radius: 2.667Vw;
@@ -193,9 +190,7 @@
                      margin-bottom: 2.133vw;
 
                      .key {
-                        margin: 0;
-                        padding: 0;
-
+                        @include distance0;
                         width: 29.867vw;
 
                         flex-basis: auto;
@@ -209,8 +204,7 @@
                      }
 
                      .value {
-                        margin: 0;
-                        padding: 0;
+                        @include distance0;
                         flex-grow: 1;
                         flex-shrink: 1;
                         overflow: hidden;
@@ -233,8 +227,7 @@
                   width: 100%;
 
                   ul {
-                     margin: 0;
-                     padding: 0;
+                     @include distance0;
                      list-style: none;
                      padding: 0 5.333vw;
                      white-space: nowrap;
@@ -275,8 +268,7 @@
                }
 
                .content {
-                  margin: 0;
-                  padding: 0;
+                  @include distance0;
                   overflow: hidden;
                   height: 4.5em;
                   border-radius: 3.733vw;
@@ -292,9 +284,7 @@
                   margin-bottom: 4.8vw;
 
                   .title {
-                     margin: 0;
-                     padding: 0;
-
+                     @include distance0;
                      background-color: $bgColor;
                      border-radius: 2.667Vw;
 
@@ -307,8 +297,7 @@
                      overflow: hidden;
 
                      .list {
-                        margin: 0;
-                        padding: 0;
+                        @include distance0;
                         list-style: none;
                         flex-wrap: wrap;
                         justify-content: space-between;
@@ -335,9 +324,7 @@
                            }
 
                            p {
-                              margin: 0;
-                              padding: 0;
-
+                              @include distance0;
                               display: inline-block;
                               margin-top: 2.133vw;
                               width: 18.667vw;
