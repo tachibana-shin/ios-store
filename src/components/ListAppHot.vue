@@ -83,7 +83,7 @@
                   line-height: 3.733vw;
                   margin-top: 2.133vw;
                   overflow: hidden;
-                  @include text-trucate;
+                  @include text-truncate;
                   white-space: nowrap;
                   width: 18.667vw;
                }
