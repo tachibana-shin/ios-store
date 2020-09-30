@@ -1,20 +1,20 @@
 import Vuei18n from 'vue-i18n'
 import filters from 'vue-i18n-filters'
 import Vue from 'vue'
-import enUS from './languages/en-US.json'
+import en from './languages/en.json'
 
 Vue.use(Vuei18n)
 Vue.use(filters)
 
 const i18n = new Vuei18n({
-   locale: "en-US",
-   fallbackLocale: "en-US",
+   locale: "en",
+   fallbackLocale: "en",
    messages: {
-      "en-US": enUS
+      "en": en
    }
 })
 
-const loadedLanguages = ["en-US"]
+const loadedLanguages = ["en"]
 
 function loadLanguageAsync(lang) {
    // If the same language
