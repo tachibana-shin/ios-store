@@ -144,7 +144,6 @@
                border: none;
                outline: none;
                background-color: $white;
-               position: absolute;
                width: 100%;
             }
 
