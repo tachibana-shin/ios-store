@@ -40,9 +40,9 @@
       </div>
       <div class="feedback-item feedback-email">
          <div class="title">
-            <span v-model="email"> {{ "FEEDBACK.EMAIL" | t }} </span>
+            <span> {{ "FEEDBACK.EMAIL" | t }} </span>
          </div>
-         <input :placeholder="'FEEDBACK.PLC3' | t">
+         <input :placeholder="'FEEDBACK.PLC3' | t" v-model="email" >
       </div>
       <button class="submit" :class="{ active: checkValid() } " @click="send"> {{ "FEEDBACK.SUBMIT" | t }} </button>
       <div class="toast" v-if="state == 1 || state == 2">
