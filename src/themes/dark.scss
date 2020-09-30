@@ -1,26 +1,23 @@
-@function getReverseColor ( $color ) {
-   @return invert($color)
-}
 :root {
-   --color-main: rgb(0, 132, 240);
-   --white: getReverseColor(rgb(255, 255, 255));
-   --black: getReverseColor(rgb(0, 0, 0));
-   --bg-noactive: getReverseColor(rgb(237, 240, 245));
-   --color-text-content: rgb(217, 217, 217);
-   --color-blue-grey:
-      getReverseColor(rgb(162, 171, 191));
-   --color-yellow-grey: getReverseColor(rgb(240, 242, 245));
-   --color-blue-dark: rgb(217, 217, 217); //getReverseColor(rgb(55, 77, 115));
-   --color-blue-black: getReverseColor(rgb(0, 87, 158));
-   --color-FAQ: getReverseColor(rgb(48, 49, 51));
-   --color-hr: getReverseColor(rgb(242, 244, 245));
-   --color-value: rgb(217, 217, 217);
-   --bg-wrapper: getReverseColor(rgb(245, 246, 247));
-   --bg-header_tabs: getReverseColor(rgb(252, 253, 255));
-   --bg-active: getReverseColor(rgb(238, 242, 250));
-   --bg-popup: getReverseColor(rgb(249, 250, 252));
-   --color-title-app: rgb(170, 170, 170); //getReverseColor(rgb(117, 136, 169));
-   --color-app-name-pro: rgb(217, 217, 217); //rgb(22, 43, 72);
-   --border-color-end: getReverseColor(rgb(217, 217, 217));
-   --bg-page-more: getReverseColor(rgb(244, 245, 247));
+   color-main: rgb(0, 132, 240);
+   white: invert(rgb(255, 255, 255));
+   black: invert(rgb(0, 0, 0));
+   bg-noactive: invert(rgb(237, 240, 245));
+   color-text-content: rgb(217, 217, 217);
+   color-blue-grey:
+      invert(rgb(162, 171, 191));
+   color-yellow-grey: invert(rgb(240, 242, 245));
+   color-blue-dark: rgb(217, 217, 217); //invert(rgb(55, 77, 115));
+   color-blue-black: invert(rgb(0, 87, 158));
+   color-FAQ: invert(rgb(48, 49, 51));
+   color-hr: invert(rgb(242, 244, 245));
+   color-value: rgb(217, 217, 217);
+   bg-wrapper: invert(rgb(245, 246, 247));
+   bg-header_tabs: invert(rgb(252, 253, 255));
+   bg-active: invert(rgb(238, 242, 250));
+   bg-popup: invert(rgb(249, 250, 252));
+   color-title-app: rgb(170, 170, 170); //invert(rgb(117, 136, 169));
+   color-app-name-pro: rgb(217, 217, 217); //rgb(22, 43, 72);
+   border-color-end: invert(rgb(217, 217, 217));
+   bg-page-more: invert(rgb(244, 245, 247));
 }
