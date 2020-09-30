@@ -73,8 +73,6 @@
          right: 5.333vw;
       }
 
-      ;
-      box-sizing: border-box;
       width: 100%;
       overflow: none;
 
@@ -144,6 +142,7 @@
                min-height: 32.267vw;
                border: none;
                outline: none;
+               background-color: $white;
             }
 
             span {
