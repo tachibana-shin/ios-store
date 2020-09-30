@@ -17,7 +17,7 @@ $color-value: getColor(11, 57, 95);
 $bg-wrapper: getColor(245, 246, 247);
 $bg-header_tabs: getColor(252, 253, 255);
 
-%distance0 {
+@mixin distance0 {
    margin: 0;
    padding: 0;
 }
