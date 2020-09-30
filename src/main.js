@@ -24,24 +24,24 @@ import VueTouchScroll from "vue-touch-scroll"
 Vue.prototype.$axios = axios
 
 Vue.use(VueProgressBar, {
-  color: 'rgb(0, 132, 240)',
-  failedColor: '#f00',
-  height: 5
+   color: 'rgb(0, 132, 240)',
+   failedColor: '#f00',
+   height: 5
 })
 Vue.use(vImg, {
-  altAsTitle: true,
-  sourceButton: true,
-  thumbnails: true
+   altAsTitle: true,
+   sourceButton: true,
+   thumbnails: true
 })
 Vue.use(Lazyload)
 Vue.use(VueScrollTo)
 Vue.use(VueTouchScroll)
 
 new Vue({
-  el: '#app',
-  router,
-  store,
-  i18n,
-  template: '<App/>',
-  components: { App }
+   el: '#app',
+   router,
+   store,
+   i18n,
+   template: '<App/>',
+   components: { App }
 })
