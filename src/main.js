@@ -1,3 +1,10 @@
+import cssVars from 'css-vars-ponyfill'
+
+cssVars({
+   watch: true,
+   rootElement: document
+})
+
 import eruda from 'eruda'
 eruda.init()
 import Vue from 'vue'
