@@ -98,9 +98,9 @@
       data() {
          return {
             languages: [
-               { flag: "en-US.png", name: "English / USA", code: "en-US" },
-               { flag: "ja-JP.png", name: "本語", code: "ja-JP" },
-               { flag: "vi-VN.png", name: "Tiếng Việt", code: "vi-VN" }
+               { flag: "en-US.png", name: "English / USA", code: "en" },
+               { flag: "ja-JP.png", name: "本語", code: "ja" },
+               { flag: "vi-VN.png", name: "Tiếng Việt", code: "vi" }
             ],
             StateOption: false
          }

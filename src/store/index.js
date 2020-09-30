@@ -8,7 +8,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
    state: {
       darkMode: false,
-      language: navigator.language
+      language: navigator.language.slice(0, 2)
    },
    plugins: [
       createStorage({
