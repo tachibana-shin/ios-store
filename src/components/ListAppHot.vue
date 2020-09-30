@@ -76,7 +76,7 @@
 
                p {
                   @include distance0;
-                  color: rgb(11, 57, 95);
+                  color: $color-value;
                   display: inline-block;
                   font-size: 3.2vmin;
                   font-weight: 500;

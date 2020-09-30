@@ -54,7 +54,7 @@
          border-radius: 7.467vw 7.467vw 0 0;
          height: calc(100vh - 39.467vw);
          overflow: hidden;
-         background-color: rgb(249, 250, 252);
+         background-color: $bg-popup;
          display: flex;
          position: relative;
          flex-direction: column;

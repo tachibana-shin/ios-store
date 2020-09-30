@@ -1,4 +1,4 @@
-$colorMain: invert(rgb(0, 132, 240));
+$colorMain: (rgb(0, 132, 240));
 $white: invert(rgb(255, 255, 255));
 $black: invert(rgb(0, 0, 0));
 $bg-noactive: invert(rgb(237, 240, 245));
@@ -12,23 +12,13 @@ $color-hr: invert(rgb(242, 244, 245));
 $color-value: invert(rgb(11, 57, 95));
 $bg-wrapper: invert(rgb(245, 246, 247));
 $bg-header_tabs: invert(rgb(252, 253, 255));
+$bg-active: invert(rgb(238, 242, 250));
+$bg-popup: invert(rgb(249, 250, 252));
+$color-title-app: invert(rgb(117, 136, 169));
 
 @mixin distance0 {
    margin: 0;
    padding: 0;
-}
-
-%col-auto {
-   flex: {
-      grow: 1;
-      basis: 0;
-      shrink: 0;
-   }
-}
-
-@mixin square($value) {
-   width: #{$value};
-   height: #{$value};
 }
 
 @mixin text-truncate($count: -1) {

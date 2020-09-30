@@ -85,7 +85,7 @@
                p {
                   @include distance0;
 
-                  color: rgb(117, 136, 169);
+                  color: $color-title-app;
                   font-size: 3.733vmin;
                   font-weight: 400;
                   line-height: 4.267vw;

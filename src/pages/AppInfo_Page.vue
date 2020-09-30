@@ -169,7 +169,7 @@
                         line-height: 4.267vw;
                         margin-right: 4vw;
                         width: 29.867vw;
-                        color: rgb(117, 136, 169);
+                        color: $color-title-app;
                         flex-basis: auto;
                         flex-grow: 0;
                         flex-shrink: 0;

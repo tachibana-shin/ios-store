@@ -20,11 +20,12 @@
 
       .appinfo\.content {
          display: flex;
-	 flex: {
+
+         flex: {
             grow: 1;
-	    basis: 0;
-	    shrink: 1;
-	 }
+            basis: 0;
+            shrink: 1;
+         }
 
          .icon {
 
@@ -87,9 +88,9 @@
    export default {
       props: {
          data: {
-	    type: Object,
-	    required: true
-	 }
+            type: Object,
+            required: true
+         }
       }
    }
 </script>

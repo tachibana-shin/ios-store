@@ -112,7 +112,7 @@
          scrollbar-width: none;
 
          .content {
-            border: 1px solid #fff;
+            border: 1px solid $white;
             background-color: $white;
             padding-bottom: 26.667vw;
             width: 100%;
@@ -204,7 +204,7 @@
                   }
 
                   &.active {
-                     background-color: rgb(238, 242, 250);
+                     background-color: $bg-active;
                   }
                }
 
@@ -215,7 +215,7 @@
                }
 
                .contact {
-                  color: rgb(117, 136, 169);
+                  color: $color-title-app;
 
                   font: {
                      size: 3.733vw;
@@ -235,7 +235,7 @@
 
                         a {
                            text-decoration: none;
-                           color: rgb(117, 136, 169);
+                           color: $color-title-app;
 
                            font: {
                               size: 3.733vmin;
