@@ -10,9 +10,8 @@
       <div class="options" v-show="StateOption">
          <ul class="list">
             <li class="item" v-for="item in languages" :key="item.code" :class="{
-                active: $i18n.localeAsync == item.code
-            }"
-	    @click="$i18n.localeAsync = item.code; StateOption = false">
+               active: $store.getters.getLanguage == item.code
+            }" @click="$store.commit('setLanguage', item.code); StateOption = false">
                <img class="flag" :src="require('@/assets/' + item.flag)">
                <span class="name"> {{ item.name }} </span>
             </li>
@@ -60,13 +59,13 @@
          border-radius: 8px;
          background-color: $white;
          overflow: hidden scroll;
-	 box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-	 border: 1px solid rgba(0, 0, 0, .1);
+         box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+         border: 1px solid rgba(0, 0, 0, .1);
 
          .list {
             list-style: none;
-	    margin: 6px 0;
-	    padding: 0;
+            margin: 6px 0;
+            padding: 0;
 
             .item {
                padding: 10px 6px;
@@ -94,14 +93,13 @@
       }
    }
 </style>
-
 <script>
    export default {
       data() {
          return {
             languages: [
                { flag: "en-US.png", name: "English / USA", code: "en-US" },
-               { flag: "ja-JP.png", name: "本語", code: "ja-JP" }, 
+               { flag: "ja-JP.png", name: "本語", code: "ja-JP" },
                { flag: "vi-VN.png", name: "Tiếng Việt", code: "vi-VN" }
             ],
             StateOption: false
@@ -109,8 +107,8 @@
       },
       methods: {
          inChild(element, target) {
-            while ( element && element.nodeType == 1 ) {
-               if ( element == target ) {
+            while (element && element.nodeType == 1) {
+               if (element == target) {
                   return true
                }
                element = element.parentNode
@@ -120,17 +118,17 @@
       },
       computed: {
          infoLanguage() {
-           for ( let value of this.languages ) {
-              if ( value.code == this.$i18n.localeAsync ) {
-                 return value
-	      }
-	   }
-	   return this.languagws[0]
-	 }
+            for (let value of this.languages) {
+               if (value.code == this.$i18n.localeAsync) {
+                  return value
+               }
+            }
+            return this.languagws[0]
+         }
       },
       mounted() {
          document.addEventListener("click", this.on = event => {
-            if ( [ event.target, event.srcElement, event.toElement, event.fromElement ].map(e => this.inChild(e, this.$refs.selector)).indexOf( true ) == -1 ) {
+            if ([event.target, event.srcElement, event.toElement, event.fromElement].map(e => this.inChild(e, this.$refs.selector)).indexOf(true) == -1) {
                this.StateOption = false
             }
          })

@@ -45,6 +45,4 @@ Object.defineProperty(i18n, "localeAsync", {
    }
 })
 
-i18n.localeAsync = navigator.language
-
 export default i18n

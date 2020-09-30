@@ -1,12 +1,14 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 import createStorage from 'vuex-persistedstate'
+import i18n from './i18n'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
    state: {
-      darkMode: false
+      darkMode: false,
+      language: navigator.language
    },
    plugins: [
       createStorage({
@@ -16,6 +18,19 @@ export default new Vuex.Store({
    mutations: {
       setDarkMode(state, value) {
          state.darkMode = value
+      },
+      setLanguage( state, value ) {
+         state.language = value
+         i18n.localeAsync = value
+      }
+   },
+   getters: {
+      getLanguage({ language }) {
+         return language
       }
    }
 })
+
+i8n.localeAsync = store.getters.getLanguage
+
+export default store
