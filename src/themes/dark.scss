@@ -1,4 +1,4 @@
-@function ( $color ) {
+@function getReverseColor ( $color ) {
    @return invert($color)
 }
 :root {
