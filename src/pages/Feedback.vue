@@ -65,7 +65,7 @@
    @import "~@/scss/variants";
 
    .main {
-      background-color: rgb(244, 245, 247);
+      background-color: $bg-page-more;
       padding-top: 6.4vw;
 
       padding: {
