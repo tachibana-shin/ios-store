@@ -411,6 +411,7 @@
                text-align: center;
                font-size: 3.733vmin;
                color: $colorMain;
+               background-color: $white;
             }
 
             .ok {
