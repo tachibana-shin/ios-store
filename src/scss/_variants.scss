@@ -1,5 +1,5 @@
 @function getColor( $r, $g, $b ) {
-   @return rgb(#{$r}, #{$g}, #{$b});
+   @return "rgb(" + (255 - $r) + ", " + (255 - $g) + ", " + (255 - $b) + ")"
 }
 
 $colorMain: getColor(0, 132, 240);
