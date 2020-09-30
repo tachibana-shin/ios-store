@@ -13,7 +13,7 @@
             <span> {{ "FEEDBACK.DESCRIPTION" | t }} </span>
          </div>
          <div class="textarea-parent">
-            <textarea :placeholder="'FEEDBACK.PLC2' | t" v-model="content"></textarea>
+            <textarea :placeholder="'FEEDBACK.PLC2' | t" v-model="content" rows="5"></textarea>
             <span> {{ content.length }} / 500 </span>
          </div>
       </div>
@@ -46,8 +46,8 @@
       </div>
       <button class="submit" :class="{ active: checkValid() } " @click="send"> {{ "FEEDBACK.SUBMIT" | t }} </button>
       <div class="toast" v-if="state == 1 || state == 2">
-         <img class="progress" :src="require('@/assets/toast.submit.progress.svg')">
-         <p> Submting... </p>
+         <img class="progress" :src="require('@/assets/toast.submit.progress.svg')" v-if="state == 1">
+         <p v-if="state == 1"> Submting... </p>
          <img :src="require('@/assets/toast.submit.failure.svg')" v-if="state == 2">
          <p v-if="state == 2"> Submit Failure </p>
       </div>
@@ -145,9 +145,7 @@
                outline: none;
                background-color: $white;
                position: absolute;
-               resize: none;
                width: 100%;
-               height: 100%;
             }
 
             span {
@@ -480,6 +478,8 @@
             formData.append("email", this.email)
             this.fileSendToReport.forEach(item => formData.append("file[]", item))
             
+            this.state = 1
+            
             this.$axios.post("http://carbonated-patterns.000webhostapp.com/admin/api/Send-Feedback.php", formData)
             .then(res => res.data)
             .then(({ state, data }) => {
@@ -487,8 +487,8 @@
                   throw new Error(state.message)
                }
             })
-            .then(() => this.state = 1)
-            .catch(() => this.state = 3)
+            .then(() => this.state = 3)
+            .catch(() => this.state = 2)
          }
       }
    }
