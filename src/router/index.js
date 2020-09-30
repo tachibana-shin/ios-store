@@ -60,6 +60,14 @@ const routes = [
       } 
    },
    {
+      path: "/help",
+      component: () => import("../pages/Help.vue"),
+      meta: {
+         hiddenTab: true,
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
+   },
+   {
       path: '/feedback',
       component: () => import('../pages/Feedback.vue'),
       meta: {
