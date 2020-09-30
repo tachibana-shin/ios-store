@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.20.0",
+    "css-vars-ponyfill": "^2.3.2",
     "eruda": "^2.4.0",
     "swiper": "^6.2.0",
     "v-img": "^0.2.0",

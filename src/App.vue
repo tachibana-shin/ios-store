@@ -1,5 +1,5 @@
 <template>
-   <div id="app">
+   <div id="app" theme="normal">
       <vue-progress-bar />
       <transition name="swipeY.top:ease">
          <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event" />
