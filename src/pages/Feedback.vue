@@ -66,11 +66,12 @@
 
    .main {
       background-color: $bg-page-more;
-      padding-top: 6.4vw;
 
       padding: {
          left: 5.333vw;
          right: 5.333vw;
+         bottom: 9.6vw;
+         top: 6.4vw;
       }
 
       width: 100%;
@@ -293,9 +294,8 @@
       }
 
       .submit {
-         margin-bottom: 9.6vw;
          width: 89.333vw;
-
+         margin-bottom: 9.6vw; 
          background-color: rgb(74, 76, 91);
          border-radius: 0.533vw;
          box-sizing: border-bOx;
