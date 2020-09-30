@@ -65,7 +65,7 @@
                </router-link>-->
                <li class="item settings" @click.stop>
                   <language />
-		  <darkmode-switcher/>
+                  <darkmode-switcher />
                </li>
                <li class="" v-if="false">
                   <button class="logout.button"> {{ "HEADER.LOGOUT" | t }} </button>
@@ -95,7 +95,7 @@
       }
 
       hr {
-         @include distance0; 
+         @include distance0;
       }
 
       .nav\.list {
@@ -207,12 +207,13 @@
                   &.active {
                      background-color: $bg-active;
                   }
-		  &.settings {
+
+                  &.settings {
                      display: flex;
-		     justify-content: space-between;
-		     box-sizing: border-box;
-		     align-items: center;
-		  }
+                     justify-content: space-between;
+                     box-sizing: border-box;
+                     align-items: center;
+                  }
                }
 
                hr {
