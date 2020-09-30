@@ -144,6 +144,10 @@
                border: none;
                outline: none;
                background-color: $white;
+               position: absolute;
+               resize: none;
+               width: 100%;
+               height: 100%;
             }
 
             span {
@@ -469,7 +473,22 @@
             return !!this.content && !!this.email && !!this.typeFeedback
          },
          send() {
-            this.state = 1 + 2
+            const formData = new FormData
+            
+            formData.append("type", this.typeFeedback)
+            formData.append("content", this.content)
+            formData.append("email", this.email)
+            this.fileSendToReport.forEach(item => formData.append("file[]", item))
+            
+            this.$axios.post("http://carbonated-patterns.000webhostapp.com/admin/api/Send-Feedback.php", formData)
+            .then(res => res.data)
+            .then(({ state, data }) => {
+               if ( state.error ) {
+                  throw new Error(state.message)
+               }
+            })
+            .then(() => this.state = 1)
+            .catch(() => this.state = 3)
          }
       }
    }
