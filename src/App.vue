@@ -1,5 +1,5 @@
 <template>
-   <div id="app" theme="normal">
+   <div id="app" :theme="$store.state.darkMode ? 'dark' : 'normal'">
       <vue-progress-bar />
       <transition name="swipeY.top:ease">
          <Header-App @show-menu="NavListShow = true" v-show="HeaderAppShow" @input="HeaderAppShow = $event" />

@@ -30,8 +30,8 @@
          prop: "checked"
       },
       watch: {
-         isEnabled: function(newValue) {
-            this.$emit('switched', newValue)
+         isEnabled(newValue) {
+            this.$emit('update:checked', newValue)
          }
       }
    }

@@ -65,7 +65,7 @@
                </router-link>-->
                <li class="item settings" @click.stop>
                   <language />
-                  <darkmode-switcher />
+                  <darkmode-switcher :checked.sync="DARK_MODE"/>
                </li>
                <li class="" v-if="false">
                   <button class="logout.button"> {{ "HEADER.LOGOUT" | t }} </button>
@@ -316,7 +316,15 @@
       computed: {
          homeRouterActive() {
             return !!this.$route.path.match(/^\/lite/)
-         }
+         },
+	 DARK_MODE: {
+            set(value) {
+               this.$store.commit("setDarkMode", value)
+	    },
+	    get() {
+               return this.$store.state.darkMode
+	    }
+	 }
       }
    }
 </script>

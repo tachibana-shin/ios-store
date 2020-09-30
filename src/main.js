@@ -9,8 +9,9 @@ import eruda from 'eruda'
 eruda.init()
 
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router/index.js'
+import App from './App'
+import router from './router'
+import store from './store'
 
 import VueProgressBar from 'vue-progressbar'
 import axios from 'axios'
@@ -39,6 +40,7 @@ Vue.use(VueTouchScroll)
 new Vue({
   el: '#app',
   router,
+  store,
   i18n,
   template: '<App/>',
   components: { App }
