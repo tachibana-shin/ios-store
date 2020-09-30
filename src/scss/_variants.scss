@@ -1,19 +1,17 @@
-
-
-$colorMain: invert(rgb(0, 132, 240));
-$white: invert(rgb(255, 255, 255));
-$black: invert(rgb(0, 0, 0));
-$bg-noactive: invert(rgb(237, 240, 245));
-$color-text-content: invert(rgb(47, 64, 89));
-$color-blue-grey: invert(rgb(162, 171, 191));
-$color-yellow-grey: invert(rgb(240, 242, 245));
-$color-blue-dark: invert(rgb(55, 77, 115));
-$color-blue-black: invert(rgb(0, 87, 158));
-$color-FAQ: invert(rgb(48, 49, 51));
-$color-hr: invert(rgb(242, 244, 245));
-$color-value: invert(rgb(11, 57, 95));
-$bg-wrapper: invert(rgb(245, 246, 247));
-$bg-header_tabs: invert(rgb(252, 253, 255));
+$colorMain: (rgb(0, 132, 240));
+$white: (rgb(255, 255, 255));
+$black: (rgb(0, 0, 0));
+$bg-noactive: (rgb(237, 240, 245));
+$color-text-content: (rgb(47, 64, 89));
+$color-blue-grey: (rgb(162, 171, 191));
+$color-yellow-grey: (rgb(240, 242, 245));
+$color-blue-dark: (rgb(55, 77, 115));
+$color-blue-black: (rgb(0, 87, 158));
+$color-FAQ: (rgb(48, 49, 51));
+$color-hr: (rgb(242, 244, 245));
+$color-value: (rgb(11, 57, 95));
+$bg-wrapper: (rgb(245, 246, 247));
+$bg-header_tabs: (rgb(252, 253, 255));
 
 @mixin distance0 {
    margin: 0;
