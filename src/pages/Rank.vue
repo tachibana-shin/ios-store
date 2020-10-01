@@ -44,7 +44,7 @@
                      <p class="type"> {{ item.category }} </p>
                   </div>
                   <router-link tag="button" :to="'/lite/detail/app/' + item.id" class="detail"> Detail </router-link>
-               </div> 
+               </div>
             </li>
          </ul>
          <div class="loading">
@@ -175,7 +175,7 @@
                      flex: {
                         basis: 0;
                         grow: 1;
-			shrink: 0;
+                        shrink: 0;
                      }
 
                      height: 100%;
@@ -195,7 +195,7 @@
                         color: rgb(11, 57, 95);
                         font-size: 4.8vw;
                         font-weight: 500;
-			max-width: (100vw / 360 * 118);
+                        max-width: (100vw / 360 * 118);
                      }
 
                      .rate {
@@ -274,20 +274,20 @@
          type: {
             handler(val) {
                this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
-                  params: {
-                     type: this.type,
-                     offset: this.Apps.length
+                     params: {
+                        type: this.type,
+                        offset: this.Apps.length
 
-                  }
-               })
-               .then(res => res.data)
-               .then(({ state, data }) => {
-                  if ( state.error ) {
-                     throw new Error(state.message)
-                  }
-                  this.Apps.push(...data)
-               })
-               .then(() => this.loading = false)
+                     }
+                  })
+                  .then(res => res.data)
+                  .then(({ state, data }) => {
+                     if (state.error) {
+                        throw new Error(state.message)
+                     }
+                     this.Apps.push(...data)
+                  })
+                  .then(() => this.loading = false)
             },
             immediate: true
          }
