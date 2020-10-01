@@ -1,12 +1,12 @@
 <template>
    <div class="wrapper">
       <h2> FAQ </h2>
-      <div class="item">
+      <div class="item" v-for="item in helpers">
          <div class="content">
-            <p class="title"> {{ "BIND.FAQ" | t }} </p>
+            <p class="title"> {{ item.title }} </p>
             <ol>
-               <li class="item">
-                  <collapse :title="'BIND.TITLE_TEXT7' | t" :content="'BIND.TEXT7' | t" />
+               <li class="item" v-for="item in item.contents">
+                  <collapse :title="item.title" :content="item.value" />
                </li>
             </ol>
          </div>
@@ -106,6 +106,24 @@
 <script>
    import Collapse from "../components/Collapse-For-FAQ.vue"
    export default {
-      components: { Collapse }
+      components: { Collapse },
+      data: () => ({
+         helpers: []
+      }),
+      watch: {
+         "i18n.locale": {
+            handler( newVal ) {
+               this.$axios.get(`http://carbonated-patterns.000webhostapp.com?lang=${newVal}`)
+               .then(res => res.data)
+               .then(({ state, data }) => {
+                  if ( state.error ) {
+                     throw new Error(state.message)
+                  }
+               })
+               .then(data => this.helpers = data)
+            },
+            immediate: true
+         }
+      }
    }
 </script>
