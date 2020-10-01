@@ -269,7 +269,7 @@
       components: { RateStar, LoadingRankContent },
       data: () => ({
          loading: true,
-         type: "apps" 
+         type: "apps",
          Apps: []
       }),
       watch: {
