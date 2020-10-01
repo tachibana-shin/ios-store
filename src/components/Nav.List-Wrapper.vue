@@ -35,11 +35,17 @@
                   <img class="icon" :src="require('@/assets/bar.ic.game.svg')">
                   <span> {{ "HEADER.IOS_APPS_AND_GAMES" | t }} </span>
                </li>
-               <hr>
+               <hr><!--
                <router-link tag="li" to="/feedback" class="item" active-class="active">
                   <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
                   <span> {{ "HEADER.FEEDBACK" | t }} </span>
+               </router-link>-->
+               <!-- /add -->
+               <router-link tag="li" to="/help" class="item" active-class="active">
+                  <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
+                  <span> {{ "HEADER.HELP_AND_FEEDBACK" | t }} </span>
                </router-link>
+               <!-- //add -->
                <li class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.contact.svg')">
                   <span> {{ "HEADER.CONTACT" | t }} </span>

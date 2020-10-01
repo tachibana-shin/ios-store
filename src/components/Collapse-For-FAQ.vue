@@ -44,7 +44,7 @@
                }
 
                .title {
-                  color: rgb(75, 98, 138);
+                  color: $color-help;
                   font-size: 3.467vmin;
                   font-weight: 400;
                   line-height: 4.267vw;

@@ -52,6 +52,7 @@
             <img class="item" :src="require('@/assets/patreon.visa.png')">
          </div>
       </div>
+      <home-swiper/>
       <transition name="fade:ease">
          <backdrop-mark v-if="guideBlockShow" />
       </transition>
@@ -514,8 +515,9 @@
    import BackdropMark from "../components/Backdrop.vue"
    import AppInfo from "../components/AppInfo.vue"
    import HomeLoadingApplist from "../components/Home.Loading.Applist.vue"
+   import HomeSwiper from "../components/Home.Swiper.vue"
    export default {
-      components: { GuideBlockWrapper, BackdropMark, AppInfo, HomeLoadingApplist },
+      components: { GuideBlockWrapper, BackdropMark, AppInfo, HomeLoadingApplist, HomeSwiper },
       data: () => ({
          guideBlockShow: false,
          AppListLoaded: false,

@@ -91,7 +91,7 @@
                font-weight: 400;
                line-height: 5.067vw;
                margin-bottom: 1.067vw;
-               color: rgb(75, 98, 138);
+               color: $color-help;
                font-size: 3.467vmin;
             }
          }

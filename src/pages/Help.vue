@@ -1,9 +1,6 @@
 <template>
    <div class="wrapper">
-      <div class="header">
-         <img :src="require('@/assets/buny.png')">
-         {{ "BIND.TEXT1" | t }}
-      </div>
+      <h2> FAQ </h2>
       <div class="item">
          <div class="content">
             <p class="title"> {{ "BIND.FAQ" | t }} </p>
@@ -21,30 +18,22 @@
 </template>
 <style lang="scss" scoped>
    .wrapper {
-      background-color: rgb(244, 245, 247);
-      padding-bottom: 4.26667vw;
+      background-color: $bg-page-more;
+      padding-bottom: 21.867vw;
+      padding-left: 5.333vw;
+      padding-right: 5.333vw;
+      padding-top: 4.267vw;
 
 
-      .header {
-         background-color: $white;
-         border-radius: 2.133vw;
-         box-shadow: rgba(8, 13, 39, 0.03) 0 0.533vw 3.2vw 0;
-         box-sizing: border-box;
-         color: $color-value;
-         font-size: 3.733vmin;
-         font-weight: 400;
-         line-height: 5.6vw;
-         padding: 3.2vw 17.067vw;
-         position: relative;
-
-         img {
-            position: absolute;
-            top: -2.133VW;
-            width: 13.867vw;
-
-            height: 15.467vw;
-            left: -1.067vw;
-         }
+      h2 {
+         color: $color-blue-dark;
+         font-size: 6.93333vw;
+         font-weight: 500;
+         line-height: 9.86667vw;
+         padding-bottom: 7.46667vw;
+         padding-left: 5.33333vw;
+         padding-right: 0;
+         padding-top: 5.33333vw;
       }
 
       .item {
@@ -91,7 +80,7 @@
                   font-weight: 400;
                   line-height: 5.067vw;
                   margin-bottom: 1.067vw;
-                  color: rgb(75, 98, 138);
+                  color: $color-help;
                   font-size: 3.467vmin;
                }
             }
@@ -102,9 +91,9 @@
       }
 
       .feedback-target {
-         background-color: rgb(0, 132, 240);
+         background-color: $colorMain;
          border-radius: 8vw 0 0 8vw;
-         color: rgb(255, 255, 255);
+         color: $white;
          font-size: 3.73333vw;
          font-weight: 500;
          padding-bottom: 1.86667vw;
