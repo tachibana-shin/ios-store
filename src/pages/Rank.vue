@@ -140,6 +140,7 @@
                   display: flex;
                   justify-content: space-between;
                   width: 100%;
+                  position: relative;
 
                   .icon {
                      height: 21.3333vw;
@@ -147,15 +148,12 @@
                      border-radius: 18%;
                      object-fit: cover;
                      object-position: center;
-                     align-self: flex-start;
-                     margin-top: auto;
                   }
 
                   .info {
                      flex: {
                         basis: 0;
                         grow: 1;
-                        shrink: 1;
                      }
 
                      margin: {

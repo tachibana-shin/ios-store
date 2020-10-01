@@ -324,5 +324,8 @@ legend+* {
 a {
    text-decoration: none;
 }
+p {
+   @include distance0;
+}
 
 /* reset all css */
