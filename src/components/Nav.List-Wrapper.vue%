@@ -2,7 +2,27 @@
    <div class="nav.list-wrapper">
       <nav class="nav.list" @touchmove.prevent>
          <div class="content" v-touch-scroll:vertical="{ scrollbar: { render: false } }">
+            <!--
+            <h1 class="welcome"> {{ "HEADER.WELCOME" | t }} </h1>
+            <div class="user-general">
+               <div class="user.content" v-if="false">
+               </div>
+               <div class="no-login" v-else>
+                  <button class="login.button"> {{ "HEADER.LOGIN" | t }}  </button>
+               </div>
+            </div>
+            <hr class="line">-->
             <ul class="list" @click="$emit('hide-menu')">
+               <!--
+               <router-link to="/bind" exact-active-class="active" tag="li" class="item">
+                  <img class="icon" :src="require('@/assets/bar.ic.bind.svg')">
+                  <span> {{ "HEADER.BIND_YOUR_UIID" | t }}  </span>
+               </router-link>
+               <li class="item" @click="$emit('show-installation-guide')">
+                  <img class="icon" :src="require('@/assets/bar.ic.vip.svg')">
+                  <span> {{ "HEADER.PURCHASE_VIP" | t }} </span>
+               </li>
+               <hr>-->
                <router-link to="/" tag="li" exact-active-class="active" class="item" :class="{ active: homeRouterActive }">
                   <img class="icon" :src="require('@/assets/bar.ic.home.svg')">
                   <span> {{ "HEADER.HOME" | t }} </span>
@@ -15,7 +35,17 @@
                   <img class="icon" :src="require('@/assets/bar.ic.game.svg')">
                   <span> {{ "HEADER.IOS_APPS_AND_GAMES" | t }} </span>
                </li>
-               <hr>
+               <hr><!--
+               <router-link tag="li" to="/feedback" class="item" active-class="active">
+                  <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
+                  <span> {{ "HEADER.FEEDBACK" | t }} </span>
+               </router-link>-->
+               <!-- /add -->
+               <router-link tag="li" to="/help" class="item" active-class="active">
+                  <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
+                  <span> {{ "HEADER.HELP_AND_FEEDBACK" | t }} </span>
+               </router-link>
+               <!-- //add -->
                <li class="item">
                   <img class="icon" :src="require('@/assets/bar.ic.contact.svg')">
                   <span> {{ "HEADER.CONTACT" | t }} </span>
@@ -34,14 +64,11 @@
                   </ul>
                </li>
                <hr>
-               <router-link tag="li" to="/help" class="item" active-class="active">
-                  <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
-                  <span> {{ "HEADER.HELP_AND_FEEDBACK" | t }} </span>
-               </router-link>
-               <router-link tag="li" to="/help" class="item" active-class="active">
-                  <img class="icon" :src="require('@/assets/bar.ic.business.svg')">
-                  <span> {{ "HEADER.ABOUT" | t }} </span>
-               </router-link>
+               <!--
+               <router-link tag="li" to="/blog" active-class="active" class="item">
+                  <img class="icon" :src="require('@/assets/bar.ic.blog.svg')">
+                  <span> {{ "HEADER.BLOG" | t }}  </span>
+               </router-link>-->
                <li class="item settings" @click.stop>
                   <language />
                   <darkmode-switcher :checked.sync="DARK_MODE" />
