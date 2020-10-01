@@ -14,6 +14,7 @@
       <router-link tag="div" to="/feedback" class="feedback-target">
          Feedback
       </router-link>
+      <img :src="require('@/assets/ellipsis.svg')" class="loading" v-if="loading">
    </div>
 </template>
 <style lang="scss" scoped>
@@ -22,7 +23,7 @@
       padding-bottom: 21.867vw;
       padding-left: 5.333vw;
       padding-right: 5.333vw;
-      
+
       h2 {
          color: $color-blue-dark;
          font-size: 6.93333vw;
@@ -101,6 +102,14 @@
          top: 19.7333vw;
          Z-index: 100;
       }
+      
+      .loading {
+         left: 50%;
+         position: fixed;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         width: 9.6vw;
+      }
    }
 </style>
 <script>
@@ -108,19 +117,21 @@
    export default {
       components: { Collapse },
       data: () => ({
-         helpers: []
+         helpers: [],
+         loading: true
       }),
       watch: {
-         "i18n.locale": {
-            handler( newVal ) {
-               this.$axios.get(`http://carbonated-patterns.000webhostapp.com?lang=${newVal}`)
-               .then(res => res.data)
-               .then(({ state, data }) => {
-                  if ( state.error ) {
-                     throw new Error(state.message)
-                  }
-               })
-               .then(data => this.helpers = data)
+         "$i18n.locale": {
+            handler(newVal) {
+               this.$axios.get(`http://carbonated-patterns.000webhostapp.com/admin/api/Helper.php?lang=${newVal}`)
+                  .then(res => res.data)
+                  .then(({ state, data }) => {
+                     if (state.error) {
+                        throw new Error(state.message)
+                     }
+                  })
+                  .then(data => this.helpers = data)
+                  .then(() => this.loading = false)
             },
             immediate: true
          }
