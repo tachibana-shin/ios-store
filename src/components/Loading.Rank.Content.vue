@@ -86,7 +86,7 @@
                      }
 
                      position: relative;
-                     height: 100%
+                     height: 100%;
 
                      margin: {
                         left: 3.75vw;
