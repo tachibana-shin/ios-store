@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>nav_ic_copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01---导航栏" transform="translate(-316.000000, -27.000000)" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(316.000000, 27.000000)">
+                <g id="Group" transform="translate(3.000000, 3.900000)" stroke="#D1D8E6" stroke-width="1.5">
+                    <rect id="Rectangle-8" x="0.75" y="0.75" width="7.66666667" height="7.66666667" rx="1"></rect>
+                    <path d="M11,2.75 L11,10.0833333 C11,10.5895944 10.5895944,11 10.0833333,11 L2.75,11" id="Rectangle-8-Copy" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <rect id="nav_ic_copy" x="0" y="0" width="18" height="18"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
