@@ -29,6 +29,7 @@
       position: relative;
       width: 100%;
       margin-top: -16.2667vw;
+      overflow: hidden;
 
       .content {
          background-color: rgb(250, 251, 252);
