@@ -29,8 +29,9 @@ $color-help: var(--color-help);
 }
 
 @mixin text-truncate($count: -1) {
-   overflow-x: hidden;
+   overflow: hidden;
    text-overflow: ellipsis;
+   white-space: nowrap;
 
    @if ($count==-1) {
       -webkit-box-orient: vertical;

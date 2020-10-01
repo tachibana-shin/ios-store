@@ -267,7 +267,7 @@
          Apps: []
       }),
       intToStr: "one two three".split(" "),
-      itemsTab: "Apps Games Global".split(" "),
+      ItemsTab: "Apps Games Global".split(" "),
       watch: {
          type: {
             handler(val) {
