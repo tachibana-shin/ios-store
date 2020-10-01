@@ -31,9 +31,12 @@ $color-help: var(--color-help);
 @mixin text-truncate($count: -1) {
    overflow: hidden;
    text-overflow: ellipsis;
-   white-space: nowrap;
 
-   @if ($count==-1) {
+   @if ($count==-1 or $count==1) {
+      white-space: nowrap;
+   }
+
+   @if ($count !=-1) {
       -webkit-box-orient: vertical;
       -webkit-line-clamp: $count;
    }
