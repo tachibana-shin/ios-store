@@ -15,20 +15,20 @@
          </div>
       </div>
       <div class="content">
-         <ul class="top-1">
+         <ul class="list">
             <li>
                <div class="index">
-                  <img>
+                  <img :src="require('@/assets/rank.one.svg')">
                </div>
                <div class="app">
-                  <img class="icon">
+                  <img class="icon" src="https://photos.tutuapp.com/picture/app_android/us/000/03/78/53/cover_37853_180x180.png">
                   <div class="info">
-                     <p></p>
+                     <p> Minecraft </p>
                      <div class="rate">
-                        <span class="point"></span>
-                        <rate-star />
+                        <span class="point">3</span>
+                        <rate-star :value="3"/>
                      </div>
-                     <p class="type"></p>
+                     <p class="type"> Apps </p>
                   </div>
                   <button class="detail"> Detail </button>
                </div>
