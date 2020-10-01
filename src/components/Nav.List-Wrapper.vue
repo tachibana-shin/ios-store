@@ -17,7 +17,7 @@
                </li>
                <hr>
                <li class="item">
-                  <img class="icon" :src="require('@/assets/bar.ic.contact.svg')">
+                  <img class="icon" :src="require('@/assets/bar.ic.business.svg')">
                   <span> {{ "HEADER.CONTACT" | t }} </span>
                </li>
                <li class="contact">
@@ -39,7 +39,7 @@
                   <span> {{ "HEADER.HELP_AND_FEEDBACK" | t }} </span>
                </router-link>
                <router-link tag="li" to="/about" class="item" active-class="active">
-                  <img class="icon" :src="require('@/assets/bar.ic.business.svg')">
+                  <img class="icon" :src="require('@/assets/bar.ic.contact.svg')">
                   <span> {{ "HEADER.ABOUT" | t }} </span>
                </router-link>
                <li class="item settings" @click.stop>
