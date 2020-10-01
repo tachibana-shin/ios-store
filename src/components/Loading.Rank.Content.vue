@@ -28,13 +28,12 @@
    .loading-overlay {
       position: relative;
       width: 100%;
-      overflow: hidden;
+         margin-top: -16.2667vw; 
 
       .content {
          background-color: rgb(250, 251, 252);
          border-radius: 6.4vw 6.4vw 0 0;
          overflow: hidden;
-         margin-top: -16.2667vw;
          padding-top: 8.53333vw;
          position: relative;
          width: 100%;
@@ -106,6 +105,7 @@
                         border-radius: 1.6vw;
                         height: 4.267vw;
                         width: 80%;
+                        margin: 0.53333vw 0;
                      }
 
                      .type {

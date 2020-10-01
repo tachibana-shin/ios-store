@@ -199,11 +199,11 @@
                         color: rgb(11, 57, 95);
                         font-size: 4.8vw;
                         font-weight: 500;
-                        margin-bottom: 0.53333vw;
                      }
 
                      .rate {
                         position: relative;
+                        margin: 0.53333vw 0;
 
                         .point {
                            color: rgb(173, 183, 204);
