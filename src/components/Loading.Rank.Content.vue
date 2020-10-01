@@ -1,6 +1,6 @@
 <template>
    <div class="loading-overlay">
-      <bac-animation v-if="!children" />
+      <bac-animation />
       <div class="content">
          <ul class="list">
             <li v-for="item in 3">
@@ -26,6 +26,9 @@
 </template>
 <style lang="scss" scoped>
    .loading-overlay {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
 
       .content {
          background-color: rgb(250, 251, 252);
