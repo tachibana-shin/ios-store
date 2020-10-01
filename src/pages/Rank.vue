@@ -63,7 +63,7 @@
             font-size: 6.93333vw;
             font-weight: 500;
             line-height: 9.86667vw;
-            margin-top: 5.33333vw 0 8.53333vw 0;
+            margin: 5.33333vw 0 8.53333vw 0;
             font-weight: 400;
          }
 
