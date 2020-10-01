@@ -175,6 +175,7 @@
                      flex: {
                         basis: 0;
                         grow: 1;
+			shrink: 0;
                      }
 
                      height: 100%;
@@ -194,6 +195,7 @@
                         color: rgb(11, 57, 95);
                         font-size: 4.8vw;
                         font-weight: 500;
+			max-width: (100vw / 360 * 118);
                      }
 
                      .rate {
