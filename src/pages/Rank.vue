@@ -155,6 +155,10 @@
                         grow: 1;
                         shrink: 1;
                      }
+                     margin: {
+                        left: 3.75vw;
+                        right: 3.75vw;
+                     }
 
                      ;
 
