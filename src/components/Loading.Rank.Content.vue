@@ -28,7 +28,7 @@
    .loading-overlay {
       position: relative;
       width: 100%;
-         margin-top: -16.2667vw; 
+      margin-top: -16.2667vw;
 
       .content {
          background-color: rgb(250, 251, 252);
