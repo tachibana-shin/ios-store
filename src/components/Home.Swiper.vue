@@ -2,7 +2,7 @@
    <div class="donwnload.slider">
       <div class="content">
          <swiper class="swiper-content">
-            <swiper-item class="item-swiper">
+            <swiper-slide class="item-swiper">
                <div class="content">
                   <div class="top">
                      <h3></h3>
@@ -13,7 +13,7 @@
                      <button></button>
                   </div>
                </div>
-            </swiper-item>
+            </swiper-slide>
          </swiper>
          <div class="swiper-paginations">
          </div>
@@ -151,8 +151,11 @@
    }
 </style>
 <script>
-   import { Swiper, SwiperSlide } from "vue-awesome-swiper"
+   import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper" 
    export default {
-      components: { Swiper, SwiperSlide }
+      components: { Swiper, SwiperSlide },
+      directives: {
+         swiper: directive
+      }
    }
 </script>
