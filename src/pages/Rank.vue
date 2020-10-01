@@ -14,7 +14,7 @@
             </a>
          </div>
       </div>
-      <div class="content" v-if="loading">
+      <div class="content" v-if="!loading">
          <ul class="list">
             <li v-for="item in ['one', 'two', 'three']">
                <div class="index">
