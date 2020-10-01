@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
-    <title>nav_ic_copy</title>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>leftbar_ic_business</title>
     <desc>Created with Sketch.</desc>
     <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="01---导航栏" transform="translate(-316.000000, -27.000000)" fill-rule="nonzero">
-            <g id="Group-2" transform="translate(316.000000, 27.000000)">
-                <g id="Group" transform="translate(3.000000, 3.900000)" stroke="#D1D8E6" stroke-width="1.5">
-                    <rect id="Rectangle-8" x="0.75" y="0.75" width="7.66666667" height="7.66666667" rx="1"></rect>
-                    <path d="M11,2.75 L11,10.0833333 C11,10.5895944 10.5895944,11 10.0833333,11 L2.75,11" id="Rectangle-8-Copy" stroke-linecap="round" stroke-linejoin="round"></path>
-                </g>
-                <rect id="nav_ic_copy" x="0" y="0" width="18" height="18"></rect>
+        <g id="01---导航栏" transform="translate(-275.000000, -75.000000)" fill-rule="nonzero">
+            <g id="分组-15" transform="translate(275.000000, 75.000000)">
+                <circle id="椭圆形" stroke="#154E9B" stroke-width="2" fill="#FFFFFF" cx="8" cy="8" r="2"></circle>
+                <circle id="椭圆形-copy-2" stroke="#154E9B" stroke-width="2" fill="#FFFFFF" cx="18" cy="8" r="2"></circle>
+                <path d="M8,12 L8,12 C9.65685425,12 11,13.3431458 11,15 L11,21 C11,21.5522847 10.5522847,22 10,22 L6,22 C5.44771525,22 5,21.5522847 5,21 L5,15 C5,13.3431458 6.34314575,12 8,12 Z" id="矩形" stroke="#154E9B" stroke-width="2" fill="#008EFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M18,12 L18,12 C19.6568542,12 21,13.3431458 21,15 L21,21 C21,21.5522847 20.5522847,22 20,22 L16,22 C15.4477153,22 15,21.5522847 15,21 L15,15 C15,13.3431458 16.3431458,12 18,12 Z" id="矩形-copy-4" stroke="#154E9B" stroke-width="2" fill="#008EFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <rect id="leftbar_ic_business" x="0" y="0" width="28" height="28"></rect>
             </g>
         </g>
     </g>
