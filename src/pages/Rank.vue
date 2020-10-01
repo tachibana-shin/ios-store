@@ -142,9 +142,9 @@
                   width: 100%;
 
                   .icon {
-                     height: 12vw;
-                     width: 12vw;
-                     border-bottom-left-radius: 18%;
+                     height: 21.3333vw;
+                     width: 21.3333vw;
+                     border-radius: 18%;
                      object-fit: cover;
                      object-position: center;
                   }
