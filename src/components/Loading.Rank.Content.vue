@@ -34,9 +34,11 @@
          background-color: rgb(250, 251, 252);
          border-radius: 6.4vw 6.4vw 0 0;
          overflow: hidden;
+         margin-top: -16.2667vw;
          padding-top: 8.53333vw;
          position: relative;
          width: 100%;
+         z-index: 2;
 
          .list {
             padding: 0 5.33333vw 0 4.26667vw;
@@ -83,10 +85,8 @@
                         grow: 1;
                      }
 
-                     display: flex;
                      position: relative;
-                     flex-direction: column;
-                     justify-content: space-between;
+                     height: 100%
 
                      margin: {
                         left: 3.75vw;
