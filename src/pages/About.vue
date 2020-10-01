@@ -148,7 +148,7 @@
          padding-top: 13.3333vw;
 
          h4 {
-            color: rgb(22, 72);
+            color: rgb(22, 43, 72);
             @extend %h4;
          }
 
