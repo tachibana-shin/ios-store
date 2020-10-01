@@ -141,7 +141,8 @@
 
                &.acitve {
                   background-color: rgb(52, 122, 243);
-                  height: 3.2vW width: 3.2vw;
+                  height: 3.2vW;
+		  width: 3.2vw;
                }
 
             }

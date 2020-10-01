@@ -11,9 +11,9 @@
             </ol>
          </div>
       </div>
-      <div class="feedback-target">
+      <router-link tag="div" to="/feedback" class="feedback-target">
          Feedback
-      </div>
+      </router-link>
    </div>
 </template>
 <style lang="scss" scoped>
@@ -22,9 +22,7 @@
       padding-bottom: 21.867vw;
       padding-left: 5.333vw;
       padding-right: 5.333vw;
-      padding-top: 4.267vw;
-
-
+      
       h2 {
          color: $color-blue-dark;
          font-size: 6.93333vw;
@@ -38,14 +36,11 @@
 
       .item {
          background-color: $white;
-         border-radius: 2.133vw;
+         border-radius: 3.2vw;
          box-shadow: rgba(8, 13, 39, 0.03) 0 0.533vw 3.2vw 0;
          box-sizing: border-bOx;
          margin-top: 4.267vw;
-         padding-bottom: 4.267vw;
-         padding-left: 6.4vw;
-         padding-right: 6.4vw;
-         padding-top: 3.2vw;
+         padding: 5.33333vw 5.333333vw 2.66667vw 5.33333vw;
 
          .content {
 
@@ -55,7 +50,7 @@
             .title {
                @include distance0;
                color: $color-blue-dark;
-               font-size: 4.267vmin;
+               font-size: 4.8vmin;
                font-weight: 500;
                line-height: 4.8vw;
                position: relative;
