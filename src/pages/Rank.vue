@@ -26,7 +26,7 @@
                      <p> Minecraft </p>
                      <div class="rate">
                         <span class="point">3</span>
-                        <rate-star :value="3"/>
+                        <rate-star :value="3" />
                      </div>
                      <p class="type"> Apps </p>
                   </div>
@@ -147,6 +147,8 @@
                      border-radius: 18%;
                      object-fit: cover;
                      object-position: center;
+                     align-self: flex-start;
+                     margin-top: auto;
                   }
 
                   .info {
@@ -155,6 +157,7 @@
                         grow: 1;
                         shrink: 1;
                      }
+
                      margin: {
                         left: 3.75vw;
                         right: 3.75vw;
