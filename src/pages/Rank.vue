@@ -3,7 +3,7 @@
       <div class="header">
          <h3>Ranks</h3>
          <div class="tabs">
-            <a class="item">
+            <a class="item active">
                Games
             </a>
             <a class="item">
@@ -14,7 +14,7 @@
             </a>
          </div>
       </div>
-      <div class="content">
+      <div class="content" v-if="loading">
          <ul class="list">
             <li v-for="item in ['one', 'two', 'three']">
                <div class="index">
@@ -58,6 +58,7 @@
             <span> Loading... </span>
          </div>
       </div>
+      <loading-rank-content v-else/>
    </div>
 </template>
 <style lang="scss" scoped>
@@ -128,7 +129,7 @@
          width: 100%;
 
          .list {
-            padding: 0 4.26667vw 0 5.33333vw;
+            padding: 0 5.33333vw 0 4.26667vw;
 
             li {
                align-items: center;
@@ -261,8 +262,15 @@
 </style>
 <script>
    import RateStar from "../components/RateStar.vue"
+   import LoadingRankContent from "../components/Loading.Rank.Content.vue"
 
    export default {
-      components: { RateStar }
+      components: { RateStar, LoadingRankContent },
+      data: () => ({
+         loading: true
+      }),
+      mounted() {
+         setTimeout(() => this.loading = false, 5000)
+      }
    }
 </script>
