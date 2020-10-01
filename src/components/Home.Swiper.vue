@@ -108,7 +108,8 @@
                   transition-timing-function: cubic-bezier(0.21, 1.3, 0.51, 1.27);
                   transition-delay: 0.5s;
                   transition-property: all;
-                  transform: translateY(0px) translateZ(0px) opacity: 1;
+                  transform: translateY(0px) translateZ(0px);
+                  o#42445Apacity: 1;
                }
             }
 
