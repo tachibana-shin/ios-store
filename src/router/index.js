@@ -74,7 +74,15 @@ const routes = [
          hiddenTab: true,
          title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
       }
-   },/*
+   },
+   {
+      path: '/about',
+      component: () => import('../pages/About.vue'),
+      meta: {
+         hiddenTab: true,
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
+   }, /*
    {
       path: '/bind',
       component: () => import('../pages/Bind.vue'),
