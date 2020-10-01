@@ -38,7 +38,7 @@
                   <img class="icon" :src="require('@/assets/bar.ic.feedback.svg')">
                   <span> {{ "HEADER.HELP_AND_FEEDBACK" | t }} </span>
                </router-link>
-               <router-link tag="li" to="/help" class="item" active-class="active">
+               <router-link tag="li" to="/about" class="item" active-class="active">
                   <img class="icon" :src="require('@/assets/bar.ic.business.svg')">
                   <span> {{ "HEADER.ABOUT" | t }} </span>
                </router-link>
