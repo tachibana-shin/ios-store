@@ -55,7 +55,7 @@
                   p {
                      height: 8.53333vw;
                      width: 7.46667vw;
-                     background-color: $bgColor;
+                     background-color: $bg-noactive;
                      border-radius: 1.6vw;
                   }
 
@@ -72,7 +72,7 @@
                      height: 21.3333vw;
                      width: 21.3333vw;
                      border-radius: 18%;
-                     background-color: $bgColor;
+                     background-color: $bg-noactive;
                   }
 
                   .info {
@@ -95,13 +95,13 @@
 
                      p {
                         margin-bottom: 2.66667vw;
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 1.6vw;
                         height: 5.3333vw;
                      }
 
                      .rate {
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 1.6vw;
                         height: 4.267vw;
                         width: 80%
@@ -116,7 +116,7 @@
                      border-radius: 5.06667vw;
                      height: 9.6vw;
                      width: 17.8667vw;
-                     background-color: $bgColor;
+                     background-color: $bg-noactive;
                   }
                }
             }

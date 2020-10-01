@@ -61,8 +61,6 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   $bgColor: $bg-noactive;
-
    .loadingapp {
       background-color: $white;
       height: 100%;
@@ -104,7 +102,7 @@
                   margin-right: 4.267vw;
                   overflow: hidden;
                   width: 26.667vw;
-                  background-color: $bgColor;
+                  background-color: $bg-noactive;
                }
 
                .info {
@@ -129,7 +127,7 @@
                      .one,
                      .two {
                         @include distance0;
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 2.667vw;
                         height: 5.333Vw;
                         margin-top: 1.6vw;
@@ -150,7 +148,7 @@
                      .app\.size {
                         margin-right: 5.333vw;
 
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 1.6vw;
                         height: 4.267vw;
                         width: 13.333vw;
@@ -158,7 +156,7 @@
 
                      .rate-star {
 
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 1.6vw;
                         height: 4.267vw;
                         width: 32vw;
@@ -172,9 +170,9 @@
             .detail-app\.infomation {
 
                .title {
-                  @include distance0; 
+                  @include distance0;
                   margin: 4.267vw 5.333vw;
-                  background-color: $bgColor;
+                  background-color: $bg-noactive;
                   border-radius: 2.667Vw;
                   height: 5.867vw;
                   width: 42.667Vw;
@@ -197,7 +195,7 @@
                         flex-grow: 0;
                         flex-shrink: 0;
 
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 1.6Vw;
                         height: 4.267vw;
                         width: 21.333vw;
@@ -211,7 +209,7 @@
 
                         flex-basis: 0%;
 
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 2.133vw, ;
                         height: 4.267vw;
                         margin-left: 10.667vw;
@@ -241,7 +239,7 @@
                         width: 37.333vw;
                         position: relative;
 
-                        background-color: $bgColor;
+                        background-color: $bg-noactive;
                         border-radius: 3.733vw;
                         height: 66.667vw;
                         margin-right: 4.267vw;
@@ -261,7 +259,7 @@
                .title {
                   margin-bottom: 4.267vw;
 
-                  background-color: $bgColor;
+                  background-color: $bg-noactive;
                   border-radius: 2.667Vw;
                   height: 5.867vw;
                   width: 42.667Vw;
@@ -272,7 +270,7 @@
                   overflow: hidden;
                   height: 4.5em;
                   border-radius: 3.733vw;
-                  background-color: $bgColor;
+                  background-color: $bg-noactive;
                }
 
             }
@@ -285,7 +283,7 @@
 
                   .title {
                      @include distance0;
-                     background-color: $bgColor;
+                     background-color: $bg-noactive;
                      border-radius: 2.667Vw;
 
                      width: 66.667vw;
@@ -320,7 +318,7 @@
                               border-radius: 3.467vw;
                               height: 18.667vw;
                               width: 18.667VW;
-                              background-color: $bgColor;
+                              background-color: $bg-noactive;
                            }
 
                            p {
@@ -328,7 +326,7 @@
                               display: inline-block;
                               margin-top: 2.133vw;
                               width: 18.667vw;
-                              background-color: $bgColor;
+                              background-color: $bg-noactive;
                               height: 3.733vw;
                            }
                         }
