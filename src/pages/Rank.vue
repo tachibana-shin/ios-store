@@ -16,7 +16,7 @@
       </div>
       <div class="content">
          <ul class="list">
-            <li v-for="item in ['one', 'two', 'threee']">
+            <li v-for="item in ['one', 'two', 'three']">
                <div class="index">
                   <img :src="require('@/assets/rank.' + item + '.svg')">
                </div>
@@ -34,6 +34,29 @@
                </div>
             </li>
          </ul>
+         <ul class="list">
+            <li v-for="item in 5">
+               <div class="index">
+                  <span> {{ item }} </span>
+               </div>
+               <div class="app">
+                  <img class="icon" src="https://photos.tutuapp.com/picture/app_android/us/000/03/78/53/cover_37853_180x180.png">
+                  <div class="info">
+                     <p> Minecraft </p>
+                     <div class="rate">
+                        <span class="point">3</span>
+                        <rate-star :value="3" />
+                     </div>
+                     <p class="type"> Apps </p>
+                  </div>
+                  <button class="detail"> Detail </button>
+               </div>
+            </li>
+         </ul>
+         <div class="loading">
+            <img :src="require('@/assets/dua.ring.1s.svg')">
+            <span> Loading... </span>
+         </div>
       </div>
    </div>
 </template>
@@ -155,6 +178,7 @@
                         basis: 0;
                         grow: 1;
                      }
+
                      display: flex;
                      position: relative;
                      flex-direction: column;
@@ -211,6 +235,25 @@
                      width: 17.8667vw;
                   }
                }
+            }
+         }
+
+         .loading {
+            align-items: center;
+            color: rgb(0, 132, 240);
+            display: flex;
+            font-size: 4.26667vw;
+            font-weight: 500;
+            justify-content: center;
+            letter-spacing: 1px;
+            line-height: 6.4vw;
+            margin: 0 auto;
+            padding: 3.2vw 0 9.6vw 0;
+            text-align: center;
+
+            img {
+               width: 6.4vw;
+               margin-right: 1.06667VW;
             }
          }
       }
