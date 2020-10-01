@@ -16,13 +16,13 @@
          <h4> Games Cooperation </h4>
          <p> Include cooperated SDK, Release easily and globally </p>
          <p> Support different payment methods </p>
-         <img class="img-global" :src="require('@/assets/us.img.two.png">
+         <img class="img-global" :src="require('@/assets/us.img.two.png')">
       </section>
       <section class="section-3">
          <h4> Advisement Cooperation </h4>
          <p> Global promotion </p>
          <p> Display Ads in multiple ways </p>
-         <img class="img-global" :src="require('@/assets/us.img.three.png">
+         <img class="img-global" :src="require('@/assets/us.img.three.png')">
       </section>
       <section class="section-4">
          <h4> Contact Us </h4>
