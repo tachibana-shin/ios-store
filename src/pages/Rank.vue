@@ -16,41 +16,41 @@
       </div>
       <div class="content" v-if="!loading">
          <ul class="list">
-            <li v-for="item in ['one', 'two', 'three']">
+            <li v-for="(item, index) in Top3App">
                <div class="index">
-                  <img :src="require('@/assets/rank.' + item + '.svg')">
+                  <img :src="require('@/assets/rank.' + $options.intToStr[index] + '.svg')">
                </div>
                <div class="app">
-                  <img class="icon" src="https://photos.tutuapp.com/picture/app_android/us/000/03/78/53/cover_37853_180x180.png">
+                  <img class="icon" :src="item.icon">
                   <div class="info">
-                     <p> Minecraft </p>
+                     <p> {{ item.name }} </p>
                      <div class="rate">
                         <span class="point">3</span>
                         <rate-star :value="3" />
                      </div>
-                     <p class="type"> Apps </p>
+                     <p class="type"> {{ item.category }} </p>
                   </div>
-                  <button class="detail"> Detail </button>
+                  <router-link tag="button" :to="'/lite/detail/app/' + item.id" class="detail"> Detail </router-link>
                </div>
             </li>
          </ul>
          <ul class="list">
-            <li v-for="item in 5">
+            <li v-for="(item, index) in AppsRest">
                <div class="index">
-                  <span> {{ item }} </span>
+                  <span> {{ index + 3 }} </span>
                </div>
                <div class="app">
-                  <img class="icon" src="https://photos.tutuapp.com/picture/app_android/us/000/03/78/53/cover_37853_180x180.png">
+                  <img class="icon" :src="item.icon">
                   <div class="info">
-                     <p> Minecraft </p>
+                     <p> {{ item.name }} </p>
                      <div class="rate">
                         <span class="point">3</span>
                         <rate-star :value="3" />
                      </div>
-                     <p class="type"> Apps </p>
+                     <p class="type"> {{ item.category }} </p>
                   </div>
-                  <button class="detail"> Detail </button>
-               </div>
+                  <router-link tag="button" :to="'/lite/detail/app/' + item.id" class="detail"> Detail </router-link>
+               </div> 
             </li>
          </ul>
          <div class="loading">
@@ -58,7 +58,7 @@
             <span> Loading... </span>
          </div>
       </div>
-      <loading-rank-content v-else/>
+      <loading-rank-content v-else />
    </div>
 </template>
 <style lang="scss" scoped>
@@ -182,6 +182,7 @@
                         basis: 0;
                         grow: 1;
                      }
+
                      height: 100%;
                      position: relative;
 
@@ -267,10 +268,38 @@
    export default {
       components: { RateStar, LoadingRankContent },
       data: () => ({
-         loading: true
+         loading: true,
+         type: "apps" 
+         Apps: []
       }),
-      mounted() {
-         setTimeout(() => this.loading = false, 5000)
+      watch: {
+         type: {
+            handler(val) {
+               this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
+                  params: {
+                     type: this.type,
+                     offset: this.Apps.length
+
+                  }
+               })
+               .then(res => res.data)
+               .then(({ state, data }) => {
+                  if ( state.error ) {
+                     throw new Error(state.message)
+                  }
+                  this.Apps.push(...data)
+               })
+               .then(() => this.loading = false)
+            }
+         }
+      },
+      computed: {
+         Top3App() {
+            return this.Apps.slice(0, 3)
+         },
+         AppsRest() {
+            return this.Apps.slice(3)
+         }
       }
    }
 </script>

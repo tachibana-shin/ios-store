@@ -114,7 +114,11 @@
                      this.banners = json.data
                   }
                }),
-            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php")
+            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
+               params: {
+                  type: "pro"
+               }
+            })
             .then(res => res.data)
             .then(json => {
                   if (json.state.error) {
