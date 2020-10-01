@@ -43,7 +43,7 @@
       src: url("/fonts/DINCond.ttf");
    }
 
-   .wapper {
+   .wrapper {
       .header {
 
          background: {
