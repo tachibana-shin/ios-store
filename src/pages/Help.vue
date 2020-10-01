@@ -129,8 +129,8 @@
                      if (state.error) {
                         throw new Error(state.message)
                      }
+                     this.helpers = data
                   })
-                  .then(data => this.helpers = data)
                   .then(() => this.loading = false)
             },
             immediate: true

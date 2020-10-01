@@ -26,9 +26,10 @@
       }
 
       .go-home {
+         background-color: rgb(0, 142, 255);
          border-radius: 1.33333vw;
-         color: $white;
-         margin-top: 5.33333vW;
+         color: rgb(255, 255, 255);
+         margin-top: 5.33333vw;
          padding: 2.66667vw 5.33333vw;
       }
    }
