@@ -16,9 +16,9 @@
       </div>
       <div class="content">
          <ul class="list">
-            <li>
+            <li v-for="item in ['one', 'two', 'threee']">
                <div class="index">
-                  <img :src="require('@/assets/rank.one.svg')">
+                  <img :src="require('@/assets/rank.' + item + '.svg')">
                </div>
                <div class="app">
                   <img class="icon" src="https://photos.tutuapp.com/picture/app_android/us/000/03/78/53/cover_37853_180x180.png">
@@ -155,6 +155,10 @@
                         basis: 0;
                         grow: 1;
                      }
+                     display: flex;
+                     position: relative;
+                     flex-direction: column;
+                     justify-content: space-between;
 
                      margin: {
                         left: 3.75vw;
