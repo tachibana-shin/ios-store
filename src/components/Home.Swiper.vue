@@ -109,7 +109,7 @@
                   transition-delay: 0.5s;
                   transition-property: all;
                   transform: translateY(0px) translateZ(0px);
-                  o#42445Apacity: 1;
+                  opacity: 1;
                }
             }
 
