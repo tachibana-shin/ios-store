@@ -10,7 +10,7 @@
       align-items: center;
       display: flex;
       flex-direction: column;
-      height: (100vh - 13.867vw);
+      height: calc(100vh - 13.867vw);
       justify-content: center;
 
       img {
