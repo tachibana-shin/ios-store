@@ -3,14 +3,8 @@
       <div class="header">
          <h3>Ranks</h3>
          <div class="tabs">
-            <a class="item active">
-               Games
-            </a>
-            <a class="item">
-               Apps
-            </a>
-            <a class="item">
-               Global
+            <a class="item" :class="{ active: item == type }" v-for="item in $options.ItemsTab" @click="type = item">
+               {{ item }}
             </a>
          </div>
       </div>
@@ -269,9 +263,11 @@
       components: { RateStar, LoadingRankContent },
       data: () => ({
          loading: true,
-         type: "apps",
+         type: "Apps",
          Apps: []
       }),
+      intToStr: "one two three".split(" "),
+      itemsTab: "Apps Games Global".split(" "),
       watch: {
          type: {
             handler(val) {
@@ -290,7 +286,8 @@
                   this.Apps.push(...data)
                })
                .then(() => this.loading = false)
-            }
+            },
+            immediate: true
          }
       },
       computed: {
