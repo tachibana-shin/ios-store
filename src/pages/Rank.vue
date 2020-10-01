@@ -122,7 +122,7 @@
       .content {
          background-color: rgb(250, 251, 252);
          border-radius: 6.4vw 6.4vw 0 0;
-         margin-top: -16.2667vw;
+         /*margin-top: -16.2667vw;*/
          Overflow: hidden;
          padding-top: 8.53333vw;
          position: relative;
@@ -130,6 +130,8 @@
 
          .list {
             padding: 0 5.33333vw 0 4.26667vw;
+            list-style: none;
+            margin: 0;
 
             li {
                align-items: center;

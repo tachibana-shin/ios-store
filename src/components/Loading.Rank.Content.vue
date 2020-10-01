@@ -33,7 +33,6 @@
       .content {
          background-color: rgb(250, 251, 252);
          border-radius: 6.4vw 6.4vw 0 0;
-         margin-top: -16.2667vw;
          overflow: hidden;
          padding-top: 8.53333vw;
          position: relative;
@@ -57,7 +56,7 @@
 
                   p {
                      height: 8.53333vw;
-                     width: 7.46667vw;
+                     width: 8.53333vw;
                      background-color: $bg-noactive;
                      border-radius: 1.6vw;
                   }
@@ -97,7 +96,6 @@
                      ;
 
                      p {
-                        margin-bottom: 2.66667vw;
                         background-color: $bg-noactive;
                         border-radius: 1.6vw;
                         height: 5.3333vw;
@@ -107,7 +105,7 @@
                         background-color: $bg-noactive;
                         border-radius: 1.6vw;
                         height: 4.267vw;
-                        width: 80%
+                        width: 80%;
                      }
 
                      .type {
