@@ -203,6 +203,7 @@ label {
 
 button {
    border-radius: 0;
+
    &:hover {
       outline: none;
    }
@@ -327,6 +328,7 @@ legend+* {
 a {
    text-decoration: none;
 }
+
 p {
    @include distance0;
 }
