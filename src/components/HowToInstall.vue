@@ -52,7 +52,7 @@
          height: 100.267vw;
          text-align: center;
          width: 79.2vW;
-	 overflow: hidden;
+         overflow: hidden;
 
          .swiper-wrapper {
             background-image: url("../assets/howtoinstall.bg.svg");
@@ -139,7 +139,7 @@
    import { Swiper as SwiperClass, Pagination, Mousewheel } from 'swiper'
 
    SwiperClass.use([Pagination, Mousewheel])
-   
+
    export default {
       components: {
          Swiper,

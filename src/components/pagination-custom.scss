@@ -1,6 +1,7 @@
-.content .swiper-wrapper >>> .swiper-container {
+.content .swiper-wrapper>>>.swiper-container {
    overflow-y: visible !important;
-   }
+}
+
 .pagination-swiper {
    z-index: 9999999;
    position: absolute;
@@ -10,7 +11,7 @@
    bottom: 0;
    @include distance0;
 
-   & >>> .bullet {
+   &>>>.bullet {
       background-color: invert(rgba(255, 202, 69, 0.3));
       margin: 0 1.067vw;
       width: 1.6vw;
@@ -22,5 +23,6 @@
          background-color: $colorMain;
          width: 4.267VW;
       }
-   
-}}
+
+   }
+}

@@ -38,7 +38,11 @@
          width: 100%;
          height: 100%;
          background-color: rgb(6, 12, 80);
-& >>> .swiper-container { position: static }
+
+         &>>>.swiper-container {
+            position: static
+         }
+
          .swiper-content {
 
             .item-swiper .content {
@@ -122,12 +126,12 @@
                padding: 0;
                position: absolute;
                right: 4vw;
-	       bottom: 40%;
+               bottom: 40%;
                transform: translateY(-50%);
                width: 3.73333vw;
                z-index: 30;
 
-               & >>> span {
+               &>>>span {
                   vertical-align: bottom;
                   background-color: rgba(52, 122, 243, 0.4);
                   border-radius: 50%;

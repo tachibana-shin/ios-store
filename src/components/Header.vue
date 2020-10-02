@@ -2,7 +2,10 @@
    <div class="header-nav">
       <div class="wrapper">
          <img class="menu" :src="require('@/assets/nav.ic.menu.svg')" @click="$emit('show-menu')">
-         <img class="logo" :src="require('@/assets/nav.ic.logo.svg')">
+         <span>
+            <img class="logo" :src="require('@/assets/nav.ic.logo.svg')">
+            <img class="download" :src="require('@/assets/nav.ic.download.svg')">
+         </span>
          <img class="download" :src="require('@/assets/nav.ic.download.svg')">
       </div>
       <div class="tabs" v-if="!$route.meta.hiddenTab">
@@ -41,14 +44,33 @@
             margin-left: 4.267vw;
          }
 
-         img.logo {
-            height: 7.467vw;
+         span {
+            display: inline-block;
+
+            img.logo {
+               height: 7.467vw;
+            }
+
+            img.download {
+               width: 4.267vw;
+               height: 5.867vw;
+               margin-right: 4.267vw;
+               animation: swipe-download .5s linear infinite alternate;
+
+               @keyframe swipe-download {
+                  0% {
+                     transform: scale(1)
+                  }
+
+                  to {
+                     transform: scale(1.2)
+                  }
+               }
+            }
          }
 
          img.download {
-            width: 4.267vw;
-            height: 5.867vw;
-            margin-right: 4.267vw;
+            width: 100%;
          }
       }
 

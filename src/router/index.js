@@ -80,9 +80,12 @@ const routes = [
       }
    },
    {
-      path: '/test',
+      path: '/download',
       component: () => import("../components/Home.Swiper.vue"),
-      meta: { hiddenTab: true }
+      meta: {
+         hiddenTab: true,
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+      }
    },
    {
       path: '/feedback',

@@ -68,12 +68,12 @@
                      margin-right: 8vw;
                      margin-top: 5.333vw;
                      padding: 0 5.333vw;
-
+                     
                      span {
                         display: block;
                         @include text-truncate;
                         font-size: 3.733vmin;
-                        color: $black;
+                        color: $color-help;
                      }
                   }
                }

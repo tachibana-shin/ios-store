@@ -11,7 +11,7 @@
             </router-link>
             <router-link to="/rank/global" class="item">
                Global
-            </router-link>  
+            </router-link>
          </div>
       </div>
       <div class="content" v-if="!loading">
@@ -282,21 +282,26 @@
             return this.Apps.slice(3)
          }
       },
-      created() {
-         this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
-               params: {
-                  type: this.$route.type || "games",
-                  offset: this.Apps.length
-               }
-            })
-            .then(res => res.data)
-            .then(({ state, data }) => {
-               if (state.error) {
-                  throw new Error(state.message)
-               }
-               this.Apps.push(...data)
-            })
-            .then(() => this.loading = false)
+      watch: {
+         "$route": {
+            handler() {
+               this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
+                     params: {
+                        type: this.$route.type || "games",
+                        offset: this.Apps.length
+                     }
+                  })
+                  .then(res => res.data)
+                  .then(({ state, data }) => {
+                     if (state.error) {
+                        throw new Error(state.message)
+                     }
+                     this.Apps.push(...data)
+                  })
+                  .then(() => this.loading = false)
+            },
+            immediate: true
+         }
       }
    }
 </script>
