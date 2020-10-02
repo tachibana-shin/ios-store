@@ -76,7 +76,15 @@ const routes = [
       component: () => import("../pages/Rank.vue"),
       meta: {
          hiddenTab: true,
-         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
+         title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun",
+         type: $route => {
+            switch ($route.params.type) {
+               case "apps":
+                  return "^games"
+               default:
+                  return $route.params.type
+            }
+         }
       }
    },
    {

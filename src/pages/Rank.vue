@@ -285,11 +285,11 @@
          }
       },
       watch: {
-         "$route": {
+         "$route.params.type": {
             handler() {
                this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
                      params: {
-                        type: this.$route.params.type || "games",
+                        type: this.$route.meta.type(this.$route) || "games",
                         offset: this.Apps.length
                      }
                   })
