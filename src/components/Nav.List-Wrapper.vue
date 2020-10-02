@@ -7,6 +7,11 @@
                   <img class="icon" :src="require('@/assets/bar.ic.home.svg')">
                   <span> {{ "HEADER.HOME" | t }} </span>
                </router-link>
+               <router-link to="/rank" tag="li" active-class="active" class="item">
+                  <img class="icon" :src="require('@/assets/bar.ic.vip.svg')">
+                  <span> {{ "HEADER.RANKING" | t }} </span>
+               </router-link>
+               
                <li class="item" @click="$emit('show-installation-guide')">
                   <img class="icon" :src="require('@/assets/bar.ic.download.svg')">
                   <span> {{ "HEADER.DOWNLOAD_APP_VIP" | t }} </span>
