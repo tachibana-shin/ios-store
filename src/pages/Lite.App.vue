@@ -101,7 +101,7 @@
          Promise.all([
             this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/Banners.php", {
                   params: {
-                     category: "app"
+                     category: "apps"
                   }
                })
             .then(res => res.data)

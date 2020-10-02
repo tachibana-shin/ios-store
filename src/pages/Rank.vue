@@ -3,13 +3,13 @@
       <div class="header">
          <h3>Ranks</h3>
          <div class="tabs">
-            <router-link to="/rank/games" class="item" active-class="active">
+            <router-link to="/rank/games" class="item">
                Games
             </router-link>
-            <router-link to="/rank/apps" class="item" active-class="active">
+            <router-link to="/rank/apps" class="item">
                Apps
             </router-link>
-            <router-link to="/rank/global" class="item" active-class="active">
+            <router-link to="/rank/global" class="item">
                Global
             </router-link>  
          </div>
