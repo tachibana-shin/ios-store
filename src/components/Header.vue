@@ -3,8 +3,8 @@
       <div class="wrapper">
          <img class="menu" :src="require('@/assets/nav.ic.menu.svg')" @click="$emit('show-menu')">
          <span>
-            <img class="logo" :src="require('@/assets/nav.ic.logo.svg')">
-            <img class="download" :src="require('@/assets/nav.ic.download.svg')">
+            <router-link to="/a" tag="img" class="logo" :src="require('@/assets/nav.ic.logo.svg')"/>
+            <router-link to="/lite/search" tag="img" class="download" :src="require('@/assets/nav.ic.download.svg')"/>
          </span>
          <img class="download" :src="require('@/assets/nav.ic.download.svg')">
       </div>
