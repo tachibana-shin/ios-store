@@ -2,7 +2,7 @@
    <div class="error-404">
       <img :src="require('@/assets/not.found.png')">
       <p> Sorry, The Page Does Not Exists</p>
-      <p class="go-home"> Go To Home </p>
+      <router-link tag="p" to="/" class="go-home"> Go To Home </router-link>
    </div>
 </template>
 <style lang="scss" scoped>
