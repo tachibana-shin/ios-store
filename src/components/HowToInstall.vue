@@ -31,7 +31,7 @@
    </div>
 </template>
 <style lang="scss" scoped>
-   @import "./pagination-custom.css";
+   @import "./pagination-custom.scss";
 
 
    .HowToInstall {

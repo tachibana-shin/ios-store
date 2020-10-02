@@ -3,9 +3,15 @@
       <div class="header">
          <h3>Ranks</h3>
          <div class="tabs">
-            <a class="item" :class="{ active: item == type }" v-for="item in $options.ItemsTab" @click="type = item">
-               {{ item }}
-            </a>
+            <router-link to="/rank/games" class="item" active-class="active">
+               Games
+            </router-link>
+            <router-link to="/rank/apps" class="item" active-class="active">
+               Apps
+            </router-link>
+            <router-link to="/rank/global" class="item" active-class="active">
+               Global
+            </router-link>  
          </div>
       </div>
       <div class="content" v-if="!loading">
@@ -265,33 +271,9 @@
       components: { RateStar, LoadingRankContent },
       data: () => ({
          loading: true,
-         type: "Apps",
          Apps: []
       }),
       intToStr: "one two three".split(" "),
-      ItemsTab: "Apps Games Global".split(" "),
-      watch: {
-         type: {
-            handler(val) {
-               this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
-                     params: {
-                        type: this.type,
-                        offset: this.Apps.length
-
-                     }
-                  })
-                  .then(res => res.data)
-                  .then(({ state, data }) => {
-                     if (state.error) {
-                        throw new Error(state.message)
-                     }
-                     this.Apps.push(...data)
-                  })
-                  .then(() => this.loading = false)
-            },
-            immediate: true
-         }
-      },
       computed: {
          Top3App() {
             return this.Apps.slice(0, 3)
@@ -299,6 +281,22 @@
          AppsRest() {
             return this.Apps.slice(3)
          }
+      },
+      created() {
+         this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
+               params: {
+                  type: this.$route.type || "games",
+                  offset: this.Apps.length
+               }
+            })
+            .then(res => res.data)
+            .then(({ state, data }) => {
+               if (state.error) {
+                  throw new Error(state.message)
+               }
+               this.Apps.push(...data)
+            })
+            .then(() => this.loading = false)
       }
    }
 </script>
