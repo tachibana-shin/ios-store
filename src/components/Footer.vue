@@ -3,7 +3,7 @@
       <div class="social">
          <img :src="require('@/assets/shared.ic.twitter.svg')">
          <img :src="require('@/assets/shared.ic.instagram.svg')">
-         <img :src="require('@/assets/shared.ic.youtube.svg')">  
+         <img :src="require('@/assets/shared.ic.youtube.svg')">
       </div>
       <div class="help">
          <span> About Us </span>
@@ -43,7 +43,8 @@
 
          span {
             color: rgb(80, 91, 107);
-            font-size: 3.73333vw font-weight: 500;
+            font-size: 3.73333vw;
+            font-weight: 500;
             line-height: 4.8vw;
 
             &:first-of-type {

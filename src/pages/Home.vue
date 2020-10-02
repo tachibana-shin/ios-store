@@ -207,7 +207,7 @@
                animation: up-down 2s linear infinite alternate;
 
                @keyframes up-down {
-                  0% {
+                  from {
                      transform: translateY(0);
                   }
 

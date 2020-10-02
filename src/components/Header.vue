@@ -3,10 +3,10 @@
       <div class="wrapper">
          <img class="menu" :src="require('@/assets/nav.ic.menu.svg')" @click="$emit('show-menu')">
          <span>
-            <router-link to="/a" tag="img" class="logo" :src="require('@/assets/nav.ic.logo.svg')"/>
-            <router-link to="/lite/search" tag="img" class="download" :src="require('@/assets/nav.ic.download.svg')"/>
+            <router-link to="/a" tag="img" class="logo" :src="require('@/assets/nav.ic.logo.svg')" />
+            <img class="download" :src="require('@/assets/nav.ic.download.svg')">
          </span>
-         <img class="download" :src="require('@/assets/nav.ic.download.svg')">
+         <router-link to="/lite/search" tag="img" class="download" :src="require('@/assets/nav.ic.search.svg')" />
       </div>
       <div class="tabs" v-if="!$route.meta.hiddenTab">
          <router-link tag="span" to="/" exact-active-class="active" class="left">
@@ -58,7 +58,7 @@
                animation: swipe-download .5s linear infinite alternate;
 
                @keyframe swipe-download {
-                  0% {
+                  from {
                      transform: scale(1)
                   }
 
@@ -69,7 +69,7 @@
             }
          }
 
-         img.download {
+         img.search {
             width: 100%;
          }
       }
