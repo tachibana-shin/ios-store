@@ -59,6 +59,7 @@
          </div>
       </div>
       <loading-rank-content v-else />
+      <app-footer/>
    </div>
 </template>
 <style lang="scss" scoped>
@@ -266,9 +267,10 @@
 <script>
    import RateStar from "../components/RateStar.vue"
    import LoadingRankContent from "../components/Loading.Rank.Content.vue"
+   import AppFooter from "../components/Footer.vue"
 
    export default {
-      components: { RateStar, LoadingRankContent },
+      components: { RateStar, LoadingRankContent, AppFooter },
       data: () => ({
          loading: true,
          Apps: []

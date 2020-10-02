@@ -13,7 +13,7 @@
             <img class="spaceship" :src="require('@/assets/home.spaceship.png')">
             <img class="download.button.highlight" :src="require('@/assets/home.btn.highlight.png')">
             <img class="download.button.light" :src="require('@/assets/home.btn.light.png')">
-            <img class="download.download" :src="require('@/assets/home.btn.download.png')">
+            <router-link tag="img" to="/download" class="download.download" :src="require('@/assets/home.btn.download.png')"/>
             <img class="slide-icon" :src="require('@/assets/home.slide.icon.svg')" v-scroll-to="{ element: '#content', duration: 666 }">
             <img class="star-big" :src="require('@/assets/home.star.big.svg')">
             <img class="star" :src="require('@/assets/home.star.svg')">

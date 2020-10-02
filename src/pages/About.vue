@@ -37,6 +37,7 @@
             </div>
          </div>
       </section>
+      <app-footer/>
    </div>
 </template>
 <style lang="scss" scoped>
@@ -204,7 +205,8 @@
    }
 </style>
 <script>
+   import AppFooter from "../components/Footer.vue"
    export default {
-
+      components: { AppFooter }
    }
 </script>
