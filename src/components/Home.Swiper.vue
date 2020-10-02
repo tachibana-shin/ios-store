@@ -1,22 +1,22 @@
 <template>
-   <div class="donwnload.slider">
+   <div class="download.slider">
       <div class="content">
-         <swiper class="swiper-content">
-            <swiper-slide class="item-swiper">
+         <swiper class="swiper-content" :options="{ pagination: { el: '.swiper-pagination', clickable: true }, direction: 'vertical' }" ref="swipe">
+            <swiper-slide class="item-swiper" v-for="i in 7" :key="i - 1">
                <div class="content">
                   <div class="top">
-                     <h3></h3>
-                     <p></p>
+                     <h3> Slide 1 </h3>
+                     <p> Description </p>
                   </div>
                   <div class="bottom">
-                     <img>
-                     <button></button>
+                     <img src="https://photos.tutuapp.com/photo/android/web/download_game.png">
+                     <button> Install </button>
                   </div>
                </div>
             </swiper-slide>
-         </swiper>
-         <div class="swiper-paginations">
+         <div class="swiper-pagination" slot="pagination">
          </div>
+	 </swiper>
       </div>
    </div>
 </template>
@@ -31,12 +31,13 @@
          position: relative;
          width: 100%;
          height: 100%;
+	 background-color: rgb(6, 12, 80);
 
          .swiper-content {
+	    
             .item-swiper .content {
-               background-color: rgb(6, 12, 80);
                height: 100vh;
-               padding-top: 28.8vw;
+               padding-top: (28.8vw - 13.867vw);
                width: 100%;
 
                .top {
@@ -97,25 +98,16 @@
             }
 
             .item-swiper.swiper-slide-active .content {
-               .top {
-                  transition: all 0.3s cubic-bezier(0.21, 1.3, 0.51, 1.27) 0;
+               .top, .bottom {
+                  transition: all .3s .5s cubic-bezier(0.21, 1.3, 0.51, 1.27);
                   transform: translateY(0px) translatez(0px);
                   opacity: 1;
-               }
-
-               .bottom {
-                  transition-duration: 0.3s;
-                  transition-timing-function: cubic-bezier(0.21, 1.3, 0.51, 1.27);
-                  transition-delay: 0.5s;
-                  transition-property: all;
-                  transform: translateY(0px) translateZ(0px);
-                  opacity: 1;
-               }
+	       }
             }
 
          }
 
-         .swiper-paginations {
+         .swiper-pagination {
             bottom: 0.53333vw;
             text-align: center;
             transform: translatez(1px);
@@ -151,7 +143,13 @@
    }
 </style>
 <script>
-   import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper" 
+   import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper"
+   import "swiper/swiper.scss"
+   
+import { Swiper as SwiperClass, Pagination, Mousewheel, Autoplay } from 'swiper'
+
+SwiperClass.use([Pagination, Mousewheel, Autoplay])
+
    export default {
       components: { Swiper, SwiperSlide },
       directives: {

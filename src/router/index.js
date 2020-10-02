@@ -80,6 +80,11 @@ const routes = [
       }
    },
    {
+      path: '/test',
+      component: () => import("../components/Home.Swiper.vue"),
+      meta: { hiddenTab: true }
+   },
+   {
       path: '/feedback',
       component: () => import('../pages/Feedback.vue'),
       meta: {
