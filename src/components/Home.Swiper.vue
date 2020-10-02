@@ -1,7 +1,13 @@
 <template>
    <div class="download.slider">
       <div class="content">
-         <swiper class="swiper-content" :options="{ pagination: { el: '.swiper-pagination', clickable: true }, direction: 'vertical' }" ref="swipe">
+         <swiper class="swiper-content" :options="{
+               pagination: {
+                  el: '.swiper-pagination', 
+                  clickable: true
+               },
+               direction: 'vertical'
+            }">
             <swiper-slide class="item-swiper" v-for="i in 7" :key="i - 1">
                <div class="content">
                   <div class="top">
@@ -14,9 +20,9 @@
                   </div>
                </div>
             </swiper-slide>
-         <div class="swiper-pagination" slot="pagination">
-         </div>
-	 </swiper>
+            <div class="swiper-pagination" slot="pagination">
+            </div>
+         </swiper>
       </div>
    </div>
 </template>
@@ -31,10 +37,10 @@
          position: relative;
          width: 100%;
          height: 100%;
-	 background-color: rgb(6, 12, 80);
+         background-color: rgb(6, 12, 80);
 
          .swiper-content {
-	    
+
             .item-swiper .content {
                height: 100vh;
                padding-top: (28.8vw - 13.867vw);
@@ -98,45 +104,48 @@
             }
 
             .item-swiper.swiper-slide-active .content {
-               .top, .bottom {
+
+               .top,
+               .bottom {
                   transition: all .3s .5s cubic-bezier(0.21, 1.3, 0.51, 1.27);
                   transform: translateY(0px) translatez(0px);
                   opacity: 1;
-	       }
+               }
             }
 
-         }
 
-         .swiper-pagination {
-            bottom: 0.53333vw;
-            text-align: center;
-            transform: translatez(1px);
 
-            display: block;
-            left: auto;
-            padding: 0;
-            position: absolute;
-            right: 4vw;
-            transform: translateY(-50%);
-            width: 3.73333vw;
-            z-index: 30;
-            bottom: 44%;
+            .swiper-pagination {
+               bottom: 0.53333vw;
+               text-align: center;
+               transform: translatez(1px);
 
-            &>span {
-               vertical-align: bottom;
-               background-color: rgba(52, 122, 243, 0.4);
-               border-radius: 50%;
                display: block;
-               height: 2.13333vw;
-               margin: 1.6vw auto;
-               width: 2.13333vw;
+               left: auto;
+               padding: 0;
+               position: absolute;
+               right: 4vw;
+               transform: translateY(-50%);
+               width: 3.73333vw;
+               z-index: 30;
+               bottom: 44%;
 
-               &.acitve {
-                  background-color: rgb(52, 122, 243);
-                  height: 3.2vW;
-		  width: 3.2vw;
+               &>span {
+                  vertical-align: bottom;
+                  background-color: rgba(52, 122, 243, 0.4);
+                  border-radius: 50%;
+                  display: block;
+                  height: 2.13333vw;
+                  margin: 1.6vw auto;
+                  width: 2.13333vw;
+
+                  &.acitve {
+                     background-color: rgb(52, 122, 243);
+                     height: 3.2vW;
+                     width: 3.2vw;
+                  }
+
                }
-
             }
          }
       }
@@ -145,10 +154,10 @@
 <script>
    import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper"
    import "swiper/swiper.scss"
-   
-import { Swiper as SwiperClass, Pagination, Mousewheel, Autoplay } from 'swiper'
 
-SwiperClass.use([Pagination, Mousewheel, Autoplay])
+   import { Swiper as SwiperClass, Pagination, Mousewheel } from 'swiper'
+
+   SwiperClass.use([Pagination, Mousewheel])
 
    export default {
       components: { Swiper, SwiperSlide },

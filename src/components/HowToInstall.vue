@@ -134,7 +134,12 @@
 </style>
 <script>
    import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper"
-   import 'swiper/swiper-bundle.css'
+   import "swiper/swiper.scss"
+
+   import { Swiper as SwiperClass, Pagination, Mousewheel } from 'swiper'
+
+   SwiperClass.use([Pagination, Mousewheel])
+   
    export default {
       components: {
          Swiper,
