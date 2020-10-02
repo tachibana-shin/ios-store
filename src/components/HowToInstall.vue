@@ -50,9 +50,9 @@
          border-radius: 2.133vw;
          flex-direction: column;
          height: 100.267vw;
-         overflow: hidden;
          text-align: center;
          width: 79.2vW;
+	 overflow: hidden;
 
          .swiper-wrapper {
             background-image: url("../assets/howtoinstall.bg.svg");

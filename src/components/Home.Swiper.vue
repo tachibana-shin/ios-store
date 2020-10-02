@@ -38,7 +38,7 @@
          width: 100%;
          height: 100%;
          background-color: rgb(6, 12, 80);
-
+& >>> .swiper-container { position: static }
          .swiper-content {
 
             .item-swiper .content {
@@ -113,10 +113,7 @@
                }
             }
 
-
-
             .swiper-pagination {
-               bottom: 0.53333vw;
                text-align: center;
                transform: translatez(1px);
 
@@ -125,12 +122,12 @@
                padding: 0;
                position: absolute;
                right: 4vw;
+	       bottom: 40%;
                transform: translateY(-50%);
                width: 3.73333vw;
                z-index: 30;
-               bottom: 44%;
 
-               &>span {
+               & >>> span {
                   vertical-align: bottom;
                   background-color: rgba(52, 122, 243, 0.4);
                   border-radius: 50%;
@@ -139,7 +136,7 @@
                   margin: 1.6vw auto;
                   width: 2.13333vw;
 
-                  &.acitve {
+                  &.swiper-pagination-bullet-active {
                      background-color: rgb(52, 122, 243);
                      height: 3.2vW;
                      width: 3.2vw;
@@ -155,9 +152,9 @@
    import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper"
    import "swiper/swiper.scss"
 
-   import { Swiper as SwiperClass, Pagination, Mousewheel } from 'swiper'
+   import { Swiper as SwiperClass, Pagination, Mousewheel, Autoplay } from 'swiper'
 
-   SwiperClass.use([Pagination, Mousewheel])
+   SwiperClass.use([Pagination, Mousewheel, Autoplay])
 
    export default {
       components: { Swiper, SwiperSlide },
