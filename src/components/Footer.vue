@@ -18,7 +18,6 @@
 <style lang="scss" scoped>
    footer {
       background-color: rgb (242, 244, 245);
-      height: 72.5333vw;
       padding-bottom: 5.33333vW;
       padding-top: 8vw;
       width: 100%;

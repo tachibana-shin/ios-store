@@ -2,11 +2,8 @@
    <div class="header-nav">
       <div class="wrapper">
          <img class="menu" :src="require('@/assets/nav.ic.menu.svg')" @click="$emit('show-menu')">
-         <span>
-            <router-link to="/a" tag="img" class="logo" :src="require('@/assets/nav.ic.logo.svg')" />
-            <img class="download" :src="require('@/assets/nav.ic.download.svg')">
-         </span>
-         <router-link to="/lite/search" tag="img" class="download" :src="require('@/assets/nav.ic.search.svg')" />
+         <router-link to="/" tag="img" class="logo" :src="require('@/assets/nav.ic.logo.svg')" />
+         <img class="download" :src="require('@/assets/nav.ic.download.svg')">
       </div>
       <div class="tabs" v-if="!$route.meta.hiddenTab">
          <router-link tag="span" to="/" exact-active-class="active" class="left">
@@ -44,34 +41,27 @@
             margin-left: 4.267vw;
          }
 
-         span {
-            display: inline-block;
+         img.logo {
+            height: 7.467vw;
+         }
 
-            img.logo {
-               height: 7.467vw;
-            }
+         img.download {
+            width: 4.267vw;
+            height: 5.867vw;
+            margin-right: 4.267vw;
+            animation: swipe-download .5s linear infinite alternate;
 
-            img.download {
-               width: 4.267vw;
-               height: 5.867vw;
-               margin-right: 4.267vw;
-               animation: swipe-download .5s linear infinite alternate;
+            @keyframes swipe-download {
+               from {
+                  transform: scale(1)
+               }
 
-               @keyframe swipe-download {
-                  from {
-                     transform: scale(1)
-                  }
-
-                  to {
-                     transform: scale(1.2)
-                  }
+               to {
+                  transform: scale(1.2)
                }
             }
          }
 
-         img.search {
-            width: 100%;
-         }
       }
 
       .tabs {

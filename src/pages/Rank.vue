@@ -289,7 +289,7 @@
             handler() {
                this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
                      params: {
-                        type: this.$route.type || "games",
+                        type: this.$route.params.type || "games",
                         offset: this.Apps.length
                      }
                   })
