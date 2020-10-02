@@ -202,7 +202,10 @@ label {
 }
 
 button {
-   border-radius: 0
+   border-radius: 0;
+   &:hover {
+      outline: none;
+   }
 }
 
 button:focus {
