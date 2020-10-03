@@ -379,24 +379,27 @@
          }
       },
       watch: {
-         "$route"() {
-            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/App.php", {
-                  params: {
-                     id: this.$route.params.id,
-                     produce: true
-                  }
-               })
-               .then(res => res.data)
-               .then(({ state, data }) => {
-                  if (state.error) {
-                     throw new Error(state.message)
-                  } else {
-                     this.data = data.data
-                     this.apps = data.apps
-                  }
-               })
-               .then(() => this.loading = false)
-               .catch((error) => console.log(error))
+         "$route": {
+            handler() {
+               this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/App.php", {
+                     params: {
+                        id: this.$route.params.id,
+                        produce: true
+                     }
+                  })
+                  .then(res => res.data)
+                  .then(({ state, data }) => {
+                     if (state.error) {
+                        throw new Error(state.message)
+                     } else {
+                        this.data = data.data
+                        this.apps = data.apps
+                     }
+                  })
+                  .then(() => this.loading = false)
+                  .catch((error) => console.log(error))
+            },
+            immediate: true
          }
       }
    }
