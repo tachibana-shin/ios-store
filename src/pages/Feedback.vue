@@ -171,7 +171,7 @@
 
                span {
                   background-color: $white;
-                  box-shadow: rgba(0, 0, 0, 0.08) 0 0 1.6vw 0.533vw;
+                  box-shadow: $black-a08 0 0 1.6vw 0.533vw;
                   box-sizing: border-box;
                   border: 0.53vw solid $color-col;
                   border-radius: 2.133vw;
@@ -226,7 +226,7 @@
                   .close {
                      background-color: $white;
                      border-radius: 50%;
-                     color: rgba(0, 0, 0, 0.8);
+                     color: $black-a8;
                      font-size: 4.267vmin;
                      position: absolute;
                      right: -0.533vw;

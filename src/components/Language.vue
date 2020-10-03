@@ -59,8 +59,8 @@
          border-radius: 8px;
          background-color: $white;
          overflow: hidden scroll;
-         box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-         border: 1px solid rgba(0, 0, 0, .1);
+         box-shadow: 0 0 20px $black-a1;
+         border: 1px solid $black-a1;
 
          .list {
             list-style: none;
