@@ -20,9 +20,7 @@
 <style lang="scss" scoped>
    .wrapper {
       background-color: $bg-page-more;
-      padding-bottom: 21.867vw;
-      padding-left: 5.333vw;
-      padding-right: 5.333vw;
+      padding-bottom: 4.26667vw;
 
       h2 {
          color: $color-blue-dark;
