@@ -132,6 +132,7 @@ const routes = [
       path: '*',
       component: () => import('../pages/404.vue'),
       meta: {
+         hiddenTab: true,
          title: () => "TutuApp Best iOS Helper EVER | no need jailbreak | Download for Fun"
       }
    }
