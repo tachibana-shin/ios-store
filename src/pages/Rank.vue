@@ -329,7 +329,9 @@
          "$route.params.type": {
             handler() {
                this.Apps = []
-               this.$refs.Infinite.stateChanger.reset()
+               if ( this.$refs.Infinite.stateChanger ) {
+                  this.$refs.Infinite.stateChanger.reset()
+               }
                this.fetchData({
                   loaded() {},
                   complete() {}
