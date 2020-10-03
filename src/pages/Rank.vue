@@ -108,8 +108,7 @@
             align-items: center;
 
             .item {
-               background-color: white-alpha(.6);
-               ;
+               background-color: $white-a6;
                border-radius: 5.06667vw;
                color: rgb(255, 161, 0);
                display: inline-block;
