@@ -7,7 +7,7 @@
       <p class="content" :style="{ height }" ref="ContentPar">
          <span ref="Content">
             <slot name="text" />
-	</span>
+         </span>
       </p>
    </div>
 </template>
@@ -35,7 +35,7 @@
          img {
             height: 5.867vw;
             width: 5.867vw;
-	    transition: transform .5s ease;
+            transition: transform .5s ease;
          }
       }
 
@@ -70,7 +70,7 @@
       data: () => ({
          state: false,
          height: "4.5em",
-	 collapseActive: false
+         collapseActive: false
       }),
       watch: {
          state(val) {

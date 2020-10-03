@@ -329,7 +329,7 @@
          "$route.params.type": {
             handler() {
                this.Apps = []
-               if ( this.$refs.Infinite ) {
+               if (this.$refs.Infinite) {
                   this.$refs.Infinite.stateChanger.reset()
                }
                this.fetchData({
