@@ -173,7 +173,7 @@
                   background-color: $white;
                   box-shadow: rgba(0, 0, 0, 0.08) 0 0 1.6vw 0.533vw;
                   box-sizing: border-box;
-                  border: 0.53vw solid rgb(209, 216, 230);
+                  border: 0.53vw solid $color-col;
                   border-radius: 2.133vw;
                   ;
                   box-shadow: none;
@@ -184,7 +184,7 @@
 
                   &:before {
                      content: "+";
-                     color: rgb(209, 216, 230);
+                     color: $color-col;
                      position: absolute;
                      font-size: 1.5rem;
                      top: 50%;
@@ -196,7 +196,7 @@
 
 
             .item {
-               border-top-color: .533vw solid rgb(209, 216, 230);
+               border-top-color: .533vw solid $color-col;
                border-radius: 2.133vw;
                box-shadow: none;
                height: 16.533vw;

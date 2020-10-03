@@ -17,7 +17,7 @@
 </template>
 <style lang="scss" scoped>
    footer {
-      background-color: rgb (242, 244, 245);
+      background-color: $color-hr;
       padding-bottom: 5.33333vW;
       padding-top: 8vw;
       width: 100%;
@@ -41,7 +41,7 @@
          text-align: center;
 
          span {
-            color: rgb(80, 91, 107);
+            color: $color-footer;
             font-size: 3.73333vw;
             font-weight: 500;
             line-height: 4.8vw;
@@ -55,13 +55,13 @@
             }
 
             &.col {
-               color: rgb(209, 216, 230);
+               color: $color-col;
             }
          }
       }
 
       .icp {
-         color: rgb(162, 171, 191);
+         color: $color-blue-grey;
          font-size: 2.66667vw;
          font-weight: 400;
          line-height: 3.73333vw;
