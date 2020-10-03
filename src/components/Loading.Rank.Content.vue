@@ -3,7 +3,7 @@
       <bac-animation />
       <div class="content">
          <ul class="list">
-            <li v-for="item in 3">
+            <li v-for="item in 20">
                <div class="index">
                   <p></p>
                </div>
