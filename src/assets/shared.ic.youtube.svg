@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>share_ic_youtube</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="38" cy="36" r="30"></circle>
+        <filter x="-21.7%" y="-18.3%" width="143.3%" height="143.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.00392156863   0 0 0 0 0.0431372549   0 0 0 0 0.145098039  0 0 0 0.03 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02---页尾" transform="translate(-450.000000, -132.000000)" fill-rule="nonzero">
+            <g id="分组-4" transform="translate(450.000000, 132.000000)">
+                <g id="椭圆形-copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+                <g id="形状-2" transform="translate(23.000000, 25.000000)" fill="#FF4B4A">
+                    <path d="M30.1488078,3.38761229 C29.7946712,2.05417304 28.751262,1.003998 27.4264492,0.647606059 C25.0251309,-1.98951966e-13 15.3961208,-1.98951966e-13 15.3961208,-1.98951966e-13 C15.3961208,-1.98951966e-13 5.76716707,-1.98951966e-13 3.36579238,0.647606059 C2.0409796,1.00405439 0.997570433,2.05417304 0.643433775,3.38761229 C6.92779167e-13,5.80454847 6.92779167e-13,10.8472605 6.92779167e-13,10.8472605 C6.92779167e-13,10.8472605 6.92779167e-13,15.8899726 0.643433775,18.3069088 C0.997570433,19.640348 2.0409796,20.6467705 3.36579238,21.0031624 C5.76716707,21.6507685 15.3961208,21.6507685 15.3961208,21.6507685 C15.3961208,21.6507685 25.0250746,21.6507685 27.4264492,21.0031624 C28.751262,20.6467705 29.7946712,19.640348 30.1488078,18.3069088 C30.7922416,15.8899726 30.7922416,10.8472605 30.7922416,10.8472605 C30.7922416,10.8472605 30.7922416,5.80454847 30.1488078,3.38761229 Z M12.2468925,15.4256651 L12.2468925,6.26885597 L20.2948327,10.8473733 L12.2468925,15.4256651 Z" id="形状"></path>
+                </g>
+                <rect id="share_ic_youtube" x="0" y="0" width="76" height="76"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

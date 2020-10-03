@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>share_ic_instagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="38" cy="36" r="30"></circle>
+        <filter x="-21.7%" y="-18.3%" width="143.3%" height="143.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.00392156863   0 0 0 0 0.0431372549   0 0 0 0 0.145098039  0 0 0 0.03 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="0%" y1="-44.8750038%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#7340B9" offset="0%"></stop>
+            <stop stop-color="#DB2E7C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="16.6394231%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#AB7DEA" offset="0%"></stop>
+            <stop stop-color="#E25293" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02---页尾" transform="translate(-350.000000, -132.000000)">
+            <g id="分组-3" transform="translate(350.000000, 132.000000)">
+                <g id="椭圆形-copy" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+                <g id="分组" transform="translate(24.000000, 22.000000)">
+                    <path d="M13.9375003,8.625 L13.9375,8.625 C11.0034863,8.62500013 8.625,11.0034863 8.625,13.9375 C8.62500013,16.8715137 11.0034863,19.25 13.9375,19.25 C13.9375001,19.25 13.9375001,19.25 13.9375002,19.25 L13.9375,19.25 C16.8715137,19.2500001 19.25,16.8715137 19.25,13.9375 C19.2500001,11.0034863 16.8715137,8.625 13.9375,8.625" id="路径" fill="url(#linearGradient-3)"></path>
+                    <path d="M23.2235391,6.25882031 C22.4048618,6.2623365 21.7383442,5.60151758 21.7348278,4.78284023 C21.7313116,3.96416289 22.3921305,3.29764531 23.2108079,3.29412891 C23.2150454,3.29411071 23.2192829,3.29411068 23.2235204,3.29412882 C24.0421978,3.297645 24.703017,3.96416554 24.6995006,4.78284015 C24.6960057,5.59655733 24.0372185,6.25533663 23.2235013,6.25882022 L23.2235391,6.25882031 Z M14,22.2352813 L13.9999996,22.2352812 C9.45177698,22.2352811 5.76471839,18.5482227 5.76471839,14 C5.76471859,9.45177734 9.45177698,5.76471875 13.9999996,5.76471875 L13.9999993,5.76471875 C18.5482219,5.76471855 22.2352805,9.45177734 22.2352805,14 C22.2352807,18.5482227 18.5482219,22.2352812 13.9999993,22.2352812 L14,22.2352813 Z M6.58823047,1.55431223e-15 C2.96471875,1.55431223e-15 0,2.96471875 0,6.58823047 L0,21.4117969 C0,25.0352813 2.96471875,28 6.58823047,28 L21.4117969,28 C25.0352812,28 28,25.0352813 28,21.4117695 L28,6.58820312 C28,2.96471875 25.0352813,0 21.4117695,0 L6.58820312,0 L6.58823047,1.55431223e-15 Z" id="形状" fill="url(#linearGradient-4)" fill-rule="nonzero"></path>
+                </g>
+                <rect id="share_ic_instagram" fill-rule="nonzero" x="0" y="0" width="76" height="76"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

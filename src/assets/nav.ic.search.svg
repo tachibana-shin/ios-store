@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01---导航栏" transform="translate(-181.000000, -28.000000)" fill-rule="nonzero">
+            <g id="search" transform="translate(177.000000, 25.000000)">
+                <g id="分组" transform="translate(5.454545, 3.909091)" stroke="#374D73" stroke-width="1.8">
+                    <circle id="椭圆形" cx="6.54545455" cy="6.54545455" r="6.54545455"></circle>
+                    <path d="M9.8814684,13.1809437 L9.8814684,15.9082165" id="直线" stroke-linecap="round" stroke-linejoin="round" transform="translate(9.881468, 14.544580) rotate(-30.000000) translate(-9.881468, -14.544580) "></path>
+                </g>
+                <rect id="nav_ic_search" x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

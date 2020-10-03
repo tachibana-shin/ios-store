@@ -53,10 +53,14 @@
                </div>
             </li>
          </ul>
-         <div class="loading" ref="Loading">
+	 <infinite-loading>
+	 <div slot="spinner">
+         <div class="loading">
             <img :src="require('@/assets/dua.ring.1s.svg')">
             <span> Loading... </span>
          </div>
+	 </div>
+	 </infinite-loading>
       </div>
       <loading-rank-content v-else />
       <app-footer />
@@ -268,9 +272,10 @@
    import RateStar from "../components/RateStar.vue"
    import LoadingRankContent from "../components/Loading.Rank.Content.vue"
    import AppFooter from "../components/Footer.vue"
+   import InfiniteLoading from "vue-infinite-loading"
 
    export default {
-      components: { RateStar, LoadingRankContent, AppFooter },
+      components: { RateStar, LoadingRankContent, AppFooter, InfiniteLoading },
       data: () => ({
          loading: true,
          Apps: []
@@ -311,17 +316,6 @@
             },
             immediate: true
          }
-      },
-      mounted() {
-         window.addEventListener("scroll", this.onScroll = () => {
-            if ( pageYOffset + innerWidth <= this.$refs.Loading.offsetTop ) {
-               // offsetTop ?
-               this.fetchData()
-            }
-         })
-      },
-      destroyed() {
-         window.removeEventListener("scroll", this.onScroll)
       }
    }
 </script>
