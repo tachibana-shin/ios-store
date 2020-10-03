@@ -132,7 +132,8 @@
       }
 
       .content {
-         background-color: $bg-rank border-radius: 6.4vw 6.4vw 0 0;
+         background-color: $bg-rank;
+         border-radius: 6.4vw 6.4vw 0 0;
          margin-top: -16.2667vw;
          overflow: hidden;
          padding-top: 8.53333vw;
