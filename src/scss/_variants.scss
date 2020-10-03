@@ -22,6 +22,15 @@ $color-app-name-pro: var(--color-app-name-pro);
 $border-color-end: var(--border-color-end);
 $bg-page-more: var(--bg-page-more);
 $color-help: var(--color-help);
+$bg-rank: var(--bg-rank);
+$color-index-rank: var(--color-index-rank);
+$color-point-rank: var(--color-point-rank);
+$bg-category-rank: var(--bg-category-rank);
+$secondary-about: var(--secondary-about);
+
+@function white-alpha( $alpha ) {
+   @return "rgba(" + red($white) + ", " + green($white) + ", " + blue($white) + ", " + $alpha + ")"
+}
 
 @mixin distance0 {
    margin: 0;

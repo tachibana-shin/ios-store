@@ -32,7 +32,7 @@
       overflow: hidden;
 
       .content {
-         background-color: rgb(250, 251, 252);
+         background-color: $bg-rank;
          border-radius: 6.4vw 6.4vw 0 0;
          overflow: hidden;
          padding-top: 8.53333vw;

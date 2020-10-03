@@ -37,7 +37,7 @@
             </div>
          </div>
       </section>
-      <app-footer/>
+      <app-footer />
    </div>
 </template>
 <style lang="scss" scoped>
@@ -124,12 +124,12 @@
          padding-top: 13.3333vw;
 
          h4 {
-            color: rgb(22, 43, 72);
+            color: $color-app-name-pro;
             @extend %h4;
          }
 
          p {
-            color: rgb(36, 53, 90);
+            color: $secondary-about;
             @extend %p;
          }
 
@@ -145,17 +145,17 @@
 
       .section-3 {
 
-         background-color: rgb(244, 245, 247);
+         background-color: $bg-page-more;
          padding-bottom: 8.26667vw;
          padding-top: 13.3333vw;
 
          h4 {
-            color: rgb(22, 43, 72);
+            color: $color-app-name-pro;
             @extend %h4;
          }
 
          p {
-            color: rgb(36, 53, 90);
+            color: $secondary-about;
             @extend %p;
          }
 
@@ -171,11 +171,11 @@
 
       .section-4 {
 
-         background-color: rgb(249, 250, 252);
+         background-color: $bg-popup;
          padding: 8.53333vw;
 
          h4 {
-            color: rgb(22, 43, 72);
+            color: $color-app-name-pro;
             margin-bottom: 4.26667vw;
             padding: 0;
          }
@@ -188,13 +188,13 @@
             .item {
                p {
                   @include distance0;
-                  color: rgb(36, 53, 90);
+                  color: $secondary-about;
                   font-size: 3.2vw;
                   font-weight: 400;
                   line-height: 5.33333vw;
 
                   &.secondary {
-                     color: rgb(117, 136, 169);
+                     color: $color-title-app;
                      line-height: 4.8vw;
                   }
                }

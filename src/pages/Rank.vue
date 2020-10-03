@@ -53,7 +53,7 @@
                </div>
             </li>
          </ul>
-         <infinite-loading @infinite="fetchData">
+         <infinite-loading @infinite="fetchData" ref="Infinite">
             <div slot="spinner">
                <div class="loading">
                   <img :src="require('@/assets/dua.ring.1s.svg')">
@@ -65,7 +65,7 @@
             </div>
             <div slot="no-results">
                <p class="no-results"> No results </p>
-            </div> 
+            </div>
          </infinite-loading>
       </div>
       <loading-rank-content v-else />
@@ -108,7 +108,8 @@
             align-items: center;
 
             .item {
-               background-color: rgba(255, 255, 255, 0.6);
+               background-color: white-alpha(.6);
+               ;
                border-radius: 5.06667vw;
                color: rgb(255, 161, 0);
                display: inline-block;
@@ -131,8 +132,7 @@
       }
 
       .content {
-         background-color: rgb(250, 251, 252);
-         border-radius: 6.4vw 6.4vw 0 0;
+         background-color: $bg-rank border-radius: 6.4vw 6.4vw 0 0;
          margin-top: -16.2667vw;
          overflow: hidden;
          padding-top: 8.53333vw;
@@ -165,7 +165,7 @@
                   }
 
                   span {
-                     color: rgb(216, 223, 235);
+                     color: $color-index-rank;
                      font-size: 11.2vw;
                      font-weight: bold;
                      white-space: nowrap;
@@ -209,7 +209,7 @@
                         @include text-truncate;
                         @include distance0;
 
-                        color: rgb(11, 57, 95);
+                        color: $color-value;
                         font-size: 4.8vw;
                         font-weight: 500;
                         max-width: (100vw / 360 * 118);
@@ -220,7 +220,7 @@
                         margin: 0.53333vw 0;
 
                         .point {
-                           color: rgb(173, 183, 204);
+                           color: $color-point-rank;
                            font-size: 4vw;
                            font-weight: 500;
                            position: absolute;
@@ -228,9 +228,9 @@
                      }
 
                      .type {
-                        background-color: rgb(242, 242, 245);
+                        background-color: $bg-category-rank;
                         border-radius: 2.4vw;
-                        color: rgb(117, 136, 169);
+                        color: $color-title-app;
                         display: inline-block;
                         font-size: 2.66667vw;
                         font-weight: 500;
@@ -271,7 +271,9 @@
                margin-right: 1.06667VW;
             }
          }
-         .no-more, .no-results {
+
+         .no-more,
+         .no-results {
             color: $color-main;
          }
       }
@@ -312,8 +314,8 @@
                      throw new Error(state.message)
                   }
                   this.Apps.push(...data)
-                  
-                  if ( data.length === 0 ) {
+
+                  if (data.length === 0) {
                      complete()
                   } else {
                      loaded()
@@ -327,6 +329,7 @@
          "$route.params.type": {
             handler() {
                this.Apps = []
+               this.$refs.Infinite.stateChanger.reset()
                this.fetchData({
                   loaded() {},
                   complete() {}
