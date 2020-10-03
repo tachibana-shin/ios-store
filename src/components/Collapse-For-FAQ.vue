@@ -51,9 +51,7 @@
                }
 
                .icon {
-                  margin-right: 2.133vw;
-                  transition: transform .2s linear;
-                  transform-origin: bottom bottom;
+                  transition: transform .3s ease;
                }
 
                &.active .icon {

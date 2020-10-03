@@ -5,7 +5,7 @@
          <div class="content">
             <p class="title"> {{ item.title }} </p>
             <ol>
-               <li class="item" v-for="item in item.contents">
+               <li class="item-collapse" v-for="item in item.contents">
                   <collapse :title="item.title" :content="item.value" />
                </li>
             </ol>
@@ -37,12 +37,12 @@
          background-color: $white;
          border-radius: 3.2vw;
          box-shadow: rgba(8, 13, 39, 0.03) 0 0.533vw 3.2vw 0;
-         box-sizing: border-bOx;
-         margin-top: 4.267vw;
+         box-sizing: border-box;;
+         margin: 0 auto 4.267vw auto;
          padding: 5.33333vw 5.333333vw 2.66667vw 5.33333vw;
-
+	 width: 89.333vw;
+	 
          .content {
-
             margin-left: 2.667vw;
             text-align: left;
 
@@ -53,6 +53,7 @@
                font-weight: 500;
                line-height: 4.8vw;
                position: relative;
+	       margin-bottom: 4.2667vw;
 
                &:before {
                   content: "";
@@ -67,13 +68,15 @@
             }
 
             ol {
-               margin: 2.133vw 1.233vw;
+               margin: 2.133vw 0 2.133vw 1.233vw;
                padding: 0;
+	       box-sizing: border-box;
 
-               .item {
+               .item-collapse {
                   font-weight: 400;
                   line-height: 5.067vw;
-                  margin-bottom: 1.067vw;
+		  @include distance0;
+                  margin-bottom: 4vw;
                   color: $color-help;
                   font-size: 3.467vmin;
                }

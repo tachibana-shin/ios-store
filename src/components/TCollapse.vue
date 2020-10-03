@@ -2,11 +2,12 @@
    <div class="t-collapse" :class="{ full: state }" @click="state = !state">
       <div class="title">
          <span> {{ title }} </span>
-         <img :src="require('@/assets/content.ic.down.svg')">
+         <img :src="require('@/assets/content.ic.down.svg')" v-if="collapseActive">
       </div>
-      <p class="content" :style="{ height }">
+      <p class="content" :style="{ height }" ref="ContentPar">
          <span ref="Content">
-            <slot name="text" /> </span>
+            <slot name="text" />
+	</span>
       </p>
    </div>
 </template>
@@ -34,6 +35,7 @@
          img {
             height: 5.867vw;
             width: 5.867vw;
+	    transition: transform .5s ease;
          }
       }
 
@@ -53,7 +55,7 @@
       &.full {
          .title {
             img {
-               transform: rotateX(180deg);
+               transform: rotate(180deg);
             }
          }
 
@@ -67,17 +69,21 @@
       },
       data: () => ({
          state: false,
-         height: "4.5em"
+         height: "4.5em",
+	 collapseActive: false
       }),
       watch: {
          state(val) {
-            if (val) {
+            if (val && this.collapseActive) {
                setTimeout(() => this.height = this.$refs.Content.offsetHeight + "px")
 
             } else {
                this.height = "4.5em"
             }
          }
+      },
+      mounted() {
+         this.collapseActive = this.$refs.Content.offsetHeight > this.$refs.ContentPar.offsetHeight
       }
    }
 </script>
