@@ -53,13 +53,13 @@
                </div>
             </li>
          </ul>
-         <div class="loading">
+         <div class="loading" ref="Loading">
             <img :src="require('@/assets/dua.ring.1s.svg')">
             <span> Loading... </span>
          </div>
       </div>
       <loading-rank-content v-else />
-      <app-footer/>
+      <app-footer />
    </div>
 </template>
 <style lang="scss" scoped>
@@ -284,26 +284,44 @@
             return this.Apps.slice(3)
          }
       },
+      methods: {
+         fetchData() {
+            this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
+                  params: {
+                     type: this.$route.meta.type(this.$route) || "games",
+                     offset: this.Apps.length
+                  }
+               })
+               .then(res => res.data)
+               .then(({ state, data }) => {
+                  if (state.error) {
+                     throw new Error(state.message)
+                  }
+                  this.Apps.push(...data)
+               })
+               .then(() => this.loading = false)
+
+         }
+      },
       watch: {
          "$route.params.type": {
             handler() {
-               this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
-                     params: {
-                        type: this.$route.meta.type(this.$route) || "games",
-                        offset: this.Apps.length
-                     }
-                  })
-                  .then(res => res.data)
-                  .then(({ state, data }) => {
-                     if (state.error) {
-                        throw new Error(state.message)
-                     }
-                     this.Apps.push(...data)
-                  })
-                  .then(() => this.loading = false)
+               this.Apps = []
+               this.fetchData()
             },
             immediate: true
          }
+      },
+      mounted() {
+         window.addEventListener("scroll", this.onScroll = () => {
+            if ( pageYOffset + innerWidth <= this.$refs.Loading.offsetTop ) {
+               // offsetTop ?
+               this.fetchData()
+            }
+         })
+      },
+      destroyed() {
+         window.removeEventListener("scroll", this.onScroll)
       }
    }
 </script>
