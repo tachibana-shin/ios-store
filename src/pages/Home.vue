@@ -165,7 +165,7 @@
 
                   p {
                      @include distance0;
-                     color: $colorMain;
+                     color: $color-main;
                      display: inline-block;
                      min-width: 100%;
                      font-size: 3.2vmin;
@@ -484,7 +484,7 @@
                }
 
                .check-more {
-                  color: $colorMain;
+                  color: $color-main;
                   display: inline-block;
 
                   font: {

@@ -93,7 +93,7 @@
             ;
 
             &.active {
-               color: $colorMain;
+               color: $color-main;
                font-size: 4.267vmin;
             }
          }

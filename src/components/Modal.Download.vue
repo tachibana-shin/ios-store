@@ -149,7 +149,7 @@
                width: 55.733vw;
 
                &.active {
-                  background-color: $colorMain
+                  background-color: $color-main
                }
 
                &.error {

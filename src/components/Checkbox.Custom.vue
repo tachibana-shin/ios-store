@@ -12,14 +12,14 @@
          display: block;
          width: 5.333vw;
          height: 5.333vw;
-         border: 1px solid $colorMain;
+         border: 1px solid $color-main;
          border-radius: 50%;
          transition: background-color .333s ease;
       }
 
       input[type="checkbox"]:checked+span {
          background: {
-            color: $colorMain;
+            color: $color-main;
             image: url("../assets/checked.svg");
             repeat: no-repeat;
             size: 80%;

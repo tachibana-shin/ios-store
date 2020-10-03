@@ -313,7 +313,7 @@
 
 
          &.active {
-            background-color: $colorMain;
+            background-color: $color-main;
          }
       }
 
@@ -393,7 +393,7 @@
             }
 
             h2 {
-               color: $colorMain;
+               color: $color-main;
                font-size: 4.267vmin;
                font-weight: 500;
                line-height: 6.4VW;
@@ -408,7 +408,7 @@
                margin-top: 0.533vW;
                text-align: center;
                font-size: 3.733vmin;
-               color: $colorMain;
+               color: $color-main;
                background-color: $white;
             }
 

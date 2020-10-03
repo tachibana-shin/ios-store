@@ -116,7 +116,7 @@
             }
 
             .install {
-               background-color: $colorMain;
+               background-color: $color-main;
                border-radius: 6.133vw;
                color: $white;
                font-size: 4vmin;

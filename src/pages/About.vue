@@ -119,7 +119,7 @@
       }
 
       .section-2 {
-         background-color: rgb(255, 255, 255);
+         background-color: $white;
          padding-bottom: 10.6667vw;
          padding-top: 13.3333vw;
 

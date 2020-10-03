@@ -23,7 +23,7 @@
          justify-content: center;
 
          .loading\.title {
-            color: $colorMain;
+            color: $color-main;
             display: block;
             left: 0;
             line-height: 4.267vW;

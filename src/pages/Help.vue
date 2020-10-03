@@ -87,7 +87,7 @@
       }
 
       .feedback-target {
-         background-color: $colorMain;
+         background-color: $color-main;
          border-radius: 8vw 0 0 8vw;
          color: $white;
          font-size: 3.73333vw;

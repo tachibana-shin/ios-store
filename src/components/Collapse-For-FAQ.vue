@@ -74,7 +74,7 @@
                   font-weight: 400;
                   line-height: 4.8vw;
                   padding-right: 8vw;
-                  color: $colorMain;
+                  color: $color-main;
                   ;
                   font-size: 3.467vmin;
                   display: block;

@@ -60,6 +60,12 @@
                   <span> Loading... </span>
                </div>
             </div>
+            <div slot="no-nore">
+               <p class="no-more"> No more :( </p>
+            </div>
+            <div slot="no-results">
+               <p class="no-results"> No results </p>
+            </div> 
          </infinite-loading>
       </div>
       <loading-rank-content v-else />
@@ -88,7 +94,7 @@
          width: 100vw;
 
          h3 {
-            color: rgb(255, 255, 255);
+            color: $white;
             font-size: 6.93333vw;
             font-weight: 500;
             line-height: 9.86667vw;
@@ -116,7 +122,7 @@
                width: 26.9333vw;
 
                &.router-link-active {
-                  background-color: rgb(255, 255, 255);
+                  background-color: $white;
                   font-weight: 500;
                }
             }
@@ -234,9 +240,9 @@
                   }
 
                   .detail {
-                     background-color: rgb(0, 132, 240);
+                     background-color: $color-main;
                      border-radius: 5.06667vw;
-                     color: rgb(255, 255, 255);
+                     color: $white;
                      font-size: 3.73333vw;
                      height: 9.6vw;
                      line-height: 9.6vw;
@@ -249,7 +255,7 @@
 
          .loading {
             align-items: center;
-            color: rgb(0, 132, 240);
+            color: $color-main;
             display: flex;
             font-size: 4.26667vw;
             font-weight: 500;
@@ -264,6 +270,9 @@
                width: 6.4vw;
                margin-right: 1.06667VW;
             }
+         }
+         .no-more, .no-results {
+            color: $color-main;
          }
       }
    }
@@ -304,7 +313,7 @@
                   }
                   this.Apps.push(...data)
                   
-                  if ( data.length < 20 ) {
+                  if ( data.length === 0 ) {
                      complete()
                   } else {
                      loaded()

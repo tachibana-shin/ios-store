@@ -86,7 +86,7 @@
 
                &.active {
 
-                  color: $colorMain;
+                  color: $color-main;
                   font-size: 4.267vmin;
                }
             }
@@ -166,7 +166,7 @@
                            margin: 0;
 
                            span {
-                              color: $colorMain;
+                              color: $color-main;
                            }
                         }
                      }

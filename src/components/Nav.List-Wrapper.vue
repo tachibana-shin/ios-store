@@ -135,7 +135,7 @@
                   margin-top: 4.267vw;
 
                   .login\.button {
-                     background-color: $colorMain;
+                     background-color: $color-main;
                      border-radius: 2.133vw;
                      color: $white;
 
@@ -246,7 +246,7 @@
 
                .logout\.button {
                   border-radius: 2.133vw;
-                  border: 1px solid $colorMain;
+                  border: 1px solid $color-main;
                   background-color: $white;
 
                   font: {
@@ -268,7 +268,7 @@
                   transition: all .666s ease;
 
                   &:hover {
-                     background-color: $colorMain;
+                     background-color: $color-main;
                      color: $white;
                   }
                }
