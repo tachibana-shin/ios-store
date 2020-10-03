@@ -53,14 +53,14 @@
                </div>
             </li>
          </ul>
-	 <infinite-loading>
-	 <div slot="spinner">
-         <div class="loading">
-            <img :src="require('@/assets/dua.ring.1s.svg')">
-            <span> Loading... </span>
-         </div>
-	 </div>
-	 </infinite-loading>
+         <infinite-loading @infinite="fetchData">
+            <div slot="spinner">
+               <div class="loading">
+                  <img :src="require('@/assets/dua.ring.1s.svg')">
+                  <span> Loading... </span>
+               </div>
+            </div>
+         </infinite-loading>
       </div>
       <loading-rank-content v-else />
       <app-footer />
@@ -290,7 +290,7 @@
          }
       },
       methods: {
-         fetchData() {
+         fetchData({ loaded, complete }) {
             this.$axios.get("http://carbonated-patterns.000webhostapp.com/admin/api/AppHot.php", {
                   params: {
                      type: this.$route.meta.type(this.$route) || "games",
@@ -303,6 +303,12 @@
                      throw new Error(state.message)
                   }
                   this.Apps.push(...data)
+                  
+                  if ( data.length < 20 ) {
+                     complete()
+                  } else {
+                     loaded()
+                  }
                })
                .then(() => this.loading = false)
 
@@ -312,7 +318,10 @@
          "$route.params.type": {
             handler() {
                this.Apps = []
-               this.fetchData()
+               this.fetchData({
+                  loaded() {},
+                  complete() {}
+               })
             },
             immediate: true
          }
