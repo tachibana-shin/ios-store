@@ -23,9 +23,9 @@
                <img :src="require('@/assets/home.ic.video.svg')">
                {{ "HOME.INST_GUIDE" | t }}
             </p>
-            <button class="install">
+            <router-link to="/download" tag="button" class="install">
                {{ "INST" | t }}
-            </button>
+            </router-link>
          </div>
       </div>
    </div>
