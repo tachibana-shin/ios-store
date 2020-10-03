@@ -24,6 +24,14 @@
                   </li>
                </ul>
                <ul class="item" v-if="tab == 1">
+                  <li class="item" v-for="(item, index) in Installtion">
+                     <span class="index"> {{ index + 1 }} </span>
+                     <div class="wrapper.content.content">
+                        <img :src="item.wrapper">
+                        <p class="text" v-html="item.html">
+                        </p>
+                     </div>
+                  </li>
                </ul>
             </div>
          </div>
@@ -184,7 +192,12 @@
             tab: 0,
 
             Installtion: [
-               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" }
+               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" },
+               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" },
+               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" },
+               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" },
+               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" },
+               { wrapper: "https://www.tutuapp.vip/ios/img/pop_img_one_english@2x.f661a0e2.png", html: "Click <span> download </span>" } 
             ]
          }
       }
