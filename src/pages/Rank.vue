@@ -37,7 +37,7 @@
          <ul class="list">
             <li v-for="(item, index) in AppsRest">
                <div class="index">
-                  <span> {{ index + 3 }} </span>
+                  <span> {{ index + 4 }} </span>
                </div>
                <div class="app">
                   <img class="icon" :src="item.icon">
